@@ -1,0 +1,30 @@
+// 400
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu-R.woff2) format('woff2'), url(../fonts/Ubuntu-R.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+%Ubuntu-400 {
+    font-family: 'Ubuntu', cursive;
+    font-weight: 400;
+}
+
+
+// 700
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu-B.woff2) format('woff2'), url(../fonts/Ubuntu-B.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+%Ubuntu-700 {
+    font-family: 'Ubuntu', cursive;
+    font-weight: 700;
+}
+
+// @extend %yne-700;

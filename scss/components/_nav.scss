@@ -1,0 +1,25 @@
+.nav {
+  margin-right: auto;
+  margin-left: 60px;
+
+  &__menu-btn {
+    display: none;
+  }
+
+  &__list {
+    padding: 13px 0;
+    @include flex-aic-jcsb;
+    gap: 40px;
+    color: var(--gray-800);
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+
+    &--active {
+      color: var(--primary);
+    }
+  }
+}

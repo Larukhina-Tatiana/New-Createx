@@ -1,0 +1,213 @@
+:root {
+  --white: #fff;
+  --primary: #ff5a30;
+  --success: #03cea4;
+  --danger: #ff4242;
+  --warning: #f89828;
+  --info: #5a87fc;
+  --gray-900: #1e212c;
+  --gray-800: #424551;
+  --gray-700: #787a80;
+  --gray-600: #9a9ca5;
+  --gray-500: #b3b7bc;
+  --gray-400: #d7dadd;
+  --gray-300: #e5e8ed;
+  --gray-200: #f4f5f6;
+  --gray-100: #f9f9f9;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-800);
+  overflow-x: hidden;
+  min-width: 100vw;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+::marker {
+  margin-top: 10px;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+.main {
+  overflow-x: clip;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../fonts/Ubuntu-R.woff2) format("woff2"), url(../fonts/Ubuntu-R.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../fonts/Ubuntu-B.woff2) format("woff2"), url(../fonts/Ubuntu-B.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.container {
+  max-width: 1260px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  outline: 1px solid brown;
+}
+
+.header {
+  background-color: var(--white);
+  padding: 20px 0;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+.header__contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header__contacts-link--tel::before {
+  content: url(../images/icons/phone.svg);
+  width: 40px;
+  height: 40px;
+}
+.header__contacts-link--mail::before {
+  content: url(../images/icons/chat.svg);
+  width: 40px;
+  height: 40px;
+}
+.header__contacts-descr {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.header__contacts-descr--fs {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gray-900);
+}
+
+.nav {
+  margin-right: auto;
+  margin-left: 60px;
+}
+.nav__menu-btn {
+  display: none;
+}
+.nav__list {
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: var(--gray-800);
+}
+.nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.nav__link--active {
+  color: var(--primary);
+}/*# sourceMappingURL=style.css.map */

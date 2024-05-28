@@ -1,0 +1,45 @@
+.header {
+  background-color: var(--white);
+  padding: 20px 0;
+
+  &__inner {
+    @include flex-aic-jcsb;
+  }
+
+
+  &__contacts {
+    @include flex-aic-jcsb;
+    gap: 36px;
+  }
+
+  &__contacts-link {
+    @include flex-aic;
+    gap: 12px;
+
+    &--tel::before {
+      content: url(../images/icons/phone.svg);
+      width: 40px;
+      height: 40px;
+    }
+
+    &--mail::before {
+      content: url(../images/icons/chat.svg);
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__contacts-descr {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+
+    &--fs {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--gray-900);
+
+    }
+  }
+}
