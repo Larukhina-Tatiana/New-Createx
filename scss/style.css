@@ -1,5 +1,5 @@
 :root {
-  --white: #fff;
+  --white: rgb(255, 255, 255);
   --primary: #ff5a30;
   --success: #03cea4;
   --danger: #ff4242;
@@ -99,13 +99,6 @@ button {
   margin-top: 10px;
 }
 
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-
 .main {
   overflow-x: clip;
 }
@@ -163,18 +156,18 @@ button,
 }
 .header__contacts-link {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 52px;
+  background-position: left center;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
 }
-.header__contacts-link--tel::before {
-  content: url(../images/icons/phone.svg);
-  width: 40px;
-  height: 40px;
+.header__contacts-link--tel {
+  background-image: url(../images/icons/phone.svg);
 }
-.header__contacts-link--mail::before {
-  content: url(../images/icons/chat.svg);
-  width: 40px;
-  height: 40px;
+.header__contacts-link--mail {
+  background-image: url(../images/icons/chat.svg);
 }
 .header__contacts-descr {
   display: block;
@@ -210,4 +203,170 @@ button,
 }
 .nav__link--active {
   color: var(--primary);
+}
+
+.hero {
+  position: relative;
+  height: 988px;
+  color: var(--white);
+}
+.hero__inner {
+  position: absolute;
+  top: 22%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+.hero__title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+}
+.hero__title span {
+  color: var(--primary);
+}
+.hero__descr {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.hero__slider-item {
+  position: relative;
+  width: 100%;
+  height: 988px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (any-hover: hover) {
+  .button:hover {
+    color: var(--primary);
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+  }
+}
+.button--large {
+  width: 224px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 3.25;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.button--link {
+  width: 278px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 3.25;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.slick-arrow {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--white);
+  opacity: 0.5;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 3;
+  cursor: url("../images/icons/cursor.svg"), pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slick-arrow svg {
+  width: 18px;
+  height: 12px;
+  z-index: 10;
+}
+@media (any-hover: hover) {
+  .slick-arrow:hover {
+    opacity: 1;
+    box-shadow: 1px 5px 10px -5px black;
+  }
+}
+
+.slick-next {
+  right: 30px;
+}
+
+.slick-prev {
+  left: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  max-width: 724px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  bottom: 12%;
+  color: rgba(255, 255, 255, 0.6);
+}
+.slick-dots > li {
+  width: 24%;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slick-dots > li:not(:last-child) {
+  margin-right: 4px;
+}
+.slick-dots > li::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.slick-dots > li.slick-active::after {
+  background-color: var(--white);
+}
+.slick-dots > li.slick-active button {
+  color: var(--white);
+}
+@media screen and (width < 1023.99px) {
+  .slick-dots {
+    display: none;
+  }
+}
+
+.section {
+  padding-top: 120px;
 }/*# sourceMappingURL=style.css.map */

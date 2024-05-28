@@ -13,19 +13,18 @@
   }
 
   &__contacts-link {
-    @include flex-aic;
-    gap: 12px;
+    @include flex-fdaifs;
+    padding-left: 52px;
+    background-position: left center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
 
-    &--tel::before {
-      content: url(../images/icons/phone.svg);
-      width: 40px;
-      height: 40px;
+    &--tel {
+      background-image: url(../images/icons/phone.svg);
     }
 
-    &--mail::before {
-      content: url(../images/icons/chat.svg);
-      width: 40px;
-      height: 40px;
+    &--mail {
+      background-image: url(../images/icons/chat.svg);
     }
   }
 

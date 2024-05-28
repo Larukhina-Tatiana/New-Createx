@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Createx Construction</title>
   <link rel="stylesheet" href="scss/modern-normalize.min.css">
+  <link rel="stylesheet" href="libs/slick/slick.css">
   <!-- <link rel="stylesheet" href="./js/swiper-bundle.min.css"> -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> -->
   <link rel="stylesheet" href="scss/style.css">
@@ -48,18 +49,14 @@
             <ul class="header__contacts">
               <li class="header__contacts-item">
                 <a class="header__contacts-link header__contacts-link--tel" href="tel:4055550128">
-                  <div class="header__contacts-descr-inner">
-                    <span class="header__contacts-descr">Call us</span>
-                    <span class="header__contacts-descr header__contacts-descr--fs">(405) 555-0128</span>
-                  </div>
+                  <span class="header__contacts-descr">Call us</span>
+                  <span class="header__contacts-descr header__contacts-descr--fs">(405) 555-0128</span>
                 </a>
               </li>
               <li class="header__contacts-item">
                 <a class="header__contacts-link header__contacts-link--mail" href="mailto:hello@createx.com">
-                  <div class="header__contacts-descr-inner">
-                    <span class="header__contacts-descr">Talk to us</span>
-                    <span class="header__contacts-descr header__contacts-descr--fs">hello@createx.com</span>
-                  </div>
+                  <span class="header__contacts-descr">Talk to us</span>
+                  <span class="header__contacts-descr header__contacts-descr--fs">hello@createx.com</span>
                 </a>
               </li>
               </u>
@@ -69,7 +66,97 @@
     </header>
     <main class="main">
       <section class="hero">
-        <div class="container"></div>
+        <div class="container">
+          <div class="hero__inner">
+            <h1 class="hero__title">CREATE<span>X</span> CONSTRUCTION</h1>
+            <p class="hero__descr">
+              Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed.
+              Pellentesque nec
+              turpis purus eget pellentesque integer ipsum elementum felis.
+            </p>
+            <div class="hero__buttons">
+              <a class="hero__more-btn button button--link" href="">Learn more about us</a>
+              <button class="hero__submit-btn button button--large" type="submit">SUBMIT REQUEST</button>
+            </div>
+          </div>
+        </div>
+        <ul class="hero__slider">
+          <li class="hero__slider-item slider-item" style="background-image:
+                                -webkit-image-set(
+                            url(./images/hero/hero-bg1@1x.avif) type('image/avif') 1x,
+                            url(./images/hero/hero-bg1@2x.avif) type('image/avif') 2x,
+                            url(./images/hero/hero-bg1@1x.webp) type('image/webp') 1x,
+                            url(./images/hero/hero-bg1@2x.webp) type('image/webp') 2x,
+                            url(./images/hero/hero-bg1@1x.jpg) 1x,
+                            url(./images/hero/hero-bg1@3x.jpg) 2x)">
+          </li>
+          <li class="hero__slider-item slider-item" style="background-image:
+                                -webkit-image-set(
+                            url(./images/hero/hero-bg1@1x.avif) type('image/avif') 1x,
+                            url(./images/hero/hero-bg1@2x.avif) type('image/avif') 2x,
+                            url(./images/hero/hero-bg1@1x.webp) type('image/webp') 1x,
+                            url(./images/hero/hero-bg1@2x.webp) type('image/webp') 2x,
+                            url(./images/hero/hero-bg1@1x.jpg) 1x,
+                            url(./images/hero/hero-bg1@3x.jpg) 2x)">
+          </li>
+          <li class="hero__slider-item slider-item" style="background-image:
+                                -webkit-image-set(
+                            url(./images/hero/hero-bg1@1x.avif) type('image/avif') 1x,
+                            url(./images/hero/hero-bg1@2x.avif) type('image/avif') 2x,
+                            url(./images/hero/hero-bg1@1x.webp) type('image/webp') 1x,
+                            url(./images/hero/hero-bg1@2x.webp) type('image/webp') 2x,
+                            url(./images/hero/hero-bg1@1x.jpg) 1x,
+                            url(./images/hero/hero-bg1@3x.jpg) 2x)">
+          </li>
+          <li class="hero__slider-item slider-item" style="background-image:
+                                -webkit-image-set(
+                            url(./images/hero/hero-bg1@1x.avif) type('image/avif') 1x,
+                            url(./images/hero/hero-bg1@2x.avif) type('image/avif') 2x,
+                            url(./images/hero/hero-bg1@1x.webp) type('image/webp') 1x,
+                            url(./images/hero/hero-bg1@2x.webp) type('image/webp') 2x,
+                            url(./images/hero/hero-bg1@1x.jpg) 1x,
+                            url(./images/hero/hero-bg1@3x.jpg) 2x)">
+          </li>
+        </ul>
+        <!-- <ul class="slider-dots">
+          <li class="slider-dots__item">
+            <div class="slider-dots__box">
+              <p class="slider-dots__nunber">01</p>
+            </div>
+          </li>
+          <li class="slider-dots__item">
+            <div class="slider-dots__box">
+              <p class="slider-dots__nunber">02</p>
+            </div>
+          </li>
+          <li class="slider-dots__item">
+            <div class="slider-dots__box">
+              <p class="slider-dots__nunber">03</p>
+            </div>
+          </li>
+          <li class="slider-dots__item">
+            <div class="slider-dots__box">
+              <p class="slider-dots__nunber">04</p>
+            </div>
+          </li>
+        </ul> -->
+      </section>
+      <section class="video container section">
+        <h2 class="section__title">We are Createx Construction Bureau</h2>
+        <p class="section__text">We are rightfully considered to be the best construction company in the USA.</p>
+        <!-- <iframe class="video__content" poster="./images/video/video1@1x.avif" width='100%' height='500'
+          src="https://www.youtube.com/embed/qm3o-R5mOPE?controls=0" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe> -->
+        <video class="video__player" preload="auto" poster="./images/video/video1@1x.avif">
+          <source src="" type="video/webm" />
+          <source src="https://www.youtube.com/embed/qm3o-R5mOPE?controls=0" type="video/mp4" />
+        </video>
+        <button class="video__button" type="button">
+          <svg class="footer__icon" width="60" height="60">
+            <use href="./img/icons/icons.svg#icon-play-button"></use>
+          </svg>
+          Дивитись відео</button>
       </section>
 
 
@@ -79,6 +166,7 @@
     </footer>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
   <!-- <script src="js/swiper-bundle.min.js"></script> -->
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   <script src="js/main.js"></script>
