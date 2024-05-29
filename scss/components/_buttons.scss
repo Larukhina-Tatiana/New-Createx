@@ -2,6 +2,7 @@
   @include flex-all-center;
   border-radius: 4px;
   background-color: var(--primary);
+  text-transform: uppercase;
   border: 1px solid transparent;
 
   @include transition ($transition-property: (color, background-color, border));
@@ -23,15 +24,16 @@
     // font-size: 16px;
     // line-height: 3.25;
     // letter-spacing: 0.03em;
-    text-transform: uppercase;
+
 
     color: var(--white);
   }
 
   &--link {
-    width: 278px;
+    width: 276px;
     height: 52px;
-    @include font-style ($font-weight: 700, $font-size: 16px, $line-height: 3.25, $text-transform: uppercase);
-    // border: 1px solid var(--white);
+    @include font-style ($font-weight: 700, $font-size: 16px, $line-height: 3.25);
+    border: 1px solid var(--white);
+    background-color: transparent;
   }
 }

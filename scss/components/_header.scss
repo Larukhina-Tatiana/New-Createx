@@ -1,6 +1,9 @@
 .header {
-  background-color: var(--white);
   padding: 20px 0;
+
+  &--main {
+    background-color: var(--white);
+  }
 
   &__inner {
     @include flex-aic-jcsb;
