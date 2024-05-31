@@ -1,6 +1,5 @@
 .values {
   @include flex-fdc;
-  padding-bottom: 270px;
 
   &__list {
 
@@ -54,9 +53,5 @@
 
   &__text {
     text-align: center;
-  }
-
-  &__form {
-    display: flex;
   }
 }

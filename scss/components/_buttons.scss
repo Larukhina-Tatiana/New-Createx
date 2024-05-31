@@ -1,9 +1,11 @@
 .button {
   @include flex-all-center;
+  padding: 0 40px;
   border-radius: 4px;
   background-color: var(--primary);
   text-transform: uppercase;
   border: 1px solid transparent;
+  color: var(--white);
 
   @include transition ($transition-property: (color, background-color, border));
 
@@ -16,7 +18,7 @@
   }
 
   &--large {
-    width: 224px;
+    // width: 224px;
     height: 52px;
     @include font-style ($font-weight: 700, $font-size: 16px, $line-height: 3.25);
 
@@ -30,10 +32,16 @@
   }
 
   &--link {
-    width: 276px;
+    // width: 276px;
     height: 52px;
     @include font-style ($font-weight: 700, $font-size: 16px, $line-height: 3.25);
     border: 1px solid var(--white);
     background-color: transparent;
+  }
+
+  &--send {
+    @include font-style ($font-size: 14px, $line-height: 3.14286, $letter-spacing: 0.04em);
+
+    height: 44px;
   }
 }
