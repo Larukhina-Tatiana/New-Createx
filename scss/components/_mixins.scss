@@ -38,7 +38,7 @@
 }
 
 
-@mixin font-style ($font-weight: 400, $font-size: 16px, $line-height: 1.6, $letter-spacing: 0.03em, $text-transform: uppercase) {
+@mixin font-style ($font-weight: 700, $font-size: 16px, $line-height: 1.6, $letter-spacing: 0.03em, $text-transform: uppercase) {
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;

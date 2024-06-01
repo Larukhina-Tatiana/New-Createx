@@ -1,6 +1,5 @@
 .button {
   @include flex-all-center;
-  padding: 0 40px;
   border-radius: 4px;
   background-color: var(--primary);
   text-transform: uppercase;
@@ -18,30 +17,26 @@
   }
 
   &--large {
-    // width: 224px;
+    padding: 0 38px;
     height: 52px;
-    @include font-style ($font-weight: 700, $font-size: 16px, $line-height: 3.25);
+    @include font-style ($font-size: 16px, $line-height: 3.25);
+  }
 
-    // font-weight: 700;
-    // font-size: 16px;
-    // line-height: 3.25;
-    // letter-spacing: 0.03em;
+  &--regular {
+    @include font-style ($font-size: 14px, $line-height: 3.14, $letter-spacing: .04em);
+    padding: 0px 32px;
+    height: 44px;
+  }
 
-
-    color: var(--white);
+  &--small {
+    @include font-style ($font-size: 12px, $line-height: 3, $letter-spacing: .04em);
+    padding: 0px 24px;
+    height: 36px;
+    // color: var(--white);
   }
 
   &--link {
-    // width: 276px;
-    height: 52px;
-    @include font-style ($font-weight: 700, $font-size: 16px, $line-height: 3.25);
     border: 1px solid var(--white);
     background-color: transparent;
-  }
-
-  &--send {
-    @include font-style ($font-size: 14px, $line-height: 3.14286, $letter-spacing: 0.04em);
-
-    height: 44px;
   }
 }
