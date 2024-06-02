@@ -1,5 +1,5 @@
 .testimonials {
-  padding-top: 181px;
+  padding-top: 180px;
   background-color: var(--gray-200);
 
   &__container {
@@ -59,8 +59,12 @@
     // bottom: 0;
     justify-content: flex-end;
     margin-top: -114px;
-
   }
 
-
+  &__img {
+    border-radius: 4px;
+    position: relative;
+    z-index: 5;
+    margin-bottom: -60px;
+  }
 }

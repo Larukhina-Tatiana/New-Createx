@@ -1,0 +1,29 @@
+.news-section {
+
+
+  &__subtitle {
+    margin-bottom: 59px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 255px);
+    gap: 30px;
+    padding-bottom: 80px;
+  }
+
+  &__item {
+    grid-column: 5 span;
+
+
+    &:first-child {
+      grid-column: 7 span;
+      grid-row: 2 span;
+    }
+  }
+
+  &__box-title-link {
+    margin-bottom: 12px;
+  }
+}
