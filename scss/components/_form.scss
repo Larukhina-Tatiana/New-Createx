@@ -25,5 +25,50 @@
     border-radius: 4px;
     color: var(--gray-600);
     background-color: var(--gray-200);
+
+    & textarea {
+      height: 66px;
+    }
   }
+}
+
+.checkbox__label {
+  display: flex;
+  gap: 7px;
+  // @include transition ($transition-property: color);
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+
+.checkbox:checked + .checkbox__label .checkbox__castom-icon {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox__castom-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  @include transition ($transition-property: color);
+}
+
+checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check {
+  opacity: 1;
+}
+
+.checkbox__icon-check {
+  cursor: pointer;
+  opacity: 0;
+  @include transition ($transition-property: opacity);
 }

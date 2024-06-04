@@ -1,0 +1,42 @@
+.application-form {
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  &__form {
+    padding: 48px 40px;
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    width: 495px;
+    height: 666px;
+    box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0 12px 10px -6px rgba(30, 33, 44, 0.08), 0 26px 24px -10px rgba(30, 33, 44, 0.1), 0 60px 80px -20px rgba(30, 33, 44, 0.16);
+    background: var(--white);
+  }
+
+  .form__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .form__label {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .checkbox__label {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  button {
+    margin: 0 auto;
+  }
+}

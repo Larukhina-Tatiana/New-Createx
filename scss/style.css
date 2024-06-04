@@ -670,6 +670,50 @@ button {
   color: var(--gray-600);
   background-color: var(--gray-200);
 }
+.form__input textarea {
+  height: 66px;
+}
+
+.checkbox__label {
+  display: flex;
+  gap: 7px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.checkbox:checked + .checkbox__label .checkbox__castom-icon {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox__castom-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check {
+  opacity: 1;
+}
+
+.checkbox__icon-check {
+  cursor: pointer;
+  opacity: 0;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .view {
   display: flex;
@@ -881,6 +925,9 @@ button {
   color: var(--gray-900);
 }
 
+.news-section {
+  padding-bottom: 120px;
+}
 .news-section__subtitle {
   margin-bottom: 59px;
 }
@@ -976,4 +1023,40 @@ button {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.application-form {
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.application-form__container {
+  display: flex;
+  justify-content: flex-end;
+}
+.application-form__form {
+  padding: 48px 40px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  width: 495px;
+  height: 666px;
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0 12px 10px -6px rgba(30, 33, 44, 0.08), 0 26px 24px -10px rgba(30, 33, 44, 0.1), 0 60px 80px -20px rgba(30, 33, 44, 0.16);
+  background: var(--white);
+}
+.application-form .form__title {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.application-form .form__label {
+  width: 100%;
+  margin-bottom: 22px;
+}
+.application-form .checkbox__label {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.application-form button {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
