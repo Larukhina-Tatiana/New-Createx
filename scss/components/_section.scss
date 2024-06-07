@@ -38,6 +38,13 @@
     color: var(--gray-900);
   }
 
+  &__titleh4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--white);
+  }
+
   &__swiper {
     padding-bottom: 80px;
   }
