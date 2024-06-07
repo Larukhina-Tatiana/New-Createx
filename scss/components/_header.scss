@@ -5,6 +5,13 @@
     background-color: var(--white);
   }
 
+  &--secondary {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 100%;
+  }
+
   &__inner {
     @include flex-aic-jcsb;
   }

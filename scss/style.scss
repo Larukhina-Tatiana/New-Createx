@@ -4,14 +4,14 @@
 @import "./utils/_container";
 @import "./components/_mixins";
 
+@import "./components/section";
 @import "./components/_header";
 @import "./components/_nav";
 @import "./components/_hero";
 @import "./components/buttons";
 @import "./components/slick-arrow";
 @import "./components/slider-dots";
-@import "./components/section";
-// @import "./components/titles";
+
 @import "./components/video";
 @import "./components/values";
 @import "./components/our-services";
@@ -28,6 +28,11 @@
 @import "./components/application-form";
 @import "./components/footer";
 @import "./components/social-media";
+
+
+@import "./components/breadcrumbs";
+@import "./components/services-hero";
+
 
 // @import "./components/_logo";
 // @import "./components/_wrapper";

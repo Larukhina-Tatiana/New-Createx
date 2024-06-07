@@ -5,12 +5,15 @@
   color: var(--white);
   background-color: rgba(30, 33, 44, 0.6);
 
+  &__title {
+    color: var(--white);
+  }
+
   &__content {
     position: absolute;
     top: 22%;
     max-width: 580px;
     z-index: 2;
-
   }
 
 
