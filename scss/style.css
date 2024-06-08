@@ -361,6 +361,19 @@ button {
   border: 1px solid var(--white);
   background-color: transparent;
 }
+.button--primary {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background-color: transparent;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (any-hover: hover) {
+  .button--primary:hover {
+    color: var(--white);
+    background-color: var(--primary);
+  }
+}
 
 .slick-arrow {
   position: absolute;
@@ -1228,4 +1241,49 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 }
 .services-hero__title {
   margin-bottom: 21px;
+}
+
+.services {
+  padding-bottom: 180px;
+}
+.services__item {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+.services__item:nth-child(even) .services__content {
+  order: -1;
+}
+.services__item:not(:last-child) {
+  margin-bottom: 120px;
+}
+.services__picture-cover {
+  grid-column: 6 span;
+  width: 575px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.services__img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.services__content {
+  grid-column: 6 span;
+}
+.services__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.5;
+  color: var(--gray-900);
+  margin-bottom: 24px;
+}
+.services__descr {
+  color: var(--gray-700);
+  margin-bottom: 48px;
+}
+.services__btn {
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */
