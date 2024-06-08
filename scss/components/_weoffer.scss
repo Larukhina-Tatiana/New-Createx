@@ -1,0 +1,29 @@
+.weoffer {
+  padding-bottom: 60px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0 105px;
+  }
+
+  &__picture-cover {
+    grid-column: 7 span;
+    width: 705px;
+    height: 440px;
+    overflow: hidden;
+  }
+
+
+
+  &__content {
+    grid-column: 5 span;
+  }
+
+  &__title {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    margin-bottom: 60px;
+    font-weight: 900;
+  }
+}

@@ -112,16 +112,23 @@ button {
 }
 
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   src: url(../fonts/Ubuntu-R.woff2) format("woff2"), url(../fonts/Ubuntu-R.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   src: url(../fonts/Ubuntu-B.woff2) format("woff2"), url(../fonts/Ubuntu-B.woff) format("woff");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url(../fonts/Lato-Black.woff2) format("woff2"), url(../fonts/Lato-Black.woff) format("woff");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -1286,4 +1293,76 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 }
 .services__btn {
   display: inline-block;
+}
+
+.weoffer {
+  padding-bottom: 60px;
+}
+.weoffer__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 105px;
+}
+.weoffer__picture-cover {
+  grid-column: 7 span;
+  width: 705px;
+  height: 440px;
+  overflow: hidden;
+}
+.weoffer__content {
+  grid-column: 5 span;
+}
+.weoffer__title {
+  font-family: "Lato", sans-serif;
+  text-align: left;
+  margin-bottom: 60px;
+  font-weight: 900;
+}
+
+.accordeon__title {
+  position: relative;
+  padding-left: 42px;
+  max-width: 376px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+  text-align: left;
+}
+.accordeon__title-icon {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--primary);
+}
+.accordeon__title-icon--rotate {
+  transform: rotate(90deg);
+  opacity: 1;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accordeon__text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-left: 42px;
+  box-sizing: content-box;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 24px;
+}
+.accordeon__title.accordeon__title--active .accordeon__title-icon--rotate {
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.accordeon__text.accordeon__text--visible {
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

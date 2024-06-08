@@ -1,0 +1,56 @@
+.accordeon {
+
+  &__title {
+    position: relative;
+    padding-left: 42px;
+    max-width: 376px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+    text-align: left;
+
+    &-icon {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      display: inline-block;
+      width: 22px;
+      height: 2px;
+      border-radius: 4px;
+      background-color: var(--primary);
+
+      &--rotate {
+        transform: rotate(90deg);
+        opacity: 1;
+        @include transition ($transition-property: (transform, opacity));
+      }
+    }
+
+
+
+  }
+
+  &__text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-left: 42px;
+    box-sizing: content-box;
+    @include transition ($transition-property: (opacity, height));
+    margin-bottom: 24px;
+  }
+
+  &__title.accordeon__title--active {
+    .accordeon__title-icon--rotate {
+      @include transition ($transition-property: opacity);
+      opacity: 0;
+    }
+  }
+
+  &__text.accordeon__text--visible {
+    @include transition ($transition-property: opacity);
+    opacity: 1;
+  }
+}
