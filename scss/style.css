@@ -143,7 +143,6 @@ button {
   padding-right: 15px;
   padding-left: 15px;
   margin: 0 auto;
-  outline: 1px solid brown;
 }
 
 .section {
@@ -823,6 +822,10 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .clients--main {
   background-color: var(--gray-200);
 }
+.clients--services {
+  padding-top: 120px;
+  padding-bottom: 114px;
+}
 .clients__list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -1476,4 +1479,88 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .projects {
   padding-top: 180px;
   padding-bottom: 101px;
+}
+
+.pricing {
+  position: relative;
+  padding-top: 80px;
+  background-color: var(--gray-200);
+}
+.pricing::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 858px;
+  height: 1065px;
+  background-image: -webkit-image-set(url(../images/pricing/pricing-bg@1x.png) type("image/png") 1x, url(../images/pricing/pricing-bg@2x.png) type("image/png") 2x);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.table {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+  background-color: var(--white);
+  overflow: hidden;
+  border: none;
+}
+.table__wrapper {
+  border-collapse: collapse;
+}
+.table__th {
+  padding-top: 31px;
+  padding-bottom: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--gray-900);
+  text-align: center;
+}
+.table__th:first-child {
+  padding-right: 24px;
+  padding-left: 24px;
+  vertical-align: bottom;
+  text-align: left;
+}
+.table__heading {
+  margin-bottom: 2px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.table__per {
+  font-size: 18px;
+  color: var(--gray-700);
+}
+.table__body .table__row:nth-child(odd) {
+  background: var(--gray-200);
+}
+.table__body tr:last-child {
+  height: 100px;
+}
+.table__col {
+  text-align: center;
+  height: 56px;
+  border: none;
+}
+.table__col:first-child {
+  padding-left: 24px;
+  vertical-align: middle;
+  text-align: left;
+}
+.table__check {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  background: url(../images/icons/mark.svg) center/cover no-repeat;
+}
+.table__btn {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

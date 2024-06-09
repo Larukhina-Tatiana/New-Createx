@@ -5,6 +5,11 @@
     background-color: var(--gray-200);
   }
 
+  &--services {
+    padding-top: 120px;
+    padding-bottom: 114px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
