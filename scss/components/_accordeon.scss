@@ -38,13 +38,14 @@
     overflow: hidden;
     padding-left: 42px;
     box-sizing: content-box;
-    @include transition ($transition-property: (opacity, height));
+    @include transition ($transition-property: (opacity));
     margin-bottom: 24px;
   }
 
   &__title.accordeon__title--active {
     .accordeon__title-icon--rotate {
-      @include transition ($transition-property: opacity);
+      @include transition ($transition-property: transform);
+      transform: rotate(0deg);
       opacity: 0;
     }
   }
