@@ -54,4 +54,31 @@
       }
     }
   }
+
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--gray-800);
+    @include transition ($transition-property: color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary);
+
+        svg {
+          color: var(--primary);
+        }
+      }
+    }
+
+    svg {
+      margin-right: 16px;
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+      color: inherit;
+      @include transition ($transition-property: color);
+    }
+  }
 }

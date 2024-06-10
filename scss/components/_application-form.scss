@@ -16,7 +16,7 @@
     border-radius: 4px;
     width: 495px;
     height: 666px;
-    box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0 12px 10px -6px rgba(30, 33, 44, 0.08), 0 26px 24px -10px rgba(30, 33, 44, 0.1), 0 60px 80px -20px rgba(30, 33, 44, 0.16);
+    box-shadow: var(--box-shadow);
     background: var(--white);
   }
 
