@@ -114,7 +114,7 @@ function images() {
       .pipe(newer("images"))
       .pipe(imagemin())
 
-      .pipe(dest("images/portfolio-section"))
+      .pipe(dest("images/decisions"))
   );
 }
 

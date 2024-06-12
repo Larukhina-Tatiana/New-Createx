@@ -1,0 +1,43 @@
+.decisions {
+  padding-top: 76px;
+  background-color: var(--gray-200);
+
+  &__container {
+    gap: 126px;
+    margin-bottom: -60px;
+  }
+
+  &__thumbs {
+    grid-column: 5 span;
+    width: 495px;
+    height: 550px;
+    overflow: hidden;
+  }
+
+  &__content {
+    grid-column: 6 span;
+  }
+
+  &__subtitle {
+    margin-bottom: 61px;
+  }
+
+  &__item {
+
+    // &::before {
+    // content: '';
+
+
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    padding-left: 36px;
+    background: url(../images/icons/decisions-check.svg) bottom left / 20px 20px no-repeat;
+  }
+}
+
+// }

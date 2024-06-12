@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Createx Modern Cottage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="scss/modern-normalize.min.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+  <header class="header header--secondary">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="./index.html">
+          <img src="./images/icons/logo.svg" alt="Createx Logo">
+        </a>
+        <nav class="nav">
+          <button class="nav__menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="">About Us</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="./services.html">Services</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="./work.html">Work</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">News</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="./contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address>
+          <ul class="header__contacts">
+            <li class="header__contacts-item">
+              <a class="header__contacts-link header__contacts-link--tel" href="tel:4055550128">
+                <span class="header__contacts-descr">Call us</span>
+                <span class="header__contacts-descr header__contacts-descr--fs">(405) 555-0128</span>
+              </a>
+            </li>
+            <li class="header__contacts-item">
+              <a class="header__contacts-link header__contacts-link--mail" href="mailto:hello@createx.com">
+                <span class="header__contacts-descr">Talk to us</span>
+                <span class="header__contacts-descr header__contacts-descr--fs">hello@createx.com</span>
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+
+    <section class="work-inside work-inside__hero" style="background-image:
+    -webkit-image-set(
+      url(./images/hero/work-inside-hero-bg@1x.png) 1x, url(./images/hero/work-inside-hero-bg@2x.png) 2x)">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol class="breadcrumbs__list mobile-overflow">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="./index.html">Homepage</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="./work.html">Work</a></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__nolink">Modern Cottage</span></li>
+          </ol>
+        </nav>
+
+        <h1 class="work-inside__title section__inside-title">Modern Cottage</h1>
+
+
+        <div class="work-inside__galery">
+          <div class="work-inside__slider-big">
+            <button class="slider-nav__btn portfolio-section__prev work-inside__btn work-inside__btn--prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M9.207 17.207a1 1 0 0 1-1.414 0l-4.5-4.5a1 1 0 0 1 0-1.414l4.5-4.5a1 1 0 0 1 1.414 1.414L6.414 11H20a1 1 0 1 1 0 2H6.414l2.793 2.793a1 1 0 0 1 0 1.414Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <button class="slider-nav__btn portfolio-section__next work-inside__btn work-inside__btn--next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M14.793 6.793a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-2.793-2.793a1 1 0 0 1 0-1.414Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="work-inside__cover-big">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                ./images/work-inside/image1@1x.avif 1x,
+                                ./images/work-inside/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                ./images/work-inside/image1@1x.webp 1x,
+                                ./images/work-inside/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                ./images/work-inside/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-big">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                ./images/work-inside/image1@1x.avif 1x,
+                                ./images/work-inside/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                ./images/work-inside/image1@1x.webp 1x,
+                                ./images/work-inside/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                ./images/work-inside/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-big">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                ./images/work-inside/image1@1x.avif 1x,
+                                ./images/work-inside/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                ./images/work-inside/image1@1x.webp 1x,
+                                ./images/work-inside/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                ./images/work-inside/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-big">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                ./images/work-inside/image1@1x.avif 1x,
+                                ./images/work-inside/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                ./images/work-inside/image1@1x.webp 1x,
+                                ./images/work-inside/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                ./images/work-inside/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-big">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                ./images/work-inside/image1@1x.avif 1x,
+                                ./images/work-inside/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                ./images/work-inside/image1@1x.webp 1x,
+                                ./images/work-inside/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                ./images/work-inside/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-big">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                ./images/work-inside/image1@1x.avif 1x,
+                                ./images/work-inside/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                ./images/work-inside/image1@1x.webp 1x,
+                                ./images/work-inside/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                ./images/work-inside/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="work-inside__slider-small">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="work-inside__cover-small">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                          ./images/work-inside/slider/image-small1-1@1x.avif 1x,
+                                          ./images/work-inside/slider/image-small1-1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                          ./images/work-inside/slider/image-small1-1@1x.webp 1x,
+                                          ./images/work-inside/slider/image-small1-1@2x.webp 2x">
+                    <img class="work-inside__img work-inside__img--small" src="
+                                          ./images/work-inside/slider/image-small1-1@1x.jpg" loading="lazy"
+                      decoding="async" alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-small" thumbsSlider=''>
+                  <picture>
+                    <source type="image/avif" srcset="
+                                          ./images/work-inside/slider/image-small1-3@1x.avif 1x,
+                                          ./images/work-inside/slider/image-small1-3@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                          ./images/work-inside/slider/image-small1-3@1x.webp 1x,
+                                          ./images/work-inside/slider/image-small1-3@2x.webp 2x">
+                    <img class="work-inside__img work-inside__img--small" src="
+                                          ./images/work-inside/slider/image-small1-3@1x.jpg" loading="lazy"
+                      decoding="async" alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-small">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                          ./images/work-inside/slider/image-small1-2@1x.avif 1x,
+                                          ./images/work-inside/slider/image-small1-2@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                          ./images/work-inside/slider/image-small1-2@1x.webp 1x,
+                                          ./images/work-inside/slider/image-small1-2@2x.webp 2x">
+                    <img class="work-inside__img work-inside__img--small" src="
+                                          ./images/work-inside/slider/image-small1-2@1x.jpg" loading="lazy"
+                      decoding="async" alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-small">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                          ./images/work-inside/slider/image-small1-4@1x.avif 1x,
+                                          ./images/work-inside/slider/image-small1-4@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                          ./images/work-inside/slider/image-small1-4@1x.webp 1x,
+                                          ./images/work-inside/slider/image-small1-4@2x.webp 2x">
+                    <img class="work-inside__img work-inside__img--small" src="
+                                          ./images/work-inside/slider/image-small1-4@1x.jpg" loading="lazy"
+                      decoding="async" alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-small">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                          ./images/work-inside/slider/image-small1-5@1x.avif 1x,
+                                          ./images/work-inside/slider/image-small1-5@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                          ./images/work-inside/slider/image-small1-5@1x.webp 1x,
+                                          ./images/work-inside/slider/image-small1-5@2x.webp 2x">
+                    <img class="work-inside__img work-inside__img--small" src="
+                                          ./images/work-inside/slider/image-small1-5@1x.jpg" loading="lazy"
+                      decoding="async" alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="work-inside__cover-small">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                          ./images/work-inside/slider/image-small1-6@1x.avif 1x,
+                                          ./images/work-inside/slider/image-small1-6@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                          ./images/work-inside/slider/image-small1-6@1x.webp 1x,
+                                          ./images/work-inside/slider/image-small1-6@2x.webp 2x">
+                    <img class="work-inside__img work-inside__img--small" src="
+                                          ./images/work-inside/slider/image-small1-6@1x.jpg" loading="lazy"
+                      decoding="async" alt="Portfolio cover">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-goal grid">
+          <div class="project-goal__content">
+            <h2 class="project-goal__subtitle section__subtitle">Project goal</h2>
+            <p class="project-goal__descr">
+              Build a&nbsp;private house 840&nbsp;sq. feet with a&nbsp;large living room, three bedrooms, two bathrooms,
+              a&nbsp;terrace, a&nbsp;pool and a&nbsp;garage for two cars.
+            </p>
+            <p class="project-goal__descr">
+              Modern design and care for each family member to&nbsp;feel as&nbsp;comfortable as&nbsp;possible
+              in&nbsp;the new home.
+            </p>
+          </div>
+          <table class="project-goal__table">
+            <tr>
+              <td class="project-goal__table-name">LOCATION</td>
+              <td class="project-goal__table-value">2464 Royal Ln. Mesa, New Jersey</td>
+            </tr>
+            <tr>
+              <td class="project-goal__table-name">CLIENT</td>
+              <td class="project-goal__table-value">Darlene Robertson</td>
+            </tr>
+            <tr>
+              <td class="project-goal__table-name">ARCHITECT</td>
+              <td class="project-goal__table-value">HIK Architecture</td>
+            </tr>
+            <tr>
+              <td class="project-goal__table-name">SIZE</td>
+              <td class="project-goal__table-value">SIZE</td>
+            </tr>
+            <tr>
+              <td class="project-goal__table-name">VALUE</td>
+              <td class="project-goal__table-value">$2&nbsp;million</td>
+            </tr>
+            <tr>
+              <td class="project-goal__table-name">COMPLETED</td>
+              <td class="project-goal__table-value">May 2020</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="decisions">
+      <div class="container decisions__container grid">
+        <div class="decisions__thumbs">
+          <picture>
+            <source type="image/avif" srcset="
+                                          ./images/decisions/image@1x.avif 1x,
+                                          ./imagesdecisionse/image@2x.avif 2x">
+            <source type="image/webp" srcset="
+                                          ./images/decisions/image@1x.webp 1x,
+                                          ./images/decisions/image@2x.webp 2x">
+            <img class="work-inside__img" src="
+                                          ./images/decisions/image@1x.jpg" loading="lazy" decoding="async"
+              alt="Portfolio cover">
+          </picture>
+        </div>
+
+        <div class="decisions__content">
+          <h2 class="decisions__subtitle section__subtitle">Constructive decisions</h2>
+
+          <ul class="decisions__list">
+            <li class="decisions__item">
+              <p class="decisions__text">
+                Vitae ultrices ornare eu&nbsp;sed in&nbsp;est quisque duis&nbsp;id.
+              </p>
+            </li>
+            <li class="decisions__item">
+              <p class="decisions__text">
+                A&nbsp;fermentum in&nbsp;morbi pretium aliquam adipiscing donec tempus.
+              </p>
+            </li>
+            <li class="decisions__item">
+              <p class="decisions__text">
+                Mauris odio pellentesque commodo, diam.
+              </p>
+            </li>
+            <li class="decisions__item">
+              <p class="decisions__text">
+                Fermentum vestibulum est fermentum, egestas gravida scelerisque quis.
+              </p>
+            </li>
+            <li class="decisions__item">
+              <p class="decisions__text">
+                At&nbsp;pharetra libero blandit risus, fringilla sed commodo diam.
+              </p>
+            </li>
+            <li class="decisions__item">
+              <p class="decisions__text">
+                Integer ultricies viverra ut&nbsp;enim viverra&nbsp;ut.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects portfolio-section container">
+      <div class="portfolio-section__top">
+        <h2 class="portfolio-section__subtitle section__subtitle">Similar projects</h2>
+        <div class="slider-nav">
+          <button class="slider-nav__btn slider-btn portfolio-section__prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M9.207 17.207a1 1 0 0 1-1.414 0l-4.5-4.5a1 1 0 0 1 0-1.414l4.5-4.5a1 1 0 0 1 1.414 1.414L6.414 11H20a1 1 0 1 1 0 2H6.414l2.793 2.793a1 1 0 0 1 0 1.414Z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button class="slider-nav__btn slider-btn portfolio-section__next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M14.793 6.793a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-2.793-2.793a1 1 0 0 1 0-1.414Z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper section__swiper projects__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a class="section__slider-slide" href="">
+              <picture>
+                <source type="image/avif" srcset="
+                          ./images/portfolio-section/slide-image-4@1x.avif 1x,
+                          ./images/portfolio-section/slide-image-4@2x.avif 2x">
+                <source type="image/webp" srcset="
+                          ./images/portfolio-section/slide-image-4@1x.webp 1x,
+                          ./images/portfolio-section/slide-image-4@2x.webp 2x">
+                <img class="section__slider-img" src="
+                          ./images/portfolio-section/slide-image-4@1x.jpg" loading="lazy" decoding="async"
+                  alt="Portfolio cover">
+              </picture>
+              <div class="section__slider-content">
+                <h3 class="section__slider-title section__titleh3">Kids Bedroom With Decorations</h3>
+                <p class="section__slider-descr">Apartments & flats</p>
+                <div class="section__slider-link button button--regular">View Project</div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="section__slider-slide" href="">
+              <picture>
+                <source type="image/avif" srcset="
+                          ./images/portfolio-section/slide-image-5@1x.avif 1x,
+                          ./images/portfolio-section/slide-image-5@2x.avif 2x">
+                <source type="image/webp" srcset="
+                          ./images/portfolio-section/slide-image-5@1x.webp 1x,
+                          ./images/portfolio-section/slide-image-5@2x.webp 2x">
+                <img class="section__slider-img" src="./images/portfolio-section/slide-image-5@1x.jpg" loading="lazy"
+                  decoding="async" alt="Portfolio cover">
+              </picture>
+              <div class="section__slider-content">
+                <h3 class="section__slider-title section__titleh3">Modern Double Bedroom</h3>
+                <p class="section__slider-descr">Apartments & flats</p>
+                <div class="section__slider-link button button--regular">View Project</div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="section__slider-slide" href="">
+              <picture>
+                <source type="image/avif" srcset="
+                          ./images/portfolio-section/slide-image-6@1x.avif 1x,
+                          ./images/portfolio-section/slide-image-6@2x.avif 2x">
+                <source type="image/webp" srcset="
+                          ./images/portfolio-section/slide-image-6@1x.webp 1x,
+                          ./images/portfolio-section/slide-image-6@2x.webp 2x">
+                <img class="section__slider-img" src="
+                          ./images/portfolio-section/slide-image-6@1x.jpg" loading="lazy" decoding="async"
+                  alt="Portfolio cover">
+              </picture>
+              <div class="section__slider-content">
+                <h3 class="section__slider-title section__titleh3">Scandinavian Style Interior</h3>
+                <p class="section__slider-descr">Private houses</p>
+                <div class="section__slider-link button button--regular">View Project</div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="section__slider-slide" href="">
+              <picture>
+                <source type="image/avif" srcset="
+                          ./images/portfolio-section/slide-image-1@1x.avif 1x,
+                          ./images/portfolio-section/slide-image-1@2x.avif 2x">
+                <source type="image/webp" srcset="
+                          ./images/portfolio-section/slide-image-1@1x.webp 1x,
+                          ./images/portfolio-section/slide-image-1@2x.webp 2x">
+                <img class="section__slider-img" src="
+                          ./images/portfolio-section/slide-image-1@1x.jpg" loading="lazy" decoding="async"
+                  alt="Portfolio cover">
+              </picture>
+              <div class="section__slider-content">
+                <h3 class="section__slider-title section__titleh3">Kids Bedroom With Decorations</h3>
+                <p class="section__slider-descr">Apartments & flats</p>
+                <div class="section__slider-link button button--regular">View Project</div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="section__slider-slide" href="">
+              <picture>
+                <source type="image/avif" srcset="
+                          ./images/portfolio-section/slide-image-3@1x.avif 1x,
+                          ./images/portfolio-section/slide-image-3@2x.avif 2x">
+                <source type="image/webp" srcset="
+                          ./images/portfolio-section/slide-image-3@1x.webp 1x,
+                          ./images/portfolio-section/slide-image-3@2x.webp 2x">
+                <img class="section__slider-img" src="./images/portfolio-section/slide-image-3@1x.jpg" loading="lazy"
+                  decoding="async" alt="Portfolio cover">
+              </picture>
+              <div class="section__slider-content">
+                <h3 class="section__slider-title section__titleh3">Modern Double Bedroom</h3>
+                <p class="section__slider-descr">Apartments & flats</p>
+                <div class="section__slider-link button button--regular">View Project</div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="section__slider-slide" href="">
+              <picture>
+                <source type="image/avif" srcset="
+                          ./images/portfolio-section/slide-image-6@1x.avif 1x,
+                          ./images/portfolio-section/slide-image-6@2x.avif 2x">
+                <source type="image/webp" srcset="
+                          ./images/portfolio-section/slide-image-6@1x.webp 1x,
+                          ./images/portfolio-section/slide-image-6@2x.webp 2x">
+                <img class="section__slider-img" src="
+                          ./images/portfolio-section/slide-image-6@1x.jpg" loading="lazy" decoding="async"
+                  alt="Portfolio cover">
+              </picture>
+              <div class="section__slider-content">
+                <h3 class="section__slider-title section__titleh3">Scandinavian Style Interior</h3>
+                <p class="section__slider-descr">Private houses</p>
+                <div class="section__slider-link button button--regular">View Project</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="view">
+        <h4 class="view__titleh4">Explore all our works</h4>
+        <a class="view__link button button--large" href="">View portfolio</a>
+      </div>
+    </section>
+
+    <section class="application-form section" style="background-image:
+    -webkit-image-set(url(./images/application/application-bg1@1x.avif) type('image/avif') 1x,
+      url(./images/application/application-bg1@2x.avif) type('image/avif') 2x,
+      url(./images/application/application-bg1@1x.webp) type('image/webp') 1x,
+      url(./images/application/application-bg1@2x.webp) type('image/webp') 2x,
+      url(./images/application/application-bg1@1x.jpg) 1x,
+      url(./images/application/application-bg1@2x.jpg) 2x)">
+      <h2 class="visually-hidden">application-form</h2>
+      <div class="container application-form__container">
+        <form class="application-form__form form" action="#">
+          <p class="form__title">A&nbsp;quick way to&nbsp;discuss details</p>
+
+          <label class="form__label" for="first-name">Name*
+            <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name">
+          </label>
+
+          <label class="form__label" for="phone">Phone*
+            <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" required>
+          </label>
+          <label class="form__label" for="e-mail">Email
+            <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
+          </label>
+          <label class="form__label" for="comment">Message*
+            <textarea class="form__input" id="comment" placeholder="Your message"></textarea>
+          </label>
+
+          <input class="checkbox" type="checkbox" name="policy" id="policy" checked>
+          <label class="checkbox__label" for="policy">
+            <span class="checkbox__castom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" fill="none">
+                <path fill="#fff" fill-rule="evenodd"
+                  d="M9.828.195c.23.26.23.683 0 .943L3.945 7.805a.54.54 0 0 1-.832 0L.173 4.47a.731.731 0 0 1 0-.942.54.54 0 0 1 .831 0L3.53 6.39 8.996.195a.54.54 0 0 1 .832 0Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+            <span class="checkbox__text">I&nbsp;agree to&nbsp;receive communications from Createx Construction
+              Bureau.</span>
+          </label>
+
+          <button class="button button--regular" type="submit">send request</button>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <div class="footer__inner">
+          <a class="footer__logo logo" href="./index.html">
+            <img src="./images/icons/logo-footer.svg" alt="Createx Logo">
+          </a>
+          <address class="social-media">
+            <ol class="social">
+              <li class="social__item">
+                <a href="" class="social__link" target="_blank">
+                  <svg class="social__link-svg" width="24" height="24" aria-label="icon whatsapp">
+                    <use href="./images/icons/icons.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link" target="_blank">
+                  <svg class="social__link-svg" width="24" height="24" aria-label="icon Messanger">
+                    <use href="./images/icons/icons.svg#messanger"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link" target="_blank">
+                  <svg class="social__link-svg" width="24" height="24" aria-label="icon facebook">
+                    <use href="./images/icons/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link" target="_blank">
+                  <svg class="social__link-svg" width="24" height="24" aria-label="icon Twitter">
+                    <use href="./images/icons/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link" target="_blank">
+                  <svg class="social__link-svg" width="24" height="24" aria-label="icon Youtube">
+                    <use href="./images/icons/icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ol>
+          </address>
+        </div>
+        <p class="footer__left-text">
+          Createx Construction Bureau has been successfully operating in&nbsp;the USA construction market since 2000.
+          We&nbsp;are
+          proud to&nbsp;offer you quality construction and exemplary service. Our mission is&nbsp;to&nbsp;set the
+          highest
+          standards for construction sphere.
+        </p>
+      </div>
+      <form class="footer__form">
+        <h4 class="footer__form-title section__titleh4">
+          Let’s stay in touch
+        </h4>
+        <div class="footer__form-inner">
+          <label class="footer__form-label form__label" for="e-mail">
+            <input class="footer__form-input form__input" type="email" name="e-mail" id="e-mail"
+              placeholder="Your email address " required>
+          </label>
+          <button class="button button--regular footer__form-btn" type="submit">subscribe</button>
+        </div>
+        <p class="footer__form-text">
+          *Subscribe to&nbsp;our newsletter to&nbsp;receive communications and early updates from Createx Construction
+          Bureau.
+        </p>
+      </form>
+      <address class="footer__address address">
+        <p class="footer__title">HEAD OFFICE</p>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+              rel="noopener noreferrer nofollow"><span>Address:&nbsp;</span>8502 Preston Rd. Inglewood, New York</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="tel:4055550128"><span>Call:&nbsp;</span>(405) 555-0128</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="mailto:hello@createx.com"><span>Email:&nbsp;</span>hello@createx.com</a>
+          </li>
+        </ul>
+      </address>
+      <nav class="footer__nav" title="secondary navigation">
+        <div class="footer__nav-col">
+          <p class="footer__title">WHO WE ARE</p>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="">About Us</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="">Available Positions</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <p class="footer__title">OUR EXPERIENCE</p>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="">Services</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="">Work</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="">News</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <p class="footer__copyright">
+        &copy;&nbsp;All rights reserved. Made with&nbsp;<span>by&nbsp;Createx Studio</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+  <script src="js/sliders.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+</body>
+
+</html>
