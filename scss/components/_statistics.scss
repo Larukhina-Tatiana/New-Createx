@@ -1,0 +1,47 @@
+.statistics {
+  padding-top: 121px;
+  padding-bottom: 120px;
+
+
+  &__list {
+    gap: 0 86px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+    @include flex-fd-all-center;
+    padding-top: 68px;
+
+    &--recommend {
+      background: url(../images/icons/recommend.svg) top center no-repeat;
+    }
+
+    &--specialists {
+      background: url(../images/icons/specialists.svg) top center no-repeat;
+    }
+
+    &--renovated {
+      background: url(../images/icons/renovated.svg) top center no-repeat;
+    }
+
+    &--finishing {
+      background: url(../images/icons/finishing.svg) top center no-repeat;
+    }
+  }
+
+
+  &__amount {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--primary);
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--gray-900);
+  }
+}

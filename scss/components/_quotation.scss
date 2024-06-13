@@ -1,0 +1,25 @@
+.quotation {
+  position: relative;
+  padding-bottom: 250px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__thumbs {
+    width: 525px;
+    height: 580px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    left: 16px;
+    top: 131px;
+  }
+
+  &__content {
+    max-width: 734px;
+    padding: 90px 77px 77px;
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    border-radius: 4px;
+    z-index: 2;
+  }
+}

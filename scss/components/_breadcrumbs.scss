@@ -1,6 +1,7 @@
 .breadcrumbs {
   // padding-top: 152px;
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
+  margin-bottom: 40px;
 
   &__list {
     @include flex-aic;

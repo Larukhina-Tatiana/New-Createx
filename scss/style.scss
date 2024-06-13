@@ -1,14 +1,16 @@
 @import "./utils/_vars";
 @import "./utils/_global";
-@import "./utils/_fonts";
+@import "./utils/fonts";
 @import "./utils/_container";
 @import "./components/_mixins";
 
+@import "./components/buttons";
 @import "./components/section";
 @import "./components/_header";
 @import "./components/_nav";
+
+@import "./components/page-hero";
 @import "./components/_hero";
-@import "./components/buttons";
 @import "./components/slick-arrow";
 @import "./components/slider-dots";
 
@@ -42,9 +44,14 @@
 @import "./components/table";
 @import "./components/portfolio";
 @import "./components/tabs";
+@import "./components/work";
 @import "./components/work-inside";
 @import "./components/project-goal";
 @import "./components/decisions";
+@import "./components/about";
+@import "./components/statistics";
+@import "./components/quotation";
+@import "./components/blockquote";
 
 
 // @import "./components/_logo";

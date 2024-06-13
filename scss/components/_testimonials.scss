@@ -2,6 +2,10 @@
   padding-top: 180px;
   background-color: var(--gray-200);
 
+  &--work {
+    padding-top: 80px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,12 @@
+.page-hero {
+  padding-top: 150px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-color: var(--gray-200);
+  background-position: right top;
+
+  &--work-inside {
+    background-color: var(--white);
+    background-position: right top;
+  }
+}

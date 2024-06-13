@@ -1,25 +1,24 @@
 // 400
+
 @font-face {
-    font-family: 'Ubuntu', sans-serif;
-    ;
-    src: url(../fonts/Ubuntu-R.woff2) format('woff2'), url(../fonts/Ubuntu-R.woff) format('woff');
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-R.woff2') format('woff2'), url('../fonts/Ubuntu-R.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
+
 %Ubuntu-400 {
     font-family: 'Ubuntu', sans-serif;
-    ;
     font-weight: 400;
 }
 
 
 // 700
 @font-face {
-    font-family: 'Ubuntu', sans-serif;
-    ;
-    src: url(../fonts/Ubuntu-B.woff2) format('woff2'), url(../fonts/Ubuntu-B.woff) format('woff');
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-B.woff2') format('woff2'), url('../fonts/Ubuntu-B.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -34,11 +33,18 @@
 
 // 900
 @font-face {
-    font-family: 'Lato', sans-serif;
-    src: url(../fonts/Lato-Black.woff2) format('woff2'), url(../fonts/Lato-Black.woff) format('woff');
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Black.woff2') format('woff2'), url('../fonts/Lato-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
+
+// @font-face {
+//     font-family: 'Inter';
+//     src: url('../../fonts/Inter-Bold.woff2') format('woff2'), url('../fonts/Inter-Bold.woff') format('woff');
+//     font-weight: 700;
+//     font-style: normal;
+// }
 
 // @extend %yne-700;

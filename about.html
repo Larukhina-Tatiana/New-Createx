@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Createx Services</title>
+  <title>Createx About Us</title>
 
   <link rel="stylesheet" href="scss/modern-normalize.min.css">
   <link rel="stylesheet" href="scss/style.css">
@@ -26,7 +26,7 @@
           </button>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="">About Us</a>
+              <a class="nav__link" href="./about.html">About Us</a>
             </li>
             <li class="nav__item">
               <a class="nav__link nav__link--active" href="./services.html">Services</a>
@@ -63,145 +63,132 @@
   </header>
   <main class="main">
 
-    <section class="page-hero" style="background-image:
+    <section class="page-hero page-hero--about" style="background-image:
     -webkit-image-set(
-      url(./images/hero/services-hero-bg@1x.png) 1x, url(./images/hero/services-hero-bg@2x.png) 2x)">
+      url(./images/hero/about-hero-bg@1x.png) 1x, url(./images/hero/about-hero-bg@2x.png) 2x)">
       <div class="container">
         <nav class="breadcrumbs">
           <ol class="breadcrumbs__list mobile-overflow">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Homepage</a></li>
-            <li class="breadcrumbs__item"><span class="breadcrumbs__nolink">Services</span></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__nolink">About Us</span></li>
           </ol>
         </nav>
         <div class="services-hero__content">
-          <h1 class="services-hero__title section__title">SERVICES</h1>
-          <p class="services-hero__descr hero__descr">
-            If&nbsp;you are looking for a&nbsp;full-service construction company, look to&nbsp;Createx Construction
-            Bureau.
-            We&nbsp;are doing our best to&nbsp;be&nbsp;a&nbsp;partner for all of&nbsp;your construction needs.
+          <h1 class="about__title section__title">About Us</h1>
+          <p class="hero__descr">
+            Createx Construction Bureau has been successfully operating in&nbsp;the USA construction market since 2000.
+            We&nbsp;are
+            proud to&nbsp;offer you quality construction and exemplary service.
           </p>
-
         </div>
       </div>
     </section>
 
-    <section class="services container section">
-      <ul class="services__list">
-        <li class="services__item">
-          <div class="services__picture-cover">
-            <picture>
-              <source type="image/avif" srcset="
-                                  ./images/services/image1@1x.avif 1x,
-                                  ./images/services/image1@2x.avif 2x">
-              <source type="image/webp" srcset="
-                                  ./images/services/image1@1x.webp 1x,
-                                  ./images/services/image1@2x.webp 2x">
-              <img class="services__img" src="
-                                  ./images/services/image1@1x.jpg" loading="lazy" decoding="async" alt="image">
-            </picture>
-          </div>
-          <div class="services__content">
-            <h3 class="services__title">
-              Construction
-            </h3>
-            <p class="services__descr">
-              Sapien, feugiat faucibus orci arcu, vulputate. Tristique varius consectetur vulputate arcu, scelerisque
-              nisi, nibh.
-              Enim
-              semper id&nbsp;sodales ultricies sed ut&nbsp;ut&nbsp;augue. Mattis habitant venenatis, gravida posuere
-              massa
-              ac&nbsp;interdum. Eget aliquam dignissim ut&nbsp;vestibulum.
-            </p>
-            <a class="services__btn button button--regular button--primary" href="">Learn more</a>
-          </div>
+    <section class="statistics container">
+      <h2 class="visually-hidden">Statistics</h2>
+      <ul class="statistics__list grid">
+        <li class="statistics__item statistics__item--recommend">
+          <span class="statistics__amount">
+            60%
+          </span>
+          <p class="statistics__descr">
+            Clients on&nbsp;the recommendation of&nbsp;friends
+          </p>
         </li>
-        <li class="services__item">
-          <div class="services__picture-cover">
-            <picture>
-              <source type="image/avif" srcset="
-                                              ./images/services/image2@1x.avif 1x,
-                                              ./images/services/image2@2x.avif 2x">
-              <source type="image/webp" srcset="
-                                              ./images/services/image2@1x.webp 1x,
-                                              ./images/services/image2@2x.webp 2x">
-              <img class="services__img" src="
-                                              ./images/services/image2@1x.jpg" loading="lazy" decoding="async"
-                alt="image">
-            </picture>
-          </div>
-          <div class="services__content">
-            <h3 class="services__title">
-              Project Development
-            </h3>
-            <p class="services__descr">
-              Volutpat tellus mauris sit sit. Posuere ut&nbsp;sit vestibulum amet viverra&nbsp;in. Est nulla lectus
-              purus
-              tincidunt
-              massa tortor. Hendrerit vulputate elementum blandit massa vitae amet felis eget.
-            </p>
-            <a class="services__btn button button--regular button--primary" href="">Learn more</a>
-          </div>
+        <li class="statistics__item statistics__item--renovated">
+          <span class="statistics__amount">
+            2400+
+          </span>
+          <p class="statistics__descr">
+            Apartments renovated
+          </p>
         </li>
-        <li class="services__item">
-          <div class="services__picture-cover">
-            <picture>
-              <source type="image/avif" srcset="
-                                  ./images/services/image3@1x.avif 1x,
-                                  ./images/services/image3@2x.avif 2x">
-              <source type="image/webp" srcset="
-                                  ./images/services/image3@1x.webp 1x,
-                                  ./images/services/image3@2x.webp 2x">
-              <img class="services__img" src="
-                                  ./images/services/image3@1x.jpg" loading="lazy" decoding="async" alt="image">
-            </picture>
-          </div>
-          <div class="services__content">
-            <h3 class="services__title">
-              Interior Design
-            </h3>
-            <p class="services__descr">
-              Eleifend orci massa et&nbsp;facilisis orci feugiat&nbsp;ac. Congue in&nbsp;ut&nbsp;lacus, turpis accumsan
-              gravida.
-              Aliquet mattis dignissim massa sociis&nbsp;a, id&nbsp;bibendum. Egestas lorem eros, mi&nbsp;cras amet, vel
-              eget
-              molestie. Turpis enim arcu, amet donec massa pellentesque nulla duis. Arcu dictum metus sed purus senectus
-              faucibus
-              eget
-              elementum pretium.
-            </p>
-            <a class="services__btn button button--regular button--primary" href="./services-inside.html">Learn more</a>
-          </div>
+        <li class="statistics__item statistics__item--specialists">
+          <span class="statistics__amount">
+            670
+          </span>
+          <p class="statistics__descr">
+            Qualified specialists
+          </p>
         </li>
-        <li class="services__item">
-          <div class="services__picture-cover">
-            <picture>
-              <source type="image/avif" srcset="
-                                              ./images/services/image4@1x.avif 1x,
-                                              ./images/services/image4@2x.avif 2x">
-              <source type="image/webp" srcset="
-                                              ./images/services/image4@1x.webp 1x,
-                                              ./images/services/image4@2x.webp 2x">
-              <img class="services__img" src="
-                                              ./images/services/image4@1x.jpg" loading="lazy" decoding="async"
-                alt="image">
-            </picture>
-          </div>
-          <div class="services__content">
-            <h3 class="services__title">
-              Repairs
-            </h3>
-            <p class="services__descr">
-              Facilisis cursus feugiat sit pulvinar amet. Ac&nbsp;facilisi dictum commodo, tortor gravida pretium, orci.
-              Nunc sit
-              sollicitudin id&nbsp;egestas mattis. Turpis viverra nec urna ultrices urna.
-            </p>
-            <a class="services__btn button button--regular button--primary" href="">Learn more</a>
-          </div>
+        <li class="statistics__item statistics__item--finishing">
+          <span class="statistics__amount">
+            150000+&nbsp;<sup>m2</sup>
+          </span>
+          <p class="statistics__descr">
+            Finishing work was carried out
+          </p>
         </li>
+
       </ul>
     </section>
 
-    <section class="application-form section" style="background-image:
+
+    <section class="quotation container">
+      <h2 class="section__subtitle visually-hidden">Quotation</h2>
+      <div class="quotation__thumbs">
+        <picture>
+          <source type="image/avif" srcset="
+            ./images/quotation/image@1x.avif 1x,
+            ./images/quotation/image@2x.avif 2x">
+          <source type="image/webp" srcset="
+            ./images/quotation/image@1x.webp 1x,
+            ./images/quotation/image@2x.webp 2x">
+          <img class="work-inside__img" src="
+            ./images/quotation/image@1x.jpg" loading="lazy" decoding="async" alt="Portfolio cover">
+        </picture>
+      </div>
+
+      <div class="quotation__content">
+        <blockquote class="quotation__blockquote blockquote">
+          <p class="quotation__text blockquote__text">
+            Dapibus nec vitae ante mattis. Aliquam phasellus ac&nbsp;dui augue&nbsp;in. Sed aliquet in&nbsp;egestas hac
+            at&nbsp;proin sed quam. Etiam aliquet sagittis non, massa cum pulvinar. Et&nbsp;in&nbsp;leo, tempus purus
+            vestibulum
+            ut&nbsp;blandit et&nbsp;mi. Odio massa purus vel praesent arcu enim elit felis viverra.
+          </p>
+          <p class="quotation__taxt blockquote__text">
+            Magna aliquam interdum mattis ipsum arcu. Elit odio elit viverra quis metus amet eleifend amet. Vet
+            suspendisse faucibus
+            tempor ipsum integer.
+          </p>
+          <footer class="blockquote__avtor">
+            Courtney Alexander
+            <span class="blockquote__company">CEO&nbsp;&mdash; Createx Construction Bureau</span>
+
+          </footer>
+        </blockquote>
+      </div>
+
+    </section>
+    <section class="values values--bg-gray values--padding-top container">
+      <h2 class="section__subtitle">Our core values</h2>
+      <p class="section__text">
+        Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.
+      </p>
+      <ul class="values__list">
+        <li class="values__item values__item--quality">
+          <h3 class="values__titleh3 section__titleh3">Quality</h3>
+          <p class="values__text">
+            Culpa nostrud commodo ea&nbsp;consequat aliquip reprehenderit. Veniam velit nostrud
+            aliquip sunt.
+          </p>
+        </li>
+        <li class="values__item values__item--safety">
+          <h3 class="values__titleh3 section__titleh3">Safety</h3>
+          <p class="values__text">
+            Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est&nbsp;ea.
+          </p>
+        </li>
+        <li class="values__item values__item--comfort">
+          <h3 class="values__titleh3 section__titleh3">Comfort</h3>
+          <p class="values__text">
+            Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea&nbsp;ad.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- <section class="application-form section" style="background-image:
     -webkit-image-set(url(./images/application/application-bg1@1x.avif) type('image/avif') 1x,
       url(./images/application/application-bg1@2x.avif) type('image/avif') 2x,
       url(./images/application/application-bg1@1x.webp) type('image/webp') 1x,
@@ -244,10 +231,10 @@
         </form>
 
       </div>
-    </section>
+    </section> -->
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container footer__container">
       <div class="footer__left">
         <div class="footer__inner">
@@ -367,9 +354,11 @@
         &copy;&nbsp;All rights reserved. Made with&nbsp;<span>by&nbsp;Createx Studio</span>
       </p>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
 

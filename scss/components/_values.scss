@@ -1,8 +1,15 @@
 .values {
   @include flex-fdc;
 
-  &__list {
+  &--padding-top {
+    padding-top: 80px;
+  }
 
+  &--bg-gray {
+    background-color: var(--gray-200);
+  }
+
+  &__list {
     --valeus-gap: 94px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -29,7 +36,6 @@
     &--comfort {
       background-image: url(../images/icons/ic-slippers.svg);
     }
-
 
     &:not(:last-child) {
       &::after {
