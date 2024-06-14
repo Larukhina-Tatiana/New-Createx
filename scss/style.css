@@ -1870,6 +1870,13 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .quotation {
   position: relative;
   padding-bottom: 250px;
+  background-image: -webkit-image-set(url(../images/quotation/bg-image1@1x.png) type("image/png") 1x, url(../images/quotation/bg-image1@2x.png) type("image/png") 2x);
+  background-position: right -530px top -440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.quotation__container {
+  position: relative;
   display: flex;
   justify-content: flex-end;
 }
@@ -1878,7 +1885,6 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   height: 580px;
   overflow: hidden;
   position: absolute;
-  z-index: 1;
   left: 16px;
   top: 131px;
 }
@@ -1934,4 +1940,63 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   font-size: 14px;
   line-height: 1.5;
   color: var(--gray-700);
+}
+
+.history {
+  padding-top: 180px;
+  padding-bottom: 100px;
+  background-color: var(--gray-200);
+}
+.history-nav {
+  position: relative;
+  grid-column: 4 span;
+  padding-left: 39px;
+  border-left: 1px solid rgba(154, 156, 165, 0.5);
+}
+.history-nav__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.history-nav__btn {
+  position: relative;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  color: var(--gray-600);
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.history-nav__btn::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -43px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--gray-200);
+}
+.history-nav__btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -43px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.history-nav__btn--active {
+  color: var(--primary);
+}
+.history__slider-images {
+  grid-column: 8 span;
+  overflow: hidden;
+}
+.history-images__cover {
+  width: 810px;
+  height: 450px;
+  overflow: hidden;
+  margin-bottom: 36px;
 }/*# sourceMappingURL=style.css.map */

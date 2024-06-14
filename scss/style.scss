@@ -1,6 +1,6 @@
 @import "./utils/_vars";
 @import "./utils/_global";
-@import "./utils/fonts";
+@import "./utils/_fonts";
 @import "./utils/_container";
 @import "./components/_mixins";
 
@@ -32,6 +32,7 @@
 @import "./components/social-media";
 
 
+
 @import "./components/breadcrumbs";
 @import "./components/services-hero";
 @import "./components/services";
@@ -52,6 +53,8 @@
 @import "./components/statistics";
 @import "./components/quotation";
 @import "./components/blockquote";
+
+@import "./components/history";
 
 
 // @import "./components/_logo";

@@ -8,6 +8,7 @@
   <title>Createx About Us</title>
 
   <link rel="stylesheet" href="scss/modern-normalize.min.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="scss/style.css">
 </head>
 
@@ -26,10 +27,10 @@
           </button>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="./about.html">About Us</a>
+              <a class="nav__link nav__link--active" href="./about.html">About Us</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--active" href="./services.html">Services</a>
+              <a class="nav__link" href="./services.html">Services</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="">Work</a>
@@ -124,70 +125,379 @@
     </section>
 
 
-    <section class="quotation container">
-      <h2 class="section__subtitle visually-hidden">Quotation</h2>
-      <div class="quotation__thumbs">
-        <picture>
-          <source type="image/avif" srcset="
+    <section class="quotation">
+      <div class="quotation__container container">
+        <h2 class="section__subtitle visually-hidden">Quotation</h2>
+        <div class="quotation__thumbs">
+          <picture>
+            <source type="image/avif" srcset="
             ./images/quotation/image@1x.avif 1x,
             ./images/quotation/image@2x.avif 2x">
-          <source type="image/webp" srcset="
+            <source type="image/webp" srcset="
             ./images/quotation/image@1x.webp 1x,
             ./images/quotation/image@2x.webp 2x">
-          <img class="work-inside__img" src="
+            <img class="work-inside__img" src="
             ./images/quotation/image@1x.jpg" loading="lazy" decoding="async" alt="Portfolio cover">
-        </picture>
+          </picture>
+        </div>
+
+        <div class="quotation__content">
+          <blockquote class="quotation__blockquote blockquote">
+            <p class="quotation__text blockquote__text">
+              Dapibus nec vitae ante mattis. Aliquam phasellus ac&nbsp;dui augue&nbsp;in. Sed aliquet in&nbsp;egestas
+              hac
+              at&nbsp;proin sed quam. Etiam aliquet sagittis non, massa cum pulvinar. Et&nbsp;in&nbsp;leo, tempus purus
+              vestibulum
+              ut&nbsp;blandit et&nbsp;mi. Odio massa purus vel praesent arcu enim elit felis viverra.
+            </p>
+            <p class="quotation__taxt blockquote__text">
+              Magna aliquam interdum mattis ipsum arcu. Elit odio elit viverra quis metus amet eleifend amet. Vet
+              suspendisse faucibus
+              tempor ipsum integer.
+            </p>
+            <footer class="blockquote__avtor">
+              Courtney Alexander
+              <span class="blockquote__company">CEO&nbsp;&mdash; Createx Construction Bureau</span>
+
+            </footer>
+          </blockquote>
+        </div>
       </div>
+    </section>
 
-      <div class="quotation__content">
-        <blockquote class="quotation__blockquote blockquote">
-          <p class="quotation__text blockquote__text">
-            Dapibus nec vitae ante mattis. Aliquam phasellus ac&nbsp;dui augue&nbsp;in. Sed aliquet in&nbsp;egestas hac
-            at&nbsp;proin sed quam. Etiam aliquet sagittis non, massa cum pulvinar. Et&nbsp;in&nbsp;leo, tempus purus
-            vestibulum
-            ut&nbsp;blandit et&nbsp;mi. Odio massa purus vel praesent arcu enim elit felis viverra.
-          </p>
-          <p class="quotation__taxt blockquote__text">
-            Magna aliquam interdum mattis ipsum arcu. Elit odio elit viverra quis metus amet eleifend amet. Vet
-            suspendisse faucibus
-            tempor ipsum integer.
-          </p>
-          <footer class="blockquote__avtor">
-            Courtney Alexander
-            <span class="blockquote__company">CEO&nbsp;&mdash; Createx Construction Bureau</span>
 
-          </footer>
-        </blockquote>
+    <section class="values values--bg-gray values--padding-top">
+      <div class="container">
+        <h2 class="section__subtitle section__subtitle--center">Our core values</h2>
+        <p class="section__text">
+          Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.
+        </p>
+        <ul class="values__list">
+          <li class="values__item values__item--quality">
+            <h3 class="values__titleh3 section__titleh3">Quality</h3>
+            <p class="values__text">
+              Culpa nostrud commodo ea&nbsp;consequat aliquip reprehenderit. Veniam velit nostrud
+              aliquip sunt.
+            </p>
+          </li>
+          <li class="values__item values__item--safety">
+            <h3 class="values__titleh3 section__titleh3">Safety</h3>
+            <p class="values__text">
+              Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est&nbsp;ea.
+            </p>
+          </li>
+          <li class="values__item values__item--comfort">
+            <h3 class="values__titleh3 section__titleh3">Comfort</h3>
+            <p class="values__text">
+              Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea&nbsp;ad.
+            </p>
+          </li>
+        </ul>
       </div>
+    </section>
 
+
+    <section class="history">
+      <div class="container">
+        <div class="portfolio-section__top">
+          <h2 class="portfolio-section__subtitle section__subtitle">Our history</h2>
+          <div class="slider-nav">
+            <button class="slider-nav__btn slider-btn history__prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M9.207 17.207a1 1 0 0 1-1.414 0l-4.5-4.5a1 1 0 0 1 0-1.414l4.5-4.5a1 1 0 0 1 1.414 1.414L6.414 11H20a1 1 0 1 1 0 2H6.414l2.793 2.793a1 1 0 0 1 0 1.414Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <button class="slider-nav__btn slider-btn history__next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M14.793 6.793a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-2.793-2.793a1 1 0 0 1 0-1.414Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="history__content grid">
+          <ul class="history__list-nav history-nav">
+            <li class="history-nav__item">
+              <button class="history-nav__btn history-nav__btn--active">
+                Present
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                March 2023
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                November 2020
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                July 2018
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                August 2015
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                February 2009
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                May 2007
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                October 2003
+              </button>
+            </li>
+            <li class="history-nav__item">
+              <button class="history-nav__btn">
+                June 2000
+              </button>
+            </li>
+          </ul>
+
+          <div class="history__slider-images">
+            <ul class="swiper-wrapper history-images">
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                      ./images/history/image1@1x.avif 1x,
+                      ./images/history/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                      ./images/history/image1@1x.webp 1x,
+                      ./images/history/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                      ./images/history/image1@1x.jpg" loading="lazy" decoding="async" alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                  ./images/hero/hero-bg1@1x.avif 1x,
+                                  ./images/hero/hero-bg1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                  ./images/hero/hero-bg1@1x.webp 1x,
+                                  ./images/hero/hero-bg1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                  ./images/hero/hero-bg1@1x.jpg" loading="lazy" decoding="async" alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                  ./images/services/image1@1x.avif 1x,
+                                  ./images/services/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                  ./images/services/image1@1x.webp 1x,
+                                  ./images/services/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                  ./images/services/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                      ./images/news-section/image1@1x.avif 1x,
+                      ./images/news-section/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                      ./images/news-section/image1@1x.webp 1x,
+                      ./images/news-section/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                      ./images/news-section/image1@1x.jpg" loading="lazy" decoding="async" alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                      ./images/history/image1@1x.avif 1x,
+                      ./images/history/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                      ./images/history/image1@1x.webp 1x,
+                      ./images/history/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                      ./images/history/image1@1x.jpg" loading="lazy" decoding="async" alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                  ./images/hero/hero-bg1@1x.avif 1x,
+                                  ./images/hero/hero-bg1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                  ./images/hero/hero-bg1@1x.webp 1x,
+                                  ./images/hero/hero-bg1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                  ./images/hero/hero-bg1@1x.jpg" loading="lazy" decoding="async" alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                      ./images/history/image1@1x.avif 1x,
+                      ./images/history/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                      ./images/history/image1@1x.webp 1x,
+                      ./images/history/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                      ./images/history/image1@1x.jpg" loading="lazy" decoding="async" alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                                  ./images/services/image1@1x.avif 1x,
+                                  ./images/services/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                                  ./images/services/image1@1x.webp 1x,
+                                  ./images/services/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                                  ./images/services/image1@1x.jpg" loading="lazy" decoding="async"
+                      alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+              <li class="swiper-slide history-images__item">
+                <div class="history-images__cover">
+                  <picture>
+                    <source type="image/avif" srcset="
+                      ./images/news-section/image1@1x.avif 1x,
+                      ./images/news-section/image1@2x.avif 2x">
+                    <source type="image/webp" srcset="
+                      ./images/news-section/image1@1x.webp 1x,
+                      ./images/news-section/image1@2x.webp 2x">
+                    <img class="work-inside__img" src="
+                      ./images/news-section/image1@1x.jpg" loading="lazy" decoding="async" alt="History images">
+                  </picture>
+                </div>
+                <p class="history-images__descr">
+                  Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                  malesuada vitae
+                  egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                  Eu&nbsp;nec vitae,
+                </p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
     </section>
-    <section class="values values--bg-gray values--padding-top container">
-      <h2 class="section__subtitle">Our core values</h2>
-      <p class="section__text">
-        Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.
-      </p>
-      <ul class="values__list">
-        <li class="values__item values__item--quality">
-          <h3 class="values__titleh3 section__titleh3">Quality</h3>
-          <p class="values__text">
-            Culpa nostrud commodo ea&nbsp;consequat aliquip reprehenderit. Veniam velit nostrud
-            aliquip sunt.
-          </p>
-        </li>
-        <li class="values__item values__item--safety">
-          <h3 class="values__titleh3 section__titleh3">Safety</h3>
-          <p class="values__text">
-            Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est&nbsp;ea.
-          </p>
-        </li>
-        <li class="values__item values__item--comfort">
-          <h3 class="values__titleh3 section__titleh3">Comfort</h3>
-          <p class="values__text">
-            Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea&nbsp;ad.
-          </p>
-        </li>
-      </ul>
+    <section class="clients clients--main">
+      <div class="container">
+        <h2 class="section__subtitle  section__subtitle--center">Supported by 12+ partners</h2>
+
+        <ul class="clients__list">
+          <li class="clients__item">
+            <a class="clients__link" href="">
+              <img class="clients__link-svg" src="./images/clients/client-logo1.png" alt="Logo client">
+            </a>
+          </li>
+          <li class="clients__item">
+            <a class="clients__link" href="">
+              <img class="clients__link-svg" src="./images/clients/client-logo2.png" alt="Logo client">
+            </a>
+          </li>
+          <li class="clients__item">
+            <a class="clients__link" href="">
+              <img class="clients__link-svg" src="./images/clients/client-logo3.png" alt="Logo client">
+            </a>
+          </li>
+          <li class="clients__item">
+            <a class="clients__link" href="">
+              <img class="clients__link-svg" src="./images/clients/client-logo4.png" alt="Logo client">
+            </a>
+          </li>
+          <li class="clients__item">
+            <a class="clients__link" href="">
+              <img class="clients__link-svg" src="./images/clients/client-logo5.png" alt="Logo client">
+            </a>
+          </li>
+          <li class="clients__item">
+            <a class="clients__link" href="">
+              <img class="clients__link-svg" src="./images/clients/client-logo6.png" alt="Logo client">
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
+
+
     <!-- <section class="application-form section" style="background-image:
     -webkit-image-set(url(./images/application/application-bg1@1x.avif) type('image/avif') 1x,
       url(./images/application/application-bg1@2x.avif) type('image/avif') 2x,
@@ -361,8 +671,9 @@
 
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
-
-  <script src="js/main.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="js/sliders.js"></script>
+  <!-- <script src="js/main.js"></script> -->
 </body>
 
 </html>
