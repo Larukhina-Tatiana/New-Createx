@@ -65,7 +65,7 @@
   &__slider-slide {
     @include flex-fdc;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     background-color: var(--white);
   }

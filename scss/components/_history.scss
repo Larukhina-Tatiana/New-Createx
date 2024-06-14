@@ -60,14 +60,6 @@
   &__slider-images {
     grid-column: 8 span;
     overflow: hidden;
-  }
-
-  &-images {
-    &__cover {
-      width: 810px;
-      height: 450px;
-      overflow: hidden;
-      margin-bottom: 36px;
-    }
+    margin-left: 9px;
   }
 }

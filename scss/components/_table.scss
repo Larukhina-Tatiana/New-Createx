@@ -3,7 +3,7 @@
   z-index: 3;
   width: 100%;
   border: 1px solid var(--gray-300);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
   overflow: hidden;

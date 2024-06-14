@@ -20,7 +20,7 @@
 
   &__item {
     border: 1px solid var(--gray-300);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     background: var(--white);
   }

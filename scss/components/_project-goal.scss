@@ -23,7 +23,7 @@
   &__table {
     grid-column: 5 span;
     padding: 37px 10px 37px 60px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     background-color: var(--white);
 

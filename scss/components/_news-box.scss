@@ -1,6 +1,6 @@
 .news-box {
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
   height: 100%;
@@ -69,7 +69,7 @@
           content: '';
           width: 1px;
           height: 12px;
-          border-radius: 4px;
+          border-radius: var(--border-radius);
           top: 50%;
           transform: translateY(-50%);
           right: 0;

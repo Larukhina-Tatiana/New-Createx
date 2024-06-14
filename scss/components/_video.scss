@@ -6,7 +6,7 @@
   &__block {
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     height: 500px;
 
     &::before {

@@ -3,9 +3,24 @@
   list-style: none;
   gap: 16px;
 
+  &--footer {
+    gap: 16px;
+  }
+
+  &--team {
+    gap: 12px;
+  }
+
   &__item {
-    width: 24px;
-    height: 24px;
+    &--footer {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--team {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__link > svg {

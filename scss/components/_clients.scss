@@ -15,12 +15,22 @@
     padding-bottom: 125px;
   }
 
+  &--about {
+    padding-top: 120px;
+    padding-bottom: 180px;
+  }
 
+  &__descr {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--gray-700);
+  }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 102px;
+    gap: 40px 102px;
     margin-top: 57px;
   }
 }

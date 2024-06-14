@@ -21,15 +21,6 @@
 
   &__picture-cover {
     grid-column: 6 span;
-    width: 575px;
-    height: 420px;
-    overflow: hidden;
-    border-radius: 4px;
-  }
-
-  &__img {
-    height: 100%;
-    object-fit: cover;
   }
 
   &__content {

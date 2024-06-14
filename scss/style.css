@@ -19,6 +19,7 @@
       0 12px 10px -6px rgba(154, 156, 165, 0.04),
       0 30px 24px -10px rgba(154, 156, 165, 0.05),
       0 80px 80px -20px rgba(154, 156, 165, 0.08);
+  --border-radius: 4px;
 }
 
 html,
@@ -153,7 +154,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   background-color: var(--primary);
   text-transform: uppercase;
   border: 1px solid transparent;
@@ -239,6 +240,46 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.images__thumb {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.images__thumb--services {
+  width: 575px;
+  height: 420px;
+}
+.images__thumb--weoffer {
+  grid-column: 7 span;
+  width: 705px;
+  height: 440px;
+}
+.images__thumb--avatar {
+  border-radius: 100%;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 25px;
+}
+.images__thumb--decisions {
+  grid-column: 5 span;
+  width: 495px;
+  height: 550px;
+}
+.images__thumb--history {
+  width: 810px;
+  height: 450px;
+  margin-bottom: 36px;
+}
+.images__thumb--team {
+  width: 285px;
+  height: 416px;
+}
+.images__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .section {
   padding-top: 120px;
 }
@@ -297,7 +338,7 @@ button {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
 }
@@ -530,7 +571,7 @@ button {
 .video__block {
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   height: 500px;
 }
 .video__block::before {
@@ -651,7 +692,7 @@ button {
 }
 .our-services__item {
   border: 1px solid var(--gray-300);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background: var(--white);
 }
@@ -735,7 +776,7 @@ button {
   padding: 33px 60px 48px;
   display: flex;
   gap: 24px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   max-width: 100%;
   box-shadow: var(--box-shadow);
   background: var(--white);
@@ -765,7 +806,7 @@ button {
   margin-top: 6px;
   padding: 10px 10px 12px 16px;
   border: 1px solid var(--gray-400);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   color: var(--gray-600);
   background-color: var(--gray-200);
 }
@@ -887,10 +928,20 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   padding-top: 172px;
   padding-bottom: 125px;
 }
+.clients--about {
+  padding-top: 120px;
+  padding-bottom: 180px;
+}
+.clients__descr {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--gray-700);
+}
 .clients__list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 102px;
+  gap: 40px 102px;
   margin-top: 57px;
 }
 
@@ -910,19 +961,6 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 }
 .testimonials__swiper {
   position: relative;
-}
-.testimonials__avatar-cover {
-  overflow: hidden;
-  border-radius: 100%;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 25px;
-}
-.testimonials__avatar {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .testimonials__subtitle {
   margin-bottom: 60px;
@@ -947,7 +985,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   margin-top: -114px;
 }
 .testimonials__img {
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   position: relative;
   z-index: 5;
   margin-bottom: -60px;
@@ -1061,7 +1099,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 
 .news-box {
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
   height: 100%;
@@ -1114,7 +1152,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   content: "";
   width: 1px;
   height: 12px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   top: 50%;
   transform: translateY(-50%);
   right: 0;
@@ -1148,7 +1186,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .application-form__form {
   padding: 48px 40px;
   border: 1px solid var(--gray-300);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   width: 495px;
   height: 666px;
   box-shadow: var(--box-shadow);
@@ -1272,9 +1310,19 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   list-style: none;
   gap: 16px;
 }
-.social__item {
+.social--footer {
+  gap: 16px;
+}
+.social--team {
+  gap: 12px;
+}
+.social__item--footer {
   width: 24px;
   height: 24px;
+}
+.social__item--team {
+  width: 20px;
+  height: 20px;
 }
 .social__link > svg {
   display: block;
@@ -1333,15 +1381,6 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 }
 .services__picture-cover {
   grid-column: 6 span;
-  width: 575px;
-  height: 420px;
-  overflow: hidden;
-  border-radius: 4px;
-}
-.services__img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .services__content {
   grid-column: 6 span;
@@ -1368,12 +1407,6 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0 105px;
-}
-.weoffer__picture-cover {
-  grid-column: 7 span;
-  width: 705px;
-  height: 440px;
-  overflow: hidden;
 }
 .weoffer__content {
   grid-column: 5 span;
@@ -1403,7 +1436,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   display: inline-block;
   width: 22px;
   height: 2px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   background-color: var(--primary);
 }
 .accordeon__title-icon--rotate {
@@ -1561,7 +1594,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   z-index: 3;
   width: 100%;
   border: 1px solid var(--gray-300);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
   overflow: hidden;
@@ -1642,7 +1675,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .tabs__item {
   flex-basis: calc((100% - 80px) / 5);
   min-height: 154px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
   display: flex;
@@ -1727,7 +1760,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .work-inside .swiper-slide {
   width: 100%;
   height: 100%;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 .work-inside__cover-big {
   min-width: 1230px;
@@ -1777,7 +1810,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .project-goal__table {
   grid-column: 5 span;
   padding: 37px 10px 37px 60px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
 }
@@ -1801,12 +1834,6 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .decisions__container {
   gap: 126px;
   margin-bottom: -60px;
-}
-.decisions__thumbs {
-  grid-column: 5 span;
-  width: 495px;
-  height: 550px;
-  overflow: hidden;
 }
 .decisions__content {
   grid-column: 6 span;
@@ -1893,7 +1920,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   padding: 90px 77px 77px;
   box-shadow: var(--box-shadow);
   background: var(--white);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   z-index: 2;
 }
 
@@ -1993,10 +2020,27 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .history__slider-images {
   grid-column: 8 span;
   overflow: hidden;
+  margin-left: 9px;
 }
-.history-images__cover {
-  width: 810px;
-  height: 450px;
-  overflow: hidden;
-  margin-bottom: 36px;
+
+.team {
+  background-color: black;
+}
+.team__thumb {
+  position: relative;
+}
+.team__hover {
+  position: absolute;
+  border-radius: 0 0 4px 4px;
+  width: 285px;
+  height: 60px;
+  left: 0;
+  bottom: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(calc(100% + 1px));
+  background-color: rgba(255, 90, 48, 0.7);
+}
+.team__item:hover .team__hover, .team__item:focus .team__hover {
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */

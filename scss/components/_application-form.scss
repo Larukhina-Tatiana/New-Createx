@@ -13,7 +13,7 @@
   &__form {
     padding: 48px 40px;
     border: 1px solid var(--gray-300);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     width: 495px;
     height: 666px;
     box-shadow: var(--box-shadow);
