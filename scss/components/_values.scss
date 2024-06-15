@@ -5,6 +5,10 @@
     padding-top: 80px;
   }
 
+  &--padding-bottom {
+    padding-bottom: 180px;
+  }
+
   &--bg-gray {
     background-color: var(--gray-200);
   }
@@ -35,6 +39,18 @@
 
     &--comfort {
       background-image: url(../images/icons/ic-slippers.svg);
+    }
+
+    &--training {
+      background-image: url(../images/icons/training.svg);
+    }
+
+    &--growth {
+      background-image: url(../images/icons/growth.svg);
+    }
+
+    &--salary {
+      background-image: url(../images/icons/salary.svg);
     }
 
     &:not(:last-child) {

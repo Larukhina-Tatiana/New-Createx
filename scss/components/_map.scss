@@ -1,0 +1,14 @@
+.map {
+  padding-top: 80px;
+  padding-bottom: 157px;
+  background-color: var(--gray-200);
+
+  &__bg {
+    width: 1230px;
+    height: 563px;
+    background-image: url(../images/map/map.png);
+    background-position: top 37px left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

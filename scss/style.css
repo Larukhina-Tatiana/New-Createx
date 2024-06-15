@@ -330,6 +330,12 @@ button {
   line-height: 1.5;
   color: var(--white);
 }
+.section__titleh5 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  color: var(--gray-900);
+}
 .section__swiper {
   padding-bottom: 80px;
 }
@@ -442,6 +448,9 @@ button {
 .page-hero--work-inside {
   background-color: var(--white);
   background-position: right top;
+}
+.page-hero--positions {
+  background-position: right 0 top 93px;
 }
 
 .hero {
@@ -626,6 +635,9 @@ button {
 .values--padding-top {
   padding-top: 80px;
 }
+.values--padding-bottom {
+  padding-bottom: 180px;
+}
 .values--bg-gray {
   background-color: var(--gray-200);
 }
@@ -654,6 +666,15 @@ button {
 }
 .values__item--comfort {
   background-image: url(../images/icons/ic-slippers.svg);
+}
+.values__item--training {
+  background-image: url(../images/icons/training.svg);
+}
+.values__item--growth {
+  background-image: url(../images/icons/growth.svg);
+}
+.values__item--salary {
+  background-image: url(../images/icons/salary.svg);
 }
 .values__item:not(:last-child)::after {
   position: absolute;
@@ -2025,8 +2046,21 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 }
 
 .team {
+  position: relative;
   padding-top: 103px;
   padding-bottom: 120px;
+}
+.team::before {
+  content: "";
+  position: absolute;
+  left: -240px;
+  bottom: 0;
+  width: 791px;
+  height: 638px;
+  background-image: -webkit-image-set(url(../images/team/bg-image1@1x.png) type("image/png") 1x, url(../images/team/bg-image1@2x.png) type("image/png") 2x);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .team__descr {
   font-size: 18px;
@@ -2079,4 +2113,92 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   color: var(--primary);
+}
+
+.map {
+  padding-top: 80px;
+  padding-bottom: 157px;
+  background-color: var(--gray-200);
+}
+.map__bg {
+  width: 1230px;
+  height: 563px;
+  background-image: url(../images/map/map.png);
+  background-position: top 37px left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vacancies {
+  padding-bottom: 105px;
+}
+.vacancies__inner {
+  display: grid;
+  grid-template-columns: 7fr 1fr 4fr;
+}
+.vacancies__list {
+  grid-column-start: 1;
+}
+.vacancies__item {
+  padding: 31px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background: var(--white);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gray-700);
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.vacancies__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media (any-hover: hover) {
+  .vacancies__item:hover {
+    box-shadow: var(--box-shadow);
+  }
+}
+.vacancies__location {
+  padding-left: 24px;
+  background: url(../images/icons/location.svg) left center/16px 16px no-repeat;
+}
+.vacancies__location::after {
+  content: "|";
+  margin-right: 8px;
+  margin-left: 8px;
+  color: var(--gray-600);
+}
+.vacancies__species {
+  padding-left: 24px;
+  background: url(../images/icons/clock.svg) left center/16px 16px no-repeat;
+}
+.vacancies__posicion {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--gray-900);
+}
+
+.vacancies-send {
+  grid-column-start: 3;
+  padding-left: 21px;
+}
+.vacancies-send__title {
+  margin-bottom: 24px;
+}
+.vacancies-send__descr {
+  margin-bottom: 48px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.vacancies-send__btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vacancies-send__btn {
+  width: 180px;
 }/*# sourceMappingURL=style.css.map */

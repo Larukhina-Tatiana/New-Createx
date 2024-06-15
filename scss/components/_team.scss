@@ -1,6 +1,21 @@
 .team {
+  position: relative;
   padding-top: 103px;
   padding-bottom: 120px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -240px;
+    bottom: 0;
+    width: 791px;
+    height: 638px;
+    background-image: -webkit-image-set(url(../images/team/bg-image1@1x.png) type("image/png") 1x,
+        url(../images/team/bg-image1@2x.png) type("image/png") 2x);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
 
   &__descr {

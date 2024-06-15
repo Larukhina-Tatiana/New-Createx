@@ -9,4 +9,8 @@
     background-color: var(--white);
     background-position: right top;
   }
+
+  &--positions {
+    background-position: right 0 top 93px;
+  }
 }
