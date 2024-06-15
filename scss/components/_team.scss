@@ -1,25 +1,66 @@
 .team {
-  background-color: black;
+  padding-top: 103px;
+  padding-bottom: 120px;
+
+
+  &__descr {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--gray-700);
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    gap: 60px 30px;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+  }
 
   &__thumb {
     position: relative;
+    margin-bottom: 16px;
   }
 
   &__hover {
     position: absolute;
-    border-radius: 0 0 4px 4px;
-    width: 285px;
-    height: 60px;
+    padding: 20px;
+    width: 100%;
     left: 0;
     bottom: 0;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(calc(100% + 1px));
+    border-radius: 0 0 4px 4px;
     background-color: rgba(#ff5a30, .7);
+    @include transition ($transition-property: transform);
+    transform: translateY(calc(100% + 1px));
   }
 
   &__item:hover .team__hover,
   &__item:focus .team__hover {
     transform: translateY(0);
+  }
+
+  &__caption {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 4px;
+  }
+
+  &__plea {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--gray-900);
+  }
+
+  &__plea-link {
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--primary);
   }
 }
