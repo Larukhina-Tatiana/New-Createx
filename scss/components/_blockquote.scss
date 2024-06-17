@@ -1,16 +1,5 @@
 .blockquote {
-  position: relative;
   padding-left: 58px;
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 28px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-image: url(../images/icons/quotes.svg);
-  }
 
   &__text {
     font-weight: 700;
@@ -46,5 +35,20 @@
     font-size: 14px;
     line-height: 1.5;
     color: var(--gray-700);
+  }
+}
+
+blockquote {
+  position: relative;
+  padding-left: 58px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 28px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: url(../images/icons/quotes.svg) no-repeat;
   }
 }

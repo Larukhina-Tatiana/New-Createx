@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 20px;
+
+  &__link {
+    font-weight: 700;
+
+    @include transition ($transition-property: color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    // & > svg {
+    //   width: 24px;
+    //   height: 24px;
+    // }
+
+    &--active {
+      color: var(--primary);
+    }
+  }
+}
