@@ -328,6 +328,25 @@
             </li>
           </ul>
         </section>
+        <section class="post__form-comment">
+          <form class="post__form form" action="#">
+            <h2 class="section__subtitle section__subtitle--center post__form-title">Leave your comment</h2>
+            <div class="post__form-inner">
+              <label class="post__form-label post__form-label--width form__label" for="first-name">Name*
+                <input class="post__form-input  form__input" type="text" name="first-name" id="first-name"
+                  placeholder="Your name" required>
+              </label>
+              <label class="post__form-label post__form-label--width form__label" for="e-mail">Email*
+                <input class="post__form-input form__input" type="email" name="e-mail" id="e-mail"
+                  placeholder="Your working email" required>
+              </label>
+            </div>
+            <label class="post__form-label form__label form__label--width100" for="comment">Your comment*
+              <textarea class="post__form-input form__input" id="comment" placeholder="Type comment here"></textarea>
+            </label>
+            <button class="post__form-btn button button--large" type="submit">Post comment</button>
+          </form>
+        </section>
       </div>
     </article>
 
@@ -372,7 +391,6 @@
 
           <button class="button button--regular" type="submit">send request</button>
         </form>
-
       </div>
     </section>
   </main>

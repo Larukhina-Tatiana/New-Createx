@@ -830,6 +830,9 @@ button {
 .form__label--big {
   width: 414px;
 }
+.form__label--width100 {
+  width: 100%;
+}
 .form__input {
   margin-top: 6px;
   padding: 10px 10px 12px 16px;
@@ -837,6 +840,7 @@ button {
   border-radius: var(--border-radius);
   color: var(--gray-600);
   background-color: var(--gray-200);
+  width: 100%;
 }
 .form__input textarea {
   height: 66px;
@@ -2397,6 +2401,9 @@ blockquote::before {
   background-image: url(../images/icons/comments.svg);
 }
 
+.post {
+  padding-bottom: 180px;
+}
 .post__thumb {
   margin-top: -80px;
 }
@@ -2506,4 +2513,40 @@ blockquote::before {
   margin-right: 4px;
   display: inline-block;
   fill: currentColor;
+}
+
+.post__form {
+  padding-top: 40px;
+}
+.post__form-title {
+  margin-bottom: 48px;
+}
+.post__form-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 22px;
+}
+.post__form-label {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.post__form-label--width {
+  width: calc((100% - 30px) / 2);
+}
+.post__form-input {
+  padding: 13px 16px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.post__form-btn {
+  width: 215px;
+  margin-top: 48px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.post__form textarea {
+  resize: none;
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */
