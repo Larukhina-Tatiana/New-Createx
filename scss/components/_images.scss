@@ -25,7 +25,10 @@
     &--decisions {
       grid-column: 5 span;
       width: 495px;
-      height: 550px;
+      height: 553px;
+      position: absolute;
+      left: 14px;
+      top: 0;
     }
 
     &--history {
@@ -47,6 +50,11 @@
     &--post {
       min-width: 1230px;
       // height: 500px;
+    }
+
+    &--contact {
+      width: 495px;
+      height: 586px;
     }
 
   }

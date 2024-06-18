@@ -262,7 +262,10 @@ button {
 .images__thumb--decisions {
   grid-column: 5 span;
   width: 495px;
-  height: 550px;
+  height: 553px;
+  position: absolute;
+  left: 14px;
+  top: 0;
 }
 .images__thumb--history {
   width: 810px;
@@ -279,6 +282,10 @@ button {
 }
 .images__thumb--post {
   min-width: 1230px;
+}
+.images__thumb--contact {
+  width: 495px;
+  height: 586px;
 }
 .images__img {
   width: 100%;
@@ -372,10 +379,10 @@ button {
 }
 
 .header {
-  padding: 20px 0;
+  padding-top: 20px;
 }
-.header--main {
-  background-color: var(--white);
+.header--padding-bottom {
+  padding-bottom: 20px;
 }
 .header--secondary {
   position: absolute;
@@ -451,16 +458,6 @@ button {
   background-repeat: no-repeat;
   background-color: var(--gray-200);
   background-position: right top;
-}
-.page-hero--work-inside {
-  background-color: var(--white);
-  background-position: right top;
-}
-.page-hero--positions {
-  background-position: right bottom;
-}
-.page-hero--news {
-  background-position: right bottom;
 }
 
 .hero {
@@ -908,7 +905,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 48px;
+  margin-bottom: 44px;
 }
 .portfolio-section__subtitle {
   max-width: 710px;
@@ -1603,7 +1600,7 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 
 .projects {
   padding-top: 180px;
-  padding-bottom: 101px;
+  padding-bottom: 119px;
 }
 
 .pricing {
@@ -1865,13 +1862,16 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
 .decisions {
   padding-top: 76px;
   background-color: var(--gray-200);
+  height: 570px;
 }
 .decisions__container {
+  position: relative;
   gap: 126px;
-  margin-bottom: -60px;
 }
 .decisions__content {
   grid-column: 6 span;
+  grid-column-start: 6;
+  grid-column-end: -1;
 }
 .decisions__subtitle {
   margin-bottom: 61px;
@@ -2549,4 +2549,54 @@ blockquote::before {
 .post__form textarea {
   resize: none;
   height: 100px;
+}
+
+.contacts {
+  padding-top: 120px;
+}
+.contacts__title {
+  margin-bottom: 24px;
+}
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.contact-form__grup {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.contact-form .form__label {
+  font-size: 16px;
+  line-height: 1.6;
+  width: 285px;
+  margin-bottom: 24px;
+}
+.contact-form .form__label--big {
+  width: 600px;
+}
+.contact-form .form__input {
+  margin-top: 8px;
+  padding: 13px 16px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.contact-form textarea {
+  height: 128px;
+}
+.contact-form__policy-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 40px;
+}
+.contact-form__policy-box .checkbox__text {
+  max-width: 315px;
+}
+.contact-form .button--large {
+  padding: 0 42px;
 }/*# sourceMappingURL=style.css.map */

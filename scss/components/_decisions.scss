@@ -1,14 +1,17 @@
 .decisions {
   padding-top: 76px;
   background-color: var(--gray-200);
+  height: 570px;
 
   &__container {
+    position: relative;
     gap: 126px;
-    margin-bottom: -60px;
   }
 
   &__content {
     grid-column: 6 span;
+    grid-column-start: 6;
+    grid-column-end: -1;
   }
 
   &__subtitle {

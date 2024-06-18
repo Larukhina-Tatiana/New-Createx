@@ -114,7 +114,7 @@ function images() {
       .pipe(newer("images"))
       .pipe(imagemin())
 
-      .pipe(dest("images/news1"))
+      .pipe(dest("images/contacts"))
   );
 }
 
