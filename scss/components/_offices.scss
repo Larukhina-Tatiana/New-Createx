@@ -23,22 +23,23 @@
 
   &__nav-coll {
     width: 252px;
+    position: relative;
 
-    // &:not(:last-child) {
-    //   &::after {
-    //     position: absolute;
-    //     content: '';
-    //     top: 0;
-    //     right: calc(-1 * var(--valeus-gap));
-    //     width: 1px;
-    //     height: 100%;
-    //     background-image: url(../images/icons/divider-offices.svg);
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     z-index: 5;
-    //   }
-    // }
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: calc(-1 * var(--valeus-gap));
+        width: 1px;
+        height: 100%;
+        background-image: url(../images/icons/divider-offices.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 5;
+      }
+    }
   }
 
   &__item {
