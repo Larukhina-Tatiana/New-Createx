@@ -9,6 +9,7 @@
   <title>Createx Contacts</title>
 
   <link rel="stylesheet" href="scss/modern-normalize.min.css">
+  <link rel="stylesheet" href="./libs/choices/choices.min.css">
   <link rel="stylesheet" href="scss/style.css">
 </head>
 
@@ -122,20 +123,20 @@
 
               <div class="contact-form__options">
                 <label class="form__label" for="interested">I am interested in
-                  <select class="form__select" name="interested" required>
-                    <option value="">Choose interested</option>
+                  <select class="form__select form__input" name="interested" id="interested" required>
+                    <option value="">Choose Interested</option>
                     <option value="Interior_Design">Interior Design</option>
                   </select>
                 </label>
-                <label class="form__label" for="interested">Location*
-                  <select class="form__select" name="location">
+                <label class="form__label" for="location">Location*
+                  <select class="form__select form__input" name="location" id="location">
                     <option value="">Choose location</option>
                     <option value="New_York">New York</option>
                   </select>
                 </label>
-                <fieldset class="form__filds form__label">
-                  <div class="form__filds-inner">
-                    <legend>Preferred contact method</legend>
+                <fieldset class="form__fields">
+                  <legend>Preferred contact method</legend>
+                  <div class="form__fields-inner">
                     <label class="custom-radio form-radio">
                       <input class="custom-radio__input" type="radio" value="Phone" name="contact-metod">
                       <span class="custom-radio__text">Phone</span>
@@ -150,7 +151,6 @@
                     </label>
                   </div>
                 </fieldset>
-
               </div>
             </div>
 
@@ -174,9 +174,96 @@
 
               <button class="button button--large" type="submit">send request</button>
             </div>
+
+          </form>
         </div>
-        </form>
       </div>
+    </section>
+
+    <section class="offices">
+      <div class="container">
+        <h2 class="section__subtitle section__subtitle--center">Our offices</h2>
+        <p class="section__text">
+          Give us a call, send us a note or visit our office. We can’t wait to hear from you!
+        </p>
+
+        <nav class="offices__nav" title="secondary navigation">
+          <div class="offices__nav-coll">
+            <p class="offices__nav-title">New York, USA</p>
+            <ul class="offices__list">
+              <li class="offices__item offices__item--address">
+                <span class="offices__address">8502&nbsp;Preston Rd. Inglewood, New York 98380</span>
+                <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                  rel="noopener noreferrer nofollow">See on the map</a>
+              </li>
+              <li class="offices__item">
+                <a class="offices__link" href="tel:4055550128"><span class="offices__link--name">Call:&nbsp;</span>(405)
+                  555-0128</a>
+              </li>
+              <li class="offices__item">
+                <a class="offices__link" href="mailto:hello@createx.com"><span
+                    class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
+              </li>
+              <li class="offices__item">
+                <span>Schedule:&nbsp;</span>Mon&nbsp;&mdash; Fri&nbsp;9:00&nbsp;&mdash;18:00
+              </li>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1" height="254" fill="none">
+              <path stroke="url(#a)" d="M.5 0v254" />
+              <defs>
+                <linearGradient id="a" x1="-1" x2="5.448" y1="254" y2=".138" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ff4242" stop-opacity="0" />
+                  <stop offset=".123" stop-color="#ff4242" stop-opacity=".5" />
+                  <stop offset=".519" stop-color="#ff4242" />
+                  <stop offset=".878" stop-color="#ff4242" stop-opacity=".5" />
+                  <stop offset="1" stop-color="#ff4242" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="offices__nav-coll">
+            <p class="offices__nav-title">New Jersey, USA</p>
+            <ul class="offices__list">
+              <li class="offices__item offices__item--address">
+                <span class="offices__address">2464&nbsp;Royal Ln. Mesa, New Jersey 45463</span>
+                <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                  rel="noopener noreferrer nofollow">See on the map</a>
+              </li>
+              <li class="offices__item">
+                <a class="offices__link" href="tel:8085550111"><span class="offices__link--name">Call:&nbsp;</span>(808)
+                  555-0111</a>
+              </li>
+              <li class="offices__item">
+                <a class="offices__link" href="mailto:hello@createx.com"><span
+                    class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
+              </li>
+              <li class="offices__item">
+                <span>Schedule:&nbsp;</span>Mon&nbsp;&mdash; Fri&nbsp;9:00&nbsp;&mdash;18:00
+              </li>
+            </ul>
+          </div>
+          <div class="offices__nav-coll">
+            <p class="offices__nav-title">San Francisco, USA</p>
+            <ul class="offices__list">
+              <li class="offices__item offices__item--address">
+                <span class="offices__address">8502 Preston Rd. Inglewood, San Francisco 98380</span>
+                <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                  rel="noopener noreferrer nofollow">See on the map</a>
+              </li>
+              <li class="offices__item">
+                <a class="offices__link" href="tel:5055550125"><span class="offices__link--name">Call:&nbsp;</span>(505)
+                  555-0125</a>
+              </li>
+              <li class="offices__item">
+                <a class="offices__link" href="mailto:hello@createx.com"><span
+                    class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
+              </li>
+              <li class="offices__item">
+                <span>Schedule:&nbsp;</span>Mon&nbsp;&mdash; Fri&nbsp;10:00&nbsp;&mdash;19:00
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </section>
 
@@ -351,7 +438,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-  <!-- <script src="js/main.js"></script> -->
+
+  <script src="./libs/choices/choices.min.js"></script>
+  <script src="js/selects.js"></script>
 </body>
 
 </html>
