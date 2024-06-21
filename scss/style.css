@@ -1373,12 +1373,29 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   width: 20px;
   height: 20px;
 }
-.social__link > svg {
+.social__item--contact {
+  width: 32px;
+  height: 32px;
+  color: var(--gray-700);
+}
+.social__link {
+  width: 100%;
+  height: 100%;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (any-hover: hover) {
+  .social__link--contact:hover {
+    color: var(--primary);
+  }
+}
+.social__link svg {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  fill: currentColor;
 }
 
 .breadcrumbs {
@@ -2770,4 +2787,14 @@ blockquote::before {
 }
 .offices__link--name {
   color: var(--gray-700);
+}
+.offices__social {
+  padding-top: 120px;
+}
+.offices__social-title {
+  margin-bottom: 40px;
+}
+.offices__social .social {
+  justify-content: center;
+  gap: 24px;
 }/*# sourceMappingURL=style.css.map */
