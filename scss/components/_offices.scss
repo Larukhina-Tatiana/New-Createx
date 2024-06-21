@@ -1,6 +1,6 @@
 .offices {
   padding-top: 80px;
-  padding-bottom: 95px;
+  padding-bottom: 122px;
   background: var(--gray-200);
 
   &__nav-title {
@@ -12,9 +12,6 @@
   }
 
   &__nav {
-    // display: flex;
-    // justify-content: space-between;
-    // gap: 10px;
     --valeus-gap: 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -44,7 +41,6 @@
 
   &__item {
     width: 100%;
-
     margin-bottom: 4px;
 
     &--address {
@@ -54,9 +50,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-
-
-
   }
 
   &__address {

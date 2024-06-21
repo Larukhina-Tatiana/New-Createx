@@ -16,6 +16,7 @@ const webp = require("gulp-webp");
 const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const svgSprite = require("gulp-svg-sprite");
+const fileinclude = require("gulp-file-include");
 
 // Конвертер шрифтов
 const fonter = require("gulp-fonter");
@@ -36,14 +37,25 @@ function fonts() {
 }
 
 // function includeh() {
-//   return src( "app/*.html")
+//   return src( "*.html")
 //     .pipe(
 //       include({
-//         includePaths: "app/html"
+//         includePaths: "html"
 //       })
 //     )
-//     .pipe(dest("app"));
+//     .pipe(dest(" "));
 // }
+const htmlInclude = () => {
+  return src(["./index.html"])
+    .pipe(
+      fileinclude({
+        prefix: "@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("./"))
+    .pipe(browserSync.stream());
+};
 
 function styles() {
   // return src("app/scss/style.scss")
