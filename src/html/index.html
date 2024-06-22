@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Createx Construction</title>
+  <link rel="stylesheet" href="./src/scss/modern-normalize.min.css">
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  @include('header.html')
+  <main class="main">
+    @include('hero.html')
+    @include('video.html')
+    @include('values.html')
+    @include('request-form.html')
+    @include('our-services.html')
+    @include('portfolio-section.html')
+    @include('clients.html')
+    @include('testimonials.html')
+    @include('facts.html')
+    @include('news-section.html')
+    @include('application-form.html')
+  </main>
+
+  @include('footer.html')
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+  <script src="./src/js/sliders.js"></script>
+  <script src="./src/js/video.js"></script>
+
+  <script src="./src/js/progress.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-aic {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-jcc {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-aic-jcsb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-fdc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-fdaifs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin flex-fd-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-fd-all-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@mixin font-style ($font-weight: 700, $font-size: 16px, $line-height: 1.6, $letter-spacing: 0.03em, $text-transform: uppercase) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

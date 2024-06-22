@@ -1,0 +1,89 @@
+.offices {
+  padding-top: 80px;
+  padding-bottom: 122px;
+  background: var(--gray-200);
+
+  &__nav-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--gray-900);
+    margin-bottom: 24px;
+  }
+
+  &__nav {
+    --valeus-gap: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--valeus-gap) * 2);
+  }
+
+  &__nav-coll {
+    width: 252px;
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: calc(-1 * var(--valeus-gap));
+        width: 1px;
+        height: 100%;
+        background-image: url(../images/icons/divider-offices.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 5;
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 4px;
+
+    &--address {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__address {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gray-900);
+
+    &--map {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--primary);
+    }
+
+    &--name {
+      color: var(--gray-700);
+    }
+  }
+
+  &__social {
+    padding-top: 120px;
+
+
+    &-title {
+      margin-bottom: 40px;
+    }
+
+    .social {
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+}

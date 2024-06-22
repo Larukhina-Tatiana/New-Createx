@@ -1,0 +1,79 @@
+.values {
+  @include flex-fdc;
+
+  &--padding-top {
+    padding-top: 80px;
+  }
+
+  &--padding-bottom {
+    padding-bottom: 180px;
+  }
+
+  &--bg-gray {
+    background-color: var(--gray-200);
+  }
+
+  &__list {
+    --valeus-gap: 94px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--valeus-gap) * 2);
+  }
+
+  &__item {
+    position: relative;
+    @include flex-fdc;
+    justify-content: center;
+    padding-top: 72px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 48px 48px;
+
+    &--quality {
+      background-image: url(../images/icons/ic-like.svg);
+    }
+
+    &--safety {
+      background-image: url(../images/icons/ic-hand.svg);
+    }
+
+    &--comfort {
+      background-image: url(../images/icons/ic-slippers.svg);
+    }
+
+    &--training {
+      background-image: url(../images/icons/training.svg);
+    }
+
+    &--growth {
+      background-image: url(../images/icons/growth.svg);
+    }
+
+    &--salary {
+      background-image: url(../images/icons/salary.svg);
+    }
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: calc(-1 * var(--valeus-gap));
+        width: 1px;
+        height: 100%;
+        background-image: url(../images/icons/divider.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__titleh3 {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

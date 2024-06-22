@@ -1,0 +1,31 @@
+.breadcrumbs {
+  // padding-top: 152px;
+  // padding-bottom: 40px;
+  margin-bottom: 40px;
+
+  &__list {
+    @include flex-aic;
+    list-style: none;
+  }
+
+
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray-800);
+
+    &::after {
+      content: "/";
+      margin-right: 8px;
+      margin-left: 8px;
+      color: var(--gray-600);
+    }
+  }
+
+  &__nolink {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray-600);
+  }
+}

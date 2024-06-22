@@ -1,0 +1,11 @@
+.view {
+  @include flex-all-center;
+  gap: 40px;
+
+  &__titleh4 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--gray-900);
+  }
+}

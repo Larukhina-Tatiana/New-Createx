@@ -1,0 +1,74 @@
+.post {
+  padding-bottom: 180px;
+
+  &__thumb {
+    margin-top: -80px;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 840px;
+  }
+
+  &__content {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    * {
+      margin-bottom: 28px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--gray-900);
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    blockquote {
+      margin-bottom: 66px;
+      top: 16px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--gray-900);
+    }
+
+    ul {
+      margin-bottom: 27px;
+
+      li {
+        padding-left: 30px;
+
+        &:not(:last-child) {
+          margin-bottom: 2px;
+        }
+
+        background: url(../images/icons/decisions-check.svg) center left / 16px 16px no-repeat;
+      }
+    }
+  }
+
+  &__share {
+    @include flex-aic;
+    gap: 12px;
+
+    span {
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+  }
+}

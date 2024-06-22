@@ -1,0 +1,61 @@
+.social {
+  @include flex-aic;
+  list-style: none;
+  gap: 16px;
+
+  &--footer {
+    gap: 16px;
+  }
+
+  &--team {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &--news {
+    gap: 11px;
+  }
+
+  &__item {
+    &--footer {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--team {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--contact {
+      width: 32px;
+      height: 32px;
+      color: var(--gray-700);
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    @include transition ($transition-property: color);
+
+    &--contact {
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--primary);
+        }
+
+      }
+    }
+
+    & svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      fill: currentColor;
+    }
+  }
+
+
+}

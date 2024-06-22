@@ -1,0 +1,21 @@
+.categories {
+  padding-top: 120px;
+  padding-bottom: 176px;
+
+  &__subtitle {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin-top: 60px;
+    gap: 55px 30px;
+  }
+
+  &__item {
+    grid-column: 6 span;
+  }
+
+  &__pag {
+    margin-top: 60px;
+  }
+}

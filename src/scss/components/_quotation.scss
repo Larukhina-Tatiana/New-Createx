@@ -1,0 +1,35 @@
+.quotation {
+  position: relative;
+  padding-bottom: 250px;
+
+  background-image: -webkit-image-set(url(../images/quotation/bg-image1@1x.png) type("image/png") 1x, url(../images/quotation/bg-image1@2x.png) type("image/png") 2x);
+  background-position: right -530px top -440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__thumbs {
+    width: 525px;
+    height: 580px;
+    overflow: hidden;
+    position: absolute;
+    left: 16px;
+    top: 131px;
+  }
+
+  &__content {
+    max-width: 734px;
+    padding: 90px 77px 77px;
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    border-radius: var(--border-radius);
+    z-index: 2;
+  }
+}
