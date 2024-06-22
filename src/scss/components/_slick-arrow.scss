@@ -1,5 +1,4 @@
 .slick-arrow {
-  // color: $gray;
   position: absolute;
   border-radius: 50%;
   background-color: var(--white);
@@ -12,19 +11,29 @@
   cursor: url('../images/icons/cursor.svg'), pointer;
   @include flex-all-center;
 
+  @include transition ($transition-property: (color, opacity));
+
   svg {
     width: 18px;
     height: 12px;
     z-index: 10;
   }
 
-  @include transition ($transition-property: opacity);
+
+  &:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
 
   @media (any-hover: hover) {
     &:hover {
       opacity: 1;
       box-shadow: 1px 5px 10px -5px black;
     }
+  }
+
+  &:active {
+    color: var(--primary);
   }
 
 }

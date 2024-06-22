@@ -22,7 +22,7 @@
   }
 
   &:active {
-    color: var(--active);
+    color: var(--primary);
   }
 
   &--large {
@@ -56,11 +56,20 @@
 
     @include transition ($transition-property: (background-color, color));
 
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
     @media (any-hover: hover) {
       &:hover {
         color: var(--white);
         background-color: var(--primary);
       }
+    }
+
+    &:active {
+      color: var(--primary);
     }
   }
 
@@ -71,6 +80,11 @@
     color: var(--gray-800);
     @include transition ($transition-property: color);
 
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
     @media (any-hover: hover) {
       &:hover {
         color: var(--primary);
@@ -79,6 +93,10 @@
           color: var(--primary);
         }
       }
+    }
+
+    &:active {
+      color: var(--primary);
     }
 
     svg {

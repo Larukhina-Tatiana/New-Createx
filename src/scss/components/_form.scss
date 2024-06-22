@@ -31,6 +31,17 @@
     & textarea {
       height: 66px;
     }
+
+    @include transition ($transition-property: color);
+
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    &:active {
+      color: var(--primary);
+    }
   }
 
   &__fields {

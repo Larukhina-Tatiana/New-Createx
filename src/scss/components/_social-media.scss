@@ -39,6 +39,21 @@
     height: 100%;
     @include transition ($transition-property: color);
 
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &:active {
+      color: var(--primary);
+    }
+
     &--contact {
       @media (any-hover: hover) {
         &:hover {

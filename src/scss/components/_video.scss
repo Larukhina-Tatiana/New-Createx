@@ -45,7 +45,22 @@
     transform: translate(-50%, -50%);
     @include flex-all-center;
     z-index: 3;
-    @include transition ($transition-property: (opacity, visibility));
+    @include transition ($transition-property: (opacity, visibility, background-color));
+
+    &:focus {
+      outline: 2px solid var(--danger);
+      outline-offset: 2px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--danger);
+      }
+    }
+
+    &:active {
+      background-color: var(--danger);
+    }
 
     &--played {
       opacity: 0;
@@ -64,6 +79,23 @@
     transform: translate(-50%, -50%);
     @include flex-all-center;
     z-index: 3;
+
+    @include transition ($transition-property: (background-color, color));
+
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(255, 255, 255, .4);
+      }
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, .4);
+    }
   }
 
 

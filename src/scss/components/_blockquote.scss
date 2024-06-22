@@ -40,15 +40,15 @@
 
 blockquote {
   position: relative;
-  padding-left: 58px;
+  // padding-left: 58px;
 
-  &::before {
-    position: absolute;
-    content: '';
-    width: 28px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background: url(../images/icons/quotes.svg) no-repeat;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   width: 28px;
+  //   height: 20px;
+  //   top: 0;
+  //   left: 0;
+  //   background: url(../images/icons/quotes.svg) no-repeat;
+  // }
 }
