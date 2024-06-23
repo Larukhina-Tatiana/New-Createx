@@ -51,6 +51,23 @@
       &--active {
         color: var(--primary);
       }
+
+      @include transition ($transition-property: color);
+
+      &:focus {
+        outline: none;
+        color: var(--primary);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      &:active {
+        color: var(--primary);
+      }
     }
   }
 
