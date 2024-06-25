@@ -16,7 +16,7 @@
     position: relative;
     font-weight: 700;
     color: var(--gray-900);
-    margin-top: 60px;
+    margin-top: 61px;
 
     &::after {
       position: absolute;
@@ -36,19 +36,20 @@
     line-height: 1.5;
     color: var(--gray-700);
   }
-}
 
-blockquote {
-  position: relative;
-  // padding-left: 58px;
 
-  // &::before {
-  //   position: absolute;
-  //   content: '';
-  //   width: 28px;
-  //   height: 20px;
-  //   top: 0;
-  //   left: 0;
-  //   background: url(../images/icons/quotes.svg) no-repeat;
-  // }
+  &--braces {
+    position: relative;
+    padding-left: 58px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 28px;
+      height: 20px;
+      top: 0;
+      left: 0;
+      background: url(../images/icons/quotes.svg) no-repeat;
+    }
+  }
 }

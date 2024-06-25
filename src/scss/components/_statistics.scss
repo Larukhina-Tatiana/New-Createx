@@ -1,6 +1,6 @@
 .statistics {
   padding-top: 121px;
-  padding-bottom: 120px;
+  padding-bottom: 106px;
 
 
   &__list {
@@ -9,7 +9,7 @@
 
   &__item {
     grid-column: 3 span;
-    @include flex-fd-all-center;
+    text-align: center;
     padding-top: 68px;
 
     &--recommend {
@@ -31,11 +31,13 @@
 
 
   &__amount {
+    display: inline-block;
     font-weight: 700;
     font-size: 46px;
     line-height: 1.3;
     text-align: center;
     color: var(--primary);
+    margin-bottom: 10px;
   }
 
   &__descr {

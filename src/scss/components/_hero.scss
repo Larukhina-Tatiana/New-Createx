@@ -1,9 +1,21 @@
 .hero {
-  position: relative;
-  // height: 90vh;
-  height: 988px;
-  color: var(--white);
-  background-color: rgba(30, 33, 44, 0.6);
+
+  &-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-slide {
+    position: relative;
+    min-height: 987px;
+    height: auto;
+    color: var(--white);
+    background-color: rgba(30, 33, 44, 0.6);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
   &__title {
     color: var(--white);
@@ -11,12 +23,11 @@
   }
 
   &__content {
-    position: absolute;
-    top: 22%;
+    padding-top: 220px;
+    padding-bottom: 354px;
     max-width: 580px;
     z-index: 2;
   }
-
 
   &__descr {
     font-size: 20px;
@@ -30,13 +41,77 @@
     gap: 24px;
   }
 
-  &__slider-item {
-    position: relative;
 
-    width: 100%;
-    height: 988px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  &__pagination {
+    counter-reset: num;
+    bottom: 120px !important;
+    text-align: left;
+    display: flex;
+    left: calc((100% - 1260px) / 2) !important;
+
+
+    .swiper-pagination-bullet {
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+
+      width: 178px;
+      height: auto;
+      background-color: transparent;
+      // border-bottom: 2px solid rgba((white), .3);
+      border-radius: 0;
+      opacity: 1;
+
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.5;
+      color: rgba((white), .6);
+      @include transition ($transition-property: color);
+
+      &::before {
+        counter-increment: num;
+        content: '0' counter(num);
+        margin-bottom: 12px;
+      }
+
+      &::after {
+        display: none;
+      }
+
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      color: var(--white);
+
+      .hero__bar::after {
+        transform: scaleX(1);
+        transition: transform var(--hero-slider-speed) ease-in-out;
+      }
+    }
   }
+
+  &__bar {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba((white), .3);
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba((white), .6);
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+  }
+}
+
+.swiper-wrapper {
+  align-items: stretch;
 }
