@@ -5,7 +5,7 @@
 @import "./components/_mixins";
 
 @import "./components/buttons";
-@import "./components/main";
+@import "./components/page";
 @import "./components/images";
 @import "./components/section";
 @import "./components/_header";
@@ -25,6 +25,7 @@
 @import "./components/_portfolio-section";
 @import "./components/slider-nav";
 @import "./components/_clients";
+@import "./components/clients-about";
 @import "./components/testimonials";
 @import "./components/facts";
 @import "./components/news-section";
@@ -36,7 +37,7 @@
 
 
 @import "./components/breadcrumbs";
-@import "./components/services-hero";
+
 @import "./components/services";
 @import "./components/weoffer";
 @import "./components/accordeon";

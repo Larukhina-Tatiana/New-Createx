@@ -1,0 +1,9 @@
+.page {
+
+  &-home {
+    .header {
+      position: relative;
+      background-color: var(--white);
+    }
+  }
+}

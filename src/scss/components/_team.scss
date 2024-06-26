@@ -33,6 +33,22 @@
 
   &__item {
     grid-column: 3 span;
+
+    @include transition ($transition-property: color);
+
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    &:focus-within {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    &:active {
+      color: var(--primary);
+    }
   }
 
   &__thumb {
@@ -77,5 +93,22 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--primary);
+
+    @include transition ($transition-property: color);
+
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--danger);
+      }
+    }
+
+    &:active {
+      color: var(--primary);
+    }
   }
 }

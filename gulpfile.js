@@ -40,8 +40,11 @@ function fonts() {
 
 function htmlInclude() {
   return (
-    src(["./src/html/index.html", "./src/html/about.html"])
-      // return src(["./src/html/about.html"])
+    src([
+      // "./src/html/index.html",
+      // "./src/html/about.html",
+      "./src/html/positions.html",
+    ])
       .pipe(
         fileinclude({
           prefix: "@",

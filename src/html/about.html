@@ -12,65 +12,16 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="page-about">
 
-  <!-- @include('header.html') -->
-  <header class="header header--secondary">
-    <div class="container">
-      <div class="header__inner">
-        <a class="logo" href="./index.html">
-          <img src="./images/icons/logo.svg" alt="Createx Logo">
-        </a>
-        <nav class="nav">
-          <button class="nav__menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--active" href="./about.html">About Us</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./services.html">Services</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Work</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">News</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./contacts.html">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address>
-          <ul class="header__contacts">
-            <li class="header__contacts-item">
-              <a class="header__contacts-link header__contacts-link--tel" href="tel:4055550128">
-                <span class="header__contacts-descr">Call us</span>
-                <span class="header__contacts-descr header__contacts-descr--fs">(405) 555-0128</span>
-              </a>
-            </li>
-            <li class="header__contacts-item">
-              <a class="header__contacts-link header__contacts-link--mail" href="mailto:hello@createx.com">
-                <span class="header__contacts-descr">Talk to us</span>
-                <span class="header__contacts-descr header__contacts-descr--fs">hello@createx.com</span>
-              </a>
-            </li>
-          </ul>
-        </address>
-      </div>
-    </div>
-  </header>
-  <main class="main main-about">
-    @include('page-hero.html')
+  @include('header.html')
+  <main>
+    @include('hero-about.html')
     @include('statistics.html')
     @include('quotation.html')
     @include('values.html')
     @include('history.html')
-    @include('clients.html')
+    @include('clients-about.html')
     @include('team.html')
     @include('map.html')
     @include('application-form.html')
@@ -78,127 +29,9 @@
 
   @include('footer.html')
 
-  <!-- <section class="clients clients--about">
-      <div class="container">
-        <h2 class="section__subtitle  section__subtitle--center">Our partners</h2>
-        <p class="clients__descr">We&nbsp;are supported by&nbsp;12+&nbsp;industry bodies and media partners</p>
-        <ul class="clients__list">
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo1.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo2.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo3.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo4.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo5.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo6.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo7.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo8.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo9.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo10.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo11.png" alt="Logo client">
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <img class="clients__link-svg" src="./images/clients/client-logo12.png" alt="Logo client">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section> -->
-  <!-- <section class="application-form section" style="background-image:
-    -webkit-image-set(url(./images/application/application-bg1@1x.avif) type('image/avif') 1x,
-      url(./images/application/application-bg1@2x.avif) type('image/avif') 2x,
-      url(./images/application/application-bg1@1x.webp) type('image/webp') 1x,
-      url(./images/application/application-bg1@2x.webp) type('image/webp') 2x,
-      url(./images/application/application-bg1@1x.jpg) 1x,
-      url(./images/application/application-bg1@2x.jpg) 2x)">
-      <h2 class="visually-hidden">application-form</h2>
-      <div class="container application-form__container">
-        <form class="application-form__form form" action="#">
-          <p class="form__title">A&nbsp;quick way to&nbsp;discuss details</p>
-
-          <label class="form__label" for="first-name">Name*
-            <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name">
-          </label>
-
-          <label class="form__label" for="phone">Phone*
-            <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" required>
-          </label>
-          <label class="form__label" for="e-mail">Email
-            <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
-          </label>
-          <label class="form__label" for="comment">Message*
-            <textarea class="form__input" id="comment" placeholder="Your message"></textarea>
-          </label>
-
-          <input class="checkbox" type="checkbox" name="policy" id="policy" checked>
-          <label class="checkbox__label" for="policy">
-            <span class="checkbox__castom-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" fill="none">
-                <path fill="#fff" fill-rule="evenodd"
-                  d="M9.828.195c.23.26.23.683 0 .943L3.945 7.805a.54.54 0 0 1-.832 0L.173 4.47a.731.731 0 0 1 0-.942.54.54 0 0 1 .831 0L3.53 6.39 8.996.195a.54.54 0 0 1 .832 0Z"
-                  clip-rule="evenodd" />
-              </svg>
-            </span>
-            <span class="checkbox__text">I&nbsp;agree to&nbsp;receive communications from Createx Construction
-              Bureau.</span>
-          </label>
-
-          <button class="button button--regular" type="submit">send request</button>
-        </form>
-
-      </div>
-    </section> -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-
-  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-
   <script src="libs/swiper/swiper-bundle.min.js"></script>
   <script src="./src/js/sliders.js"></script>
-  <!-- <script src="js/main.js"></script> -->
 </body>
 
 </html>

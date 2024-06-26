@@ -3,5 +3,15 @@
   height: 600px;
   background-repeat: no-repeat;
   background-color: var(--gray-200);
-  background-position: right top;
+  // background-position: right top;
+  background-position: bottom right;
+
+
+  &__content {
+    max-width: 600px;
+  }
+
+  &__title {
+    margin-bottom: 21px;
+  }
 }

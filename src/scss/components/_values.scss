@@ -1,17 +1,18 @@
 .values {
   @include flex-fdc;
   padding-top: 120px;
-  // &--padding-top {
-  //   padding-top: 80px;
-  // }
 
-  // &--padding-bottom {
-  //   padding-bottom: 180px;
-  // }
+  &--padding-top {
+    padding-top: 80px;
+  }
 
-  // &--bg-gray {
-  //   background-color: var(--gray-200);
-  // }
+  &--padding-bottom {
+    padding-bottom: 180px;
+  }
+
+  &--bg-gray {
+    background-color: var(--gray-200);
+  }
 
   &__list {
     --valeus-gap: 94px;

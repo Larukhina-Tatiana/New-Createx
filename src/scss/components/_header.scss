@@ -1,21 +1,15 @@
 .header {
   padding-top: 20px;
-
-  &--padding-bottom {
-    padding-bottom: 21px;
-  }
-
-  &--secondary {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    width: 100%;
-  }
+  padding-bottom: 20px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 100%;
+  background-color: var(--gray-200);
 
   &__inner {
     @include flex-aic-jcsb;
   }
-
 
   &__contacts {
     @include flex-aic-jcsb;
