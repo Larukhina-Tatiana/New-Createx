@@ -1,6 +1,7 @@
 .form {
   &__title {
-    margin-bottom: 12px;
+    margin-bottom: 24px;
+    text-align: center;
   }
 
   &__label {
@@ -9,6 +10,10 @@
     line-height: 1.5;
     color: var(--gray-800);
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
 
     &--big {
       width: 414px;
@@ -20,7 +25,7 @@
   }
 
   &__input {
-    margin-top: 6px;
+    margin-top: 8px;
     padding: 13px 16px;
     border: 1px solid var(--gray-400);
     border-radius: var(--border-radius);
@@ -66,10 +71,10 @@
 }
 
 
-
 .checkbox__label {
   display: flex;
   gap: 7px;
+  cursor: pointer;
   // @include transition ($transition-property: color);
 }
 
@@ -106,4 +111,16 @@ checkbox:checked + .checkbox__label .checkbox__castom-icon .checkbox__icon-check
   cursor: pointer;
   opacity: 0;
   @include transition ($transition-property: opacity);
+}
+
+.checkbox__file-text {
+  padding-left: calc(24px + 12px);
+  background: url(../images/icons/attach.svg) left center / 24px 24px no-repeat;
+}
+
+textarea {
+  resize: none;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
