@@ -39,21 +39,20 @@ function fonts() {
 }
 
 function htmlInclude() {
-  return (
-    src([
-      // "./src/html/index.html",
-      // "./src/html/about.html",
-      "./src/html/positions.html",
-    ])
-      .pipe(
-        fileinclude({
-          prefix: "@",
-          basepath: "@file",
-        })
-      )
-      .pipe(dest("./"))
-      .pipe(browserSync.stream())
-  );
+  return src([
+    "./src/html/index.html",
+    "./src/html/about.html",
+    "./src/html/positions.html",
+    "./src/html/contacts.html",
+  ])
+    .pipe(
+      fileinclude({
+        prefix: "@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("./"))
+    .pipe(browserSync.stream());
 }
 
 const notify = require("gulp-notify");

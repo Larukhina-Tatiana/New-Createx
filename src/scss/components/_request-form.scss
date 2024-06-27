@@ -2,15 +2,15 @@
   @include flex-fdc;
 
   &__title {
-    padding-top: 49px;
+    padding-top: 48px;
   }
 
   &__block {
-    padding: 20px 60px 43px;
+    padding: 32px 60px 43px;
     display: flex;
     gap: 24px;
     border-radius: var(--border-radius);
-    max-width: 100%;
+    width: 100%;
     box-shadow: var(--box-shadow);
     background: var(--white);
   }

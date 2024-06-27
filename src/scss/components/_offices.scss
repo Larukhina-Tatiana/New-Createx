@@ -61,6 +61,22 @@
     font-size: 16px;
     line-height: 1.6;
     color: var(--gray-900);
+    @include transition ($transition-property: color);
+
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &:active {
+      color: var(--primary);
+    }
 
     &--map {
       text-decoration: underline;
