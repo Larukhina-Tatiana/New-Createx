@@ -40,10 +40,16 @@ function fonts() {
 
 function htmlInclude() {
   return src([
-    "./src/html/index.html",
-    "./src/html/about.html",
-    "./src/html/positions.html",
-    "./src/html/contacts.html",
+    // "./src/html/index.html",
+    // "./src/html/about.html",
+    // "./src/html/positions.html",
+    // "./src/html/contacts.html",
+    // "./src/html/services.html",
+    // "./src/html/services-inside.html",
+    // "./src/html/work.html",
+    // "./src/html/work-inside.html",
+    // "./src/html/news.html",
+    "./src/html/news1.html",
   ])
     .pipe(
       fileinclude({

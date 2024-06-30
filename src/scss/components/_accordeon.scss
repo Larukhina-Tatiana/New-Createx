@@ -1,5 +1,7 @@
 .accordeon {
 
+  &__item {}
+
   &__title {
     position: relative;
     padding-left: 42px;
@@ -10,6 +12,16 @@
     color: var(--gray-900);
     margin-bottom: 12px;
     text-align: left;
+    @include transition ($transition-property: color);
+
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    &:active {
+      color: var(--primary);
+    }
 
     &-icon {
       position: absolute;
@@ -27,9 +39,6 @@
         @include transition ($transition-property: (transform, opacity));
       }
     }
-
-
-
   }
 
   &__text {

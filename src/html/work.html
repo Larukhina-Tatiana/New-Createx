@@ -5,30 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Createx Services Available Positions</title>
+  <title>Createx Work</title>
 
   <link rel="stylesheet" href="./src/scss/modern-normalize.min.css">
-  <link rel="stylesheet" href="css/graph-modal.min.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page-positions">
+<body class="page-work">
   @include('header.html')
-  <main>
-    @include('hero-positions.html')
-    @include('vacancies.html')
-    @include('values-positions.html')
+  <main class="main">
+    @include('hero-work.html')
+    @include('portfolio.html')
+    @include('testimonials.html')
+    @include('clients.html')
     @include('application-form.html')
   </main>
   @include('footer.html')
-  @include('modals.html')
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="./src/js/graph-modal.min.js"></script>
-  <script src=".src/js/selects.js"></script>
-  <script src="./src/js/modals.js"></script>
-
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="libs/mixitup-v3/patrickkunka-mixitup-61dac05/dist/mixitup.min.js"></script>
+  <script src="./src/js/sliders.js"></script>
+  <script src="./src/js/tabs.js"></script>
 </body>
 
 </html>

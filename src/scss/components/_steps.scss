@@ -1,6 +1,6 @@
 .steps {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 95px;
+  padding-bottom: 108px;
 
   &__title {
     text-align: left;
@@ -12,8 +12,6 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
     counter-reset: number;
-
-
   }
 
   &__item {
@@ -22,8 +20,6 @@
     list-style: none;
     padding-top: 116px;
     padding-left: 28px;
-    // width: 316px;
-    // height: 192px;
     background-image: none;
 
     background-position: top left;
@@ -58,8 +54,6 @@
         background-size: cover;
       }
     }
-
-
 
     @media (any-hover: hover) {
       &:hover {

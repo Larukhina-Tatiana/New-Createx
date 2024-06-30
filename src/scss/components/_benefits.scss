@@ -1,5 +1,6 @@
 .benefits {
   padding-top: 80px;
+  padding-bottom: 2px;
   background-color: var(--gray-900);
   color: var(--white-op);
 
@@ -18,7 +19,6 @@
       background-image: url(../images/icons/benefits-icon1.svg);
     }
 
-
     &--icon2 {
       background-image: url(../images/icons/benefits-icon2.svg);
     }
@@ -27,6 +27,11 @@
       background-image: url(../images/icons/benefits-icon3.svg);
     }
   }
+
+  &__titleh3 {
+    color: var(--white);
+  }
+
 
   &__link {
     position: absolute;

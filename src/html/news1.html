@@ -6,29 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Createx Services Available Positions</title>
+  <title>Createx Single Post</title>
 
   <link rel="stylesheet" href="./src/scss/modern-normalize.min.css">
-  <link rel="stylesheet" href="css/graph-modal.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page-positions">
+<body>
   @include('header.html')
-  <main>
-    @include('hero-positions.html')
-    @include('vacancies.html')
-    @include('values-positions.html')
+  <main class="main">
+    @include('hero-work1.html')
+    @include('post.html')
     @include('application-form.html')
   </main>
   @include('footer.html')
-  @include('modals.html')
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="./src/js/graph-modal.min.js"></script>
-  <script src=".src/js/selects.js"></script>
-  <script src="./src/js/modals.js"></script>
-
 </body>
 
 </html>

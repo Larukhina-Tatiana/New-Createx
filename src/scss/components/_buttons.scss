@@ -90,6 +90,7 @@
         color: var(--primary);
 
         svg {
+          @include transition ($transition-property: color);
           color: var(--primary);
         }
       }

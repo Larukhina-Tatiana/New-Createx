@@ -25,6 +25,15 @@
         margin-top: 3px;
       }
     }
+
+    .clients {
+      padding-top: 80px;
+      background-color: var(--gray-200);
+
+      &__title {
+        display: none;
+      }
+    }
   }
 
   &-about {
@@ -38,6 +47,58 @@
   &-contacts {
     .header {
       background-color: transparent;
+    }
+  }
+
+  &-services-inside {
+    .clients {
+      padding-top: 120px;
+      padding-bottom: 120px;
+      background-color: var(--gray-200);
+
+      &__title {
+        display: none;
+      }
+    }
+
+    .similar {
+      display: none;
+    }
+  }
+
+  &-work {
+    .testimonials {
+      padding-top: 80px;
+    }
+
+    .clients {
+      padding-top: 172px;
+      padding-bottom: 125px;
+
+      .partners__title {
+        display: none;
+      }
+    }
+
+    blockquote::before {
+      display: none;
+      padding-left: 0;
+    }
+  }
+
+  &-work-inside {
+    .page-hero {
+      height: auto;
+      background-color: var(--white);
+      background-position: top right;
+    }
+
+    .related {
+      display: none;
+    }
+
+    .projects {
+      padding-bottom: 117px;
     }
   }
 }
