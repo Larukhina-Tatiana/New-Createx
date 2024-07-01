@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page-home">
+<body class="page-home" id="page">
   <header class="header">
   <div class="container">
     <div class="header__inner">
@@ -862,7 +862,17 @@
   </main>
 
   <footer class="footer">
-  <div class="container footer__container">
+  <a href="#page" data-scroll class="to-top">
+    <span class="to-top__text">Go to top</span>
+    <span class="to-top__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+        <path fill="#fff" fill-rule="evenodd"
+          d="M4.293 15.707a1 1 0 0 1 0-1.414l7-7a1 1 0 0 1 1.414 0l7 7a1 1 0 0 1-1.414 1.414L12 9.414l-6.293 6.293a1 1 0 0 1-1.414 0Z"
+          clip-rule="evenodd" />
+      </svg>
+    </span>
+  </a>
+  <div class="container footer__container grid">
     <div class="footer__left">
       <div class="footer__inner">
         <a class="footer__logo logo" href="./index.html">
@@ -986,13 +996,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="libs/slick/slick.min.js"></script>
   <script src="libs/swiper/swiper-bundle.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  <script src="libs/smoothscroll/smooth-scroll.min.js"></script>
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   <!-- <script src="./src/js/main.js"></script> -->
   <script src="./src/js/sliders.js"></script>
   <script src="./src/js/video.js"></script>
 
   <script src="./src/js/progress.js"></script>
+  <script src="./src/js/to-top.js"></script>
 </body>
 
 </html>

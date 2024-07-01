@@ -9,16 +9,20 @@
 
     @include transition ($transition-property: color);
 
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
     @media (any-hover: hover) {
       &:hover {
         color: var(--primary);
       }
     }
 
-    // & > svg {
-    //   width: 24px;
-    //   height: 24px;
-    // }
+    &:active {
+      color: var(--primary);
+    }
 
     &--active {
       color: var(--primary);

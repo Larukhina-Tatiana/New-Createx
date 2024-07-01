@@ -1,22 +1,8 @@
-// .backdrop {
-//     position: fixed;
-//     inset: 0;
-//     width: 100%;
-//     height: 100vh;
-//     background-color: rgba(30, 33, 44, .75);
-//     z-index: 1;
-
-//     @include transition ((opaciti, visibility));
-// }
-
 .modal {
     &__container {
-        //     position: absolute;
-        padding: 48px;
         width: 486px;
-        // height: 412px;
-        //     inset: 0;
         margin: auto;
+        padding: 48px;
 
         border: 1px solid var(--gray-300);
         border-radius: var(--border-radius);
@@ -42,28 +28,15 @@
         }
 
 
-        &:focus {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
-        }
+        // &:focus {
+        //     outline: 2px solid var(--primary);
+        //     outline-offset: 2px;
+        // }
 
         @media (any-hover: hover) {
             &:hover &-icon {
                 color: var(--primary);
             }
         }
-
-        // &:active {
-        //     color: var(--primary);
-        // }
     }
 }
-
-// .is-hidden {
-//     visibility: hidden;
-//     cursor: pointer;
-// }
-
-// .is-hidden .modal {
-//     scale: 0;
-// }

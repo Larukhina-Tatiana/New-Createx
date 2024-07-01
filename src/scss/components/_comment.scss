@@ -40,10 +40,43 @@
       font-weight: 700;
       display: inline-block;
       color: var(--primary);
+      @include transition ($transition-property: color);
+
+      &:focus {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--danger);
+        }
+      }
+
+      &:active {
+        color: var(--danger);
+      }
     }
   }
 
   &__reply {
+    @include transition ($transition-property: color);
+
+    &:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &:active {
+      color: var(--primary);
+    }
+
     &-svg {
       margin-right: 4px;
       display: inline-block;

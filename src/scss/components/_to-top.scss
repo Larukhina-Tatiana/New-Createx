@@ -1,0 +1,51 @@
+.to-top {
+  position: fixed;
+  right: calc((100% - 1230px) / 2);
+  bottom: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  @include transition ($transition-property: (opacity, visibility));
+
+
+  &__text {
+    margin-right: 16px;
+    text-shadow: 3px 3px 11px rgba(150, 150, 150, 1);
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    @include transition ($transition-property: background-color);
+
+
+    svg {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+    }
+
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // @include middledesk {
+  //   right: 20px;
+  //   bottom: 20px;
+  // }
+}
