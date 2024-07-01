@@ -12,7 +12,8 @@
 
   &__contacts {
     @include flex-aic-jcsb;
-    gap: 36px;
+    // gap: 36px;
+    gap: clamp(1rem, -4.424rem + 8.47vw, 2.25rem);
   }
 
   &__contacts-link {
@@ -21,7 +22,8 @@
     background-position: left center;
     background-size: 40px 40px;
     background-repeat: no-repeat;
-    font-size: 18px;
+    // font-size: 18px;
+    font-size: clamp(1rem, 0.458rem + 0.85vw, 1.125rem);
     font-weight: 400;
     color: var(--gray-900);
     @include transition ($transition-property: color);

@@ -34,6 +34,12 @@
         display: none;
       }
     }
+
+    blockquote::before {
+      display: none;
+      padding-left: 0;
+    }
+
   }
 
   &-about {
@@ -78,11 +84,6 @@
       .partners__title {
         display: none;
       }
-    }
-
-    blockquote::before {
-      display: none;
-      padding-left: 0;
     }
   }
 

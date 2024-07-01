@@ -41,12 +41,14 @@
 
 
   &__pagination {
+    padding-left: 15px;
     counter-reset: num;
     bottom: 120px !important;
     text-align: left;
     display: flex;
     gap: 4px;
-    left: calc((100% - 1260px) / 2) !important;
+    // left: calc((100% - 1260px) / 2) !important;
+    left: calc((100% - clamp(64rem, 100vw, 78.75rem)) / 2) !important;
 
 
 

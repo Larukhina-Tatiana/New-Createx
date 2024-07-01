@@ -1,6 +1,6 @@
 .to-top {
   position: fixed;
-  right: calc((100% - 1230px) / 2);
+  right: calc((100% - clamp(64rem, 100vw, 78.75rem)) / 2);
   bottom: 80px;
   z-index: 1000;
   display: flex;

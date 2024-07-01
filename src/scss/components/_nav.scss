@@ -1,19 +1,21 @@
 .nav {
   margin-right: auto;
-  margin-left: 60px;
+  // margin-left: 60px;
+  margin-left: clamp(2.75rem, -1.589rem + 6.78vw, 3.75rem);
 
   &__menu-btn {
     display: none;
   }
 
   &__list {
-    padding: 13px 0;
     @include flex-aic-jcsb;
-    gap: 40px;
+    // gap: 40px;
+    gap: clamp(1.5rem, -2.839rem + 6.78vw, 2.5rem);
     color: var(--gray-800);
   }
 
   &__link {
+    padding: 13px 0;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.6;
