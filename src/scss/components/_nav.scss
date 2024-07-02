@@ -40,4 +40,8 @@
       color: var(--primary);
     }
   }
+
+  @media screen and (width < 768.01px) {
+    display: none;
+  }
 }

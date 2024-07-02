@@ -59,6 +59,12 @@
     line-height: 1.5;
     color: var(--gray-800);
   }
+
+  @media screen and (width < 768.01px) {
+    &__contacts {
+      display: none;
+    }
+  }
 }
 
 .logo {
