@@ -1,5 +1,6 @@
 .testimonials {
-  padding-top: 185px;
+  // padding-top: 185px;
+  padding-top: clamp(4.375rem, 3.276rem + 5.49vw, 7.5rem);
   background-color: var(--gray-200);
 
   &__container {
@@ -18,7 +19,8 @@
   }
 
   &__subtitle {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
+    margin-bottom: clamp(1.875rem, 1.216rem + 3.3vw, 3.75rem);
   }
 
   &__blockquote-text {
@@ -50,5 +52,26 @@
     position: relative;
     z-index: 5;
     margin-bottom: -60px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    &__content {
+      max-width: clamp(20.313rem, -31.25rem + 107.42vw, 37.5rem);
+    }
+  }
+
+  @media screen and (width < 768.01px) {
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__blockquote {
+      padding-left: 32px;
+    }
+
+    &__img {
+      display: none;
+    }
   }
 }

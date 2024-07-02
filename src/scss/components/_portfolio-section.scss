@@ -1,6 +1,7 @@
 .portfolio-section {
   background-color: var(--white);
-  padding-bottom: 120px;
+  // padding-bottom: 120px;
+  padding-bottom: clamp(4.375rem, 3.276rem + 5.49vw, 7.5rem);
 
 
   &__top {

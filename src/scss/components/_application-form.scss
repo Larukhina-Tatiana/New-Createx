@@ -12,7 +12,8 @@
 
 
   &__form {
-    padding: 48px 40px;
+    // padding: 48px 40px;
+    padding: 48px clamp(0.625rem, -0.034rem + 3.3vw, 2.5rem);
     border: 1px solid var(--gray-300);
     border-radius: var(--border-radius);
     width: 495px;
@@ -27,7 +28,7 @@
   }
 
   .form__label {
-    width: 100%;
+    // width: 100%;
     margin-bottom: 17px;
   }
 

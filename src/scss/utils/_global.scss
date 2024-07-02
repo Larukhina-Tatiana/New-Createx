@@ -65,7 +65,7 @@ address {
 body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(0.875rem, 0.831rem + 0.22vw, 1rem);
     line-height: 1.6;
     color: var(--gray-800);
     overflow-x: hidden;

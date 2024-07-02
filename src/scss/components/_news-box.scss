@@ -51,8 +51,9 @@
   &__meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    font-size: 14px;
+    gap: 4px 12px;
+    // font-size: 14px;
+    font-size: clamp(0.75rem, 0.706rem + 0.22vw, 0.875rem);
     line-height: 1.5;
     color: var(--gray-700);
     margin-bottom: 16px;
@@ -104,5 +105,17 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  @media screen and (width < 1024.01px) {
+    &--small {
+      .news-box__descr {
+        display: block;
+      }
+
+      .news-box__meta {
+        margin-bottom: 16px;
+      }
+    }
   }
 }

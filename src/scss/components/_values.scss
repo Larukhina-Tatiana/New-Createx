@@ -1,6 +1,7 @@
 .values {
   @include flex-fdc;
-  padding-top: 120px;
+  // padding-top: 120px;
+  padding-top: clamp(2.5rem, 0.742rem + 8.79vw, 7.5rem);
 
   &--padding-top {
     padding-top: 80px;
@@ -15,15 +16,17 @@
   }
 
   &__list {
-    --valeus-gap: 94px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    // --valeus-gap: 94px;
+    --valeus-gap: clamp(1.875rem, -4.774rem + 13.85vw, 5.875rem);
     gap: calc(var(--valeus-gap) * 2);
   }
 
   &__item {
     position: relative;
-    @include flex-fdc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding-top: 72px;
     background-repeat: no-repeat;
@@ -76,5 +79,15 @@
 
   &__text {
     text-align: center;
+  }
+
+  @media screen and (width < 768px) {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item:not(:last-child)::after {
+      display: none;
+    }
   }
 }

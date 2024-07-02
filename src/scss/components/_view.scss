@@ -1,10 +1,12 @@
 .view {
   @include flex-all-center;
+  flex-wrap: wrap;
   gap: 40px;
 
   &__titleh4 {
     font-weight: 700;
-    font-size: 28px;
+    // font-size: 28px;
+    font-size: clamp(1rem, 0.736rem + 1.32vw, 1.75rem);
     line-height: 1.5;
     color: var(--gray-900);
   }

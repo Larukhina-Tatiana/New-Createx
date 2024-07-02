@@ -22,7 +22,8 @@
 
   &__inner {
     @include flex-aic;
-    gap: 0 60px;
+    flex-wrap: wrap;
+    gap: 30px 60px;
     margin-bottom: 25px;
   }
 
@@ -118,7 +119,8 @@
   &__copyright {
     grid-column: 12 span;
     margin-top: 9px;
-    font-size: 12px;
+    // font-size: 12px;
+    font-size: clamp(0.688rem, 0.666rem + 0.11vw, 0.75rem);
     line-height: 1.5;
     color: var(--white);
 
@@ -131,5 +133,43 @@
     }
   }
 
+  @media screen and (width < 768.01px) {
+    &__container {
+      display: block;
+    }
 
+    &__left {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      &-text {
+        max-width: none;
+      }
+    }
+
+    &__form {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__address {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__nav {
+      padding-left: 0;
+      justify-content: space-around;
+      gap: 10px;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
 }

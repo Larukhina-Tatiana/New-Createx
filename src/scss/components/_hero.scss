@@ -8,7 +8,7 @@
 
   &-slide {
     position: relative;
-    min-height: 987px;
+    // min-height: 987px;
     height: auto;
     color: var(--white);
     background-color: rgba(30, 33, 44, 0.6);
@@ -23,8 +23,10 @@
   }
 
   &__content {
-    padding-top: 220px;
-    padding-bottom: 354px;
+    // padding-top: 220px;
+    // padding-bottom: 354px;
+    padding-top: clamp(4.375rem, 1.078rem + 16.48vw, 13.75rem);
+    padding-bottom: clamp(6.25rem, 0.668rem + 27.91vw, 22.125rem);
     max-width: 580px;
     z-index: 2;
   }
@@ -36,6 +38,7 @@
   &__buttons {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 24px;
   }
 
@@ -43,12 +46,13 @@
   &__pagination {
     padding-left: 15px;
     counter-reset: num;
-    bottom: 120px !important;
+    // bottom: 120px !important;
+    bottom: clamp(2.125rem, 0.235rem + 9.45vw, 7.5rem) !important;
     text-align: left;
     display: flex;
     gap: 4px;
     // left: calc((100% - 1260px) / 2) !important;
-    left: calc((100% - clamp(64rem, 100vw, 78.75rem)) / 2) !important;
+    left: calc((100% - clamp(20rem, 100vw, 76.875rem)) / 2) !important;
 
 
 
@@ -64,7 +68,8 @@
       opacity: 1;
 
       font-weight: 700;
-      font-size: 28px;
+      // font-size: 28px;
+      font-size: clamp(1.125rem, 0.905rem + 1.1vw, 1.75rem);
       line-height: 1.5;
       color: rgba((white), .6);
       @include transition ($transition-property: color);

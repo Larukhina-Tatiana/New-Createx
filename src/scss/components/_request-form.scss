@@ -6,8 +6,11 @@
   }
 
   &__block {
-    padding: 32px 60px 43px;
+    // padding: 32px 60px 43px;
+    padding: 32px clamp(0.625rem, -0.474rem + 5.49vw, 3.75rem) 43px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     border-radius: var(--border-radius);
     width: 100%;

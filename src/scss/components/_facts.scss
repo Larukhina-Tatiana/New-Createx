@@ -1,7 +1,9 @@
 .facts {
   background-color: var(--white);
-  padding-top: 180px;
-  padding-bottom: 57px;
+  // padding-top: 180px;
+  padding-top: clamp(4.375rem, 1.957rem + 12.09vw, 11.25rem);
+  // padding-bottom: 57px;
+  padding-bottom: clamp(1.25rem, 0.437rem + 4.07vw, 3.563rem);
   position: relative;
   overflow: hidden;
 
@@ -28,14 +30,25 @@
 
   &__list {
     max-width: 736px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 48px;
+    // gap: 48px;
+    column-gap: clamp(1.563rem, 1.057rem + 2.53vw, 3rem);
+    row-gap: 40px;
     margin: 0 auto;
   }
 
-  &__item {}
+  &__item {
+    grid-column: 3 span;
+  }
 
+  @media screen and (width < 768.01px) {
+    &__list {
+      justify-items: center;
+    }
+
+    &__item {
+      grid-column: 6 span;
+    }
+  }
 
 
 
