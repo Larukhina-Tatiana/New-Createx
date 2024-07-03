@@ -23,9 +23,10 @@
     width: 100%;
     font-size: 16px;
     line-height: 1.6;
+    height: 52px;
   }
 
-  & textarea {
+  .form__textarea {
     height: 128px;
   }
 
@@ -41,5 +42,24 @@
 
   .button--large {
     padding: 0 42px;
+  }
+
+  @media screen and (width < 1025.01px) {
+    .form__label--big {
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (width < 768.01px) {
+    &__grup {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__policy-box {
+      flex-direction: column;
+    }
   }
 }

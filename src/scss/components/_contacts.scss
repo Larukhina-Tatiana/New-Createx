@@ -9,6 +9,13 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 30px 10px;
+  }
+
+  @media screen and (width < 1025.01px) {
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
