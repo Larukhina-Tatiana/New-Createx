@@ -60,10 +60,12 @@
     color: var(--gray-800);
   }
 
-  @media screen and (width < 768.01px) {
-    &__contacts {
-      display: none;
-    }
+  @media screen and (width < 1025.01px) {
+    display: none;
+
+    // &__contacts {
+    //   display: none;
+    // }
   }
 }
 

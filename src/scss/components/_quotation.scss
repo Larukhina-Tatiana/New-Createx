@@ -1,6 +1,7 @@
 .quotation {
   position: relative;
-  padding-bottom: 250px;
+  // padding-bottom: 250px;
+  padding-bottom: clamp(7.5rem, -32.888rem + 63.11vw, 15.625rem);
 
   background-image: -webkit-image-set(url(../images/quotation/bg-image1@1x.png) type("image/png") 1x, url(../images/quotation/bg-image1@2x.png) type("image/png") 2x);
   background-position: right -530px top -440px;
@@ -16,7 +17,8 @@
   }
 
   &__thumbs {
-    width: 525px;
+    // width: 525px;
+    width: clamp(22.625rem, -28.016rem + 79.13vw, 32.813rem);
     height: 580px;
     overflow: hidden;
     position: absolute;
@@ -26,10 +28,32 @@
 
   &__content {
     max-width: 734px;
-    padding: 90px 77px 77px;
+    // padding: 90px 77px 77px;
+    padding: clamp(0.938rem, -0.711rem + 8.24vw, 5.625rem) clamp(0.625rem, -0.848rem + 7.36vw, 4.813rem) clamp(0.625rem, -0.848rem + 7.36vw, 4.813rem);
     box-shadow: var(--box-shadow);
     background: var(--white);
     border-radius: var(--border-radius);
     z-index: 2;
+  }
+
+  @media screen and (width < 1025px) {
+    &__container {
+      display: block;
+    }
+
+    &__thumbs {
+      position: static;
+      margin: 0 auto;
+    }
+
+    &__content {
+      max-width: none;
+    }
+  }
+
+  @media screen and (width < 425.01px) {
+    &__thumbs {
+      display: none;
+    }
   }
 }

@@ -1,4 +1,6 @@
 .clients-about {
-  padding-top: 120px;
-  padding-bottom: 80px;
+  // padding-top: 120px;
+  padding-top: clamp(2.5rem, 0.742rem + 8.79vw, 7.5rem);
+  // padding-bottom: 80px;
+  padding-bottom: clamp(1.25rem, -0.069rem + 6.59vw, 5rem);
 }

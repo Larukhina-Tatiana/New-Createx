@@ -1,9 +1,11 @@
 .blockquote {
-  padding-left: 58px;
+  // padding-left: 58px;
+  padding-left: clamp(2.5rem, 2.104rem + 1.98vw, 3.625rem);
 
   &__text {
     font-weight: 700;
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: clamp(1.125rem, 1.081rem + 0.22vw, 1.25rem);
     line-height: 1.5;
     color: var(--gray-900);
 

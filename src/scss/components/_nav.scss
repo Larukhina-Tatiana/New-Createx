@@ -1,7 +1,7 @@
 .nav {
   margin-right: auto;
   // margin-left: 60px;
-  margin-left: clamp(2.75rem, -1.589rem + 6.78vw, 3.75rem);
+  margin-left: clamp(1.25rem, -11.177rem + 19.42vw, 3.75rem);
 
   &__menu-btn {
     display: none;
@@ -41,7 +41,7 @@
     }
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (width < 1024.01px) {
     display: none;
   }
 }

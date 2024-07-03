@@ -16,4 +16,8 @@
     //   background-size: cover;
     //   background-repeat: no-repeat;
   }
+
+  @media screen and (width < 1025.99px) {
+    display: none;
+  }
 }

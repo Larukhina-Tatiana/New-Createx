@@ -111,4 +111,26 @@
       color: var(--primary);
     }
   }
+
+  @media screen and (width < 1170.99px) {
+    &__list {
+      justify-items: center;
+    }
+
+    &__item {
+      grid-column: 4 span;
+    }
+  }
+
+  @media screen and (width < 980.99px) {
+    &__item {
+      grid-column: 6 span;
+    }
+  }
+
+  @media screen and (width < 585.99px) {
+    &__item {
+      grid-column: 12 span;
+    }
+  }
 }

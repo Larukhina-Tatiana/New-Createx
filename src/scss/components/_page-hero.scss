@@ -7,6 +7,11 @@
 
   &__content {
     max-width: 600px;
+
+    @media screen and (min-width: 1025px) and (max-width: 1230px) {
+      max-width: clamp(21.875rem, -55.795rem + 121.36vw, 37.5rem);
+    }
+
   }
 
   &__title {
@@ -14,7 +19,14 @@
   }
 
   &__descr {
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: clamp(1.125rem, 1.081rem + 0.22vw, 1.25rem);
     line-height: 1.5;
+  }
+
+  @media screen and (width < 1025px) {
+    background-image: none !important;
+    padding-top: 100px;
+    height: 460px;
   }
 }

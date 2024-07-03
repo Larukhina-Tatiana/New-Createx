@@ -1,6 +1,8 @@
 .history {
-  padding-top: 180px;
-  padding-bottom: 100px;
+  // padding-top: 180px;
+  padding-top: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
+  // padding-bottom: 100px;
+  padding-bottom: clamp(2.5rem, 1.181rem + 6.59vw, 6.25rem);
   background-color: var(--gray-200);
 
 
@@ -19,7 +21,8 @@
     &__btn {
       position: relative;
       font-weight: 700;
-      font-size: 28px;
+      // font-size: 28px;
+      font-size: clamp(0.875rem, 0.567rem + 1.54vw, 1.75rem);
       line-height: 1.5;
       color: var(--gray-600);
       @include transition ($transition-property: color);
@@ -71,12 +74,24 @@
     }
   }
 
-
-
-
   &__slider-images {
     grid-column: 8 span;
     overflow: hidden;
     margin-left: 9px;
+  }
+
+  @media screen and (width < 425.01px) {
+    &__content {
+      display: block;
+    }
+
+    &-nav {
+
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
   }
 }
