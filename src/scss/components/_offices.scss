@@ -15,15 +15,17 @@
   }
 
   &__nav {
+    display: grid;
     // --valeus-gap: 120px;
     --valeus-gap: clamp(0.125rem, -12.135rem + 25.54vw, 7.5rem);
     gap: calc(var(--valeus-gap) * 2);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   &__nav-coll {
     width: 252px;
     position: relative;
-    grid-column: 3 span;
+    grid-column: 1 span;
 
     &:not(:last-child) {
       &::after {

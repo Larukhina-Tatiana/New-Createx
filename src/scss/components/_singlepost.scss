@@ -8,6 +8,7 @@
 
   &__bottom {
     @include flex-aic-jcsb;
+    margin-bottom: 30px;
   }
 
   &__meta {
@@ -20,6 +21,18 @@
     &:not(:last-child) {
       position: relative;
       padding-right: 16px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 16px;
+        border-radius: var(--border-radius);
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        background-color: var(--gray-700);
+      }
     }
 
     @include transition ($transition-property: color);
@@ -34,23 +47,6 @@
         color: var(--primary);
       }
     }
-
-    &:active {
-      color: var(--primary);
-    }
-
-    &::after {
-      position: absolute;
-      content: '';
-      width: 1px;
-      height: 16px;
-      border-radius: var(--border-radius);
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      background-color: var(--gray-700);
-    }
-
 
     &--active {
       font-weight: 700;
@@ -73,6 +69,17 @@
 
     &--comments {
       background-image: url(../images/icons/comments.svg);
+    }
+  }
+
+  @media screen and (width < 768.01px) {
+    &__bottom {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__meta {
+      flex-wrap: wrap;
     }
   }
 }

@@ -48,6 +48,10 @@
       // padding-top: 80px;
       background-color: var(--gray-200);
     }
+
+    blockquote::before {
+      top: 0;
+    }
   }
 
 
@@ -85,6 +89,11 @@
       .partners__title {
         display: none;
       }
+    }
+
+    blockquote::before {
+      display: none;
+      padding-left: 0;
     }
   }
 

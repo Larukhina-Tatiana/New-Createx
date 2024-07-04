@@ -104,10 +104,10 @@
         </ol>
       </address>
     </div>
-    <section class="post__comments">
-      <h2 class="post__comments__title section__subtitle section__subtitle--center">4 comments</h2>
-      <ul class="post__comments__list">
-        <li class="post__comments__item">
+    <section class="post-comments">
+      <h2 class="post-comments__title section__subtitle section__subtitle--center">4 comments</h2>
+      <ul class="post-comments__list">
+        <li class="post-comments__item">
           <article class="comment">
             <h2 class="section__subtitle visually-hidden">Comment</h2>
             <div class="comment__left">
@@ -132,7 +132,7 @@
             </div>
           </article>
         </li>
-        <li class="post__comments__item">
+        <li class="post-comments__item">
           <article class="comment">
             <h2 class="section__subtitle visually-hidden">Comment</h2>
             <div class="comment__left">
@@ -157,7 +157,7 @@
             </div>
           </article>
         </li>
-        <li class="post__comments__item">
+        <li class="post-comments__item">
           <article class="comment">
             <h2 class="section__subtitle visually-hidden">Comment</h2>
             <div class="comment__left">
@@ -180,7 +180,7 @@
             </div>
           </article>
         </li>
-        <li class="post__comments__item">
+        <li class="post-comments__item">
           <article class="comment">
             <h2 class="section__subtitle visually-hidden">Comment</h2>
             <div class="comment__left">
@@ -207,22 +207,23 @@
       </ul>
     </section>
     <section class="post__form-comment">
-      <form class="post__form form" action="#">
-        <h2 class="section__subtitle section__subtitle--center post__form-title">Leave your comment</h2>
-        <div class="post__form-inner">
-          <label class="post__form-label post__form-label--width form__label" for="first-name">Name*
-            <input class="post__form-input  form__input" type="text" name="first-name" id="first-name"
+      <form class="post-form form" action="#">
+        <h2 class="section__subtitle section__subtitle--center post-form__title">Leave your comment</h2>
+        <div class="post-form__inner">
+          <label class="post-form__label post-form__label--width form__label" for="first-name">Name*
+            <input class="post-form__input  form__input" type="text" name="first-name" id="first-name"
               placeholder="Your name" required>
           </label>
-          <label class="post__form-label post__form-label--width form__label" for="e-mail">Email*
-            <input class="post__form-input form__input" type="email" name="e-mail" id="e-mail"
+          <label class="post-form__label post-form__label--width form__label" for="e-mail">Email*
+            <input class="post-form__input form__input" type="email" name="e-mail" id="e-mail"
               placeholder="Your working email" required>
           </label>
+
+          <label class="post-form__label form__label form__label--width100" for="comment">Your comment*
+            <textarea class="post-form__input form__input" id="comment" placeholder="Type comment here"></textarea>
+          </label>
         </div>
-        <label class="post__form-label form__label form__label--width100" for="comment">Your comment*
-          <textarea class="post__form-input form__input" id="comment" placeholder="Type comment here"></textarea>
-        </label>
-        <button class="post__form-btn button button--large" type="submit">Post comment</button>
+        <button class="post-form__btn button button--large" type="submit">Post comment</button>
       </form>
     </section>
   </div>

@@ -1,19 +1,17 @@
-.post__form {
-  padding-top: 40px;
+.post-form {
 
-
-  &-title {
+  &__title {
     margin-bottom: 48px;
   }
 
-  &-inner {
-    @include flex-aic;
+  &__inner {
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 22px;
+    margin-bottom: 8px;
   }
 
-  &-label {
+  &__label {
     font-size: 16px;
     line-height: 1.6;
 
@@ -23,13 +21,13 @@
     }
   }
 
-  &-input {
+  &__input {
     padding: 13px 16px;
     font-size: 16px;
     line-height: 1.6;
   }
 
-  &-btn {
+  &__btn {
     width: 215px;
     margin-top: 48px;
     margin-right: auto;
@@ -40,5 +38,15 @@
   textarea {
     resize: none;
     height: 100px;
+  }
+
+  @media screen and (width < 485.01px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__label {
+      width: 100%;
+    }
   }
 }

@@ -44,14 +44,15 @@
 // &--braces {
 blockquote {
   position: relative;
-  padding-left: 58px;
+  // padding-left: 58px;
+  padding-left: clamp(2.5rem, 2.104rem + 1.98vw, 3.625rem);
 
   &::before {
     position: absolute;
     content: '';
     width: 28px;
     height: 20px;
-    top: 0;
+    top: 18px;
     left: 0;
     background: url(../images/icons/quotes.svg) no-repeat;
   }

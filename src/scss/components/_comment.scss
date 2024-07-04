@@ -1,12 +1,15 @@
 .comment {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-
-
+  gap: 10px 30px;
   font-size: 14px;
   line-height: 1.5;
   color: var(--gray-700);
+
+  &__left {
+    flex-shrink: 0;
+    width: 150px;
+  }
 
   &__user {
     display: block;
@@ -18,7 +21,7 @@
   }
 
   &__right {
-    max-width: 630px;
+    width: 630px;
   }
 
   &__body {
@@ -84,5 +87,15 @@
     }
   }
 
+  @media screen and (width < 768.01px) {
+    flex-direction: column;
 
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      width: 100%;
+    }
+  }
 }

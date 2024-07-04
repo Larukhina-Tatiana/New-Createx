@@ -1,0 +1,16 @@
+.post-comments {
+  // padding-top: 80px;
+  // padding-bottom: 80px;
+  padding-top: clamp(2.5rem, 1.621rem + 4.4vw, 5rem);
+  padding-bottom: clamp(2.5rem, 1.621rem + 4.4vw, 5rem);
+
+  &__title {
+    margin-bottom: 61px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 56px;
+    }
+  }
+}

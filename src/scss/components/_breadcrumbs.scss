@@ -46,7 +46,7 @@
     color: var(--gray-600);
   }
 
-  @media screen and (width < 375.01px) {
+  @media screen and (width < 768.01px) {
     &__list {
       flex-wrap: wrap;
     }
