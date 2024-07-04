@@ -45,4 +45,10 @@
     line-height: 1.5;
     color: var(--gray-600);
   }
+
+  @media screen and (width < 375.01px) {
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
 }

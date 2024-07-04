@@ -61,6 +61,11 @@
     &--news {
       width: 600px;
       height: 306px;
+
+      @media screen and (width < 768.01px) {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &--post {

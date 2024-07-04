@@ -14,9 +14,25 @@
 
   &__btn-box {
     @include flex-aic-jcsb;
+    gap: 30px 10px;
   }
 
   &__btn {
     width: 180px;
+  }
+
+  @media screen and (width < 1025.01px) {
+    &__btn-box {
+      flex-wrap: wrap;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  @media screen and (width < 768.01px) {
+    grid-column: 12 span;
+    width: 100%;
   }
 }

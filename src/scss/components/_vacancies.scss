@@ -1,5 +1,6 @@
 .vacancies {
-  padding-bottom: 105px;
+  // padding-bottom: 105px;
+  padding-bottom: clamp(2.5rem, 1.023rem + 7.39vw, 6.563rem);
 
   &__inner {
     display: grid;
@@ -37,6 +38,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: var(--gray-700);
+    gap: 10px;
   }
 
   &__location {
@@ -68,5 +70,30 @@
 
   &__posicion {
     margin-top: 8px;
+  }
+
+  @media screen and (width < 1025px) {
+    &__article {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (width < 768.01px) {
+    &__inner {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__list {
+      grid-column: 12 span;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__article {
+      padding: 20px;
+      text-align: center;
+    }
   }
 }

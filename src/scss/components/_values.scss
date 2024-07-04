@@ -4,11 +4,13 @@
   padding-top: clamp(2.5rem, 0.742rem + 8.79vw, 7.5rem);
 
   &--padding-top {
-    padding-top: 80px;
+    // padding-top: 80px;
+    padding-top: clamp(2.5rem, 1.621rem + 4.4vw, 5rem);
   }
 
   &--padding-bottom {
-    padding-bottom: 180px;
+    // padding-bottom: 180px;
+    padding-bottom: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
   }
 
   &--bg-gray {

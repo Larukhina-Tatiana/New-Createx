@@ -2,13 +2,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 3px;
-
+  gap: 10px 3px;
 
   &__item {
-    width: calc(100% / 6);
-
-
+    width: 205px;
   }
 
   &__btn {
@@ -21,6 +18,7 @@
     font-size: 16px;
     color: var(--gray-600);
     background-color: var(--white);
+    white-space: nowrap;
     @include transition ($transition-property: (border, color));
 
     &:focus {
@@ -33,14 +31,15 @@
         color: var(--primary);
       }
     }
-
-    &:active {
-      color: var(--primary);
-    }
-
-    &--active {
-      color: var(--primary);
-      border: 1px solid var(--primary);
-    }
   }
+
+  @media screen and (width < 1025.01px) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.mixitup-control-active {
+  color: var(--primary);
+  border: 1px solid var(--primary);
 }

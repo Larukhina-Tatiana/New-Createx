@@ -27,6 +27,7 @@
   @media screen and (width < 1025px) {
     background-image: none !important;
     padding-top: 100px;
-    height: 460px;
+    height: auto;
+    padding-bottom: 40px;
   }
 }

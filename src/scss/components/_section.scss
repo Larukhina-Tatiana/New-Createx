@@ -18,7 +18,8 @@
 
   &__inside-title {
     font-weight: 700;
-    font-size: 64px;
+    // font-size: 64px; 28
+    font-size: clamp(1.75rem, 0.959rem + 3.96vw, 4rem);
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--gray-900);

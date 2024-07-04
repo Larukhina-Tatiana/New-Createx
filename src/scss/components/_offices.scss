@@ -1,6 +1,8 @@
 .offices {
-  padding-top: 80px;
-  padding-bottom: 122px;
+  // padding-top: 80px;
+  padding-top: clamp(2.5rem, 1.621rem + 4.4vw, 5rem);
+  // padding-bottom: 122px;
+  padding-bottom: clamp(2.5rem, 0.698rem + 9.01vw, 7.625rem);
   background: var(--gray-200);
 
   &__nav-title {
