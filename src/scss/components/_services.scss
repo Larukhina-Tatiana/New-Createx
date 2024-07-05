@@ -1,15 +1,21 @@
 .services {
-  padding-bottom: 180px;
+  // padding-bottom: 180px;
+  padding-bottom: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
+
+  // &_list {
+  //   gap: 80px;
+  // }
 
   &__item {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 80px;
+    // gap: 80px;
+    gap: 80px clamp(1.5rem, -1.583rem + 8.56vw, 5rem);
     align-items: center;
 
-    &:nth-child(even) {
-      .services__content {
-        order: -1;
+    @media screen and (width > 567.99px) {
+      &:nth-child(even) {
+        .services__content {
+          order: -1;
+        }
       }
     }
 
@@ -37,10 +43,21 @@
 
   &__descr {
     color: var(--gray-700);
-    margin-bottom: 48px;
+    // margin-bottom: 48px;
+    margin-bottom: clamp(1.5rem, -0.435rem + 9.68vw, 3rem);
   }
 
   &__btn {
     display: inline-block;
+  }
+
+  @media screen and (width < 568.01px) {
+    &__picture-cover {
+      grid-column: 12 span;
+    }
+
+    &__content {
+      grid-column: 12 span;
+    }
   }
 }
