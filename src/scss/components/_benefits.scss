@@ -1,12 +1,14 @@
 .benefits {
-  padding-top: 80px;
+  // padding-top: 80px;
+  padding-top: clamp(2.5rem, 1.621rem + 4.4vw, 5rem);
   padding-bottom: 2px;
   background-color: var(--gray-900);
   color: var(--white-op);
 
   &__container {
     position: relative;
-    padding-bottom: 126px;
+    // padding-bottom: 126px;
+    padding-bottom: clamp(2.5rem, 0.61rem + 9.45vw, 7.875rem);
   }
 
   &__title {

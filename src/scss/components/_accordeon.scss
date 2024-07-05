@@ -1,13 +1,12 @@
 .accordeon {
 
-  &__item {}
-
   &__title {
     position: relative;
     padding-left: 42px;
     max-width: 376px;
     font-weight: 700;
-    font-size: 28px;
+    // font-size: 28px;
+    font-size: clamp(1.375rem, 1.243rem + 0.66vw, 1.75rem);
     line-height: 1.5;
     color: var(--gray-900);
     margin-bottom: 12px;
@@ -49,6 +48,10 @@
     box-sizing: content-box;
     @include transition ($transition-property: (opacity));
     margin-bottom: 24px;
+
+    &--not-margin-bottom {
+      margin-bottom: 0;
+    }
   }
 
   &__title.accordeon__title--active {
@@ -62,5 +65,11 @@
   &__text.accordeon__text--visible {
     @include transition ($transition-property: opacity);
     opacity: 1;
+  }
+
+  @media screen and (width < 768.01px) {
+    &__title {
+      max-width: none;
+    }
   }
 }

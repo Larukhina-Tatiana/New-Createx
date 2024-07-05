@@ -1,17 +1,21 @@
 .decisions {
-  padding-top: 76px;
+  // padding-top: 76px;
+  padding-top: clamp(2.5rem, 1.709rem + 3.96vw, 4.75rem);
   background-color: var(--gray-200);
-  height: 570px;
+  // height: 570px;
 
   &__container {
     position: relative;
-    gap: 126px;
+    gap: clamp(3.125rem, -20.487rem + 36.89vw, 7.875rem);
+    // gap: 126px;
   }
 
   &__content {
     grid-column: 6 span;
     grid-column-start: 6;
     grid-column-end: -1;
+    // margin-bottom: 114px;
+    margin-bottom: clamp(1.875rem, -24.222rem + 40.78vw, 7.125rem);
   }
 
   &__subtitle {
@@ -27,5 +31,13 @@
   &__text {
     padding-left: 36px;
     background: url(../images/icons/decisions-check.svg) bottom left / 20px 20px no-repeat;
+  }
+
+  @media screen and (width < 1025px) {
+    &__container {
+      display: block;
+    }
+
+
   }
 }

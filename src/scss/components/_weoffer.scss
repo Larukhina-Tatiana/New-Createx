@@ -4,7 +4,8 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 0 105px;
+    // gap: 0 105px;
+    gap: 0 clamp(3.125rem, -2.589rem + 11.9vw, 6.563rem);
   }
 
   &__content {
@@ -16,5 +17,11 @@
     text-align: left;
     margin-bottom: 60px;
     font-weight: 900;
+  }
+
+  @media screen and (width < 768.01px) {
+    &__container {
+      display: block;
+    }
   }
 }

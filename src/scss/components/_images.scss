@@ -29,6 +29,14 @@
       grid-column: 7 span;
       max-width: 705px;
       height: 440px;
+
+      @media screen and (width < 768.01px) {
+        height: auto;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
     }
 
     &--avatar {
@@ -40,11 +48,20 @@
 
     &--decisions {
       grid-column: 5 span;
-      width: 495px;
-      height: 553px;
+      // max-width: 495px;
+      max-width: clamp(23.313rem, -14.59rem + 59.22vw, 30.938rem);
+      max-height: 553px;
       position: absolute;
       left: 14px;
       top: 0;
+
+      @media screen and (width < 1025px) {
+        position: static;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
     }
 
     &--history {

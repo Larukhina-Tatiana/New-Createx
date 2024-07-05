@@ -1,4 +1,6 @@
 .projects {
-  padding-top: 180px;
-  padding-bottom: 100px;
+  // padding-top: 180px;
+  padding-top: clamp(5rem, 2.802rem + 10.99vw, 11.25rem);
+  // padding-bottom: 100px;
+  padding-bottom: clamp(2.5rem, 1.181rem + 6.59vw, 6.25rem);
 }

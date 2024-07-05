@@ -1,6 +1,8 @@
 .steps {
-  padding-top: 95px;
-  padding-bottom: 108px;
+  // padding-top: 95px;
+  padding-top: clamp(2.5rem, 1.291rem + 6.04vw, 5.938rem);
+  // padding-bottom: 108px;
+  padding-bottom: clamp(2.5rem, 1.005rem + 7.47vw, 6.75rem);
 
   &__title {
     text-align: left;
@@ -68,6 +70,22 @@
 
   &__subtitle {
     margin-bottom: 8px;
+  }
+
+  @media screen and (width < 768.01px) {
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        &::after {
+          background-image: none;
+        }
+
+        margin-bottom: 30px;
+      }
+    }
   }
 }
 
