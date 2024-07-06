@@ -27,16 +27,21 @@
             cursor: pointer;
         }
 
-
-        // &:focus {
-        //     outline: 2px solid var(--primary);
-        //     outline-offset: 2px;
-        // }
-
         @media (any-hover: hover) {
             &:hover &-icon {
                 color: var(--primary);
             }
+        }
+    }
+
+    @media screen and (width < 576.01px) {
+        // &::before {
+        //     display: none;
+        // }
+
+        &__container {
+            width: 90%;
+            padding: 34px;
         }
     }
 }

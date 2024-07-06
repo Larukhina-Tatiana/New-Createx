@@ -10,11 +10,37 @@
     @include flex-aic-jcsb;
   }
 
+  &__nav {
+    @media screen and (width < 768.01px) {
+      position: fixed;
+      padding: 50px;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 85%;
+      height: 100%;
+      background-color: var(--gray-200);
+      z-index: 11;
+      overflow-y: auto;
+      transform: translateX(150%);
+      @include transition ($transition-property: transform);
+
+      &--active {
+        transform: none;
+      }
+    }
+  }
+
   &__contacts {
     @include flex-aic-jcsb;
     // gap: 36px;
     gap: clamp(1rem, -4.424rem + 8.47vw, 2.25rem);
+
+    &--nav {
+      display: none;
+    }
   }
+
 
   &__contacts-link {
     @include flex-fdaifs;
@@ -60,16 +86,31 @@
     color: var(--gray-800);
   }
 
-  @media screen and (width < 1025.01px) {
-    display: none;
+  @media screen and (width < 768.01px) {
+    &__logo {
+  z-index: 11;
+    }
+    &__contacts {
+      display: none;
 
-    // &__contacts {
-    //   display: none;
-    // }
+      &--nav {
+        display: block;
+      }
+    }
+
+    &__contacts-item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
+
+
 }
 
 .logo {
+
+
   &:focus {
     outline: 2px solid var(--primary);
     outline-offset: 2px;

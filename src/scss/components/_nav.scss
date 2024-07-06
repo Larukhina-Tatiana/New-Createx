@@ -3,9 +3,6 @@
   // margin-left: 60px;
   margin-left: clamp(1.25rem, -11.177rem + 19.42vw, 3.75rem);
 
-  &__menu-btn {
-    display: none;
-  }
 
   &__list {
     @include flex-aic-jcsb;
@@ -41,7 +38,15 @@
     }
   }
 
-  @media screen and (width < 1024.01px) {
-    display: none;
+  @media screen and (width < 768.01px) {
+
+    &__list {
+      // flex-direction: column;
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
   }
 }
