@@ -45,7 +45,7 @@ const portfolioSlider = new Swiper(".section__swiper", {
     576: {
       slidesPerView: 2,
     },
-    768: {
+    868: {
       slidesPerView: 3,
     },
   },
@@ -65,16 +65,18 @@ const workInsideGalery = document.querySelector(".work-inside__slider-big");
 
 if (workInsideGalery) {
   const workSlider = new Swiper(".work-inside__slider-small", {
-    spaceBetween: 20,
-    slidesPerView: 10,
+    spaceBetween: 5,
+    slidesPerView: 6,
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
       576: {
         slidesPerView: 6,
+        spaceBetween: 10,
       },
       768: {
         slidesPerView: 10,
+        spaceBetween: 20,
       },
     },
   });

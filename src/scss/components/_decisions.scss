@@ -15,7 +15,7 @@
     grid-column-start: 6;
     grid-column-end: -1;
     // margin-bottom: 114px;
-    margin-bottom: clamp(1.875rem, -24.222rem + 40.78vw, 7.125rem);
+    padding-bottom: clamp(1.875rem, -24.222rem + 40.78vw, 7.125rem);
   }
 
   &__subtitle {

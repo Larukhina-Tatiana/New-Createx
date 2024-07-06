@@ -1,8 +1,10 @@
 .project-goal {
-  gap: 122px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 
   &__content {
-    grid-column: 6 span;
     max-width: 600px;
     padding-top: 43px;
   }
@@ -21,11 +23,11 @@
   }
 
   &__table {
-    grid-column: 5 span;
     padding: 37px 10px 37px 60px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     background-color: var(--white);
+    flex-shrink: 0;
 
 
     &-name {
@@ -46,5 +48,19 @@
     // td {
     //   padding-bottom: 16px;
     // }
+  }
+
+  @media screen and (width < 768.01px) {
+    flex-direction: column;
+
+    &__content {
+      max-width: none;
+    }
+  }
+
+  @media screen and (width < 425.01px) {
+    &__table {
+      padding: 10px;
+    }
   }
 }

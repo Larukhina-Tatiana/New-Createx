@@ -1,5 +1,6 @@
 .work-inside {
-  padding-bottom: 120px;
+  // padding-bottom: 120px;
+  padding-bottom: clamp(2.5rem, 0.742rem + 8.79vw, 7.5rem);
 
   &__title {
     margin-bottom: 60px;
@@ -7,7 +8,8 @@
 
 
   &__galery {
-    margin-bottom: 96px;
+    // margin-bottom: 96px;
+    margin-bottom: clamp(1.875rem, 0.424rem + 7.25vw, 6rem);
   }
 
 
@@ -31,26 +33,21 @@
       right: 38px;
     }
   }
-
-
-
   .swiper-slide {
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
   }
 
-
-
   &__cover-big {
-    min-width: 1230px;
-    height: 500px;
+    // min-width: 1230px;
+    // height: 500px;
     margin-bottom: 20px;
   }
 
   &__cover-small {
-    width: 100px;
-    height: 100px;
+    // width: 100px;
+    // height: 100px;
   }
 
   &__img {
