@@ -1,5 +1,4 @@
-if ($(window).width() < 768.01) {
-  // $(".header__logo").appendTo($(".header__nav"));
+if ($(window).width() < 578.01) {
   $(".header__address").appendTo($(".header__nav"));
 }
 

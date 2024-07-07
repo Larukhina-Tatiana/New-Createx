@@ -11,11 +11,11 @@
   }
 
   &__nav {
-    @media screen and (width < 768.01px) {
+    @media screen and (width < 578.01px) {
       position: fixed;
-      padding: 50px;
+      padding: 30px;
       left: 0;
-      top: 0;
+      top: 50px;
       display: block;
       width: 85%;
       height: 100%;
@@ -35,10 +35,6 @@
     @include flex-aic-jcsb;
     // gap: 36px;
     gap: clamp(1rem, -4.424rem + 8.47vw, 2.25rem);
-
-    &--nav {
-      display: none;
-    }
   }
 
 
@@ -86,16 +82,35 @@
     color: var(--gray-800);
   }
 
-  @media screen and (width < 768.01px) {
-    &__logo {
-  z-index: 11;
-    }
-    &__contacts {
-      display: none;
+  &__address {
 
-      &--nav {
-        display: block;
-      }
+
+    @media screen and (min-width: 578.01px) and (max-width: 1025.01px) {
+      margin-left: auto;
+    }
+  }
+
+
+  @media screen and (width < 1025.01px) {
+    &__inner {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+
+  }
+
+  @media screen and (width < 578.01px) {
+    &__logo {
+      z-index: 13;
+    }
+
+    &__contacts {
+      // display: none;
+
+      // &--nav {
+      display: block;
+      // }
     }
 
     &__contacts-item {
@@ -104,17 +119,13 @@
       }
     }
   }
-
-
 }
 
 .logo {
-
+  flex-shrink: 0;
 
   &:focus {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
   }
-
-  flex-shrink: 0;
 }
