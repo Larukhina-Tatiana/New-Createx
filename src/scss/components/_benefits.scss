@@ -38,9 +38,12 @@
   &__link {
     position: absolute;
     display: inline-block;
-    padding: 0px 112px;
+    padding: 0px 10px;
     left: 50%;
     transform: translateX(-50%);
     bottom: -26px;
+    max-width: 390px;
+    min-width: 290px;
+    text-align: center;
   }
 }
