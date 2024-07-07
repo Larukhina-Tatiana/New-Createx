@@ -89,6 +89,8 @@
   }
 
   &__plea-link {
+    position: relative;
+    z-index: 5;
     display: inline-block;
     text-decoration: underline;
     text-decoration-skip-ink: none;
