@@ -163,11 +163,11 @@ function scripts() {
       "./src/js/to-top.js",
       "./src/js/accordeon.js",
       "./src/js/graph-modal.min.js",
+      "libs/mixitup-v3/mixitup.js",
       "./src/js/mainmixitup.js",
       "./src/js/modals.js",
       "./src/js/selects.js",
       "./src/js/tabs.js",
-      "libs/mixitup-v3/mixitup.min.js",
       // "js/modal.js",
       // Для подключения многих (всех) файлов js? Обязательно исключать main.min.js
       // 'app/js/*.js',
