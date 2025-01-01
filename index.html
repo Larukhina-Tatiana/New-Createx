@@ -182,8 +182,8 @@
   <p class="section__text">We&nbsp;are rightfully considered to&nbsp;be&nbsp;the best construction
     company in&nbsp;the USA.</p>
   <div class="video__block">
-    <video class="video__player" width="1230" height="500" preload="metadata" muted preload="metadata"
-      poster="./images/video/video1@1x.avif">
+    <video class="video__player" controls="controls" width="1230" height="500" preload="metadata" muted
+      preload="metadata" poster="./images/video/video1@1x.avif">
       <source src="../src/resources/video.mp4" type="video/mp4">
     </video>
     <button class="video__button" type="button" aria-label="Play video">
@@ -234,12 +234,12 @@
   <p class="request-form__title form__title section__titleh5">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:
   </p>
   <form class="request-form__block form" action="#">
-    <label class="form__label" for="first-name">Name
-      <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name">
+    <label class="form__label" for="firstName">Name
+      <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Your name">
     </label>
 
     <label class="form__label" for="phone">Phone
-      <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone" required>
+      <input class="form__input" type="tel" name="phone" id="phone" placeholder="+380 (XX) XXX-XX-XX" required>
     </label>
 
     <label class="form__label form__label--big" for="comment">Message
@@ -823,17 +823,22 @@
       <p class="section__titleh5 form__title">A&nbsp;quick way to&nbsp;discuss details</p>
 
       <label class="form__label" for="first-name">Name*
-        <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name">
+        <input class="form__input" type="text" name="first-name" id="first-name" data-required placeholder="Your name"
+          data-reg="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$">
+        <!-- data-reg="^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$"> -->
       </label>
 
       <label class="form__label" for="phone">Phone*
-        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" required>
+        <input class="form__input" type="tel" name="phone" id="phone" data-required placeholder="Your phone number"
+          data-reg="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$">
       </label>
       <label class="form__label" for="e-mail">Email
-        <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
+        <input class="form__input" type="email" name="e-mail" id="e-mail" data-required placeholder="Your working email"
+          data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
       </label>
       <label class="form__label" for="comment">Message*
-        <textarea class="form__textarea form__input" id="comment" placeholder="Your message"></textarea>
+        <textarea class="form__textarea form__input" id="comment" name="comment" placeholder="Your message"
+          required></textarea>
       </label>
 
       <input class="checkbox" type="checkbox" name="policy" id="policy" checked>
@@ -926,8 +931,8 @@
         Let’s stay in touch
       </h4>
       <div class="footer__form-inner">
-        <label class="footer__form-label form__label" for="e-mail">
-          <input class="footer__form-input form__input" type="email" name="e-mail" id="e-mail"
+        <label class="footer__form-label form__label" for="email">
+          <input class="footer__form-input form__input" type="email" name="email" id="email"
             placeholder="Your email address " required>
         </label>
         <button class="button button--regular footer__form-btn" type="submit">subscribe</button>
@@ -997,10 +1002,13 @@
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   <!-- <script src="./src/js/main.js"></script> -->
   <!-- <script src="./src/js/burger.js"></script>
-  <script src="./src/js/sliders.js"></script>
-  <script src="./src/js/video.js"></script>
+  <script src="./src/js/sliders.js"></script> -->
+  <!-- <script src="./src/js/video.js" type="module"></script> -->
+  <script src="./src/js/request-form.js" type="module"></script>
+  <script src="./src/js/application-form.js" type="module"></script>
+  <script src="./src/js/footer-form.js" type="module"></script>
 
-  <script src="./src/js/progress.js"></script>
+  <!-- <script src="./src/js/progress.js"></script>
   <script src="./src/js/to-top.js"></script> -->
   <script src="js/main.min.js"></script>
 </body>

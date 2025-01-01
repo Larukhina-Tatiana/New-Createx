@@ -15,7 +15,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      z-index: 3;
+      // z-index: 3;
       background: var(--gray-900);
       opacity: 0.6;
       @include transition ($transition-property: (opacity, visibility));
