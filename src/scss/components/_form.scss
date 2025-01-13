@@ -39,6 +39,10 @@
       outline: 2px solid var(--primary);
       outline-offset: 2px;
     }
+
+    &[data-required] {
+      border-color: #f48b36;
+    }
   }
 
   &__textarea {

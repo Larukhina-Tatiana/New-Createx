@@ -1,11 +1,13 @@
 const refs = {
   form: document.querySelector(".contact-form"),
+  // firstName: document.querySelector("#first-name"),
+  // phone: document.querySelector("#phone"),
+  // email: document.querySelector("#e-mail"),
   textarea: document.querySelector(".form__textarea"),
   policyСheckbox: document.querySelector("#policy"),
   btn: document.querySelector(".contact-form button"),
 };
-const radioAll = refs.form.contactMetod;
-const countRadioElement = refs.form.contactMetod.length;
+
 const textarea = refs.form.comment;
 
 let textError = "";
@@ -20,33 +22,45 @@ populateFormOutput();
 function onFormSubmit(e) {
   e.preventDefault();
 
-  if (validationForm(refs.form) && validRadio(radioAll)) {
+  // if (validationForm(refs.form) === true && validRadio() === true) {
+  if (validationForm(refs.form) === true) {
+    console.log(validRadio() === true);
+
     alert("Форма проверена");
+    // Сбор данных формы
+    // const formData = new FormData(e.currentTarget);
+    // formData.forEach((value, name) => {
+    //   console.log(name, value);
+    // });
+    // Способ 2
     const formData = new FormData(refs.form);
     console.log(Object.fromEntries(formData));
+    // Object.entries(savedFormData).forEach(([name, value]) => {
+    //   refs.form.elements[name].value = value.trim();
+    // });
+
     // Очистка LS
     e.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
   } else {
     e.preventDefault();
-    alert("Форма не прошла валидацию");
+    // alert("Форма не прошла вылидацию");
   }
 }
 
+let result = true;
 function validationForm(form) {
   const inputAll = form.querySelectorAll("[data-required]");
   console.log(inputAll);
-  let formFalse = 0;
+
   inputAll.forEach((input) => {
     const inputValue = input.value;
     const inputReg = input.getAttribute("data-reg");
     const reg = new RegExp(inputReg);
-    // console.log(inputValue, reg);
+    console.log(inputValue, reg);
+    console.log(result);
 
     if (reg.test(inputValue) !== true) {
-      formFalse += 1;
-      console.log(formFalse);
-
       const inputError = input.name;
       onTextError(inputError);
       input.parentElement.insertAdjacentHTML(
@@ -60,55 +74,31 @@ function validationForm(form) {
           input.style.boxShadow = "";
         }
       });
+      result = false;
+      console.log(result);
+    } else {
+      validRadio();
     }
   });
-  return formFalse >= 1 ? false : true;
-}
+  console.log(result);
 
-// Проверка radio
-function validRadio(radioAll) {
-  // console.log("Проверка Radio");
-  let inValidRadio = false;
-  let inFalse = 0;
-
-  for (let index = 0; index < countRadioElement; index++) {
-    if (radioAll[index].checked === false) {
-      inFalse += 1;
-    } else {
-      inValidRadio = true;
-      // console.log(inValidRadio);
-      return inValidRadio;
-    }
-
-    if (inFalse === countRadioElement) {
-      const parentDiv = radioAll[0].closest(".form__fields-inner");
-
-      parentDiv.style.boxShadow = "0 0 4px rgb(255, 0, 0)";
-      parentDiv.addEventListener("focus", function (event) {
-        parentDiv.style.boxShadow = "";
-        // console.log(inValidRadio);
-      });
-    }
-  }
+  return result;
 }
 
 function onTextError(inputError) {
   if (inputError === "first-name") {
     textError = "Incorrect name, enter name without spaces!";
-    return;
   }
   if (inputError === "phone") {
     textError = "Incorrect phone number!";
-    return;
   }
   if (inputError === "e-mail") {
     textError = "Incorrect email!";
-    return;
   }
   if (inputError === "comment") {
     textError = "Incorrect Message!";
-    return;
   }
+  return textError;
 }
 
 // Возврат из LS при обновлении страницы
@@ -143,4 +133,41 @@ function onFormInput(e) {
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
   // console.log(JSON.stringify(formData));
+}
+
+// Проверка radio
+
+function validRadio() {
+  console.log("Проверка Radio");
+
+  const radioAll = refs.form.contactMetod;
+  console.log(radioAll);
+
+  let inFalse = 0;
+  for (let index = 0; index < radioAll.length; index++) {
+    if (radioAll[index].checked === false) inFalse += 1;
+    if (inFalse === radioAll.length) {
+      result = false;
+      console.log(result);
+
+      const parentDiv = radioAll[0].closest(".form__fields-inner");
+      // parentDiv
+      //   .closest("fieldset")
+      //   .insertAdjacentHTML(
+      //     "beforeend",
+      //     `<div class="form__error">Select your preferred method of communication</div>`
+      //   );
+      parentDiv.style.boxShadow = "0 0 4px rgb(255, 0, 0)";
+
+      parentDiv.addEventListener("focus", function (event) {
+        // if (input.nextElementSibling) {
+        //   input.nextElementSibling.remove();
+        parentDiv.style.boxShadow = "";
+        // }
+        console.log(result);
+      });
+    } else {
+      result = true;
+    }
+  }
 }

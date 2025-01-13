@@ -98,11 +98,12 @@
       </div>
 
       <form class="contact-form" action="#">
-        <div class="contact-form__grup">
+        <div class="contact-form__grup" role="group" aria-labelledby="contact-details-head">
           <div class="contact-form__data">
             <label class="form__label" for="first-name">Name*
               <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name"
-                inputmode="text" data-required data-reg="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$">
+                inputmode="text" data-required data-reg="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$"
+                title="Your name without spaces">
             </label>
 
             <label class="form__label" for="phone">Phone*
@@ -117,7 +118,7 @@
 
           <div class="contact-form__options">
             <label class="form__label" for="interested">I am interested in
-              <select class="form__select form__input" name="interested" id="interested" required>
+              <select class="form__select form__input" name="interested" id="interested">
                 <option value="" selected disabled>Choose Interested</option>
                 <option value="Interior_design">Interior design</option>
                 <option value="Graphic_designer">Graphic designer</option>
