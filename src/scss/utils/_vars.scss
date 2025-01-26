@@ -1,7 +1,7 @@
 :root {
     --white: rgb(255, 255, 255);
     --white-op: rgba(255, 255, 255, .6);
-    --primary: #ff5a30;
+    --primary: rgb(255, 90, 48);
     --success: #03cea4;
     --danger: #ff4242;
     --warning: #f89828;
@@ -15,6 +15,7 @@
     --gray-300: #e5e8ed;
     --gray-200: #f4f5f6;
     --gray-100: #f9f9f9;
+    --accent-color: #ff5a30;
 
     --box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
         0 12px 10px -6px rgba(154, 156, 165, 0.04),

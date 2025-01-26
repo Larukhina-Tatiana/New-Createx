@@ -15,6 +15,11 @@
       margin-bottom: 20px;
     }
 
+    &:has([required]) .form__label-legend::after {
+      content: "*";
+      padding-inline: 0.25em;
+      color: red;
+    }
 
 
     &--width100 {
@@ -40,7 +45,7 @@
       outline-offset: 2px;
     }
 
-    &[data-required] {
+    &[required] {
       border-color: #f48b36;
     }
   }
@@ -131,4 +136,30 @@ textarea {
   cursor: text;
   white-space: pre-wrap;
   overflow-wrap: break-word;
+}
+
+.form-errors {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4em;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+  color: red;
+  line-height: 1.25;
+}
+
+.form-errors:empty {
+  display: none;
+}
+
+.progress-line {
+  width: 5px;
+  height: 3px;
+  background-color: rgb(255, 137, 0);
+  border-radius: 4px;
+}
+
+#phone-mask {
+  margin-bottom: 5px;
+  // text-align: center;
 }

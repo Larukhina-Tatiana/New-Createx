@@ -9,13 +9,13 @@ const countRadioElement = refs.form.contactMetod.length;
 const textarea = refs.form.comment;
 
 let textError = "";
-const formData = {};
+let formData = {};
 const STORAGE_KEY = "feedback-contact-form-state";
 
 refs.form.addEventListener("submit", onFormSubmit);
 refs.form.addEventListener("input", onFormInput);
 
-populateFormOutput();
+// populateFormOutput();
 
 function onFormSubmit(e) {
   e.preventDefault();
@@ -111,16 +111,6 @@ function onTextError(inputError) {
   }
 }
 
-// Возврат из LS при обновлении страницы
-function populateFormOutput() {
-  const savedFormData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-
-  if (savedFormData) {
-    Object.entries(savedFormData).forEach(([name, value]) => {
-      refs.form.elements[name].value = value.trim();
-    });
-  }
-}
 // Запись в LS при вводе текста
 
 // function onTextareaInput(e) {
@@ -142,5 +132,32 @@ function onFormInput(e) {
   // console.log((formData[e.target.name] = e.target.value.trim()));
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-  // console.log(JSON.stringify(formData));
+  formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 }
+
+// Возврат из LS при обновлении страницы
+(function populateFormOutput() {
+  // console.log("Форма проверяется");
+
+  // const savedFormData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+  // if (savedFormData) {
+  //   Object.entries(savedFormData).forEach(([name, value]) => {
+  //     refs.form.elements[name].value = value.trim();
+  //   });
+  // }
+  if (localStorage.getItem(STORAGE_KEY)) {
+    formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    console.log(formData);
+    for (let key in formData) {
+      if (
+        refs.form.elements[key].type === "chekbox" &&
+        refs.form.elements[key].value === "on"
+      ) {
+        refs.form.elements[key].checked = true;
+      } else {
+        refs.form.elements[key].value = formData[key];
+      }
+    }
+  }
+})();

@@ -7,26 +7,50 @@
       url(./images/application/application-bg1@2x.jpg) 2x)">
   <h2 class="visually-hidden">application-form</h2>
   <div class="container application-form__container">
-    <form class="application-form__form form" action="#">
+    <form class="application-form__form form" action="#" name="applicationForm" data-js-form novalidate>
       <p class="section__titleh5 form__title">A&nbsp;quick way to&nbsp;discuss details</p>
 
-      <label class="form__label" for="first-name">Name*
-        <input class="form__input" type="text" name="first-name" id="first-name" data-required placeholder="Your name"
-          data-reg="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$">
+      <label class="form__label" for="first-name">
+        <span class="form__label-legend">Name</span>
+        <input class="form__input" type="text" name="first-name" id="first-name" inputmode="text"
+          title="Имя должно содержать от 2 до 15 символов, быть одним словом, не содержать других символов, кроме букв"
+          required minlength="2" maxlength="15" placeholder="Your name" aria-errormessage="first-name-errors"
+          pattern="^[a-zA-Z[А-Я][а-яё][а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]]+$">
+        <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
+        <!-- pattern="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$"> -->
         <!-- data-reg="^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$"> -->
       </label>
 
-      <label class="form__label" for="phone">Phone*
-        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" data-required
-          data-reg="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$">
+      <label class="form__label" for="phone">
+        <span class="form__label-legend">Phone</span>
+        <input class="form__input" type="tel" name="phone" id="phone-mask" placeholder="Your phone number"
+          inputmode="tel" required aria-errormessage="phone-errors">
+        <div class="progress-line"></div>
+        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
       </label>
-      <label class="form__label" for="e-mail">Email
-        <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" data-required
-          data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+      <!-- <label class="form__label" for="phone">
+        <span class="form__label-legend">Phone</span>
+        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" inputmode="tel"
+          required pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$"
+          aria-errormessage="phone-errors">
+        <div class="progress-line"></div>
+        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
+      </label> -->
+      <label class="form__label" for="email">
+        <span class="form__label-legend">Email</span>
+        <input class="form__input" type="email" name="email" id="email" inputmode="email"
+          placeholder="Your working email" required pattern="^\S+@\S+\.\S+$" aria-errormessage="email-errors"
+          title="Укажите в формате: user@example.com"
+          oninvalid="this.setCustomValidity('Пожалуйста, введите корректный адрес электронной почты.')"
+          onchange="this.setCustomValidity('') ">
+        <span class="form-errors" id="email-errors" data-js-form-field-errors></span>
       </label>
-      <label class="form__label" for="comment">Message*
+      <label class="form__label" for="comment">
+        <span class="form__label-legend">Message</span>
         <textarea class="form__textarea form__input" id="comment" name="comment" placeholder="Your message"
-          required></textarea>
+          inputmode="text" required pattern="^(?:(?![\s\n]+$)[\s\S])+$" title="Поле должно быть заполнено"
+          maxlength=1000 aria-errormessage="comment-errors"></textarea>
+        <span class="form-errors" id="comment-errors" data-js-form-field-errors></span>
       </label>
 
       <input class="checkbox" type="checkbox" name="policy" id="policy" checked>
@@ -42,8 +66,9 @@
           Bureau.</span>
       </label>
 
-      <button class="button button--regular" type="submit">send request</button>
+      <button class="button button--regular" type="submit" js-submit>send request</button>
     </form>
 
   </div>
 </section>
+<script src="https://unpkg.com/imask"></script>

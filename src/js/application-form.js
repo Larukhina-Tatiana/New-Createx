@@ -1,103 +1,187 @@
-const refs = {
-  form: document.querySelector(".application-form__form"),
-  // firstName: document.querySelector("#first-name"),
-  // phone: document.querySelector("#phone"),
-  // email: document.querySelector("#e-mail"),
-  textarea: document.querySelector(".application-form__form textarea"),
-  policyСheckbox: document.querySelector("#policy"),
-  btn: document.querySelector(".application-form__form button"),
-};
+class FormsValidation {
+  selectors = {
+    form: "[data-js-form]",
+    fieldErrors: "[data-js-form-field-errors]",
+  };
 
-let textError = "";
-const form = document.querySelector(".application-form__form");
-// console.log(form.elements);
+  errorMessages = {
+    valueMissing: () => "Пожалуйста, заполните это поле",
+    patternMismatch: ({ title }) => title || "Данные не соответствуют формату",
+    tooShort: ({ minLength }) =>
+      `Слишком короткое значение, минимум символов — ${minLength}`,
+    tooLong: ({ maxLength }) =>
+      `Слишком длинное значение, ограничение символов — ${maxLength}`,
+  };
 
-form.addEventListener("submit", onFormSubmit);
-
-refs.textarea.addEventListener("input", onTextareaInput);
-const STORAGE_KEY = "feedback-application-form-state";
-populateTextareaOutput();
-
-function onFormSubmit(e) {
-  e.preventDefault();
-
-  if (validationForm(form) === true) {
-    alert("Форма проверена");
-    // Сбор данных формы
-    const formData = new FormData(e.currentTarget);
-    formData.forEach((value, name) => {
-      console.log(name, value);
-    });
-    // Очистка LS
-    e.currentTarget.reset();
-    localStorage.removeItem(STORAGE_KEY);
-  } else {
-    e.preventDefault();
-    // alert("Форма не прошла вылидацию");
+  constructor() {
+    this.bindEvents();
   }
-}
 
-function validationForm(form) {
-  let result = true;
-  const inputAll = form.querySelectorAll("[data-required]");
+  manageErrors(formControlElement, errorMessages) {
+    const fieldErrorsElement = formControlElement.parentElement.querySelector(
+      this.selectors.fieldErrors
+    );
 
-  inputAll.forEach((input) => {
-    const inputValue = input.value;
-    const inputReg = input.getAttribute("data-reg");
-    const reg = new RegExp(inputReg);
+    fieldErrorsElement.innerHTML = errorMessages
+      .map((message) => `<span class="form-error">${message}</span>`)
+      .join("");
+  }
 
-    if (reg.test(inputValue) !== true) {
-      const inputError = input.name;
-      onTextError(inputError);
-      input.parentElement.insertAdjacentHTML(
-        "beforeend",
-        `<div class="form__error"> ${textError} </div>`
-      );
-      input.style.boxShadow = "0 0 4px rgb(255, 0, 0)";
-      input.addEventListener("focus", function (event) {
-        if (input.nextElementSibling) {
-          input.nextElementSibling.remove();
-          input.style.boxShadow = "";
+  validateField(formControlElement) {
+    const errors = formControlElement.validity;
+    const errorMessages = [];
+
+    Object.entries(this.errorMessages).forEach(
+      ([errorType, getErrorMessage]) => {
+        if (errors[errorType]) {
+          errorMessages.push(getErrorMessage(formControlElement));
         }
-      });
-      result = false;
-    }
-  });
+      }
+    );
 
-  return result;
+    this.manageErrors(formControlElement, errorMessages);
+
+    const isValid = errorMessages.length === 0;
+
+    formControlElement.ariaInvalid = !isValid;
+    return isValid;
+  }
+
+  onBlur(event) {
+    const { target } = event;
+    const isFormField = target.closest(this.selectors.form);
+    const isRequired = target.required;
+
+    if (isFormField && isRequired) {
+      this.validateField(target);
+    }
+  }
+
+  onChange(event) {
+    const { target } = event;
+    const isRequired = target.required;
+    const isToggleType = ["radio", "checkbox"].includes(target.type);
+
+    if (isToggleType && isRequired) {
+      this.validateField(target);
+    }
+  }
+
+  onSubmit(event) {
+    const isFormElement = event.target.matches(this.selectors.form);
+
+    if (!isFormElement) {
+      return;
+    }
+
+    const requiredControlElements = [...event.target.elements].filter(
+      ({ required }) => required
+    );
+    let isFormValid = true;
+    let firstInvalidFieldControl = null;
+
+    requiredControlElements.forEach((element) => {
+      const isFieldValid = this.validateField(element);
+
+      if (!isFieldValid) {
+        isFormValid = false;
+
+        if (!firstInvalidFieldControl) {
+          firstInvalidFieldControl = element;
+        }
+      }
+    });
+
+    if (!isFormValid) {
+      event.preventDefault();
+      firstInvalidFieldControl.focus();
+    }
+    if (isFormValid) {
+      // Очистка LS
+      event.target.reset();
+      localStorage.removeItem(STORAGE_KEY);
+
+      alert("Форма отправлена");
+    }
+  }
+
+  bindEvents() {
+    document.addEventListener(
+      "blur",
+      (event) => {
+        this.onBlur(event);
+      },
+      { capture: true }
+    );
+    document.addEventListener("change", (event) => this.onChange(event));
+    document.addEventListener("submit", (event) => this.onSubmit(event));
+    // document.addEventListener("change", (event) => this.onPolicyChange(event));
+  }
 }
 
-function onTextError(inputError) {
-  if (inputError === "first-name") {
-    textError = "Incorrect name, enter name without spaces!";
-  }
-  if (inputError === "phone") {
-    textError = "Incorrect phone number!";
-  }
-  if (inputError === "e-mail") {
-    textError = "Incorrect email!";
-  }
-  return textError;
+new FormsValidation();
+
+const formLs = document.forms.applicationForm;
+formLs.addEventListener("input", onFormInput);
+const STORAGE_KEY = "application-form";
+
+let formData = {};
+function onFormInput(event) {
+  formData[event.target.name] = event.target.value;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 // Возврат из LS при обновлении страницы
-function populateTextareaOutput() {
-  const savedMessage = localStorage.getItem(STORAGE_KEY);
-
-  if (savedMessage) {
-    refs.textarea.value = savedMessage;
+(function populateFormOutput() {
+  if (localStorage.getItem(STORAGE_KEY)) {
+    formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    console.log(formData);
+    for (let key in formData) {
+      if (
+        formLs.elements[key].type === "chekbox" &&
+        formLs.elements[key].value === "on"
+      ) {
+        formLs.elements[key].checked = true;
+      } else {
+        formLs.elements[key].value = formData[key];
+      }
+    }
   }
-}
-// Запись в LS при вводе текста
+})();
 
-function onTextareaInput(e) {
-  const message = e.target.value;
-  localStorage.setItem(STORAGE_KEY, message);
-}
+// Шаблон для номера телефона
+const progressLine = document.querySelector(".progress-line");
+const phoneMask = document.getElementById("phone-mask");
+IMask(phoneMask, {
+  mask: "+{38} ({\\000) 000-00-00",
+});
+
+document.getElementById("phone-mask").oninput = function () {
+  const lengthOfIinput = this.value.length;
+  const w = this.offsetWidth;
+
+  progressLine.style.width = (w / 19) * lengthOfIinput + "px";
+  progressLine.style.backgroundColor = `rgb(${
+    255 - (255 / 19) * lengthOfIinput
+  },137,0)`;
+};
+
+phoneMask.addEventListener("blur", function (event) {
+  progressLine.style.display = "none";
+});
+phoneMask.addEventListener("focus", function (event) {
+  progressLine.style.display = "block";
+});
 
 // Проверка на checked
+const refs = {
+  form: "[data-js-form]",
+  policyСheckbox: document.querySelector("#policy"),
+  btnSubmit: "[js-submit]",
+};
+
 refs.policyСheckbox.addEventListener("change", onPolicyChange);
 
 function onPolicyChange(event) {
-  refs.btn.disabled = !event.currentTarget.checked;
+  refs.btnSubmit.disabled = !event.currentTarget.checked;
 }

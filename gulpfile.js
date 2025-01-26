@@ -147,7 +147,7 @@ function scripts() {
       // "node_modules/swiper/swiper-bundle.js",
       "node_modules/swiper/swiper-bundle.js",
       "libs/smoothscroll/smooth-scroll.min.js",
-      "libs/choices/choices.min.js",
+      // "libs/choices/choices.min.js",
       "libs/slick/slick.min.js",
       // "node_modules/nouislider/dist/nouislider.js",
       // "node_modules/simplelightbox/dist/simple-lightbox.min.js",
@@ -166,7 +166,7 @@ function scripts() {
       "libs/mixitup-v3/mixitup.js",
       "./src/js/mainmixitup.js",
       "./src/js/modals.js",
-      "./src/js/selects.js",
+      // "./src/js/selects.js",
       "./src/js/tabs.js",
       // "js/modal.js",
       // Для подключения многих (всех) файлов js? Обязательно исключать main.min.js
