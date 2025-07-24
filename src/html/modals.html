@@ -9,14 +9,20 @@
     </button>
     <div class="modal-content">
       <h5 class="form__title section__titleh5">Subscribe to our newsletter</h5>
-      <form class="form" action="#">
-        <label class="form__label" for="first-name">Name*
-          <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name">
+      <form class="form" action="#" id="form-newsletter">
+        <label class="form__label" for="newsletter-first-name">
+          <span class="form__label-legend">Name</span>
+          <input class="form__input" type="text" name="newsletter-first-name" id="newsletter-first-name"
+            placeholder="Your name" autocomplete="on"
+            title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
+            required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
         </label>
-        <label class="form__label" for="e-mail">Email
-          <input class="form__input " type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
+        <label class="form__label" for="newsletter-email"><span class="form__label-legend">Email</span>
+          <input class="form__input " type="email" name="newsletter-email" id="newsletter-email"
+            placeholder="Your working email" required autocomplete="on">
+          <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
         </label>
-        <button class="vacancies-form__btn button button--regular" type="submit">send</button>
+        <button class="button button--regular button--vacansies" type="submit">send</button>
       </form>
     </div>
   </div>
@@ -31,8 +37,9 @@
     <div class="modal-content">
       <h5 class="form__title section__titleh5">Send your CV</h5>
       <form action="#" class="form" id="formSendCv">
-        <label class="form__label" for="first-name">Name*
-          <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name">
+        <label class="form__label" for="formSendCv-first-name">Name*
+          <input class="form__input" type="text" name="formSendCv-first-name" id="formSendCv-first-name"
+            placeholder="Your name" required autocomplete="on">
         </label>
         <label class="form__label" for="location">Location*
           <select class="form__select form__input" name="location" id="location">
@@ -40,14 +47,15 @@
             <option value="New_York">New York</option>
           </select>
         </label>
-        <label class="form__label" for="phone">Phone*
-          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" required>
+        <label class="form__label" for="formSendCv-phone">Phone*
+          <input class="form__input" type="tel" name="formSendCv-phone" id="formSendCv-phone"
+            placeholder="Your phone number" required>
         </label>
         <label class="form__label" for="e-mail">Email
           <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
         </label>
-        <label class="form__label" for="comment">Сovering letter
-          <textarea class="form__input" id="comment" placeholder="Your covering letter"></textarea>
+        <label class="form__label" for="formSendCv-comment">Сovering letter
+          <textarea class="form__input" id="formSendCv-comment" placeholder="Your covering letter"></textarea>
         </label>
 
 
@@ -55,7 +63,7 @@
           <input class="checkbox checkbox__file-imput form__input" type="file" name="file" id="file" checked>
           <span class="checkbox__text checkbox__file-text">Attach your CV*</span>
         </label>
-        <button class="vacancies-form__btn button button--regular" type="submit">send</button>
+        <button class="button button--regular button--vacansies" type="submit">send</button>
       </form>
     </div>
   </div>

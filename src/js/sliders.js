@@ -12,9 +12,9 @@ const heroSlider = new Swiper(".hero-slider", {
     prevEl: ".hero-prev",
   },
   speed: heroSliderSpeed,
-  // autoplay: {
-  //   delay: 1000,
-  // },
+  autoplay: {
+    delay: 2500,
+  },
   pagination: {
     el: ".hero__pagination",
     type: "bullets",

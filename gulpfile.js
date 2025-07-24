@@ -110,7 +110,7 @@ const watchFiles = () => {
   // watch("./src/resources/**", resources);
   // watch("./src/fonts/**.ttf", fonts);
   // watch("./src/fonts/**.ttf", fontsStyle);
-  // watch("./src/js/**/*.js", scripts);
+  watch("./src/js/**/*.js", scripts);
 };
 
 // function styles() {
@@ -144,11 +144,14 @@ function scripts() {
     src([
       // "https://unpkg.com/aos@2.3.1/dist/aos.js",
       "node_modules/jquery/dist/jquery.js",
+      "node_modules/scrollreveal/dist/scrollreveal.js",
       // "node_modules/swiper/swiper-bundle.js",
       "node_modules/swiper/swiper-bundle.js",
       "libs/smoothscroll/smooth-scroll.min.js",
       // "libs/choices/choices.min.js",
       "libs/slick/slick.min.js",
+      // "libs/imask.js", не работает
+      "libs/inputmask.min.js",
       // "node_modules/nouislider/dist/nouislider.js",
       // "node_modules/simplelightbox/dist/simple-lightbox.min.js",
       // "node_modules/siema/dist/siema.min.js",
@@ -168,11 +171,13 @@ function scripts() {
       "./src/js/modals.js",
       // "./src/js/selects.js",
       "./src/js/tabs.js",
+      "./src/js/animations.js",
+      // "./src/js/tabs.js",
       // "js/modal.js",
       // Для подключения многих (всех) файлов js? Обязательно исключать main.min.js
       // 'app/js/*.js',
       // '!app/js/main.min.js'
-      "!/js/main.min.js",
+      "!js/main.min.js",
     ])
       .pipe(concat("main.min.js"))
       // .pipe(concat("main.js"))
@@ -240,12 +245,6 @@ function building() {
 }
 
 // слешение за обновлениями файлов
-function watching() {
-  // watch(["app/*.html"], includeh);
-  watch(["app/scss/*.scss", "app/scss/components/*.scss"], styles);
-  watch(["app/images/**/*.*"], images);
-  watch(["app/js/main.js"], scripts);
-}
 
 exports.fonts = fonts;
 // exports.includeh = includeh;
@@ -255,11 +254,10 @@ exports.scripts = scripts;
 exports.images = images;
 exports.sprite = sprite;
 exports.building = building;
-exports.watching = watching;
 exports.watchFiles = watchFiles;
 
 exports.build = series(cleanDist, building);
 
 // exports.default = parallel(styles, images, scripts, watching);
 
-exports.default = series(parallel(htmlInclude), styles, watchFiles);
+exports.default = series(parallel(htmlInclude, styles, scripts), watchFiles);

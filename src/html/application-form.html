@@ -13,18 +13,18 @@
       <label class="form__label" for="first-name">
         <span class="form__label-legend">Name</span>
         <input class="form__input" type="text" name="first-name" id="first-name" inputmode="text"
-          title="Имя должно содержать от 2 до 15 символов, быть одним словом, не содержать других символов, кроме букв"
+          title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
           required minlength="2" maxlength="15" placeholder="Your name" aria-errormessage="first-name-errors"
-          pattern="^[a-zA-Z[А-Я][а-яё][а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]]+$">
+          pattern="^[a-zA-Z[А-Я][а-яё][а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]]+$" autocomplete="on">
         <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
         <!-- pattern="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$"> -->
         <!-- data-reg="^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$"> -->
       </label>
 
-      <label class="form__label" for="phone">
+      <label class="form__label" for="phone-mask">
         <span class="form__label-legend">Phone</span>
-        <input class="form__input" type="tel" name="phone" id="phone-mask" placeholder="Your phone number"
-          inputmode="tel" required aria-errormessage="phone-errors">
+        <input class="form__input" type="tel" name="tel" id="phone-mask" placeholder="Your phone number" inputmode="tel"
+          required aria-errormessage="phone-errors" autocomplete="on">
         <div class="progress-line"></div>
         <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
       </label>
@@ -42,7 +42,7 @@
           placeholder="Your working email" required pattern="^\S+@\S+\.\S+$" aria-errormessage="email-errors"
           title="Укажите в формате: user@example.com"
           oninvalid="this.setCustomValidity('Пожалуйста, введите корректный адрес электронной почты.')"
-          onchange="this.setCustomValidity('') ">
+          onchange="this.setCustomValidity('') " autocomplete="email">
         <span class="form-errors" id="email-errors" data-js-form-field-errors></span>
       </label>
       <label class="form__label" for="comment">
@@ -66,9 +66,10 @@
           Bureau.</span>
       </label>
 
-      <button class="button button--regular" type="submit" js-submit>send request</button>
+      <button class="button button--regular" type="submit" data-js-submit>send request</button>
     </form>
 
   </div>
 </section>
-<script src="https://unpkg.com/imask"></script>
+<script src="./libs/imask.js" ,></script>
+<!-- <script src="https://unpkg.com/imask"></script> -->

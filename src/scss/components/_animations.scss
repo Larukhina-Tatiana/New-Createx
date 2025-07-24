@@ -1,0 +1,150 @@
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: none;
+  will-change: opacity, transform;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.spin.in-view {
+    animation: spin 6s linear infinite;
+  }
+
+  &.fadeInUp.in-view {
+    animation: fadeInUp 0.8s ease forwards 0.2s;
+  }
+
+  &.pulse.in-view {
+    animation: pulse 1.5s ease-out infinite;
+  }
+
+  // Если хочешь, можешь объединить:
+  &.fadeInUp.pulse.in-view {
+    animation:
+      fadeInUp 0.2s ease-out forwards,
+      pulse 1.5s ease-out infinite;
+    animation-delay: 0s, 0.5s;
+  }
+
+  &.shake.in-view {
+    animation: gift-nudge 1.2s ease-out;
+  }
+
+  &.shake.shake-loop {
+    animation: shake 0.6s infinite ease-in-out;
+  }
+}
+
+// Анимация появления элементов
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    scale: 0.5;
+
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-1.5px, 1.5px) rotate(-1.5deg);
+  }
+
+  40% {
+    transform: translate(-1.5px, -1.5px) rotate(1.5deg);
+  }
+
+  60% {
+    transform: translate(1.5px, 1.5px) rotate(0.5deg);
+  }
+
+  80% {
+    transform: translate(1.5px, -1.5px) rotate(1deg);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeScale {
+  from {
+    scale: 0.5;
+  }
+}
+
+@keyframes to-right {
+  0% {
+    transform: translate3d(-10%, 0, 1px);
+  }
+
+  100% {
+    transform: translateZ(1px);
+  }
+}
+
+@keyframes running-line-right {
+  0% {
+    transform: translateX(50%);
+    transform-origin: left center;
+  }
+
+  100% {
+    transform: translateX(-50%);
+    transform-origin: right center;
+  }
+}
+
+@keyframes running-line-left {
+  0% {
+    transform: translateX(-50%);
+    transform-origin: left center;
+  }
+
+  100% {
+    transform: translateX(50%);
+    transform-origin: right center;
+  }
+}

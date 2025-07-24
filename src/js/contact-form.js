@@ -1,3 +1,4 @@
+import { createAlertBox } from "./create-alertbox.js";
 const refs = {
   form: document.querySelector(".contact-form"),
   textarea: document.querySelector(".form__textarea"),
@@ -21,12 +22,13 @@ function onFormSubmit(e) {
   e.preventDefault();
 
   if (validationForm(refs.form) && validRadio(radioAll)) {
-    alert("Форма проверена");
-    const formData = new FormData(refs.form);
+    // alert("Форма проверена");
+    formData = new FormData(refs.form);
     console.log(Object.fromEntries(formData));
     // Очистка LS
     e.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
+    createAlertBox(refs.form);
   } else {
     e.preventDefault();
     alert("Форма не прошла валидацию");
@@ -125,14 +127,14 @@ function onPolicyChange(event) {
   refs.btn.disabled = !event.currentTarget.checked;
 }
 
-function onFormInput(e) {
-  console.log(e.target.value);
-
-  formData[e.target.name] = e.target.value.trim();
-  // console.log((formData[e.target.name] = e.target.value.trim()));
+function onFormInput(event) {
+  if (event.target.type === "checkbox") {
+    formData[event.target.name] = event.target.checked;
+  } else {
+    formData[event.target.name] = event.target.value;
+  }
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-  formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 }
 
 // Возврат из LS при обновлении страницы
@@ -150,10 +152,7 @@ function onFormInput(e) {
     formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
     console.log(formData);
     for (let key in formData) {
-      if (
-        refs.form.elements[key].type === "chekbox" &&
-        refs.form.elements[key].value === "on"
-      ) {
+      if (refs.form.elements[key].type === "checkbox" && formData[key]) {
         refs.form.elements[key].checked = true;
       } else {
         refs.form.elements[key].value = formData[key];

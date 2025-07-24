@@ -1,3 +1,7 @@
+import { createAlertBox } from "./create-alertbox.js";
+const STORAGE_KEY = "application-form";
+let formData = {};
+
 class FormsValidation {
   selectors = {
     form: "[data-js-form]",
@@ -28,6 +32,8 @@ class FormsValidation {
   }
 
   validateField(formControlElement) {
+    console.log("validity", formControlElement.validity);
+
     const errors = formControlElement.validity;
     const errorMessages = [];
 
@@ -97,11 +103,15 @@ class FormsValidation {
       firstInvalidFieldControl.focus();
     }
     if (isFormValid) {
+      event.preventDefault();
+      console.log(
+        "✅ Отправка данных:",
+        JSON.parse(localStorage.getItem(STORAGE_KEY))
+      );
       // Очистка LS
       event.target.reset();
       localStorage.removeItem(STORAGE_KEY);
-
-      alert("Форма отправлена");
+      createAlertBox(event.target);
     }
   }
 
@@ -123,25 +133,31 @@ new FormsValidation();
 
 const formLs = document.forms.applicationForm;
 formLs.addEventListener("input", onFormInput);
-const STORAGE_KEY = "application-form";
 
-let formData = {};
 function onFormInput(event) {
-  formData[event.target.name] = event.target.value;
+  console.log("event.target.type", event.target.type);
+
+  if (event.target.type === "checkbox") {
+    formData[event.target.name] = event.target.checked;
+  } else {
+    formData[event.target.name] = event.target.value;
+  }
+
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 // Возврат из LS при обновлении страницы
 (function populateFormOutput() {
-  if (localStorage.getItem(STORAGE_KEY)) {
-    formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    console.log(formData);
-    for (let key in formData) {
-      if (
-        formLs.elements[key].type === "chekbox" &&
-        formLs.elements[key].value === "on"
-      ) {
-        formLs.elements[key].checked = true;
+  const savedData = localStorage.getItem(STORAGE_KEY);
+  if (!savedData) return;
+
+  formData = JSON.parse(savedData);
+  console.log(formData);
+
+  for (let key in formData) {
+    if (formLs.elements[key]) {
+      if (formLs.elements[key].type === "checkbox") {
+        formLs.elements[key].checked = formData[key];
       } else {
         formLs.elements[key].value = formData[key];
       }
@@ -156,7 +172,7 @@ IMask(phoneMask, {
   mask: "+{38} ({\\000) 000-00-00",
 });
 
-document.getElementById("phone-mask").oninput = function () {
+phoneMask.oninput = function () {
   const lengthOfIinput = this.value.length;
   const w = this.offsetWidth;
 
@@ -172,16 +188,17 @@ phoneMask.addEventListener("blur", function (event) {
 phoneMask.addEventListener("focus", function (event) {
   progressLine.style.display = "block";
 });
+document.addEventListener("DOMContentLoaded", () => {
+  // Проверка на checked
+  const refs = {
+    form: document.querySelector("[data-js-form]"),
+    policyCheckbox: document.querySelector("#policy"),
+    btnSubmit: document.querySelector("[data-js-submit]"),
+  };
 
-// Проверка на checked
-const refs = {
-  form: "[data-js-form]",
-  policyСheckbox: document.querySelector("#policy"),
-  btnSubmit: "[js-submit]",
-};
+  refs.policyCheckbox.addEventListener("change", onPolicyChange);
 
-refs.policyСheckbox.addEventListener("change", onPolicyChange);
-
-function onPolicyChange(event) {
-  refs.btnSubmit.disabled = !event.currentTarget.checked;
-}
+  function onPolicyChange(event) {
+    refs.btnSubmit.disabled = !event.currentTarget.checked;
+  }
+});

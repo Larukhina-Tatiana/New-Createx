@@ -7,6 +7,14 @@
   position: relative;
   overflow: hidden;
 
+  animation-name: fadeScale;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+
+  view-timeline-name: --fadeScale-block;
+  animation-timeline: --fadeScale-block;
+  animation-range: 20% 50%;
+
 
   &::before {
     content: "";

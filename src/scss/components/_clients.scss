@@ -11,6 +11,14 @@
     // gap: 40px 102px;
     gap: 40px clamp(2.5rem, -16.762rem + 30.1vw, 6.375rem);
     margin-top: 57px;
+
+    &--right {
+      animation: running-line-right 30s linear 1s infinite;
+    }
+
+    &--left {
+      animation: running-line-left 30s linear 1s infinite;
+    }
   }
 
   &__item {

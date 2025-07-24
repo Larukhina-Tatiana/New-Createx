@@ -208,19 +208,30 @@
     </section>
     <section class="post__form-comment">
       <form class="post-form form" action="#">
-        <h2 class="section__subtitle section__subtitle--center post-form__title">Leave your comment</h2>
+        <h2 class="section__subtitle section__subtitle--center post-form__title">
+          Leave your comment
+        </h2>
         <div class="post-form__inner">
-          <label class="post-form__label post-form__label--width form__label" for="first-name">Name*
-            <input class="post-form__input  form__input" type="text" name="first-name" id="first-name"
-              placeholder="Your name" required>
+          <label class="post-form__label post-form__label--width form__label" for="post-first-name">
+            <span class="form__label-legend">Name</span>
+            <input class="post-form__input  form__input" type="text" name="first-name" id="post-first-name"
+              placeholder="Your name"
+              title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
+              required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
+            <span id="error-message" style="color: red;"></span>
           </label>
-          <label class="post-form__label post-form__label--width form__label" for="e-mail">Email*
-            <input class="post-form__input form__input" type="email" name="e-mail" id="e-mail"
+          <label class="post-form__label post-form__label--width form__label" for="post-email">
+            <span class="form__label-legend">Email</span>
+            <input class="post-form__input form__input" type="email" name="e-mail" id="post-email"
               placeholder="Your working email" required>
+            <span id="error-message" style="color: red;"></span>
           </label>
 
-          <label class="post-form__label form__label form__label--width100" for="comment">Your comment*
-            <textarea class="post-form__input form__input" id="comment" placeholder="Type comment here"></textarea>
+          <label class="post-form__label form__label form__label--width100" for="post-comment">
+            <span class="form__label-legend">Your comment</span>
+            <textarea class="post-form__input form__input" id="post-comment" name="comment"
+              placeholder="Type comment here" minlength="10" maxlength="200" required></textarea>
+            <span id="error-message" style="color: red;"></span>
           </label>
         </div>
         <button class="post-form__btn button button--large" type="submit">Post comment</button>
