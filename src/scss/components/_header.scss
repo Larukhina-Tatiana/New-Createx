@@ -1,10 +1,14 @@
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 8px;
+  // left: 8px;
+  left: 0;
   width: 100%;
+  z-index: 10;
+  box-shadow: var(--box-shadow);
+
 
   &__inner {
     @include flex-aic-jcsb;

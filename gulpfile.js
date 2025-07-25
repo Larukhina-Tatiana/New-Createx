@@ -223,7 +223,8 @@ function sprite() {
 
 // функция удаления папок
 function cleanDist() {
-  return src("dist").pipe(clean("*.*"));
+  // return src("dist").pipe(clean("*.*"));
+  return src("dist/**/*", { read: false, allowEmpty: true });
 }
 
 // функция переноса файлов в чистую папку для сдачи
@@ -236,6 +237,7 @@ function building() {
       "app/**/*.html",
       "app/fonts/*.*",
       "app/images/*.*",
+      "app/resources/**/*.*",
       "!app/images/*.svg",
       "!app/images/stack",
       "app/images/sprite.svg",
