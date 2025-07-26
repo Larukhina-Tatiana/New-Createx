@@ -149,9 +149,10 @@ function scripts() {
       "node_modules/swiper/swiper-bundle.js",
       "libs/smoothscroll/smooth-scroll.min.js",
       // "libs/choices/choices.min.js",
+      "libs/TransferElements.js",
       "libs/slick/slick.min.js",
-      // "libs/imask.js", не работает
-      "libs/inputmask.min.js",
+      "libs/imask.js",
+      // "libs/inputmask.min.js",
       // "node_modules/nouislider/dist/nouislider.js",
       // "node_modules/simplelightbox/dist/simple-lightbox.min.js",
       // "node_modules/siema/dist/siema.min.js",

@@ -6,7 +6,7 @@
     overflow: hidden;
     position: relative;
     height: calc(100vh - var(--header-height));
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   &-slide {
@@ -55,7 +55,7 @@
     display: flex;
     gap: 4px;
     // left: calc((100% - 1260px) / 2) !important;
-    left: calc((100% - clamp(20rem, 100vw, 76.875rem)) / 2) !important;
+    left: calc((100% - clamp(20rem, 100%, 76.875rem)) / 2) !important;
 
 
 

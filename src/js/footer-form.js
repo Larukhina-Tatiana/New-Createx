@@ -4,6 +4,9 @@ const refs = {
   form: document.querySelector(".footer__form"),
   email: document.querySelector("#user-email"),
 };
+if (!refs.form) {
+  console.warn("Footer form отсутсвует");
+} else {
 
 const STORAGE_KEY = "feedback-footer-form-state";
 let formData = {};
@@ -36,3 +39,4 @@ function onFormInput(e) {
     refs.email.value = JSON.parse(localStorage.getItem(STORAGE_KEY)).email;
   }
 })();
+}

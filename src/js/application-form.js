@@ -1,5 +1,6 @@
 import { createAlertBox } from "./create-alertbox.js";
 const STORAGE_KEY = "application-form";
+
 let formData = {};
 
 class FormsValidation {
@@ -132,7 +133,11 @@ class FormsValidation {
 new FormsValidation();
 
 const formLs = document.forms.applicationForm;
-formLs.addEventListener("input", onFormInput);
+if (!formLs) {
+  console.error("Форма не найдена");
+} else {
+  formLs.addEventListener("input", onFormInput);
+}
 
 function onFormInput(event) {
   console.log("event.target.type", event.target.type);

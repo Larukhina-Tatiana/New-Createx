@@ -1,7 +1,3 @@
-if ($(window).width() < 578.01) {
-  $(".header__address").appendTo($(".header__nav"));
-}
-
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".header__nav");
 const overlay = document.querySelector(".overlay");

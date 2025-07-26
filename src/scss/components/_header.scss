@@ -37,8 +37,8 @@
 
   &__contacts {
     @include flex-aic-jcsb;
-    // gap: 36px;
-    gap: clamp(1rem, -4.424rem + 8.47vw, 2.25rem);
+    gap: 36px;
+    // gap: clamp(1rem, -4.424rem + 8.47vw, 2.25rem);
   }
 
 
@@ -110,11 +110,8 @@
     }
 
     &__contacts {
-      // display: none;
+      flex-wrap: wrap;
 
-      // &--nav {
-      display: block;
-      // }
     }
 
     &__contacts-item {
