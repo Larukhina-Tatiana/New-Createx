@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Createx About Us</title>
-
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+@include('head.html', {"title": "Createx About us"})
 
 <body class="page-about" id="page">
-
   @include('header.html')
+
   <main>
     @include('hero-about.html')
     @include('statistics.html')
@@ -33,11 +25,12 @@
   <script src="./src/js/sliders.js"></script>
   <script src="./src/js/to-top.js"></script> -->
   <!-- <script src="./src/js/application-form.js" type="module"></script> -->
+  <script src="js/main.min.js" type="module"></script>
+  <script src="./src/js/my-scrollreveal.js" type="module"></script>
   <script src="./src/js/create-alertbox.js" type="module"></script>
 
   <script src="./src/js/footer-form.js" type="module"></script>
   <script src="./src/js/application-form.js" type="module"></script>
-  <script src="js/main.min.js" type="module"></script>
 </body>
 
 </html>

@@ -9,15 +9,21 @@ document.querySelectorAll(".our-services__item").forEach((card, index) => {
 });
 
 function ScrollRevealFunc() {
-  ScrollReveal().reveal(".hero, .news-section ", {
-    origin: "bottom",
-    // delay: 0,
-    // viewOffset: { top: -100 },
-  });
+  ScrollReveal().reveal(
+    ".hero, .news-section, .page-hero, .page-hero__descr, history, .team__descr",
+    {
+      origin: "bottom",
+      // delay: 0,
+      // viewOffset: { top: -100 },
+    }
+  );
 
-  ScrollReveal().reveal(".section__subtitle, .video", {
-    origin: "top",
-  });
+  ScrollReveal().reveal(
+    ".section__subtitle, .video, .section__title, .quotation, .team, .clients, .application-form",
+    {
+      origin: "top",
+    }
+  );
 
   ScrollReveal().reveal(".section__text", {
     origin: "bottom",
