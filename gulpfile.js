@@ -173,6 +173,7 @@ function scripts() {
       // "./src/js/selects.js",
       "./src/js/tabs.js",
       "./src/js/animations.js",
+      "./src/js/dynamic-header-height.js",
       // "./src/js/tabs.js",
       // "js/modal.js",
       // Для подключения многих (всех) файлов js? Обязательно исключать main.min.js

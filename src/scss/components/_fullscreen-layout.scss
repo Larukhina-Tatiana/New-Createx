@@ -1,0 +1,118 @@
+/* 
+  Компонент полноэкранного layout'а с фиксированной шапкой и hero
+  Адаптируется под любые устройства и ориентацию экрана
+*/
+
+.fullscreen-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  
+  /* Fallback для браузеров без поддержки dvh */
+  @supports not (height: 100dvh) {
+    min-height: 100vh;
+  }
+  
+  /* Адаптация под мобильные устройства в альбомной ориентации */
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    min-height: 100vh; /* На низких экранах в landscape используем vh */
+  }
+}
+
+/* Header стилизуется через класс .header, высота определяется динамически */
+
+.fullscreen-layout__content {
+  flex: 1;
+  margin-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+}
+
+.fullscreen-layout__hero {
+  flex: 1;
+  min-height: calc(100dvh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  
+  /* Fallback для браузеров без поддержки dvh */
+  @supports not (height: 100dvh) {
+    min-height: calc(100vh - var(--header-height));
+  }
+  
+  /* Адаптация под мобильные устройства */
+  @media screen and (max-width: 768px) {
+    padding: 20px 15px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    padding: 15px 10px;
+  }
+  
+  /* Специальная обработка альбомной ориентации */
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    min-height: calc(100vh - var(--header-height));
+    padding: 10px;
+  }
+  
+  /* Обработка очень широких экранов */
+  @media screen and (min-width: 1920px) {
+    min-height: calc(100vh - var(--header-height));
+  }
+}
+
+/* Дополнительные утилиты для контента hero */
+.fullscreen-layout__hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* Для фонового изображения или видео */
+.fullscreen-layout__hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Оверлей для лучшей читаемости текста */
+.fullscreen-layout__hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Адаптивные исправления для iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .fullscreen-layout__hero {
+    /* Фиксы для iOS Safari с его особенностями viewport */
+    min-height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--header-height));
+  }
+}
+
+/* Исправления для очень маленьких экранов */
+@media screen and (max-height: 400px) {
+  .fullscreen-layout__hero {
+    min-height: calc(100vh - var(--header-height));
+    padding: 10px;
+  }
+}

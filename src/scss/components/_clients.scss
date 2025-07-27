@@ -1,28 +1,35 @@
 .clients {
 
+  &__ticker {
+    overflow: hidden;
+    width: 100%;
+  }
+
   &__descr {
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
     color: var(--gray-700);
+    will-change: transform;
   }
 
   &__list {
+    width: max-content;
+    display: flex;
     // gap: 40px 102px;
     gap: 40px clamp(2.5rem, -16.762rem + 30.1vw, 6.375rem);
     margin-top: 57px;
+    transform: translateZ(0);
 
     &--right {
-      animation: running-line-right 30s linear 1s infinite;
+      // pointer-events: none;
+      //   animation: running-line-right 30s linear 1s infinite;
     }
 
-    &--left {
-      animation: running-line-left 30s linear 1s infinite;
-    }
   }
 
   &__item {
-    grid-column: 2 span;
+    flex: 0 0 auto;
     @include flex-jcc;
   }
 

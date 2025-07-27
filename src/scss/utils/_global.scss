@@ -3,13 +3,34 @@
 html {
     scroll-behavior: smooth;
     height: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
+    
+    /* Fallback для браузеров без поддержки dvh */
+    @supports not (height: 100dvh) {
+        min-height: 100vh;
+    }
 }
 
 body {
     box-sizing: border-box;
     height: 100%;
-    padding-top: 82px;
+    padding-top: var(--header-height);
+}
+
+/* Для страниц с hero на всю высоту экрана */
+body.fullscreen-hero {
+    padding-top: 0;
+    min-height: 100dvh;
+    
+    /* Fallback для браузеров без поддержки dvh */
+    @supports not (height: 100dvh) {
+        min-height: 100vh;
+    }
+    
+    /* Hero сам добавляет margin-top */
+    .hero {
+        padding-top: 0;
+    }
 }
 
 

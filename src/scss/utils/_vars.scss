@@ -25,12 +25,14 @@
     --border-radius: 4px;
 
     --hero-slider-speed: 500;
-    --header-height: 80px;
+    --header-height: 82px; /* Будет обновляться через JS */
 
     --burger-width: 40px;
     --burger-height: 20px;
     --burger-line-height: 2px;
 }
+
+/* Адаптивная высота header'а - будет определяться через JavaScript */
 
 
 @mixin transition ($transition-property: color, $transition-duration: 350ms, $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)) {

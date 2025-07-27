@@ -3,7 +3,6 @@
   padding-bottom: 20px;
   position: fixed;
   top: 0;
-  // left: 8px;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -19,7 +18,8 @@
       position: fixed;
       padding: 30px;
       left: 0;
-      top: 50px;
+      // top: 50px;
+      top: var(--header-height);
       display: block;
       width: 85%;
       height: 100%;
@@ -84,6 +84,9 @@
     font-size: 14px;
     line-height: 1.5;
     color: var(--gray-800);
+
+    // -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    // animation: heartbeat 1.5s ease-in-out infinite both;
   }
 
   &__address {
