@@ -26,6 +26,10 @@ if (document.querySelector(".request-form")) {
     e.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
     createAlertBox(refs.form);
+    // 🔀 Добавим редирект с фейковым ID
+    const fakeId = Math.floor(Math.random() * 5000);
+    const currentBaseUrl = window.location.origin + window.location.pathname; // localhost:3000/index.html
+    window.location.href = `${currentBaseUrl}?id=${fakeId}#page`;
   }
 
   (function populateFormOutput() {

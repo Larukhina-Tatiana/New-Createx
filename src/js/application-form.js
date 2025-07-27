@@ -113,6 +113,10 @@ class FormsValidation {
       event.target.reset();
       localStorage.removeItem(STORAGE_KEY);
       createAlertBox(event.target);
+
+      // ✅ ДОБАВЬ ЭТО СЮДА
+      const fakeId = Math.floor(Math.random() * 5000);
+      window.location.href = `/Createx/${fakeId}#page`;
     }
   }
 

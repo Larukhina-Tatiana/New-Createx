@@ -5,30 +5,30 @@
 
 class DynamicHeaderHeight {
   constructor() {
-    this.header = document.querySelector('.header');
+    this.header = document.querySelector(".header");
     this.debounceTimeout = null;
-    
+
     if (!this.header) {
-      console.warn('Header не найден');
+      console.warn("Header не найден");
       return;
     }
-    
+
     this.init();
   }
-  
+
   init() {
     // Устанавливаем начальную высоту
     this.updateHeaderHeight();
-    
+
     // Обновляем при изменении размеров окна
-    window.addEventListener('resize', () => this.debounceUpdate());
-    
+    window.addEventListener("resize", () => this.debounceUpdate());
+
     // Обновляем при повороте устройства
-    window.addEventListener('orientationchange', () => {
+    window.addEventListener("orientationchange", () => {
       // Небольшая задержка для корректного определения новых размеров
       setTimeout(() => this.updateHeaderHeight(), 100);
     });
-    
+
     // Обновляем при изменении DOM (если добавляется/убирается контент в header)
     if (window.MutationObserver) {
       const observer = new MutationObserver(() => this.debounceUpdate());
@@ -36,39 +36,44 @@ class DynamicHeaderHeight {
         childList: true,
         subtree: true,
         attributes: true,
-        attributeFilter: ['class', 'style']
+        attributeFilter: ["class", "style"],
       });
     }
   }
-  
+
   updateHeaderHeight() {
     if (!this.header) return;
-    
+
     // Получаем реальную высоту header'а
     const headerHeight = this.header.offsetHeight;
-    
+
     // Обновляем CSS переменную
-    document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
-    
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
+
     // Также устанавливаем как data-атрибут для отладки
-    document.documentElement.setAttribute('data-header-height', headerHeight);
-    
+    document.documentElement.setAttribute("data-header-height", headerHeight);
+
     // Опционально: логируем для отладки
-    console.log(`Header height updated: ${headerHeight}px`);
-    
+    // console.log(`Header height updated: ${headerHeight}px`);
+
     // Триггерим кастомное событие для других скриптов
-    window.dispatchEvent(new CustomEvent('headerHeightUpdated', {
-      detail: { height: headerHeight }
-    }));
+    window.dispatchEvent(
+      new CustomEvent("headerHeightUpdated", {
+        detail: { height: headerHeight },
+      })
+    );
   }
-  
+
   debounceUpdate() {
     clearTimeout(this.debounceTimeout);
     this.debounceTimeout = setTimeout(() => {
       this.updateHeaderHeight();
     }, 150);
   }
-  
+
   // Публичный метод для принудительного обновления
   forceUpdate() {
     this.updateHeaderHeight();
@@ -76,12 +81,12 @@ class DynamicHeaderHeight {
 }
 
 // Инициализируем после загрузки DOM
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   window.dynamicHeaderHeight = new DynamicHeaderHeight();
 });
 
 // Также инициализируем сразу, если DOM уже загружен
-if (document.readyState === 'loading') {
+if (document.readyState === "loading") {
   // DOM еще загружается, ждем DOMContentLoaded
 } else {
   // DOM уже загружен
@@ -89,6 +94,6 @@ if (document.readyState === 'loading') {
 }
 
 // Экспортируем класс для использования в других модулях
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = DynamicHeaderHeight;
 }
