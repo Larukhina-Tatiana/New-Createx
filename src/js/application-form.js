@@ -27,9 +27,11 @@ class FormsValidation {
       this.selectors.fieldErrors
     );
 
-    fieldErrorsElement.innerHTML = errorMessages
-      .map((message) => `<span class="form-error">${message}</span>`)
-      .join("");
+    if (fieldErrorsElement) {
+      fieldErrorsElement.innerHTML = errorMessages
+        .map((message) => `<span class="form-error">${message}</span>`)
+        .join("");
+    }
   }
 
   validateField(formControlElement) {
@@ -56,6 +58,8 @@ class FormsValidation {
 
   onBlur(event) {
     const { target } = event;
+    if (!target || !target.closest) return;
+
     const isFormField = target.closest(this.selectors.form);
     const isRequired = target.required;
 
@@ -177,26 +181,35 @@ function onFormInput(event) {
 // Шаблон для номера телефона
 const progressLine = document.querySelector(".progress-line");
 const phoneMask = document.getElementById("phone-mask");
-IMask(phoneMask, {
-  mask: "+{38} ({\\000) 000-00-00",
-});
+if (phoneMask) {
+  IMask(phoneMask, {
+    mask: "+{38} ({\\000) 000-00-00",
+  });
 
-phoneMask.oninput = function () {
-  const lengthOfIinput = this.value.length;
-  const w = this.offsetWidth;
+  phoneMask.oninput = function () {
+    const lengthOfIinput = this.value.length;
+    const w = this.offsetWidth;
 
-  progressLine.style.width = (w / 19) * lengthOfIinput + "px";
-  progressLine.style.backgroundColor = `rgb(${
-    255 - (255 / 19) * lengthOfIinput
-  },137,0)`;
-};
+    if (progressLine) {
+      progressLine.style.width = (w / 19) * lengthOfIinput + "px";
+      progressLine.style.backgroundColor = `rgb(${
+        255 - (255 / 19) * lengthOfIinput
+      },137,0)`;
+    }
+  };
 
-phoneMask.addEventListener("blur", function (event) {
-  progressLine.style.display = "none";
-});
-phoneMask.addEventListener("focus", function (event) {
-  progressLine.style.display = "block";
-});
+  phoneMask.addEventListener("blur", function (event) {
+    if (progressLine) {
+      progressLine.style.display = "none";
+    }
+  });
+  phoneMask.addEventListener("focus", function (event) {
+    if (progressLine) {
+      progressLine.style.display = "block";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Проверка на checked
   const refs = {
@@ -205,9 +218,11 @@ document.addEventListener("DOMContentLoaded", () => {
     btnSubmit: document.querySelector("[data-js-submit]"),
   };
 
-  refs.policyCheckbox.addEventListener("change", onPolicyChange);
+  if (refs.policyCheckbox && refs.btnSubmit) {
+    refs.policyCheckbox.addEventListener("change", onPolicyChange);
 
-  function onPolicyChange(event) {
-    refs.btnSubmit.disabled = !event.currentTarget.checked;
+    function onPolicyChange(event) {
+      refs.btnSubmit.disabled = !event.currentTarget.checked;
+    }
   }
 });
