@@ -55,6 +55,21 @@
   }
 }
 
+.fade-scale {
+  animation-name: fadeScale;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+
+  view-timeline-name: --fadeScale-block;
+  animation-timeline: --fadeScale-block;
+  animation-range: 20% 50%;
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
 // Анимация появления элементов
 @keyframes fadeInUp {
   from {
