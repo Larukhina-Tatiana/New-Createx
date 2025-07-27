@@ -1,16 +1,16 @@
 .clients {
 
-  &__ticker {
-    overflow: hidden;
-    width: 100%;
-  }
-
   &__descr {
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
     color: var(--gray-700);
     will-change: transform;
+  }
+
+  &__ticker {
+    overflow: hidden;
+    width: 100%;
   }
 
   &__list {
@@ -20,12 +20,7 @@
     gap: 40px clamp(2.5rem, -16.762rem + 30.1vw, 6.375rem);
     margin-top: 57px;
     transform: translateZ(0);
-
-    &--right {
-      // pointer-events: none;
-      //   animation: running-line-right 30s linear 1s infinite;
-    }
-
+    will-change: transform;
   }
 
   &__item {
