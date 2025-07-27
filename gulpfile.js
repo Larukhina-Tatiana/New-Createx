@@ -165,6 +165,7 @@ function scripts() {
       // "./src/js/video.js",
       "./src/js/progress.js",
       "./src/js/to-top.js",
+      "./src/js/video.js",
       "./src/js/accordeon.js",
       "./src/js/graph-modal.min.js",
       "libs/mixitup-v3/mixitup.js",
