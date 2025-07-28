@@ -1,85 +1,74 @@
-// Ждём полной загрузки DOM
 document.addEventListener("DOMContentLoaded", function () {
-  // Контейнер, относительно которого будет работать IntersectionObserver (если нужен)
-  const content = document.querySelector(".scroll-content");
   const shakeDuration = 1200;
   const shakeInterval = 3000;
 
-  // Создаём наблюдатель за появлением элементов в зоне видимости
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const el = entry.target;
-        const isShake = el.classList.contains("shake"); // Проверяем, нужен ли shake
+  const elements = document.querySelectorAll(".animate-on-scroll");
 
-        if (entry.isIntersecting) {
-          // Элемент появился в зоне видимости
-          el.classList.add("in-view");
-          if (isShake) setupShakeLoop(el); // Запускаем shake-анимацию
-        } else {
-          // Элемент вышел из зоны видимости
-          el.classList.remove("in-view");
-          if (isShake) clearShakeLoop(el); // Останавливаем shake-анимацию
-        }
-      });
-    },
-    {
-      root: content, // Можно указать null, если нужен весь viewport
-      threshold: 0.2, // Срабатывает, когда 20% элемента видно
-    }
-  );
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-  // Функция запускает shake-анимацию с интервалом
   function setupShakeLoop(el) {
-    function setupShakeLoop(el) {
-      // ⛳ Уважение к системным настройкам
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) {
-        console.log("🛑 Shake отключён: prefers-reduced-motion включён");
-        return;
-      }
+    if (prefersReducedMotion) return;
+    if (el.dataset.shaking === "true") return;
 
-      if (el.dataset.shaking === "true") return; // если уже запущено — ничего не делаем
-      el.dataset.shaking = "true";
+    el.dataset.shaking = "true";
 
-      const intervalId = setInterval(() => {
-        el.classList.add("shake-loop");
-        setTimeout(() => el.classList.remove("shake-loop"), shakeDuration);
-      }, shakeInterval);
-
-      el.dataset.shakeInterval = intervalId;
-    }
-    // Сначала очищаем предыдущий интервал, если он есть
-    const existingId = el.dataset.shakeInterval;
-    if (existingId) {
-      clearInterval(existingId);
-    }
-
-    if (el.dataset.shaking === "true") return; // Если уже запущено — ничего не делаем
-    el.dataset.shaking = "true"; // Ставим маркер
-
-    // Запускаем интервал для анимации shake
     const intervalId = setInterval(() => {
       el.classList.add("shake-loop");
-      setTimeout(() => el.classList.remove("shake-loop"), shakeDuration); // Убираем класс через 1.2 сек (длительность анимации)
-    }, shakeInterval); // Каждые 3 секунды
+      setTimeout(() => el.classList.remove("shake-loop"), shakeDuration);
+    }, shakeInterval);
 
-    el.dataset.shakeInterval = intervalId; // Сохраняем id интервала для последующей очистки
+    el.dataset.shakeInterval = intervalId;
   }
 
-  // Функция останавливает shake-анимацию и очищает интервал
   function clearShakeLoop(el) {
     const id = el.dataset.shakeInterval;
-    if (id) clearInterval(id); // Очищаем интервал, если был
-    delete el.dataset.shakeInterval; // Удаляем data-атрибут
-    delete el.dataset.shaking; // Удаляем маркер
-    el.classList.remove("shake-loop"); // На всякий случай убираем класс
+    if (id) clearInterval(id);
+    delete el.dataset.shakeInterval;
+    delete el.dataset.shaking;
+    el.classList.remove("shake-loop");
   }
 
-  // Подключаем наблюдатель ко всем элементам с классом .animate-on-scroll
-  document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-    observer.observe(el);
-  });
+  function handleVisibilityChange(el, isVisible) {
+    const isShake = el.classList.contains("shake");
+
+    if (isVisible) {
+      el.classList.add("in-view");
+      if (isShake) setupShakeLoop(el);
+    } else {
+      el.classList.remove("in-view");
+      if (isShake) clearShakeLoop(el);
+    }
+  }
+
+  // 👇 Используем IntersectionObserver, если доступен
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          handleVisibilityChange(entry.target, entry.isIntersecting);
+        });
+      },
+      {
+        root: null,
+        threshold: 0.2,
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  } else {
+    // 🧯 Fallback для старых устройств
+    function fallbackCheckVisibility() {
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const visible = rect.top <= window.innerHeight && rect.bottom >= 0;
+        handleVisibilityChange(el, visible);
+      });
+    }
+
+    window.addEventListener("scroll", fallbackCheckVisibility);
+    window.addEventListener("resize", fallbackCheckVisibility);
+    fallbackCheckVisibility(); // сразу проверить при загрузке
+  }
 });

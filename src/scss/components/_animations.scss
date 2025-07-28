@@ -46,13 +46,22 @@
     animation: heartbeat 1.5s ease-in-out infinite both;
   }
 
-  &.running-line-right.in-view {
-    animation: running-line-right 30s linear 1s infinite;
-  }
+  // &.running-line-right.in-view {
+  //   animation: running-line-right 30s linear 1s infinite;
+  // }
+}
 
-  &.running-line-left.in-view {
-    animation: running-line-left 30s linear 1s infinite;
+.running-line-right {
+  animation: running-line-right 30s linear 1s infinite;
+
+  @media screen and (width < 768px) {
+    animation: running-line-right 10s linear 1s infinite;
   }
+}
+
+
+.running-line-left {
+  animation: running-line-left 30s linear 1s infinite;
 }
 
 .fade-scale {
@@ -169,17 +178,17 @@
   }
 }
 
-@keyframes running-line-left {
-  0% {
-    transform: translateX(0);
-    // transform-origin: left center;
-  }
+// @keyframes running-line-left {
+//   0% {
+//     transform: translateX(0);
+//     transform-origin: left center;
+//   }
 
-  100% {
-    transform: translateX(100%);
-    // transform-origin: right center;
-  }
-}
+//   100% {
+//     transform: translateX(100%);
+//     transform-origin: right center;
+//   }
+// }
 
 @keyframes heartbeat {
   0% {
