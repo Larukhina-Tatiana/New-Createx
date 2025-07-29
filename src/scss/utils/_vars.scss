@@ -25,7 +25,10 @@
     --border-radius: 4px;
 
     --hero-slider-speed: 500;
-    --header-height: 82px; /* Будет обновляться через JS */
+    --header-height: 82px;
+    /* Будет обновляться через JS */
+    --scroll-margin-top: calc(var(--header-height) + 20px);
+
 
     --burger-width: 40px;
     --burger-height: 20px;

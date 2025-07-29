@@ -84,6 +84,14 @@ class DynamicHeaderHeight {
 document.addEventListener("DOMContentLoaded", () => {
   window.dynamicHeaderHeight = new DynamicHeaderHeight();
 });
+window.addEventListener("headerHeightUpdated", () => {
+  const anchors = document.querySelectorAll("[id]");
+  anchors.forEach((el) => {
+    el.style.scrollMarginTop = getComputedStyle(
+      document.documentElement
+    ).getPropertyValue("--header-height");
+  });
+});
 
 // Также инициализируем сразу, если DOM уже загружен
 if (document.readyState === "loading") {

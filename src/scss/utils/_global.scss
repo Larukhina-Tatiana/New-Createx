@@ -4,7 +4,7 @@ html {
     scroll-behavior: smooth;
     height: 100%;
     min-height: 100dvh;
-    
+
     /* Fallback для браузеров без поддержки dvh */
     @supports not (height: 100dvh) {
         min-height: 100vh;
@@ -12,7 +12,14 @@ html {
 }
 
 body {
-    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.831rem + 0.22vw, 1rem);
+    line-height: 1.6;
+    color: var(--gray-800);
+    background-color: var(--white);
+    overflow-x: hidden;
+    min-width: 100%;
     height: 100%;
     padding-top: var(--header-height);
 }
@@ -21,12 +28,12 @@ body {
 body.fullscreen-hero {
     padding-top: 0;
     min-height: 100dvh;
-    
+
     /* Fallback для браузеров без поддержки dvh */
     @supports not (height: 100dvh) {
         min-height: 100vh;
     }
-    
+
     /* Hero сам добавляет margin-top */
     .hero {
         padding-top: 0;
@@ -87,16 +94,6 @@ dd {
 
 address {
     font-style: normal;
-}
-
-body {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.831rem + 0.22vw, 1rem);
-    line-height: 1.6;
-    color: var(--gray-800);
-    overflow-x: hidden;
-    min-width: 100%;
 }
 
 button {

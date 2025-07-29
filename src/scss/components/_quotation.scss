@@ -3,11 +3,21 @@
   // padding-bottom: 250px;
   padding-bottom: clamp(7.5rem, -32.888rem + 63.11vw, 15.625rem);
 
-  background-image: -webkit-image-set(url(../images/quotation/bg-image1@1x.png) type("image/png") 1x, url(../images/quotation/bg-image1@2x.png) type("image/png") 2x);
-  background-position: right -530px top -440px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
 
+    max-width: 1024px;
+    width: 100%;
+    min-height: 825px;
+    height: 100%;
+    background-image: -webkit-image-set(url(../images/quotation/bg-image1@1x.png) type("image/png") 1x, url(../images/quotation/bg-image1@2x.png) type("image/png") 2x);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
 
   &__container {
@@ -48,6 +58,12 @@
 
     &__content {
       max-width: none;
+    }
+  }
+
+  @media screen and (width < 585.99px) {
+    &::before {
+      top: 84px;
     }
   }
 

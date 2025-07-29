@@ -1,12 +1,9 @@
 .request-form {
   @include flex-fdc;
-  animation-name: fadeScale;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
 
-  view-timeline-name: --fadeScale-block;
-  animation-timeline: --fadeScale-block;
-  animation-range: 20% 50%;
+  scroll-margin-top: var(--scroll-margin-top);
+
+
 
   &__title {
     padding-top: 48px;

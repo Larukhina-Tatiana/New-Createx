@@ -1,36 +1,56 @@
 class TransparentHeader {
-  constructor(headerId, scrollThreshold) {
-    this.header = document.getElementById(headerId);
-    this.scrollThreshold = scrollThreshold; // Пороговое значение скролла
-    this.isScrolled = false; // Флаг, указывающий, был ли скролл
+  constructor(scrollThreshold, initialColor = "transparent") {
+    this.header = document.querySelector("header");
+    this.scrollThreshold = scrollThreshold;
+    this.initialColor = initialColor;
+    this.isScrolled = false;
 
-    // Проверка, существует ли header
     if (!this.header) {
-      console.error(`Header с ID "${headerId}" не найден.`);
-      return; // Прерываем выполнение, если header не найден
+      console.error("Элемент <header> не найден.");
+      return;
     }
 
     this.init();
   }
 
   init() {
-    // Устанавливаем прозрачный фон изначально
-    this.header.style.backgroundColor = 'transparent';
-    this.header.style.transition = 'background-color 0.3s ease'; // Добавляем плавный переход
+    this.header.style.backgroundColor = this.initialColor;
+    this.header.style.transition = "background-color 0.3s ease";
 
-    window.addEventListener('scroll', this.handleScroll.bind(this));
+    window.addEventListener("scroll", this.handleScroll.bind(this));
   }
 
   handleScroll() {
     if (window.scrollY > this.scrollThreshold && !this.isScrolled) {
-      this.header.style.backgroundColor = 'white';
+      this.header.style.backgroundColor = "white";
       this.isScrolled = true;
     } else if (window.scrollY <= this.scrollThreshold && this.isScrolled) {
-      this.header.style.backgroundColor = 'transparent';
+      this.header.style.backgroundColor = this.initialColor;
       this.isScrolled = false;
     }
   }
 }
 
-// Пример использования:
-const headerComponent = new TransparentHeader('myHeader', 100); // 'myHeader' - ID вашего header, 100 - порог скролла в пикселях
+// Конфигурация: соответствие классов body и начального цвета header
+const pageConfigs = {
+  "page-home": "white",
+  "page-contacts": "transparent",
+  "page-about": "transparent",
+  "page-news": "transparent",
+  "page-services": "transparent",
+  // добавляй по мере необходимости
+};
+
+// Определение начального цвета из классов <body>
+let initialColor = "transparent";
+const bodyClasses = document.body.classList;
+
+for (const className of bodyClasses) {
+  if (pageConfigs[className]) {
+    initialColor = pageConfigs[className];
+    break;
+  }
+}
+
+// Инициализация компонента
+new TransparentHeader(100, initialColor);
