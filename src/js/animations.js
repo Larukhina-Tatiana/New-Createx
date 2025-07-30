@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
           el.style.animationDelay = `${i * 0.4}s`;
         } else {
           el.classList.remove("visible"); // повторная активация при скролле
-          el.style.animationDelay = "0s"; // сброс задержки, если нужно
+          el.style.animationDelay = "0.2s"; // сброс задержки, если нужно
         }
       });
     },

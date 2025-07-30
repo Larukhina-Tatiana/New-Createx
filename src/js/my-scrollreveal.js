@@ -10,7 +10,7 @@ document.querySelectorAll(".our-services__item").forEach((card, index) => {
 
 function ScrollRevealFunc() {
   ScrollReveal().reveal(
-    ".hero, .news-section, .page-hero, .page-hero__descr, .history, .team__descr, .clients__descr",
+    ".hero, .news-section, .page-hero, .page-hero__descr, .history, .team__descr, .clients__descr,  .projects",
     {
       origin: "bottom",
       // delay: 0,

@@ -29,6 +29,7 @@
       grid-column: 7 span;
       max-width: 705px;
       height: 440px;
+      @include appearance(left, 50px, 0.6s, 0.4s);
 
       @media screen and (width < 768.01px) {
         height: auto;

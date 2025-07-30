@@ -10,6 +10,7 @@
   border: none;
 
 
+
   &__wrapper {
     border-collapse: collapse;
   }
@@ -51,6 +52,17 @@
 
     tr:last-child {
       height: 100px;
+    }
+
+
+    .table__row {
+      @include transition ($transition-property: background-color);
+
+      @media (any-hover: hover) {
+        &:hover:not(:last-child) {
+          background-color: var(--warning);
+        }
+      }
     }
   }
 

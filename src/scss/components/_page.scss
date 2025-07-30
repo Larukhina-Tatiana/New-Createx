@@ -61,6 +61,19 @@
   }
 
   &-services-inside {
+    .page-hero {
+      background-size: 0% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: revealBg 1s ease-out forwards;
+    }
+
+    @keyframes revealBg {
+      to {
+        background-size: 100% 100%;
+      }
+    }
+
     .clients {
       padding-top: 120px;
       padding-bottom: 120px;

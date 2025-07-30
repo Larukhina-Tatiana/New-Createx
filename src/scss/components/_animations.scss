@@ -151,8 +151,18 @@
 }
 
 @keyframes fadeScale {
-  from {
+  0% {
     scale: 0.5;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.4;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
   }
 }
 
@@ -234,7 +244,7 @@
 
 
 // Анимация появления сдвигом использована в position.html -> vacancies
-@mixin appearance($direction: left, $distance: 50px, $duration: 0.6s, $delay: 0s) {
+@mixin appearance($direction: left, $distance: 50px, $duration: 0.6s, $delay: 0.2s) {
   opacity: 0;
 
   @if $direction ==left {
@@ -343,3 +353,62 @@
 //   // -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 //   // animation: appLandingLogosCarousel-scroll 40s linear infinite;
 // }
+
+
+// 🎯 Миксин для анимации раскрытия фона
+@mixin my-reveal-bg($duration: 1s,
+  $timing: ease-out,
+  $start-size: 0% 100%,
+  $end-size: 50% 100%,
+  $anim-name: my-revealBg) {
+  background-size: $start-size;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: $anim-name $duration $timing forwards;
+
+  @keyframes #{$anim-name} {
+    to {
+      background-size: $end-size;
+    }
+  }
+}
+
+.page-hero {
+  @include my-reveal-bg(1s, ease-out);
+}
+
+/*
+
+// // 📦 Использование:
+
+
+Сообщение для Copilot
+📌 Зачем нужен $anim-name Переменная $anim-name позволяет: ✅ Назвать @keyframes анимацию динамически;
+
+✅ Использовать одно и то же @mixin reveal-bg(...) с разными названиями;
+
+✅ Избежать конфликта,
+если ты вызываешь миксин несколько раз с разными параметрами (например, на .page-hero и .banner).
+🧠 Как это работает Вот ключевой момент:
+
+
+
+миксин вставит имя из параметра — например,
+revealBg,
+bgExpandHero,
+bgFadeSlide,
+и т.д.
+✨ Пример использования scss .page-hero {
+  @include reveal-bg($duration: 1.2s,
+    $start-size: 0% 100%,
+    $end-size: 100% 100%,
+    $anim-name: bgExpandHero);
+}
+
+Это создаст: css @keyframes bgExpandHero {
+  ...
+}
+
+И применит animation: bgExpandHero 1.2s ease-out forwards;
+— красиво и изолированно 💅
+*/
