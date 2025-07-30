@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Createx Services</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <title>Createx Services </title>
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+  <link rel="shortcut icon" href="favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="favicons/site.webmanifest" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/graph-modal.min.css">
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
+
 
 <body class="page-services" id="page">
   <header class="header">
@@ -81,7 +94,7 @@
     <section class="services container section">
   <ul class="services__list">
     <li class="services__item grid">
-      <div class="services__picture-cover images__thumb images__thumb--services">
+      <div class="services__picture-cover images__thumb images__thumb--services appearance-left">
         <picture>
           <source type="image/avif" srcset="
               ./images/services/image1@1x.avif 1x,
@@ -93,7 +106,7 @@
               ./images/services/image1@1x.jpg" loading="lazy" decoding="async" alt="image">
         </picture>
       </div>
-      <div class="services__content">
+      <div class="services__content appearance-right">
         <h3 class="services__title">
           Construction
         </h3>
@@ -109,7 +122,7 @@
       </div>
     </li>
     <li class="services__item grid">
-      <div class="services__picture-cover images__thumb images__thumb--services">
+      <div class="services__picture-cover images__thumb images__thumb--services appearance-left">
         <picture>
           <source type="image/avif" srcset="
               ./images/services/image2@1x.avif 1x,
@@ -121,7 +134,7 @@
               ./images/services/image2@1x.jpg" loading="lazy" decoding="async" alt="image">
         </picture>
       </div>
-      <div class="services__content">
+      <div class="services__content appearance-right">
         <h3 class="services__title">
           Project Development
         </h3>
@@ -135,7 +148,7 @@
       </div>
     </li>
     <li class="services__item grid">
-      <div class="services__picture-cover images__thumb images__thumb--services">
+      <div class="services__picture-cover images__thumb images__thumb--services appearance-left">
         <picture>
           <source type="image/avif" srcset="
               ./images/services/image3@1x.avif 1x,
@@ -147,7 +160,7 @@
               ./images/services/image3@1x.jpg" loading="lazy" decoding="async" alt="image">
         </picture>
       </div>
-      <div class="services__content">
+      <div class="services__content appearance-right">
         <h3 class="services__title">
           Interior Design
         </h3>
@@ -165,7 +178,7 @@
       </div>
     </li>
     <li class="services__item grid">
-      <div class="services__picture-cover images__thumb images__thumb--services">
+      <div class="services__picture-cover images__thumb images__thumb--services appearance-left">
         <picture>
           <source type="image/avif" srcset="
               ./images/services/image4@1x.avif 1x,
@@ -177,7 +190,7 @@
               ./images/services/image4@1x.jpg" loading="lazy" decoding="async" alt="image">
         </picture>
       </div>
-      <div class="services__content">
+      <div class="services__content appearance-right">
         <h3 class="services__title">
           Repairs
         </h3>
@@ -401,6 +414,7 @@
 <div class="overlay"></div>
 
   <script src="js/main.min.js"></script>
+  <script src="./src/js/my-scrollreveal.js" type="module"></script>
 </body>
 
 </html>

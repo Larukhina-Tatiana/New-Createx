@@ -74,17 +74,43 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Анимация появления вакансий position.html -> vacancies
+
+// Не повторяющаяся при скролле
+// document.addEventListener("DOMContentLoaded", () => {
+//   const appearanceEls = document.querySelectorAll("[class*='appearance-']");
+
+//   const observer = new IntersectionObserver(
+//     (entries, obs) => {
+//       entries.forEach((entry, i) => {
+//         if (entry.isIntersecting) {
+//           const el = entry.target;
+//           el.classList.add("visible");
+//           el.style.animationDelay = `${i * 0.4}s`;
+//           obs.unobserve(el);
+//         }
+//       });
+//     },
+//     { threshold: 0.2 }
+//   );
+
+//   appearanceEls.forEach((el) => observer.observe(el));
+// });
+
+//  Повторяющаяся при скроле
 document.addEventListener("DOMContentLoaded", () => {
   const appearanceEls = document.querySelectorAll("[class*='appearance-']");
 
   const observer = new IntersectionObserver(
-    (entries, obs) => {
+    (entries) => {
       entries.forEach((entry, i) => {
+        const el = entry.target;
+
         if (entry.isIntersecting) {
-          const el = entry.target;
           el.classList.add("visible");
           el.style.animationDelay = `${i * 0.4}s`;
-          obs.unobserve(el);
+        } else {
+          el.classList.remove("visible"); // повторная активация при скролле
+          el.style.animationDelay = "0s"; // сброс задержки, если нужно
         }
       });
     },

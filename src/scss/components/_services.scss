@@ -51,11 +51,9 @@
     display: inline-block;
   }
 
-  @media screen and (width < 568.01px) {
-    &__picture-cover {
-      grid-column: 12 span;
-    }
+  @media screen and (width < 568px) {
 
+    &__picture-cover,
     &__content {
       grid-column: 12 span;
     }
