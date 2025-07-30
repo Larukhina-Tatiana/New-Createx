@@ -232,6 +232,103 @@
   // animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
+
+// Анимация появления сдвигом использована в position.html -> vacancies
+@mixin appearance($direction: left, $distance: 50px, $duration: 0.6s, $delay: 0s) {
+  opacity: 0;
+
+  @if $direction ==left {
+    transform: translateX(-$distance);
+    animation-name: slideIn-left;
+  }
+
+  @else if $direction ==right {
+    transform: translateX($distance);
+    animation-name: slideIn-right;
+  }
+
+  @else if $direction ==top {
+    transform: translateY(-$distance);
+    animation-name: slideIn-top;
+  }
+
+  @else if $direction ==bottom {
+    transform: translateY($distance);
+    animation-name: slideIn-bottom;
+  }
+
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIn-left {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn-right {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn-top {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn-bottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.appearance-left.visible {
+  @include appearance(left);
+}
+
+.appearance-right.visible {
+  @include appearance(right);
+}
+
+.appearance-top.visible {
+  @include appearance(top);
+}
+
+.appearance-bottom.visible {
+  @include appearance(bottom);
+}
+
+
+
 // @keyframes running-begin {
 //   0% {
 //     transform: translateX(0);

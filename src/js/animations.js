@@ -72,3 +72,24 @@ document.addEventListener("DOMContentLoaded", function () {
     fallbackCheckVisibility(); // сразу проверить при загрузке
   }
 });
+
+// Анимация появления вакансий position.html -> vacancies
+document.addEventListener("DOMContentLoaded", () => {
+  const appearanceEls = document.querySelectorAll("[class*='appearance-']");
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.classList.add("visible");
+          el.style.animationDelay = `${i * 0.4}s`;
+          obs.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  appearanceEls.forEach((el) => observer.observe(el));
+});

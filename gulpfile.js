@@ -150,6 +150,7 @@ function scripts() {
       "libs/smoothscroll/smooth-scroll.min.js",
       // "libs/choices/choices.min.js",
       "libs/TransferElements.js",
+      "./src/js/initScrollReset.js",
       "./src/js/transfer.js",
       "libs/slick/slick.min.js",
       "libs/imask.js",
