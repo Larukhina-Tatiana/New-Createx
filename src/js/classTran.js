@@ -34,9 +34,10 @@ class TransparentHeader {
 // Конфигурация: соответствие классов body и начального цвета header
 const pageConfigs = {
   "page-home": "white",
-  "page-contacts": "transparent",
   "page-about": "transparent",
+  "page-positions": "white",
   "page-news": "transparent",
+  "page-contacts": "transparent",
   "page-services": "transparent",
   // добавляй по мере необходимости
 };

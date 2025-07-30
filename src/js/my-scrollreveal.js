@@ -19,7 +19,7 @@ function ScrollRevealFunc() {
   );
 
   ScrollReveal().reveal(
-    ".section__subtitle, .video, .section__title, .quotation, .team, .clients, .application-form",
+    ".section__subtitle, .video, .section__title, .quotation, .team, .clients, .application-form, .reveal-top",
     {
       origin: "top",
     }
