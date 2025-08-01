@@ -153,16 +153,16 @@
 @keyframes fadeScale {
   0% {
     scale: 0.5;
-    opacity: 0;
+    // opacity: 0;
   }
 
-  40% {
-    opacity: 0.4;
-  }
+  // 40% {
+  //   opacity: 0.4;
+  // }
 
   100% {
     scale: 1;
-    opacity: 1;
+    // opacity: 1;
   }
 }
 
@@ -412,3 +412,42 @@ bgFadeSlide,
 И применит animation: bgExpandHero 1.2s ease-out forwards;
 — красиво и изолированно 💅
 */
+
+
+@keyframes expandLeft {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes expandRight {
+  from {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+
+.img-expand-left {
+  animation: expandLeft 1s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+.img-expand-right {
+  animation: expandRight 1s cubic-bezier(0.4, 0, 0.6, 1) both;
+}
+
+@mixin expand-img($origin: left, $duration: 1s) {
+  transform: scaleX(0);
+  transform-origin: $origin;
+  animation: expand#{$origin} $duration cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}

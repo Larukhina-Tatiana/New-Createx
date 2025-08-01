@@ -26,8 +26,17 @@
     padding: 37px 10px 37px 60px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+
     background-color: var(--white);
     flex-shrink: 0;
+    @include transition ($transition-property: (scale, box-shadow));
+
+    @media (any-hover: hover) {
+      &:hover {
+        scale: 1.1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      }
+    }
 
 
     &-name {

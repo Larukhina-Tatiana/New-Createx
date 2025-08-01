@@ -97,25 +97,76 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 //  Повторяющаяся при скроле
+// document.addEventListener("DOMContentLoaded", () => {
+//   const appearanceEls = document.querySelectorAll("[class*='appearance-']");
+
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry, i) => {
+//         const el = entry.target;
+
+//         if (entry.isIntersecting) {
+//           el.classList.add("visible");
+//           el.style.animationDelay = `${0.2 + i * 0.6}s`;
+//         } else {
+//           el.classList.remove("visible"); // повторная активация при скролле
+//           // el.style.animationDelay = "0s"; // сброс задержки, если нужно
+//         }
+//       });
+//     },
+//     { threshold: 0.2 }
+//   );
+
+//   appearanceEls.forEach((el) => observer.observe(el));
+// });
+// следующая анимация  по окончанию предыдущей
 document.addEventListener("DOMContentLoaded", () => {
-  const appearanceEls = document.querySelectorAll("[class*='appearance-']");
+  let appearanceEls = [...document.querySelectorAll("[class*='appearance-']")];
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         const el = entry.target;
 
         if (entry.isIntersecting) {
+          observer.unobserve(el); // чтобы не запускать повторно
+
+          const index = appearanceEls.indexOf(el);
+          const delay = 0.2 + index * 0.3;
+
+          el.style.animationDelay = `${delay}s`;
           el.classList.add("visible");
-          el.style.animationDelay = `${i * 0.4}s`;
+
+          el.addEventListener(
+            "animationend",
+            () => {
+              const nextEl = appearanceEls[index + 1];
+              if (nextEl && !nextEl.classList.contains("visible")) {
+                nextEl.classList.add("visible");
+              }
+            },
+            { once: true }
+          );
         } else {
-          el.classList.remove("visible"); // повторная активация при скролле
-          el.style.animationDelay = "0.2s"; // сброс задержки, если нужно
+          el.classList.remove("visible");
         }
       });
     },
-    { threshold: 0.2 }
+    {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px", // помогает захватывать элементы чуть ниже viewport'а
+    }
   );
 
-  appearanceEls.forEach((el) => observer.observe(el));
+  const observeAll = () => {
+    appearanceEls.forEach((el) => observer.observe(el));
+  };
+
+  observeAll();
+
+  // Повторное наблюдение при изменении размеров экрана
+  window.addEventListener("resize", () => {
+    appearanceEls = [...document.querySelectorAll("[class*='appearance-']")];
+    observeAll();
+  });
 });

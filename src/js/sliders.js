@@ -62,6 +62,7 @@ const testimonialsSlider = new Swiper(".testimonials__swiper", {
 });
 
 const workInsideGalery = document.querySelector(".work-inside__slider-big");
+console.log("✅ workInsideGalery найден:", workInsideGalery);
 
 if (workInsideGalery) {
   const workSlider = new Swiper(".work-inside__slider-small", {
@@ -80,6 +81,7 @@ if (workInsideGalery) {
       },
     },
   });
+
   const workSlidesNav = new Swiper(workInsideGalery, {
     spaceBetween: 20,
     slidesPerView: 1,
@@ -90,7 +92,47 @@ if (workInsideGalery) {
     thumbs: {
       swiper: workSlider,
     },
+    on: {
+      slideChange: function () {
+        const activeSlide = this.slides[this.activeIndex];
+        const img = activeSlide.querySelector(".work-inside__img");
+
+        if (!img) return;
+
+        // Выбираем направление по индексу
+        const direction =
+          this.activeIndex % 2 === 0 ? "img-expand-left" : "img-expand-right";
+
+        // Функция запуска анимации безопасно
+        function triggerAnimation(imgEl, className) {
+          imgEl.classList.remove(
+            "img-expand-left",
+            "img-expand-right",
+            "active"
+          );
+          imgEl.style.animation = "none"; // сброс анимации
+          void imgEl.offsetWidth; // форс-рендер
+          imgEl.classList.add(className, "active");
+          imgEl.style.animation = ""; // включаем снова
+        }
+
+        // Если изображение уже загружено
+        if (img.complete && img.naturalWidth !== 0) {
+          triggerAnimation(img, direction);
+        } else {
+          // Подождём загрузку, прежде чем анимировать
+          img.addEventListener("load", () => triggerAnimation(img, direction), {
+            once: true,
+          });
+        }
+      },
+    },
   });
+
+  // Начальная анимация для первого слайда
+  const activeSlide = workInsideGalery.querySelector(".swiper-slide-active");
+  const img = activeSlide?.querySelector(".work-inside__img");
+  if (img) img.classList.add("img-expand-left");
 }
 
 const historySlider = document.querySelector(".history__slider-images");
