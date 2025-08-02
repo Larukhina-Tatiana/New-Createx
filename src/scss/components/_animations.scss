@@ -337,6 +337,15 @@
   @include appearance(bottom);
 }
 
+/*
+< !-- Все одновременно -- > 
+<div class="appearance-left" data-animate="sync" > 1</div >
+<div class="appearance-right" data-animate="sync" > 2</div > 
+< !-- Один за другим -- > 
+<div class="appearance-left" data-animate="chain" > 3</div > <div class="appearance-right" data-animate="chain" > 4</div >
+< !-- Задержка по конкретному времени -- >
+<div class="appearance-top" data-animate="delay" data-delay="1.2" > 5</div >
+*/
 
 
 // @keyframes running-begin {

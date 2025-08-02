@@ -131,22 +131,37 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) {
           observer.unobserve(el); // чтобы не запускать повторно
 
+          const animateType = el.dataset.animate;
+          const delayAttr = el.dataset.delay;
+
           const index = appearanceEls.indexOf(el);
-          const delay = 0.2 + index * 0.3;
+
+          let delay = 0;
+
+          if (animateType === "sync") {
+            delay = 0;
+          } else if (animateType === "chain") {
+            delay = 0.2 + index * 0.3;
+          } else if (animateType === "delay" && delayAttr) {
+            delay = parseFloat(delayAttr);
+          }
 
           el.style.animationDelay = `${delay}s`;
           el.classList.add("visible");
 
-          el.addEventListener(
-            "animationend",
-            () => {
-              const nextEl = appearanceEls[index + 1];
-              if (nextEl && !nextEl.classList.contains("visible")) {
-                nextEl.classList.add("visible");
-              }
-            },
-            { once: true }
-          );
+          // для последовательной активации (если sequential)
+          if (animateType === "chain") {
+            el.addEventListener(
+              "animationend",
+              () => {
+                const nextEl = appearanceEls[index + 1];
+                if (nextEl && !nextEl.classList.contains("visible")) {
+                  nextEl.classList.add("visible");
+                }
+              },
+              { once: true }
+            );
+          }
         } else {
           el.classList.remove("visible");
         }
@@ -154,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       threshold: 0.2,
-      rootMargin: "0px 0px -50px 0px", // помогает захватывать элементы чуть ниже viewport'а
+      rootMargin: "0px 0px -50px 0px",
     }
   );
 
@@ -164,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observeAll();
 
-  // Повторное наблюдение при изменении размеров экрана
   window.addEventListener("resize", () => {
     appearanceEls = [...document.querySelectorAll("[class*='appearance-']")];
     observeAll();
