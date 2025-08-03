@@ -4,6 +4,8 @@
   padding-bottom: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
 
   &__thumb {
+    position: relative;
+    z-index: 1;
     // position: absolute;
     // top: -2%;
     margin-top: -80px;
@@ -58,28 +60,24 @@
       margin-bottom: 27px;
 
       li {
-        padding-left: 30px;
-
         &:not(:last-child) {
           margin-bottom: 2px;
         }
-
-        background: url(../images/icons/decisions-check.svg) center left / 16px 16px no-repeat;
       }
     }
-  }
 
-  &__share {
-    @include flex-aic;
-    gap: 12px;
+    &__share {
+      @include flex-aic;
+      gap: 12px;
 
-    span {
-      font-weight: 700;
-      color: var(--gray-900);
+      span {
+        font-weight: 700;
+        color: var(--gray-900);
+      }
     }
-  }
 
-  &__form-comment {
-    padding-top: 40px;
+    &__form-comment {
+      padding-top: 40px;
+    }
   }
 }

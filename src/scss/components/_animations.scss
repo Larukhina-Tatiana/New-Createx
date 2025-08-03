@@ -337,6 +337,15 @@
   @include appearance(bottom);
 }
 
+/*
+< !-- Все одновременно -- > 
+<div class="appearance-left" data-animate="sync" > 1</div >
+<div class="appearance-right" data-animate="sync" > 2</div > 
+< !-- Один за другим -- > 
+<div class="appearance-left" data-animate="chain" > 3</div > <div class="appearance-right" data-animate="chain" > 4</div >
+< !-- Задержка по конкретному времени -- >
+<div class="appearance-top" data-animate="delay" data-delay="1.2" > 5</div >
+*/
 
 
 // @keyframes running-begin {
@@ -450,4 +459,30 @@ bgFadeSlide,
   transform: scaleX(0);
   transform-origin: $origin;
   animation: expand#{$origin} $duration cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+
+@keyframes clip-path {
+  from {
+    opacity: 0;
+    clip-path: inset(45% 20% 45% 20%);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+.revealing-image {
+  /* Create View Timeline */
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+
+  /* Attach animation, linked to the  View Timeline */
+  animation: linear clip-path both;
+  animation-timeline: --revealing-image;
+
+  /* Tweak range when effect should run*/
+  animation-range: entry 15% cover 50%;
 }
