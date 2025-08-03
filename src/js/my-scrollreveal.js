@@ -10,7 +10,7 @@ document.querySelectorAll(".our-services__item").forEach((card, index) => {
 
 function ScrollRevealFunc() {
   ScrollReveal().reveal(
-    ".hero, .news-section, .page-hero, .page-hero__descr, .history, .team__descr, .clients__descr,  .projects, .categories__box",
+    ".hero, .news-section, .page-hero, .page-hero__descr, .history, .team__descr, .clients__descr,  .projects, .categories__box, .reveal-bottom",
     {
       origin: "bottom",
       // delay: 0,
@@ -22,6 +22,8 @@ function ScrollRevealFunc() {
     ".section__subtitle, .video, .section__title, .quotation, .team, .clients, .application-form, .reveal-top",
     {
       origin: "top",
+      delay: 200,
+      viewOffset: { top: -100 },
     }
   );
 

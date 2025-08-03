@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Createx Construction Single Post</title>
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+  <link rel="shortcut icon" href="favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png" />
 
-  <title>Createx Single Post</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- Manifest -->
+  <link rel="manifest" href="favicons/site.webmanifest" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/graph-modal.min.css">
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body id="page">
@@ -71,7 +82,8 @@
       </ol>
     </nav>
     <div class="singlepost__content">
-      <h1 class="singlepost__title section__inside-title">How to&nbsp;Build Climate Change-Resilient Infrastructure
+      <h1 class="singlepost__title section__inside-title reveal-top">How to&nbsp;Build Climate Change-Resilient
+        Infrastructure
       </h1>
 
       <div class="singlepost__bottom">
@@ -116,7 +128,7 @@
     <article class="post">
   <div class="container">
     <h2 class="section__subtitle visually-hidden">Single Post</h2>
-    <div class="post__thumb images__thumb images__thumb--post">
+    <div class="post__thumb images__thumb images__thumb--post reveal-bottom">
       <picture>
         <source type="image/avif" srcset="
               ./images/news1/image1@1x.avif 1x,
@@ -156,7 +168,7 @@
         pharetra, nisi nunc,
         non.
       </p>
-      <blockquote>
+      <blockquote class="revealing-image">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis
         fermentum amet,
         eu. Pulvinar eu&nbsp;sed purus facilisi. Vitae id&nbsp;turpis tempus ornare turpis quis non. Congue tortor
@@ -169,11 +181,27 @@
         in&nbsp;neque amet non fringilla blandit:
       </p>
 
-      <ul>
-        <li>A&nbsp;fermentum in&nbsp;morbi pretium aliquam adipiscing donec tempus.</li>
-        <li>Vulputate placerat amet pulvinar lorem nisl.</li>
-        <li>Consequat feugiat habitant gravida quisque elit bibendum id&nbsp;adipiscing sed.</li>
-        <li>Etiam duis lobortis in&nbsp;fames ultrices commodo nibh.</li>
+      <ul class="decisions-list" role="list">
+        <li class="decisions-list__item appearance-right" data-animate="chain" role="listitem">
+          <p class="decisions-list__text decisions-list__text--16">
+            A&nbsp;fermentum in&nbsp;morbi pretium aliquam adipiscing donec tempus.
+          </p>
+        </li>
+        <li class="decisions-list__item appearance-right" data-animate="chain" role="listitem">
+          <p class="decisions-list__text decisions-list__text--16">
+            Vulputate placerat amet pulvinar lorem nisl.
+          </p>
+        </li>
+        <li class="decisions-list__item appearance-right" data-animate="chain" role="listitem">
+          <p class="decisions-list__text decisions-list__text--16">
+            Consequat feugiat habitant gravida quisque elit bibendum id&nbsp;adipiscing sed.
+          </p>
+        </li>
+        <li class="decisions-list__item appearance-right" data-animate="chain" role="listitem">
+          <p class="decisions-list__text decisions-list__text--16">
+            Etiam duis lobortis in&nbsp;fames ultrices commodo nibh
+          </p>
+        </li>
       </ul>
       <p>
         Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec sed leo. Nisi in ornare lectus
@@ -563,11 +591,12 @@
 
 <div class="overlay"></div>
 
+  <script src="js/main.min.js"></script>
+  <script src="./src/js/my-scrollreveal.js" type="module"></script>
   <script src="./src/js/create-alertbox.js" type="module"></script>
   <script src="./src/js/forms-handle.js" type="module"></script>
   <!-- <script src="./src/js/footer-form.js" type="module"></script>
   <script src="./src/js/application-form.js" type="module"></script> -->
-  <script src="js/main.min.js"></script>
 </body>
 
 </html>

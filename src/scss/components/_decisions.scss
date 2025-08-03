@@ -22,6 +22,14 @@
     margin-bottom: 61px;
   }
 
+  @media screen and (width < 1025px) {
+    &__container {
+      display: block;
+    }
+  }
+}
+
+.decisions-list {
   &__item {
 
     &:not(:last-child) {
@@ -31,14 +39,11 @@
 
   &__text {
     padding-left: 36px;
-    background: url(../images/icons/decisions-check.svg) bottom left / 20px 20px no-repeat;
+    background: url(../images/icons/decisions-check.svg) center left / 20px 20px no-repeat;
   }
 
-  @media screen and (width < 1025px) {
-    &__container {
-      display: block;
-    }
-
-
+  &__text--16 {
+    padding-left: 30px;
+    background: url(../images/icons/decisions-check.svg) center left / 16px 16px no-repeat;
   }
 }
