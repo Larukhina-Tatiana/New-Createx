@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Createx Construction Contacts</title>
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+  <link rel="shortcut icon" href="favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png" />
 
-  <title>Createx Contacts</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- Manifest -->
+  <link rel="manifest" href="favicons/site.webmanifest" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/graph-modal.min.css">
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="page-contacts" id="page">
@@ -84,7 +95,7 @@
       Please complete the form. Detailed information will help us to make a tuned offer.
     </p>
     <div class="contacts__inner">
-      <div class="images__thumb images__thumb--contact">
+      <div class="images__thumb images__thumb--contact reveal-left">
         <picture>
           <source type="image/avif" srcset="
                 ./images/contacts/image1@1x.avif 1x,
@@ -97,7 +108,7 @@
         </picture>
       </div>
 
-      <form class="contact-form" action="#">
+      <form class="contact-form reveal-right" action="#">
         <div class="contact-form__grup" role="group" aria-labelledby="contact-details-head">
           <div class="contact-form__data">
             <label class="form__label" for="first-name">Name*
@@ -186,17 +197,17 @@
     <nav class="offices__nav" title="secondary navigation">
       <div class="offices__nav-coll">
         <p class="offices__nav-title">New York, USA</p>
-        <ul class="offices__list">
-          <li class="offices__item offices__item--address">
+        <ul class="offices__list" role="list">
+          <li class="offices__item offices__item--address" role="listitem">
             <span class="offices__address">8502&nbsp;Preston Rd. Inglewood, New York 98380</span>
             <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
               rel="noopener noreferrer nofollow">See on the map</a>
           </li>
-          <li class="offices__item">
+          <li class="offices__item" role="listitem">
             <a class="offices__link" href="tel:4055550128"><span class="offices__link--name">Call:&nbsp;</span>(405)
               555-0128</a>
           </li>
-          <li class="offices__item">
+          <li class="offices__item" role="listitem">
             <a class="offices__link" href="mailto:hello@createx.com"><span
                 class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
           </li>
@@ -208,16 +219,16 @@
       <div class="offices__nav-coll">
         <p class="offices__nav-title">New Jersey, USA</p>
         <ul class="offices__list">
-          <li class="offices__item offices__item--address">
+          <li class="offices__item offices__item--address" role="listitem">
             <span class="offices__address">2464&nbsp;Royal Ln. Mesa, New Jersey 45463</span>
             <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
               rel="noopener noreferrer nofollow">See on the map</a>
           </li>
-          <li class="offices__item">
+          <li class="offices__item" role="listitem">
             <a class="offices__link" href="tel:8085550111"><span class="offices__link--name">Call:&nbsp;</span>(808)
               555-0111</a>
           </li>
-          <li class="offices__item">
+          <li class="offices__item" role="listitem">
             <a class="offices__link" href="mailto:hello@createx.com"><span
                 class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
           </li>
@@ -228,17 +239,17 @@
       </div>
       <div class="offices__nav-coll">
         <p class="offices__nav-title">San Francisco, USA</p>
-        <ul class="offices__list">
-          <li class="offices__item offices__item--address">
+        <ul class="offices__list" role="list">
+          <li class="offices__item offices__item--address" role="listitem">
             <span class="offices__address">8502 Preston Rd. Inglewood, San Francisco 98380</span>
             <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
               rel="noopener noreferrer nofollow">See on the map</a>
           </li>
-          <li class="offices__item">
+          <li class="offices__item" role="listitem">
             <a class="offices__link" href="tel:5055550125"><span class="offices__link--name">Call:&nbsp;</span>(505)
               555-0125</a>
           </li>
-          <li class="offices__item">
+          <li class="offices__item" role="listitem">
             <a class="offices__link" href="mailto:hello@createx.com"><span
                 class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
           </li>
@@ -430,9 +441,10 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="libs/choices/choices.min.js"></script>
   <script src="./src/js/selects.js"></script> -->
+  <script src="js/main.min.js"></script>
+  <script src="./src/js/my-scrollreveal.js" type="module"></script>
   <script src="./src/js/forms-handle.js" type="module"></script>
 
-  <script src="js/main.min.js"></script>
 </body>
 
 </html>

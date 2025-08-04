@@ -4,9 +4,11 @@ ScrollReveal({
   // reset: true,
 });
 
-document.querySelectorAll(".our-services__item").forEach((card, index) => {
-  card.style.setProperty("--order", index);
-});
+document
+  .querySelectorAll(".our-services__item, .offices__nav-coll")
+  .forEach((card, index) => {
+    card.style.setProperty("--order", index);
+  });
 
 function ScrollRevealFunc() {
   ScrollReveal().reveal(
@@ -31,6 +33,10 @@ function ScrollRevealFunc() {
     origin: "bottom",
     // duration: 2000,
   });
+  ScrollReveal().reveal(".offices__nav-coll", {
+    origin: "bottom",
+    duration: 2000,
+  });
 
   // ScrollReveal().reveal(".hero__btn, .gift__btn", {
   //   origin: "top",
@@ -41,8 +47,13 @@ function ScrollRevealFunc() {
     origin: "top",
   });
 
-  ScrollReveal().reveal(".rooms__title", {
-    origin: "bottom",
+  ScrollReveal().reveal(".reveal-left", {
+    origin: "left",
+    delay: 200,
+  });
+  ScrollReveal().reveal(".reveal-right", {
+    origin: "right",
+    delay: 200,
   });
 
   ScrollReveal().reveal(".reveal-rotate", {
