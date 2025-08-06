@@ -1,9 +1,7 @@
 .request-form {
   @include flex-fdc;
-
   scroll-margin-top: var(--scroll-margin-top);
-
-
+  @include appear-scale;
 
   &__title {
     padding-top: 48px;

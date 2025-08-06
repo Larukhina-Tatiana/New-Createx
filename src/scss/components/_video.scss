@@ -11,6 +11,17 @@
     height: 500px;
     border-radius: var(--border-radius);
 
+    // анимация
+    transform-origin: center center;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+
+    &.is-visible {
+      transform: scale(1);
+      opacity: 1;
+    }
+
     &::before {
       content: '';
       position: absolute;

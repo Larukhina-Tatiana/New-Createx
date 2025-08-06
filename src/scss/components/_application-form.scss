@@ -5,14 +5,12 @@
   background-position: center;
   background-size: cover;
 
-  animation-name: fadeScale;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
+  @include my-reveal-bg($duration: 2s,
+    $timing: ease-out,
+    $end-size: 100% 100%,
+    $start-size: 0% 100%,
+    $anim-name: my-revealBg);
 
-  view-timeline-name: --fadeScale-block;
-  animation-timeline: --fadeScale-block;
-  animation-range: 20% 50%;
-  // scroll-margin-top: 100px;
 
   &__container {
     display: flex;

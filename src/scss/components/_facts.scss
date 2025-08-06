@@ -1,5 +1,4 @@
 .facts {
-  background-color: var(--white);
   // padding-top: 180px;
   padding-top: clamp(4.375rem, 1.957rem + 12.09vw, 11.25rem);
   // padding-bottom: 57px;
@@ -7,13 +6,13 @@
   position: relative;
   overflow: hidden;
 
-  animation-name: fadeScale;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
+  // animation-name: fadeScale;
+  // animation-fill-mode: both;
+  // animation-timing-function: linear;
 
-  view-timeline-name: --fadeScale-block;
-  animation-timeline: --fadeScale-block;
-  animation-range: 20% 50%;
+  // view-timeline-name: --fadeScale-block;
+  // animation-timeline: --fadeScale-block;
+  // animation-range: 20% 50%;
 
 
   &::before {
@@ -72,18 +71,23 @@
     width: 148px;
     height: 148px;
 
-    svg {
+    .circle-anim {
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
+      transform: rotate(0deg);
     }
 
     .progress {
       stroke: var(--progress-stroke);
       transform: rotate(-90deg) translateX(20px);
       transform-origin: center;
+      stroke-dasharray: 942;
+      stroke-dashoffset: 942;
+      transition: stroke-dashoffset 2s ease-in-out;
+      /* Переход для плавной анимации */
     }
 
     .progress-bg {
@@ -108,15 +112,27 @@
     }
   }
 
-  &__value {
+  &__value-wrapper {
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__value {
     font-weight: 700;
     font-size: 32px;
     line-height: 150%;
     color: var(--gray-900);
-    transform: translate(-50%, -50%);
+    // анимация
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+
+    &.show {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 
   &__text {

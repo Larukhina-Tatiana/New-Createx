@@ -1,7 +1,7 @@
 ScrollReveal({
   distance: "60px",
-  duration: 1800,
-  // reset: true,
+  duration: 1000,
+  reset: true, // повторение анимации
 });
 
 document
@@ -12,24 +12,20 @@ document
 
 function ScrollRevealFunc() {
   ScrollReveal().reveal(
-    ".hero, .news-section, .page-hero, .page-hero__descr, .history, .team__descr, .clients__descr,  .projects, .categories__box, .reveal-bottom",
+    ".news-section, .page-hero, .page-hero__descr, .history, .team__descr, .clients__descr,  .projects, .categories__box, .reveal-bottom",
     {
       origin: "bottom",
       // delay: 0,
       // viewOffset: { top: -100 },
     }
   );
+  ScrollReveal().reveal(".video,.quotation, .team, .clients, .reveal-top", {
+    origin: "top",
+    delay: 200,
+    // viewOffset: { top: -100 },
+  });
 
-  ScrollReveal().reveal(
-    ".section__subtitle, .video, .section__title, .quotation, .team, .clients, .application-form, .reveal-top",
-    {
-      origin: "top",
-      delay: 200,
-      viewOffset: { top: -100 },
-    }
-  );
-
-  ScrollReveal().reveal(".section__text", {
+  ScrollReveal().reveal(".reveal-bottom", {
     origin: "bottom",
     // duration: 2000,
   });

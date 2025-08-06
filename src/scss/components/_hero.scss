@@ -25,7 +25,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+
     /* Fallback для браузеров без поддержки dvh */
     @supports not (height: 100dvh) {
       min-height: calc(100vh - var(--header-height));
@@ -38,9 +38,11 @@
   }
 
   &__content {
-    padding-top: clamp(4.375rem, 1.078rem + 16.48vw, 13.75rem);
+    // padding-top: clamp(4.375rem, 1.078rem + 16.48vw, 13.75rem);
+    padding-top: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
     padding-bottom: clamp(6.25rem, 0.668rem + 27.91vw, 22.125rem);
-    max-width: 580px;
+    padding-left: 76px;
+    max-width: calc(580px + 76px);
     z-index: 2;
   }
 
@@ -127,6 +129,30 @@
       background-color: rgba((white), .6);
       transform-origin: left;
       transform: scaleX(0);
+    }
+  }
+
+  .reveal-top-init {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  .reveal-bottom-init {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .reveal-top,
+  .reveal-bottom {
+    opacity: 1 !important;
+    /* Додано !important, щоб перекрити вбудовані стилі */
+    transform: translateY(0) !important;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  @media screen and (width < 1024px) {
+    &__content {
+      padding-left: 0;
     }
   }
 }

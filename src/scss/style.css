@@ -318,17 +318,17 @@ button {
   letter-spacing: 0.02em;
   color: var(--gray-900);
 }
-.section__subtitle {
+.section-subtitle reveal-top {
   font-weight: 700;
   font-size: 46px;
   line-height: 1.3;
   color: var(--gray-900);
   margin-bottom: 24px;
 }
-.section__subtitle--center {
+.section-subtitle section-subtitle--center {
   text-align: center;
 }
-.section__text {
+.section-text reveal-bottom {
   font-size: 18px;
   line-height: 1.5;
   color: var(--gray-700);
@@ -948,7 +948,7 @@ checkbox:checked
   align-items: flex-end;
   margin-bottom: 44px;
 }
-.portfolio-section__subtitle {
+.portfolio-section-subtitle reveal-top {
   max-width: 710px;
   margin-bottom: 0;
   padding-bottom: 14px;
@@ -1149,7 +1149,7 @@ checkbox:checked
 .news-section {
   padding-bottom: 120px;
 }
-.news-section__subtitle {
+.news-section-subtitle reveal-top {
   margin-bottom: 59px;
 }
 .news-section__list {

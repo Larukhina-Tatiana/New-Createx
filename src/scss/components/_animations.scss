@@ -14,7 +14,7 @@
   }
 
   &.fadeInUp.in-view {
-    animation: fadeInUp 0.8s ease forwards 0.2s;
+    animation: fadeInUp 0.8s ease forwards 0.12s;
   }
 
   &.pulse.in-view {
@@ -76,7 +76,7 @@
 }
 
 .fadeInUp {
-  animation: fadeInUp 0.8s ease forwards 0.2s;
+  animation: fadeInUp 0.8s ease forwards 0.12s;
 }
 
 // Анимация появления элементов
@@ -367,8 +367,8 @@
 // 🎯 Миксин для анимации раскрытия фона
 @mixin my-reveal-bg($duration: 1s,
   $timing: ease-out,
-  $start-size: 0% 100%,
   $end-size: 50% 100%,
+  $start-size: 0% 100%,
   $anim-name: my-revealBg) {
   background-size: $start-size;
   background-repeat: no-repeat;
@@ -383,7 +383,13 @@
 }
 
 .page-hero {
-  @include my-reveal-bg(1s, ease-out);
+  .page-hero {
+    @include my-reveal-bg($duration: 1s,
+      $timing: ease-out,
+      $end-size: 50% 100%,
+      $start-size: 0% 100%,
+      $anim-name: my-revealBg);
+  }
 }
 
 /*
@@ -485,4 +491,24 @@ bgFadeSlide,
 
   /* Tweak range when effect should run*/
   animation-range: entry 15% cover 50%;
+}
+
+
+@keyframes scaleUp {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@mixin appear-scale($duration: 0.8s, $easing: ease-out, $origin: center center, $scale: 0.5) {
+  transform-origin: $origin;
+  transform: scale($scale);
+  opacity: 0;
+  transition: transform $duration $easing, opacity $duration $easing;
+
+  &.is-visible {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

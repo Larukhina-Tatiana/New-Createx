@@ -28,7 +28,7 @@
     color: var(--primary);
   }
 
-  @media screen and (width < 1024.99px) {
+  @media screen and (width < 1024px) {
     display: none;
   }
 }

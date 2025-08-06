@@ -30,6 +30,8 @@
     }
 
     &__item {
+      @include appear-scale;
+
       &:not(:last-child) {
         margin-bottom: 30px;
       }

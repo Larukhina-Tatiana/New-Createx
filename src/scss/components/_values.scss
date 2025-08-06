@@ -22,14 +22,6 @@
     // --valeus-gap: 94px;
     --valeus-gap: clamp(1.875rem, -4.774rem + 13.85vw, 5.875rem);
     gap: calc(var(--valeus-gap) * 2);
-
-    animation-name: fadeScale;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-
-    view-timeline-name: --fadeScale-block;
-    animation-timeline: --fadeScale-block;
-    animation-range: 20% 50%;
   }
 
   &__item {

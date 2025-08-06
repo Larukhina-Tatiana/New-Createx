@@ -1,37 +1,43 @@
 <section class="facts">
   <div class="container">
-    <h2 class="section__subtitle section__subtitle--center facts__subtitle">Some facts and figures</h2>
-    <ul class="facts__list grid">
-      <li class="facts__item">
+    <h2 class="section-subtitle section-subtitle--center facts__subtitle reveal-top">Some facts and
+      figures
+    </h2>
+    <ul class="facts__list grid" role="list">
+      <li class="facts__item" role="listitem">
         <div class="facts-element">
-          <div class="facts-element__circle facts-element__circle--one-color" data-percent="57">
+          <div class="facts-element__circle facts-element__circle--one-color" data-percent="98">
             <svg class="circle-anim" viewBox="-10 -10 320 320">
               <circle class="progress-bg" r="150" cx="150" cy="150" fill="none" stroke-width="15">
               </circle>
               <circle class="progress" r="150" cx="150" cy="150" fill="none" stroke-width="15">
               </circle>
             </svg>
-            <div class="facts-element__value">98%</div>
+            <div class="facts-element__value-wrapper">
+              <span class="facts-element__value">98%</span>
+            </div>
           </div>
           <span class="facts-element__text">Totally satisfied clients</span>
         </div>
       </li>
-      <li class="facts__item">
+      <li class="facts__item" role="listitem">
         <div class="facts-element">
-          <div class="facts-element__circle facts-element__circle--two-color" data-percentage="true" data-full="50"
-            data-value="35">
+          <div class="facts-element__circle facts-element__circle--two-color" data-percentage="true" data-full="30"
+            data-value="20">
             <svg class="circle-anim" viewBox="-10 -10 320 320">
               <circle class="progress-bg" r="150" cx="150" cy="150" fill="none" stroke="yellow" stroke-width="15">
               </circle>
               <circle class="progress" r="150" cx="150" cy="150" fill="none" stroke="crimson" stroke-width="15">
               </circle>
             </svg>
-            <div class="facts-element__value">98%</div>
+            <div class="facts-element__value-wrapper">
+              <span class="facts-element__value">20</span>
+            </div>
           </div>
           <span class="facts-element__text">Years of experience</span>
         </div>
       </li>
-      <li class="facts__item">
+      <li class="facts__item" role="listitem">
         <div class="facts-element">
           <div class="facts-element__circle facts-element__circle--three-color" data-percentage="true" data-full="10000"
             data-value="9452">
@@ -41,12 +47,14 @@
               <circle class="progress" r="150" cx="150" cy="150" fill="none" stroke="crimson" stroke-width="15">
               </circle>
             </svg>
-            <div class="facts-element__value">98%</div>
+            <div class="facts-element__value-wrapper">
+              <span class="facts-element__value"></span>
+            </div>
           </div>
           <span class="facts-element__text">Working hours spent</span>
         </div>
       </li>
-      <li class="facts__item">
+      <li class="facts__item" role="listitem">
         <div class="facts-element">
           <div class="facts-element__circle facts-element__circle--four-color" data-percent="100">
             <svg class="circle-anim" viewBox="-10 -10 320 320">
@@ -55,7 +63,9 @@
               <circle class="progress" r="150" cx="150" cy="150" fill="none" stroke="crimson" stroke-width="15">
               </circle>
             </svg>
-            <div class="facts-element__value">98%</div>
+            <div class="facts-element__value-wrapper">
+              <span class="facts-element__value">100%</span>
+            </div>
           </div>
           <span class="facts-element__text">Succeeded projects</span>
         </div>

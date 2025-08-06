@@ -1,17 +1,27 @@
-<section class="video container section">
-  <h2 class="section__subtitle">We are Createx Construction Bureau</h2>
-  <p class="section__text">We&nbsp;are rightfully considered to&nbsp;be&nbsp;the best construction
-    company in&nbsp;the USA.</p>
-  <div class="video__block">
-    <video class="video__player" width="100%" height="auto" preload="metadata" muted
-      poster="./images/video/video1@1x.avif" tabindex="0">
-      <source src="./src/resources/Untitled-5.mp4" type="video/mp4">
-    </video>
-    <button class="video__button" type="button" aria-label="Play video">
-      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" fill="none">
-        <path fill="#fff"
-          d="M18.5 10.134a1 1 0 0 1 0 1.732L2 21.392a1 1 0 0 1-1.5-.866V1.474A1 1 0 0 1 2 .608l16.5 9.526Z" />
-      </svg>
-    </button>
+<section class="video section" itemscope itemtype="http://schema.org/VideoObject">
+  <div class="container">
+    <h2 class="section-subtitle reveal-top" itemprop="name">We are Createx Construction Bureau</h2>
+    <p class="section-text reveal-bottom" itemprop="description">We&nbsp;are rightfully considered to&nbsp;be&nbsp;the
+      best construction
+      company in&nbsp;the USA.</p>
+    <div class="video__block animate-on-scroll">
+      <video class="video__player" width="100%" height="auto" preload="metadata" muted
+        poster="./images/video/video1@1x.avif" tabindex="0" itemprop="thumbnailUrl">
+        <source src="./src/resources/Untitled-5.mp4" type="video/mp4" itemprop="contentUrl">
+        Your browser does not support video.
+      </video>
+      <button class="video__button" type="button" aria-label="Play video">
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" fill="none">
+          <path fill="#fff"
+            d="M18.5 10.134a1 1 0 0 1 0 1.732L2 21.392a1 1 0 0 1-1.5-.866V1.474A1 1 0 0 1 2 .608l16.5 9.526Z" />
+        </svg>
+      </button>
+      <!-- Дополнительные метаданные для VideoObject -->
+      <meta itemprop="uploadDate" content="2024-10-27"> <!-- Пример даты загрузки -->
+      <meta itemprop="duration" content="PT0M8S"> <!-- Пример длительности видео (8 секунд) -->
+      <meta itemprop="embedUrl" content="https://larukhina-tatiana.github.io/Createx/src/resources/Untitled-5.mp4">
+      <!-- URL для встраивания -->
+      <meta itemprop="interactionCount" content="1234"> <!-- Пример количества просмотров -->
+    </div>
   </div>
 </section>

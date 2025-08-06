@@ -164,7 +164,7 @@ function scripts() {
       // "js/jquery.rateyo.js",
       "./src/js/burger.js",
       "./src/js/sliders.js",
-      // "./src/js/video.js",
+      "./src/js/video.js",
       "./src/js/progress.js",
       "./src/js/to-top.js",
       "./src/js/video.js",
