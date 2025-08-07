@@ -1,4 +1,5 @@
 .values {
+  overflow: hidden;
   @include flex-fdc;
   // padding-top: 120px;
   padding-top: clamp(2.5rem, 0.742rem + 8.79vw, 7.5rem);

@@ -382,15 +382,15 @@
   }
 }
 
+
 .page-hero {
-  .page-hero {
-    @include my-reveal-bg($duration: 1s,
-      $timing: ease-out,
-      $end-size: 50% 100%,
-      $start-size: 0% 100%,
-      $anim-name: my-revealBg);
-  }
+  @include my-reveal-bg($duration: 1s,
+    $timing: ease-out,
+    $end-size: 50% 100%,
+    $start-size: 0% 100%,
+    $anim-name: my-revealBg);
 }
+
 
 /*
 

@@ -3,13 +3,16 @@
   padding-bottom: 80px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  // background-size: cover;
+  background-size: 0% 100%;
 
-  @include my-reveal-bg($duration: 2s,
-    $timing: ease-out,
-    $end-size: 100% 100%,
-    $start-size: 0% 100%,
-    $anim-name: my-revealBg);
+  &.in-view {
+    @include my-reveal-bg($duration: 1s,
+      $timing: ease-out,
+      $end-size: 100% 100%,
+      $start-size: 0% 100%,
+      $anim-name: my-revealBg);
+  }
 
 
   &__container {

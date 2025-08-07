@@ -19,7 +19,7 @@ function ScrollRevealFunc() {
       // viewOffset: { top: -100 },
     }
   );
-  ScrollReveal().reveal(".video,.quotation, .team, .clients, .reveal-top", {
+  ScrollReveal().reveal(".quotation, .team, .reveal-top", {
     origin: "top",
     delay: 200,
     // viewOffset: { top: -100 },
