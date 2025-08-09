@@ -24,7 +24,7 @@
   }
 
   &__item {
-    grid-column: 3 span;
+    grid-column: span 3;
     border: 1px solid var(--gray-300);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -125,13 +125,21 @@
 
   @media screen and (width < 1024.99px) {
     &__item {
-      grid-column: 6 span;
+      grid-column: span 6;
     }
   }
 
   @media screen and (width < 484.99px) {
     &__item {
-      grid-column: 12 span;
+      grid-column: span 12;
+
+    }
+  }
+
+  @media screen and (height < 769px) {
+    &__list {
+      gap: 27px 5px;
+
     }
   }
 }

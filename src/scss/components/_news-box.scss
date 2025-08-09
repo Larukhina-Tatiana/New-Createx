@@ -5,7 +5,25 @@
   background-color: var(--white);
   height: auto;
 
+  @include transition ($transition-property: (transform, scale));
+
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translate3d(10px, -15px, 10px);
+
+      .images__img {
+        scale: 1.1;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
   &__title-link {
+    @include transition ($transition-property: color);
+
     &:focus {
       outline: 2px solid var(--primary);
       outline-offset: 2px;
@@ -13,10 +31,7 @@
 
     @media (any-hover: hover) {
       &:hover {
-        .news-box__title {
-          @include transition ($transition-property: color);
-          color: var(--primary);
-        }
+        color: var(--primary);
       }
     }
 
@@ -41,12 +56,9 @@
   }
 
   &__content {
-    padding: 25px 24px;
+    padding: 24px;
   }
 
-  &__title-link {
-    margin-bottom: 12px;
-  }
 
   &__meta {
     display: flex;
@@ -100,6 +112,7 @@
   }
 
   &__descr {
+    margin-bottom: 1px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

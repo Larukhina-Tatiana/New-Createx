@@ -1,6 +1,7 @@
 .news-section {
   // padding-bottom: 119px;
   padding-bottom: clamp(2.5rem, 0.764rem + 8.68vw, 7.438rem);
+  overflow: hidden;
 
 
   &__subtitle {
@@ -10,7 +11,7 @@
 
   &__list {
     grid-template-rows: repeat(2, 255px);
-    column-gap: 30px;
+    gap: 30px;
     padding-bottom: 80px;
   }
 

@@ -33,4 +33,11 @@
     }
 
   }
+
+  @media screen and (height < 769px) {
+    &__btn {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

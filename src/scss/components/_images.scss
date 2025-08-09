@@ -4,13 +4,18 @@
     overflow: hidden;
     border-radius: var(--border-radius);
 
+    &--news-box-705 {
+      width: 705px;
+      height: 360px;
+    }
+
     &--news-box {
       width: 575px;
       height: 420px;
     }
 
     &--news-box-small {
-      width: 575px;
+      width: 495px;
       height: 156px;
     }
 
@@ -103,6 +108,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include transition ($transition-property: scale);
     // aspect-ratio: 1/1;
   }
 }

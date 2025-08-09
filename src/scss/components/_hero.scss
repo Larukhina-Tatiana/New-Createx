@@ -40,7 +40,7 @@
   &__content {
     // padding-top: clamp(4.375rem, 1.078rem + 16.48vw, 13.75rem);
     padding-top: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
-    padding-bottom: clamp(6.25rem, 0.668rem + 27.91vw, 22.125rem);
+    // padding-bottom: clamp(6.25rem, 0.668rem + 27.91vw, 22.125rem);
     padding-left: 76px;
     max-width: calc(580px + 76px);
     z-index: 2;
@@ -155,6 +155,42 @@
       padding-left: 0;
     }
   }
+
+  @media screen and (height < 801px) {
+    &__content {
+      padding-top: 100px;
+    }
+  }
+
+  @media screen and (height < 721px) {
+    &__content {
+      padding-top: 10px;
+    }
+
+    &__descr {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (height < 601px) {
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__descr {
+      margin-bottom: 10px;
+    }
+
+    &__buttons {
+      gap: 10px;
+    }
+
+    &__pagination {
+      bottom: 15px !important;
+    }
+  }
+
+
 }
 
 .hero .swiper-wrapper {
