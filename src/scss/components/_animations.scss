@@ -364,17 +364,25 @@
 // }
 
 
-// 🎯 Миксин для анимации раскрытия фона
+// 🎯 Миксин для анимации раскрытия фона на page-hero
 @mixin my-reveal-bg($duration: 1s,
   $timing: ease-out,
-  $end-size: 50% 100%,
   $start-size: 0% 100%,
-  $anim-name: my-revealBg) {
+  $anim-name: my-revealBg,
+  $end-size: null) {
+  // Автоматически получаем end-size из карты, если не задано вручную
+  $resolved-end-size: if($end-size ==null and map-has-key($reveal-bg-sizes, str-replace($anim-name, "my-revealBg-", "")),
+      map-get($reveal-bg-sizes, str-replace($anim-name, "my-revealBg-", "")),
+      $end-size );
+
   background-size: $start-size;
-  background-repeat: no-repeat;
-  background-position: center;
   animation: $anim-name $duration $timing forwards;
 
+  // fallback: если resolved-end-size не null, можно использовать его где-то ещё
+}
+
+@mixin generate-reveal-keyframe($anim-name,
+  $end-size: 50% 100%) {
   @keyframes #{$anim-name} {
     to {
       background-size: $end-size;
@@ -382,13 +390,19 @@
   }
 }
 
+// Карта размеров анимации
+$reveal-bg-sizes: (
+  "100-100": 100% 100%,
+  "50-100": 50% 100%,
+  "56-100": 56% 100%,
+  "52-100": 52% 100%,
+  "46-100": 46% 100%,
+  "52-85": 52% 85%,
+  "cover": cover
+);
 
-.page-hero {
-  @include my-reveal-bg($duration: 1s,
-    $timing: ease-out,
-    $end-size: 50% 100%,
-    $start-size: 0% 100%,
-    $anim-name: my-revealBg);
+@each $name, $size in $reveal-bg-sizes {
+  @include generate-reveal-keyframe(my-revealBg-#{$name}, $size);
 }
 
 

@@ -175,6 +175,7 @@ function scripts() {
       "./src/js/mainmixitup.js",
       "./src/js/modals.js",
       // "./src/js/selects.js",
+      "./src/js/tab-link-handler.js",
       "./src/js/tabs.js",
       "./src/js/animations.js",
       "./src/js/dynamic-header-height.js",

@@ -1,96 +1,233 @@
-const portfolioTabsNav = document.querySelector(".portfolio-tabs-nav");
-const portfolioTabsBtns = document.querySelectorAll(".portfolio-tabs-nav__btn");
-const portfolioTabsItems = document.querySelectorAll(".tabs-content__item");
-const portfolioTabsItemsVisible = document.querySelectorAll(
-  ".tabs-content__item--visible"
-);
-const loadMore = document.querySelector(".portfolio-more");
-const maxItems = 9;
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("✅ tabs.js загружен");
 
-if (portfolioTabsNav) {
-  const isLoadMoreNeeded = (selector) => {
-    if (selector.length <= maxItems) {
-      loadMore.style.display = "none";
+  const portfolioTabsNav = document.querySelector(".portfolio-tabs-nav");
+  const portfolioTabsBtns = document.querySelectorAll(
+    ".portfolio-tabs-nav__btn"
+  );
+  const portfolioTabsItems = document.querySelectorAll(".tabs-content__item");
+  const loadMore = document.querySelector(".portfolio-more");
+  const maxItems = 9;
+
+  // Функция для добавления/удаления классов анимации
+  const setItemVisibility = (item, isVisible) => {
+    if (isVisible) {
+      item.classList.remove("item--hidden");
+      item.classList.add("item--visible");
     } else {
-      loadMore.style.display = "inline-flex";
+      item.classList.remove("item--visible");
+      item.classList.add("item--hidden");
     }
   };
 
-  const hideMoreItems = (selector) => {
-    if (selector.length > maxItems) {
-      const arr = Array.from(selector);
-      const hiddenItems = arr.slice(maxItems, selector.length);
+  // Активация вкладки по path
+  // const activateTab = (path) => {
+  //   console.log(`▶️ Активируем вкладку: ${path}`);
+  //   const targetBtn = document.querySelector(
+  //     `.portfolio-tabs-nav__btn[data-path="${path}"]`
+  //   );
+  //   if (!targetBtn) return;
 
-      hiddenItems.forEach((el) => {
-        el.classList.remove("tabs-content__item--visible");
-        el.classList.remove("tabs-content__item--visible-more");
-      });
-    }
-  };
+  //   // Обновляем активную кнопку
+  //   portfolioTabsBtns.forEach((btn) =>
+  //     btn.classList.remove("portfolio-tabs-nav__btn--active")
+  //   );
+  //   targetBtn.classList.add("portfolio-tabs-nav__btn--active");
 
-  portfolioTabsNav.addEventListener("click", (e) => {
-    const target = e.target;
-    if (target.classList.contains("portfolio-tabs-nav__btn")) {
-      const path = target.dataset.path;
+  //   // Получаем нужные элементы
+  //   const itemsToShow =
+  //     path === "all"
+  //       ? Array.from(portfolioTabsItems)
+  //       : Array.from(document.querySelectorAll(`[data-target="${path}"]`))
+  //           .map((el) => el.closest(".tabs-content__item"))
+  //           .filter(Boolean);
 
-      portfolioTabsBtns.forEach((el) => {
-        el.classList.remove("portfolio-tabs-nav__btn--active");
-      });
-      target.classList.add("portfolio-tabs-nav__btn--active");
+  //   // Скрываем все элементы
+  //   portfolioTabsItems.forEach((item) => {
+  //     item.classList.remove("item--visible");
+  //     item.classList.add("item--hidden");
+  //     item.style.display = "none"; // Скрываем из потока
+  //   });
 
-      portfolioTabsItems.forEach((el) => {
-        el.classList.remove("tabs-content__item--visible");
-        el.classList.remove("tabs-content__item--visible-more");
-      });
+  //   // Показываем первые maxItems
+  //   itemsToShow.slice(0, maxItems).forEach((item) => {
+  //     item.style.display = "block"; // Показываем в потоке
+  //     setItemVisibility(item, true);
+  //   });
 
-      document.querySelectorAll(`[data-target="${path}"]`).forEach((el) => {
-        el.closest(".tabs-content__item").classList.add(
-          "tabs-content__item--visible"
-        );
-      });
-
-      isLoadMoreNeeded(document.querySelectorAll(`[data-target="${path}"]`));
-      hideMoreItems(document.querySelectorAll(".tabs-content__item--visible"));
-
-      if (path == "all") {
-        portfolioTabsItems.forEach((el) => {
-          el.classList.add("tabs-content__item--visible");
-        });
-
-        isLoadMoreNeeded(
-          document.querySelectorAll(".tabs-content__item--visible")
-        );
-        hideMoreItems(
-          document.querySelectorAll(".tabs-content__item--visible")
-        );
-      }
-    }
-  });
-
-  hideMoreItems(portfolioTabsItems);
-  isLoadMoreNeeded(portfolioTabsItemsVisible);
-
-  loadMore.addEventListener("click", (e) => {
-    const visibleItems = document.querySelectorAll(
-      ".tabs-content__item--visible"
+  //   // Показываем кнопку "Показать больше", если нужно
+  //   if (loadMore) {
+  //     loadMore.style.display =
+  //       itemsToShow.length > maxItems ? "inline-flex" : "none";
+  //   }
+  // };
+  const activateTab = (path) => {
+    console.log(`▶️ Активируем вкладку: ${path}`);
+    const targetBtn = document.querySelector(
+      `.portfolio-tabs-nav__btn[data-path="${path}"]`
     );
+    if (!targetBtn) return;
 
-    const path = document.querySelector(".portfolio-tabs-nav__btn--active")
-      .dataset.path;
-    console.log(path);
+    portfolioTabsBtns.forEach((btn) =>
+      btn.classList.remove("portfolio-tabs-nav__btn--active")
+    );
+    targetBtn.classList.add("portfolio-tabs-nav__btn--active");
 
-    if (path == "all") {
-      portfolioTabsItems.forEach((el) => {
-        el.classList.add("tabs-content__item--visible-more");
-        loadMore.style.display = "none";
+    const itemsToShow =
+      path === "all"
+        ? Array.from(portfolioTabsItems)
+        : Array.from(document.querySelectorAll(`[data-target="${path}"]`))
+            .map((el) => el.closest(".tabs-content__item"))
+            .filter(Boolean);
+
+    portfolioTabsItems.forEach((item) => {
+      item.classList.remove("item--visible");
+      item.classList.add("item--hidden");
+      item.style.display = "none";
+    });
+
+    itemsToShow.slice(0, maxItems).forEach((item) => {
+      item.style.display = "block";
+      requestAnimationFrame(() => {
+        item.classList.remove("item--hidden");
+        item.classList.add("item--visible");
       });
-    } else {
-      document.querySelectorAll(`[data-target="${path}"]`).forEach((el) => {
-        el.closest(".tabs-content__item").classList.add(
-          "tabs-content__item--visible-more"
-        );
-      });
-      loadMore.style.display = "none";
+    });
+
+    if (loadMore) {
+      loadMore.style.display =
+        itemsToShow.length > maxItems ? "inline-flex" : "none";
     }
+  };
+
+  // активация карточек по очереди
+  // const activateTab = (path) => {
+  //   console.log(`▶️ Активируем вкладку: ${path}`);
+  //   const targetBtn = document.querySelector(
+  //     `.portfolio-tabs-nav__btn[data-path="${path}"]`
+  //   );
+  //   if (!targetBtn) return;
+
+  //   portfolioTabsBtns.forEach((btn) =>
+  //     btn.classList.remove("portfolio-tabs-nav__btn--active")
+  //   );
+  //   targetBtn.classList.add("portfolio-tabs-nav__btn--active");
+
+  //   const itemsToShow =
+  //     path === "all"
+  //       ? Array.from(portfolioTabsItems)
+  //       : Array.from(document.querySelectorAll(`[data-target="${path}"]`))
+  //           .map((el) => el.closest(".tabs-content__item"))
+  //           .filter(Boolean);
+
+  //   // Скрываем все элементы
+  //   portfolioTabsItems.forEach((item) => {
+  //     item.classList.remove("item--visible");
+  //     item.classList.add("item--hidden");
+  //     item.style.display = "none";
+  //   });
+
+  //   // Каскадное появление
+  //   itemsToShow.slice(0, maxItems).forEach((item, index) => {
+  //     item.style.display = "block";
+  //     setTimeout(() => {
+  //       item.classList.remove("item--hidden");
+  //       item.classList.add("item--visible");
+  //     }, index * 100); // задержка между карточками
+  //   });
+
+  //   if (loadMore) {
+  //     loadMore.style.display =
+  //       itemsToShow.length > maxItems ? "inline-flex" : "none";
+  //   }
+  // };
+
+  // Инициализация при загрузке — из хеша, query или sessionStorage
+  const initTabFromURL = () => {
+    let hash = window.location.hash.replace("#", "");
+    if (!hash) {
+      hash = new URLSearchParams(window.location.search).get("tab");
+    }
+    if (!hash) {
+      hash = sessionStorage.getItem("tab");
+      sessionStorage.removeItem("tab");
+    }
+
+    console.log("🔍 Инициализация вкладки из URL:", hash || "all");
+
+    if (!hash) {
+      activateTab("all");
+      return;
+    }
+
+    let attempts = 0;
+    const maxAttempts = 30;
+
+    const check = () => {
+      const btn = document.querySelector(
+        `.portfolio-tabs-nav__btn[data-path="${hash}"]`
+      );
+      const items = document.querySelectorAll(`[data-target="${hash}"]`);
+      if (btn && items.length > 0) {
+        activateTab(hash);
+      } else if (attempts < maxAttempts) {
+        attempts++;
+        setTimeout(check, 100);
+      } else {
+        console.warn(`❌ Вкладка "${hash}" не найдена — не активируем "all"`);
+      }
+    };
+
+    check();
+  };
+
+  // Обработчик кнопки "Показать больше"
+  if (loadMore) {
+    loadMore.addEventListener("click", () => {
+      const activePath = document.querySelector(
+        ".portfolio-tabs-nav__btn--active"
+      )?.dataset.path;
+      if (!activePath) return;
+
+      const items =
+        activePath === "all"
+          ? Array.from(portfolioTabsItems)
+          : Array.from(
+              document.querySelectorAll(`[data-target="${activePath}"]`)
+            )
+              .map((el) => el.closest(".tabs-content__item"))
+              .filter(Boolean);
+
+      // Показываем скрытые элементы
+      items.slice(maxItems).forEach((item, index) => {
+        item.style.display = "block";
+        setTimeout(() => {
+          item.classList.remove("item--hidden");
+          item.classList.add("item--visible");
+        }, index * 100); // каскадное появление
+      });
+
+      loadMore.style.display = "none";
+    });
+  }
+
+  // Обработчик клика по вкладкам
+  if (portfolioTabsNav) {
+    portfolioTabsNav.addEventListener("click", (e) => {
+      const target = e.target.closest(".portfolio-tabs-nav__btn");
+      if (target) {
+        activateTab(target.dataset.path);
+        history.pushState(null, "", `#${target.dataset.path}`);
+      }
+    });
+  }
+
+  // Инициализация при загрузке
+  initTabFromURL();
+
+  // Обработка переходов назад/вперёд
+  window.addEventListener("popstate", () => {
+    console.log("🔄 popstate: проверяем хеш");
+    initTabFromURL();
   });
-}
+});

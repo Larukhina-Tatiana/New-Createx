@@ -44,6 +44,11 @@
   }
 
   &-about {
+
+    .page-hero.in-view {
+      @include my-reveal-bg($anim-name: my-revealBg-50-100);
+    }
+
     .values {
       padding-top: clamp(2.5rem, 1.621rem + 4.4vw, 5rem);
       // padding-top: 80px;
@@ -55,26 +60,29 @@
     }
   }
 
+  &-positions {
+    .page-hero.in-view {
+      @include my-reveal-bg($anim-name: my-revealBg-52-85);
+    }
+  }
 
-  &-contacts {
-    .header {
-      background-color: transparent;
+  &-news {
+    .page-hero.in-view {
+      @include my-reveal-bg($anim-name: my-revealBg-56-100);
+    }
+  }
+
+  &-services {
+    .page-hero.in-view {
+      @include my-reveal-bg($anim-name: my-revealBg-50-100);
     }
   }
 
   &-services-inside {
     .page-hero {
-      background-size: 0% 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      animation: revealBg 1s ease-out forwards;
+      @include my-reveal-bg($anim-name: my-revealBg-52-100);
     }
 
-    @keyframes revealBg {
-      to {
-        background-size: 100% 100%;
-      }
-    }
 
     .clients {
       padding-top: 120px;
@@ -91,14 +99,33 @@
     }
   }
 
+  &-contacts {
+    .header {
+      background-color: transparent;
+    }
+
+    .page-hero.in-view {
+      @include my-reveal-bg($anim-name: my-revealBg-46-100);
+    }
+  }
+
+
+
   &-work {
+    .page-hero.in-view {
+      @include my-reveal-bg($duration: 1s,
+        $timing: ease-out,
+        $start-size: 0% 100%,
+        $anim-name: my-revealBg-46-100);
+    }
+
     .testimonials {
       padding-top: 80px;
     }
 
     .clients {
       padding-top: 172px;
-      padding-bottom: 125px;
+      padding-bottom: 110px;
 
       .partners__title {
         display: none;
