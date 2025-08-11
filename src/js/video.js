@@ -51,7 +51,7 @@ if (videoBlock) {
       videoBlock.classList.remove("video__block--played");
       playBtn.classList.remove("video__button--played");
       playBtn.setAttribute("aria-pressed", "false");
-      playBtn.style.display = "block";
+      playBtn.style.display = "flex";
 
       clearInterval(saveInterval);
       localStorage.setItem("videoplayer-current-time", video.currentTime);
@@ -95,7 +95,7 @@ if (videoBlock) {
     // 🛑 Завершение видео — сброс состояния
     video.addEventListener("ended", () => {
       resetVideoProgress();
-      playBtn.style.display = "block";
+      playBtn.style.display = "flex";
       playBtn.classList.remove("video__button--played");
       video.controls = false;
     });

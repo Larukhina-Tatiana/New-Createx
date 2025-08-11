@@ -6,7 +6,7 @@
 
   &__block {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
@@ -26,13 +26,14 @@
       content: '';
       position: absolute;
       inset: 0;
-      // z-index: 3;
+      z-index: 5;
       background: var(--gray-900);
       opacity: 0.6;
+      pointer-events: none; // важно, чтобы не мешал кликам
       @include transition ($transition-property: (opacity, visibility));
 
 
-      &.video__block--played::before {
+      &--played::before {
         opacity: 0;
         visibility: hidden;
       }
@@ -58,8 +59,26 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @include flex-all-center;
-    z-index: 3;
+    z-index: 6;
     @include transition ($transition-property: (opacity, visibility, background-color));
+
+    svg {
+      @include transition ($transition-property: (transform));
+    }
+
+    // Внешнее кольцо
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -16px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      opacity: 0.12;
+      // background-color: rgba(var(--primary-rgb), 0.2);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
 
     &:focus {
       outline: 2px solid var(--danger);
@@ -69,11 +88,29 @@
     @media (any-hover: hover) {
       &:hover {
         background-color: var(--danger);
+
+        &::after {
+          transform: scale(1.2);
+          // opacity: 0.4;
+        }
+
+        svg {
+          transform: scale(1.2);
+        }
       }
     }
 
     &:active {
       background-color: var(--danger);
+
+      &::after {
+        transform: scale(1.4);
+        opacity: 0.6;
+      }
+
+      svg {
+        transform: scale(1.2);
+      }
     }
 
     &--played {
