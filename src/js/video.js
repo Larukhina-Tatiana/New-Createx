@@ -4,7 +4,7 @@ if (videoBlock) {
   const video = document.querySelector("video");
 
   video.addEventListener("canplay", () => {
-    video.controls = true; // включаем до play()
+    // video.controls = true; // включаем до play()
     video.muted = false;
   });
 
