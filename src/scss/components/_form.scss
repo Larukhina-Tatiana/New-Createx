@@ -57,6 +57,10 @@
 
   &__textarea {
     height: 66px;
+
+    &--44 {
+      height: 44px;
+    }
   }
 
   &__fields {
@@ -167,6 +171,12 @@ textarea {
   font-size: 0.8em;
   color: red;
   line-height: 1.25;
+
+  &--position {
+    position: absolute;
+    bottom: 46px;
+    left: 0;
+  }
 }
 
 .form-errors:empty {

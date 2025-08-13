@@ -18,19 +18,19 @@
 
   <title>Createx Construction</title>
   <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
-  <link rel="shortcut icon" href="favicons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
 
   <!-- Manifest -->
-  <link rel="manifest" href="favicons/site.webmanifest" />
+  <link rel="manifest" href="favicons/site.webmanifest">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/graph-modal.min.css">
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-home" id="page">
@@ -265,25 +265,39 @@
     </ul>
   </div>
 </section>
-    <div class="request-form container section animate-on-scroll" id="request-form">
-  <p class="request-form__title form__title section__titleh5 reveal-top">Want to&nbsp;know more? Ask&nbsp;us
-    a&nbsp;question:
+    <!-- html -->
+
+<div class="request-form container section animate-on-scroll" id="request-form" itemscope
+  itemtype="https://schema.org/ContactPage">
+  <p class="request-form__title form__title section__titleh5 reveal-top" itemprop="name">
+    Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:
   </p>
-  <form class="request-form__block form" action="#">
-    <label class="form__label" for="firstName">Name
-      <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Your name" autocomplete="on">
+  <form class="form request-form__block" action="#" method="post" data-js-form name="request-form"
+    itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction" novalidate>
+    <meta itemprop="target" content="https://larukhina-tatiana.github.io/Createx/#request-form">
+    <label class="form__label" for="firstName">
+      <span class="">Name</span>
+      <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Your name" autocomplete="on"
+        itemprop="name">
     </label>
 
-    <label class="form__label" for="phone">Phone
-      <input class="form__input" type="tel" name="phone" id="phone" placeholder="+380 (XX) XXX-XX-XX" required
-        autocomplete="on">
+    <label class="form__label">
+      <span class="form__label-legend">Phone</span>
+      <input class="form__input" type="tel" name="phone" data-js-phone placeholder="Enter your phone number" required
+        autocomplete="on" title="Введите номер телефона без пробелов и других символов" itemprop="telephone">
+      <span class="progress-line"></span>
+      <span class="form-errors" data-js-form-field-errors></span>
     </label>
 
-    <label class="form__label form__label--big" for="message">Message
-      <input class="form__input" type="text" name="message" id="message" placeholder="Your message" required
-        autocomplete="off">
+    <label class="form__label form__label--big" for="message">
+      <span class="form__label-legend">Message</span>
+      <textarea class="form__textarea form__input form__textarea--44" id="message" name="message"
+        placeholder="Your message" required title="The field must be filled" maxlength="1000"
+        itemprop="message"></textarea>
+      <span class="form-errors" data-js-form-field-errors></span>
     </label>
-    <button class="button button--regular request-form__button" type="submit" aria-label="send">Send</button>
+    <button class="button button--regular request-form__button" type="submit" aria-label="send" itemprop="actionStatus"
+      content="ActiveActionStatus">Send</button>
   </form>
 </div>
     <section class="our-services">
@@ -295,14 +309,14 @@
     </p>
     <ul class="our-services__list grid">
       <li class="our-services__item">
-        <a class="our-services__link our-services__link--bi" href="./work.html" data-tab="repairs">
+        <a class="our-services__link our-services__link--bi" href="./work.html" data-tab="construction">
           <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" fill="none">
-            <g clip-path="url(#a)">
+            <g clip-path="url(#clip-construction)">
               <path fill="currentColor"
                 d="M50.977 27.523c.84 0 1.523-.682 1.523-1.523V14.625c0-.841-.682-1.523-1.523-1.523H28.023V3.25c0-.841-.682-1.523-1.523-1.523H10.25c-.841 0-1.523.682-1.523 1.523v9.852H2.023c-.84 0-1.523.682-1.523 1.523V26c0 .841.682 1.523 1.523 1.523h6.704v8.329H2.023c-.84 0-1.523.682-1.523 1.523V48.75c0 .841.682 1.523 1.523 1.523h48.954c.84 0 1.523-.682 1.523-1.523V37.375c0-.841-.682-1.523-1.523-1.523h-6.704v-8.329h6.704Zm-1.524-3.046H36.148v-8.329h13.305v8.329Zm-16.351 0H19.898v-8.329h13.204v8.329ZM11.773 4.773h13.204v8.329H11.773V4.773ZM3.547 24.477v-8.329h13.305v8.329H3.547Zm8.226 3.046h13.204v8.329H11.773v-8.329ZM3.547 38.898h13.305v8.329H3.547v-8.329Zm16.351 0h13.204v8.329H19.898v-8.329Zm29.555 0v8.329H36.148v-8.329h13.305Zm-8.226-3.046H28.023v-8.329h13.204v8.329Z" />
             </g>
             <defs>
-              <clipPath id="a">
+              <clipPath id="clip-construction">
                 <path fill="#fff" d="M.5 0h52v52H.5z" />
               </clipPath>
             </defs>
@@ -311,16 +325,16 @@
         </a>
       </li>
       <li class="our-services__item">
-        <a class="our-services__link our-services__link--bi1" href="./work.html" data-tab="project">
+        <a class="our-services__link our-services__link--bi1" href="./work.html" data-tab="development">
           <svg xmlns="http://www.w3.org/2000/svg" width="59" height="52" fill="none">
-            <g fill="currentColor" clip-path="url(#a)">
+            <g fill="currentColor" clip-path="url(#clip-development)">
               <path
                 d="M46.406 3.148a6.097 6.097 0 0 0-5.276 3.047H2.023C1.183 6.195.5 6.877.5 7.72v39.61c0 .84.682 1.523 1.523 1.523h44.383a6.1 6.1 0 0 0 6.094-6.094V9.242a6.1 6.1 0 0 0-6.094-6.094Zm0 42.657H3.546V9.242h36.767v33.516a1.523 1.523 0 0 0 3.046 0 3.05 3.05 0 0 1 3.047-3.047 3.05 3.05 0 0 1 3.047 3.047 3.05 3.05 0 0 1-3.047 3.047Zm3.047-8.323a6.057 6.057 0 0 0-3.047-.818c-1.109 0-2.15.298-3.047.818V9.242a3.05 3.05 0 0 1 3.047-3.047 3.05 3.05 0 0 1 3.047 3.047v28.24Z" />
               <path
                 d="M35.64 12.29H8.22c-.842 0-1.524.681-1.524 1.523v27.421c0 .842.682 1.524 1.524 1.524h15.234a1.523 1.523 0 0 0 1.524-1.524v-3.047a4.578 4.578 0 0 1 3.046-4.309v7.356c0 .842.683 1.524 1.524 1.524h6.094c.841 0 1.523-.682 1.523-1.524V13.812c0-.84-.682-1.523-1.523-1.523Zm-1.523 27.42H31.07v-7.616c0-.842-.682-1.524-1.523-1.524-4.2 0-7.617 3.417-7.617 7.617v1.524H9.742v-9.14h6.094v4.57a1.524 1.524 0 0 0 3.047 0v-6.094c0-.841-.682-1.524-1.524-1.524H9.742V15.336h9.14v6.094h-4.57a1.523 1.523 0 0 0 0 3.047H26.5a1.523 1.523 0 0 0 0-3.047h-4.57v-6.094h12.187V39.71Z" />
             </g>
             <defs>
-              <clipPath id="a">
+              <clipPath id="clip-development">
                 <path fill="#fff" d="M.5 0h52v52H.5z" />
               </clipPath>
             </defs>
@@ -331,14 +345,14 @@
       <li class="our-services__item">
         <a class="our-services__link our-services__link--bi" href="./work.html" data-tab="design">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="48" fill="none">
-            <g fill="currentColor" clip-path="url(#a)">
+            <g fill="currentColor" clip-path="url(#clip-design)">
               <path
                 d="M9.938 33.844a4.224 4.224 0 0 0-4.22 4.218 4.224 4.224 0 0 0 4.22 4.22 4.223 4.223 0 0 0 4.218-4.22 4.223 4.223 0 0 0-4.219-4.218Zm0 5.625a1.408 1.408 0 0 1 0-2.813c.775 0 1.406.631 1.406 1.407 0 .775-.631 1.406-1.406 1.406Z" />
               <path
                 d="M45.462 28.569a4.22 4.22 0 0 0 .264-4.62l-5.623-9.831c-.972-1.684-3.023-2.453-4.852-1.964a4.227 4.227 0 0 0-2.009-4.573L23.5 1.957a4.222 4.222 0 0 0-4.334.07A4.22 4.22 0 0 0 15.562 0H4.22A4.224 4.224 0 0 0 0 4.219V43.78A4.224 4.224 0 0 0 4.219 48H43.78A4.224 4.224 0 0 0 48 43.781V32.438a4.224 4.224 0 0 0-2.538-3.869ZM16.969 43.781c0 .776-.631 1.407-1.407 1.407H4.22c-.776 0-1.407-.631-1.407-1.407v-12.75H16.97v12.75Zm0-15.562H2.812V16.875H16.97v11.344Zm0-14.157H2.812V4.22c0-.776.631-1.407 1.407-1.407h11.343c.776 0 1.407.631 1.407 1.407v9.843Zm2.812-8.477.391-.678a1.408 1.408 0 0 1 1.922-.515l9.742 5.625c.672.388.903 1.25.514 1.923l-1.625 2.825c-.04.06-.077.122-.108.187L19.78 33.787V5.584Zm0 33.842 13.146-22.85 2.718-1.57c.69-.397 1.634-.156 2.02.512l5.622 9.832a1.411 1.411 0 0 1-.518 1.93c-1.005.58-21.999 12.735-22.988 13.308v-1.162Zm25.407 4.354c0 .776-.631 1.407-1.407 1.407H19.54c.15-.423.234-.877.24-1.349l22.124-12.808h1.878c.776 0 1.407.631 1.407 1.407V43.78Z" />
             </g>
             <defs>
-              <clipPath id="a">
+              <clipPath id="clip-design">
                 <path fill="#fff" d="M0 0h48v48H0z" />
               </clipPath>
             </defs>
@@ -1003,59 +1017,54 @@
     <a class="view__link button button--large animate-on-scroll pulse" href="./news.html">View all news</a>
   </div>
 </section>
-    <section class="application-form section animate-on-scroll" id="discuss" style="background-image:
+    <section class="application-form section animate-on-scroll" id="discuss" itemscope
+  itemtype="https://schema.org/ContactPage" style="background-image:
     -webkit-image-set(url(./images/application/application-bg1@1x.avif) type('image/avif') 1x,
       url(./images/application/application-bg1@2x.avif) type('image/avif') 2x,
       url(./images/application/application-bg1@1x.webp) type('image/webp') 1x,
       url(./images/application/application-bg1@2x.webp) type('image/webp') 2x,
       url(./images/application/application-bg1@1x.jpg) 1x,
       url(./images/application/application-bg1@2x.jpg) 2x)">
-  <h2 class="visually-hidden">Discuss a project</h2>
+  <h2 class="visually-hidden" itemprop="name">Discuss a project</h2>
+
   <div class="container application-form__container">
-    <form class="application-form__form form" action="#" name="applicationForm" data-js-form novalidate>
+    <form class="application-form__form form" action="#" name="applicationForm" data-js-form novalidate
+      itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction">
+      <meta itemprop="target" content="https://larukhina-tatiana.github.io/Createx/index.html#discuss">
+
       <p class="section__titleh5 form__title">A&nbsp;quick way to&nbsp;discuss details</p>
 
       <label class="form__label" for="first-name">
         <span class="form__label-legend">Name</span>
-        <input class="form__input" type="text" name="first-name" id="first-name" inputmode="text"
+        <input class="form__input" type="text" name="first-name" id="first-name"
           title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
-          required minlength="2" maxlength="15" placeholder="Your name" aria-errormessage="first-name-errors"
-          pattern="^[a-zA-Z[А-Я][а-яё][а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]]+$" autocomplete="on">
-        <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
-        <!-- pattern="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$"> -->
-        <!-- data-reg="^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$"> -->
+          required minlength="2" maxlength="15" placeholder="Your name" pattern="^[a-zA-ZА-Яа-яёЁЇїІіЄєҐґ]{2,15}$"
+          autocomplete="on" itemprop="name">
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
 
-      <label class="form__label" for="phone-mask">
+      <label class="form__label">
         <span class="form__label-legend">Phone</span>
-        <input class="form__input" type="tel" name="tel" id="phone-mask" placeholder="Your phone number" inputmode="tel"
-          required aria-errormessage="phone-errors" autocomplete="on">
-        <div class="progress-line"></div>
-        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
+        <input class="form__input" type="tel" name="tel" data-js-phone placeholder="Your phone number" required
+          autocomplete="on" itemprop="telephone">
+        <span class="progress-line"></span>
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
-      <!-- <label class="form__label" for="phone">
-        <span class="form__label-legend">Phone</span>
-        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" inputmode="tel"
-          required pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$"
-          aria-errormessage="phone-errors">
-        <div class="progress-line"></div>
-        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
-      </label> -->
+
       <label class="form__label" for="email">
         <span class="form__label-legend">Email</span>
-        <input class="form__input" type="email" name="email" id="email" inputmode="email"
-          placeholder="Your working email" required pattern="^\S+@\S+\.\S+$" aria-errormessage="email-errors"
-          title="Укажите в формате: user@example.com"
-          oninvalid="this.setCustomValidity('Пожалуйста, введите корректный адрес электронной почты.')"
-          onchange="this.setCustomValidity('') " autocomplete="email">
-        <span class="form-errors" id="email-errors" data-js-form-field-errors></span>
+        <input class="form__input" type="email" name="email" id="email" placeholder="Your working email" required
+          pattern="^\S+@\S+\.\S+$" title="Please specify in the format: user@example.com"
+          oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+          onchange="this.setCustomValidity('') " autocomplete="email" itemprop="email">
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
       <label class="form__label" for="comment">
         <span class="form__label-legend">Message</span>
-        <textarea class="form__textarea form__input" id="comment" name="comment" placeholder="Your message"
-          inputmode="text" required pattern="^(?:(?![\s\n]+$)[\s\S])+$" title="Поле должно быть заполнено"
-          maxlength=1000 aria-errormessage="comment-errors"></textarea>
-        <span class="form-errors" id="comment-errors" data-js-form-field-errors></span>
+        <textarea class="form__textarea form__input" id="comment" name="comment" placeholder="Your message" required
+          title="The field must be filled" maxlength="1000" itemprop="message"></textarea>
+
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
 
       <input class="checkbox" type="checkbox" name="policy" id="policy" checked>
@@ -1071,12 +1080,11 @@
           Bureau.</span>
       </label>
 
-      <button class="button button--regular" type="submit" data-js-submit>send request</button>
+      <button class="button button--regular" type="submit" data-js-submit itemprop="actionStatus"
+        content="ActiveActionStatus">send request</button>
     </form>
-
   </div>
 </section>
-<!-- <script src="https://unpkg.com/imask"></script> -->
   </main>
 
   <footer class="footer">
@@ -1144,14 +1152,18 @@
         standards for construction sphere.
       </p>
     </div>
-    <form class="footer__form form">
+    <form class="footer__form form" name="footer-form" action="#" method="post" data-js-form novalidate>
       <h4 class="footer__form-title section__titleh4">
         Let’s stay in touch
       </h4>
       <div class="footer__form-inner">
         <label class="footer__form-label form__label" for="user-email">
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="Your email address" required autocomplete="on">
+            placeholder="Your email address" required autocomplete="on" pattern="^\S+@\S+\.\S+$"
+            title="Please specify in the format: user@example.com"
+            oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+            onchange="this.setCustomValidity('') " autocomplete="email" itemprop="email">
+          <span class="form-errors form-errors--position" data-js-form-field-errors></span>
         </label>
         <button class="button button--regular footer__form-btn" type="submit">subscribe</button>
       </div>
@@ -1230,18 +1242,20 @@
   <!-- <script src="./src/js/to-top.js"></script>  -->
 
 
-  <script src="js/main.min.js" type="module"></script>
   <!-- <script src="./src/js/transfer.js" type="module"></script> -->
   <!-- <script src="./src/js/video.js" type="module"></script> -->
   <!-- <script src="./src/js/tabs.js" type="module"></script> -->
-  <script src="./src/js/my-scrollreveal.js" type="module"></script>
+  <script src="js/main.min.js"></script>
 
-  <script src="./src/js/create-alertbox.js" type="module"></script>
+  <script src="./src/js/validation-form.js" type="module"></script>
+  <script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="./src/js/my-scrollreveal.js"></script>
+
+  <!-- <script src="./src/js/create-alertbox.js" type="module"></script> -->
   <!-- <script src="./src/js/video.js" type="module"></script> -->
 
-  <script src="./src/js/request-form.js" type="module"></script>
-  <script src="./src/js/footer-form.js" type="module"></script>
-  <script src="./src/js/application-form.js" type="module"></script>
+  <!-- <script src="./src/js/request-form.js" type="module"></script> -->
+  <!-- <script src="./src/js/footer-form.js" type="module"></script> -->
 
 
 </body>

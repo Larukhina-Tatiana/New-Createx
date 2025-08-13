@@ -17,19 +17,19 @@
 
   <title>Createx Construction Services Interior Design</title>
   <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
-  <link rel="shortcut icon" href="favicons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
 
   <!-- Manifest -->
-  <link rel="manifest" href="favicons/site.webmanifest" />
+  <link rel="manifest" href="favicons/site.webmanifest">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/graph-modal.min.css">
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-services-inside" id="page">
@@ -672,59 +672,54 @@
   </ul>
 </div>
 </section>
-    <section class="application-form section animate-on-scroll" id="discuss" style="background-image:
+    <section class="application-form section animate-on-scroll" id="discuss" itemscope
+  itemtype="https://schema.org/ContactPage" style="background-image:
     -webkit-image-set(url(./images/application/application-bg1@1x.avif) type('image/avif') 1x,
       url(./images/application/application-bg1@2x.avif) type('image/avif') 2x,
       url(./images/application/application-bg1@1x.webp) type('image/webp') 1x,
       url(./images/application/application-bg1@2x.webp) type('image/webp') 2x,
       url(./images/application/application-bg1@1x.jpg) 1x,
       url(./images/application/application-bg1@2x.jpg) 2x)">
-  <h2 class="visually-hidden">Discuss a project</h2>
+  <h2 class="visually-hidden" itemprop="name">Discuss a project</h2>
+
   <div class="container application-form__container">
-    <form class="application-form__form form" action="#" name="applicationForm" data-js-form novalidate>
+    <form class="application-form__form form" action="#" name="applicationForm" data-js-form novalidate
+      itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction">
+      <meta itemprop="target" content="https://larukhina-tatiana.github.io/Createx/index.html#discuss">
+
       <p class="section__titleh5 form__title">A&nbsp;quick way to&nbsp;discuss details</p>
 
       <label class="form__label" for="first-name">
         <span class="form__label-legend">Name</span>
-        <input class="form__input" type="text" name="first-name" id="first-name" inputmode="text"
+        <input class="form__input" type="text" name="first-name" id="first-name"
           title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
-          required minlength="2" maxlength="15" placeholder="Your name" aria-errormessage="first-name-errors"
-          pattern="^[a-zA-Z[А-Я][а-яё][а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]]+$" autocomplete="on">
-        <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
-        <!-- pattern="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$"> -->
-        <!-- data-reg="^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$"> -->
+          required minlength="2" maxlength="15" placeholder="Your name" pattern="^[a-zA-ZА-Яа-яёЁЇїІіЄєҐґ]{2,15}$"
+          autocomplete="on" itemprop="name">
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
 
-      <label class="form__label" for="phone-mask">
+      <label class="form__label">
         <span class="form__label-legend">Phone</span>
-        <input class="form__input" type="tel" name="tel" id="phone-mask" placeholder="Your phone number" inputmode="tel"
-          required aria-errormessage="phone-errors" autocomplete="on">
-        <div class="progress-line"></div>
-        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
+        <input class="form__input" type="tel" name="tel" data-js-phone placeholder="Your phone number" required
+          autocomplete="on" itemprop="telephone">
+        <span class="progress-line"></span>
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
-      <!-- <label class="form__label" for="phone">
-        <span class="form__label-legend">Phone</span>
-        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" inputmode="tel"
-          required pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$"
-          aria-errormessage="phone-errors">
-        <div class="progress-line"></div>
-        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
-      </label> -->
+
       <label class="form__label" for="email">
         <span class="form__label-legend">Email</span>
-        <input class="form__input" type="email" name="email" id="email" inputmode="email"
-          placeholder="Your working email" required pattern="^\S+@\S+\.\S+$" aria-errormessage="email-errors"
-          title="Укажите в формате: user@example.com"
-          oninvalid="this.setCustomValidity('Пожалуйста, введите корректный адрес электронной почты.')"
-          onchange="this.setCustomValidity('') " autocomplete="email">
-        <span class="form-errors" id="email-errors" data-js-form-field-errors></span>
+        <input class="form__input" type="email" name="email" id="email" placeholder="Your working email" required
+          pattern="^\S+@\S+\.\S+$" title="Please specify in the format: user@example.com"
+          oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+          onchange="this.setCustomValidity('') " autocomplete="email" itemprop="email">
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
       <label class="form__label" for="comment">
         <span class="form__label-legend">Message</span>
-        <textarea class="form__textarea form__input" id="comment" name="comment" placeholder="Your message"
-          inputmode="text" required pattern="^(?:(?![\s\n]+$)[\s\S])+$" title="Поле должно быть заполнено"
-          maxlength=1000 aria-errormessage="comment-errors"></textarea>
-        <span class="form-errors" id="comment-errors" data-js-form-field-errors></span>
+        <textarea class="form__textarea form__input" id="comment" name="comment" placeholder="Your message" required
+          title="The field must be filled" maxlength="1000" itemprop="message"></textarea>
+
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
 
       <input class="checkbox" type="checkbox" name="policy" id="policy" checked>
@@ -740,12 +735,11 @@
           Bureau.</span>
       </label>
 
-      <button class="button button--regular" type="submit" data-js-submit>send request</button>
+      <button class="button button--regular" type="submit" data-js-submit itemprop="actionStatus"
+        content="ActiveActionStatus">send request</button>
     </form>
-
   </div>
 </section>
-<!-- <script src="https://unpkg.com/imask"></script> -->
   </main>
   <footer class="footer">
   <a href="#page" data-scroll class="to-top">
@@ -812,14 +806,18 @@
         standards for construction sphere.
       </p>
     </div>
-    <form class="footer__form form">
+    <form class="footer__form form" name="footer-form" action="#" method="post" data-js-form novalidate>
       <h4 class="footer__form-title section__titleh4">
         Let’s stay in touch
       </h4>
       <div class="footer__form-inner">
         <label class="footer__form-label form__label" for="user-email">
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="Your email address" required autocomplete="on">
+            placeholder="Your email address" required autocomplete="on" pattern="^\S+@\S+\.\S+$"
+            title="Please specify in the format: user@example.com"
+            oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+            onchange="this.setCustomValidity('') " autocomplete="email" itemprop="email">
+          <span class="form-errors form-errors--position" data-js-form-field-errors></span>
         </label>
         <button class="button button--regular footer__form-btn" type="submit">subscribe</button>
       </div>

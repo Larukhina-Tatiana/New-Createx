@@ -24,17 +24,17 @@
       <label class="form__label" for="phone-mask">
         <span class="form__label-legend">Phone</span>
         <input class="form__input" type="tel" name="tel" id="phone-mask" placeholder="Your phone number" inputmode="tel"
-          required aria-errormessage="phone-errors" autocomplete="on">
-        <div class="progress-line"></div>
-        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
+          required autocomplete="on">
+        <span class="progress-line"></span>
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
       <!-- <label class="form__label" for="phone">
         <span class="form__label-legend">Phone</span>
         <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number" inputmode="tel"
           required pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$"
-          aria-errormessage="phone-errors">
-        <div class="progress-line"></div>
-        <span class="form-errors" id="phone-errors" data-js-form-field-errors></span>
+         ">
+        <span class="progress-line"></span>
+        <span class="form-errors" data-js-form-field-errors></span>
       </label> -->
       <label class="form__label" for="email">
         <span class="form__label-legend">Email</span>
@@ -50,7 +50,7 @@
         <textarea class="form__textarea form__input" id="comment" name="comment" placeholder="Your message"
           inputmode="text" required pattern="^(?:(?![\s\n]+$)[\s\S])+$" title="Поле должно быть заполнено"
           maxlength=1000 aria-errormessage="comment-errors"></textarea>
-        <span class="form-errors" id="comment-errors" data-js-form-field-errors></span>
+        <span class="form-errors" data-js-form-field-errors></span>
       </label>
 
       <input class="checkbox" type="checkbox" name="policy" id="policy" checked>

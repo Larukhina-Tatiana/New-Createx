@@ -1,21 +1,35 @@
-<div class="request-form container section animate-on-scroll" id="request-form">
-  <p class="request-form__title form__title section__titleh5 reveal-top">Want to&nbsp;know more? Ask&nbsp;us
-    a&nbsp;question:
+<!-- html -->
+
+<div class="request-form container section animate-on-scroll" id="request-form" itemscope
+  itemtype="https://schema.org/ContactPage">
+  <p class="request-form__title form__title section__titleh5 reveal-top" itemprop="name">
+    Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:
   </p>
-  <form class="request-form__block form" action="#">
-    <label class="form__label" for="firstName">Name
-      <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Your name" autocomplete="on">
+  <form class="form request-form__block" action="#" method="post" data-js-form name="request-form"
+    itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction" novalidate>
+    <meta itemprop="target" content="https://larukhina-tatiana.github.io/Createx/#request-form">
+    <label class="form__label" for="firstName">
+      <span class="">Name</span>
+      <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Your name" autocomplete="on"
+        itemprop="name">
     </label>
 
-    <label class="form__label" for="phone">Phone
-      <input class="form__input" type="tel" name="phone" id="phone" placeholder="+380 (XX) XXX-XX-XX" required
-        autocomplete="on">
+    <label class="form__label">
+      <span class="form__label-legend">Phone</span>
+      <input class="form__input" type="tel" name="phone" data-js-phone placeholder="Enter your phone number" required
+        autocomplete="on" title="Введите номер телефона без пробелов и других символов" itemprop="telephone">
+      <span class="progress-line"></span>
+      <span class="form-errors" data-js-form-field-errors></span>
     </label>
 
-    <label class="form__label form__label--big" for="message">Message
-      <input class="form__input" type="text" name="message" id="message" placeholder="Your message" required
-        autocomplete="off">
+    <label class="form__label form__label--big" for="message">
+      <span class="form__label-legend">Message</span>
+      <textarea class="form__textarea form__input form__textarea--44" id="message" name="message"
+        placeholder="Your message" required title="The field must be filled" maxlength="1000"
+        itemprop="message"></textarea>
+      <span class="form-errors" data-js-form-field-errors></span>
     </label>
-    <button class="button button--regular request-form__button" type="submit" aria-label="send">Send</button>
+    <button class="button button--regular request-form__button" type="submit" aria-label="send" itemprop="actionStatus"
+      content="ActiveActionStatus">Send</button>
   </form>
 </div>

@@ -1,4 +1,4 @@
-export function createAlertBox(form) {
+function createAlertBox(form) {
   let alertBox = document.createElement("div");
   alertBox.classList.add("form-alert");
   alertBox.innerText = `Subscription completed!`;

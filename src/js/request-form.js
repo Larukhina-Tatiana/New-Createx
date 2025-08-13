@@ -6,6 +6,7 @@ if (document.querySelector(".request-form")) {
     phone: document.querySelector("#phone"),
     message: document.querySelector("#message"),
   };
+  console.log("refs", refs);
 
   const STORAGE_KEY = "feedback-form-state";
   let formData = {};
@@ -21,15 +22,24 @@ if (document.querySelector(".request-form")) {
 
   function onFormSubmit(e) {
     e.preventDefault();
+    const values = {
+      firstName: refs.firstName.value.trim(),
+      phone: refs.phone.value.trim(),
+      message: refs.message.value.trim(),
+    };
+    const isEmpty = Object.values(values).some((value) => value === "");
+    if (isEmpty) {
+      alert("Пожалуйста, заполните все поля.");
+      return;
+    }
 
-    console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
+    // console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
+    // Сохраняем в localStorage перед отправкой
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
+
     e.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
     createAlertBox(refs.form);
-    // 🔀 Добавим редирект с фейковым ID
-    const fakeId = Math.floor(Math.random() * 5000);
-    const currentBaseUrl = window.location.origin + window.location.pathname; // localhost:3000/index.html
-    window.location.href = `${currentBaseUrl}?id=${fakeId}#page`;
   }
 
   (function populateFormOutput() {

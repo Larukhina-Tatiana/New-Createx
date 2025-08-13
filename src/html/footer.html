@@ -63,14 +63,18 @@
         standards for construction sphere.
       </p>
     </div>
-    <form class="footer__form form">
+    <form class="footer__form form" name="footer-form" action="#" method="post" data-js-form novalidate>
       <h4 class="footer__form-title section__titleh4">
         Let’s stay in touch
       </h4>
       <div class="footer__form-inner">
         <label class="footer__form-label form__label" for="user-email">
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="Your email address" required autocomplete="on">
+            placeholder="Your email address" required autocomplete="on" pattern="^\S+@\S+\.\S+$"
+            title="Please specify in the format: user@example.com"
+            oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+            onchange="this.setCustomValidity('') " autocomplete="email" itemprop="email">
+          <span class="form-errors form-errors--position" data-js-form-field-errors></span>
         </label>
         <button class="button button--regular footer__form-btn" type="submit">subscribe</button>
       </div>

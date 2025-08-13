@@ -35,8 +35,7 @@ class FormsValidation {
   }
 
   validateField(formControlElement) {
-    console.log("validity", formControlElement.validity);
-
+    // console.log("validity", formControlElement.validity);
     const errors = formControlElement.validity;
     const errorMessages = [];
 
@@ -47,6 +46,14 @@ class FormsValidation {
         }
       }
     );
+
+    // Дополнительная проверка для textarea
+    if (formControlElement.tagName === "TEXTAREA") {
+      const value = formControlElement.value.trim();
+      if (value.length === 0) {
+        errorMessages.push("Поле должно быть заполнено");
+      }
+    }
 
     this.manageErrors(formControlElement, errorMessages);
 
@@ -117,10 +124,6 @@ class FormsValidation {
       event.target.reset();
       localStorage.removeItem(STORAGE_KEY);
       createAlertBox(event.target);
-
-      // ✅ ДОБАВЬ ЭТО СЮДА
-      const fakeId = Math.floor(Math.random() * 5000);
-      window.location.href = `/Createx/${fakeId}#page`;
     }
   }
 
