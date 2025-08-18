@@ -54,15 +54,15 @@
 .running-line-right {
   animation: running-line-right 30s linear 1s infinite;
 
-  @media screen and (width < 768px) {
+  @media screen and (max-width:768px) {
     animation: running-line-right 10s linear 1s infinite;
   }
 }
 
 
-.running-line-left {
-  animation: running-line-left 30s linear 1s infinite;
-}
+// .running-line-left {
+//   animation: running-line-left 30s linear 1s infinite;
+// }
 
 .fade-scale {
   animation-name: fadeScale;
@@ -176,28 +176,86 @@
   }
 }
 
-@keyframes running-line-right {
-  0% {
-    transform: translateX(0);
-    transform-origin: left center;
-  }
-
-  100% {
-    transform: translateX(-50%);
-    transform-origin: right center;
-  }
-}
-
-// @keyframes running-line-left {
+// @keyframes running-line-right {
 //   0% {
 //     transform: translateX(0);
 //     transform-origin: left center;
 //   }
 
 //   100% {
-//     transform: translateX(100%);
+//     transform: translateX(-50%);
 //     transform-origin: right center;
 //   }
+// }
+
+// @keyframes running-line-left {
+//   0% {
+//     transform: translateX(0);
+//     transform-origin: right center;
+//   }
+
+//   100% {
+//     transform: translateX(-100%);
+//     transform-origin: left center;
+//   }
+// }
+
+// @keyframes running-line-left {
+//   0% {
+//     transform: translateX(0);
+//     transform-origin: right center;
+//   }
+
+//   100% {
+//     transform: translateX(-50%);
+//     transform-origin: right center;
+//   }
+// }
+@keyframes ticker-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+
+.running-line-left {
+  animation: ticker-left 40s linear infinite;
+}
+
+.running-line-right {
+  animation: ticker-right 40s linear infinite;
+}
+
+
+@keyframes ticker-right {
+  from {
+    transform: translateX(-33.333%);
+    ;
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+// @keyframes running-line-right {
+//   0% {
+//     transform: translateX(-50%);
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// .running-line-right {
+//   animation: running-line-right 30s linear infinite;
+//   // display: flex;
+//   // width: 200%;
 // }
 
 @keyframes heartbeat {
@@ -523,6 +581,26 @@ bgFadeSlide,
 
   &.is-visible {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@mixin appear-scale3d($duration: 0.8s,
+  $easing: ease-out,
+  $origin: center center) {
+  transform-origin: $origin;
+  animation: scale3d $duration $easing forwards;
+}
+
+@keyframes scale3d {
+
+  0% {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
     opacity: 1;
   }
 }

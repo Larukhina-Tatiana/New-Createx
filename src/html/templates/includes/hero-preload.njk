@@ -1,0 +1,21 @@
+{# hero-preload.njk #}
+{% macro preloadHero(pageKey) %}
+{% set heroMap = {
+'about': 'about-hero-bg',
+'positions': 'positions-hero-bg',
+'news': 'news-hero-bg',
+'services': 'services-hero-bg',
+'services-inside': 'services-inside-hero-bg',
+'work': 'work-hero-bg',
+'work-inside': 'work-inside-hero-bg',
+'contacts': 'contacts-hero-bg'
+} %}
+
+{% set bgName = heroMap[pageKey] %}
+{% if bgName %}
+<link rel="preload" as="image" href="images/hero/{{ bgName }}@1x.avif" type="image/avif">
+<link rel="preload" as="image" href="images/hero/{{ bgName }}@2x.avif" type="image/avif">
+<link rel="preload" as="image" href="images/hero/{{ bgName }}@1x.webp" type="image/webp">
+<link rel="preload" as="image" href="images/hero/{{ bgName }}@2x.webp" type="image/webp">
+{% endif %}
+{% endmacro %}

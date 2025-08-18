@@ -67,7 +67,7 @@
     opacity: 1;
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     &__title {
       max-width: none;
     }

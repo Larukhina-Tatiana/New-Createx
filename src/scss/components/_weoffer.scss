@@ -20,7 +20,7 @@
     font-weight: 900;
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     &__container {
       display: block;
     }

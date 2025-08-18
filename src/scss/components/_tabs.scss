@@ -76,7 +76,7 @@
     }
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     flex-wrap: wrap;
     justify-content: center;
 
@@ -90,13 +90,13 @@
     }
   }
 
-  @media screen and (width < 576.01px) {
+  @media screen and (max-width:576.01px) {
     &-content__item {
       grid-column: 12 span;
     }
   }
 
-  @media screen and (width < 375.01px) {
+  @media screen and (max-width:375.01px) {
     flex-direction: column;
 
     &__item {

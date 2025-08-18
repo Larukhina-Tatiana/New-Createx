@@ -1,6 +1,7 @@
 .clients {
   overflow: hidden;
 
+
   &__descr {
     font-size: 18px;
     line-height: 1.5;
@@ -10,18 +11,29 @@
   }
 
   &__ticker {
+    padding-top: 60px;
+    padding-bottom: 10px;
     overflow: hidden;
-    width: 100%;
+
+
+    &-track {
+      display: flex;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      width: max-content;
+    }
   }
 
+
   &__list {
-    width: max-content;
     display: flex;
+
     // gap: 40px 102px;
     gap: 40px clamp(2.5rem, -16.762rem + 30.1vw, 6.375rem);
-    margin-top: 57px;
     transform: translateZ(0);
     will-change: transform;
+
+
   }
 
   &__item {
@@ -48,7 +60,7 @@
     }
   }
 
-  @media screen and (width < 768px) {
+  @media screen and (max-width:768px) {
     &__list {
       width: 100%;
 

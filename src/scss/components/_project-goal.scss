@@ -59,7 +59,7 @@
     // }
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     flex-direction: column;
 
     &__content {
@@ -67,7 +67,7 @@
     }
   }
 
-  @media screen and (width < 425.01px) {
+  @media screen and (max-width:425.01px) {
     &__table {
       padding: 10px;
     }

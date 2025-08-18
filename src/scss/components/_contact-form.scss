@@ -44,14 +44,14 @@
     padding: 0 42px;
   }
 
-  @media screen and (width < 1025.01px) {
+  @media screen and (max-width:1025.01px) {
     .form__label--big {
       width: 100%;
     }
 
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     &__grup {
       width: 100%;
       flex-direction: column;

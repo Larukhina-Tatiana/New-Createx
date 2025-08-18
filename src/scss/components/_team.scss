@@ -35,6 +35,16 @@
   &__item {
     grid-column: 3 span;
 
+
+    opacity: 0;
+    transform: scale3d(0, 0, 0);
+    transition: none;
+
+
+    &.animate-on-scroll.in-view {
+      @include appear-scale3d(0.8s, ease-out, center center);
+    }
+
     @include transition ($transition-property: color);
 
     &:focus {
@@ -115,7 +125,7 @@
     }
   }
 
-  @media screen and (width < 1170.99px) {
+  @media screen and (max-width:1170.99px) {
     &__list {
       justify-items: center;
     }
@@ -125,13 +135,13 @@
     }
   }
 
-  @media screen and (width < 980.99px) {
+  @media screen and (max-width:980.99px) {
     &__item {
       grid-column: 6 span;
     }
   }
 
-  @media screen and (width < 585.99px) {
+  @media screen and (max-width:585.99px) {
     &::before {
       left: 0;
     }

@@ -5,7 +5,16 @@
 <body class="page-news" id="page">
   @include('header.html')
   <main class="main">
-    @include('hero-news.html')
+    @include('page-hero.html', {
+    "id": "hero-title-news",
+    "title": "News",
+    "descr": "Stay tuned with our news, expert tips and articles.",
+    "breadcrumbs": [
+    { "text": "Homepage", "href": "index.html" },
+    { "text": "News", "current": true }
+    ]
+    })
+
     @include('categories.html')
     @include('application-form.html')
   </main>

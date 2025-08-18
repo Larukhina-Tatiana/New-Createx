@@ -21,7 +21,7 @@
     width: 180px;
   }
 
-  @media screen and (width < 1025.01px) {
+  @media screen and (max-width:1025.01px) {
     &__btn-box {
       flex-wrap: wrap;
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     grid-column: 12 span;
     width: 100%;
   }

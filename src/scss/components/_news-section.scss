@@ -25,7 +25,7 @@
     }
   }
 
-  @media screen and (width < 1024.01px) {
+  @media screen and (max-width:1024.01px) {
     &__list {
       display: block;
     }

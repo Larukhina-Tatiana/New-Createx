@@ -36,7 +36,7 @@
       height: 440px;
       @include appearance(left, 50px, 0.6s, 0.4s);
 
-      @media screen and (width < 768.01px) {
+      @media screen and (max-width:768.01px) {
         height: auto;
 
         &:not(:last-child) {
@@ -61,7 +61,7 @@
       left: 14px;
       top: 0;
 
-      @media screen and (width < 1025px) {
+      @media screen and (max-width:1025px) {
         position: static;
 
         &:not(:last-child) {
@@ -85,7 +85,7 @@
       max-width: 600px;
       height: 306px;
 
-      @media screen and (width < 768.01px) {
+      @media screen and (max-width:768.01px) {
         width: 100%;
         height: auto;
       }

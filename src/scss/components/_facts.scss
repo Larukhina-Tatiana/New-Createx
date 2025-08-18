@@ -18,16 +18,46 @@
   &::before {
     content: "";
     position: absolute;
-    left: -310px;
+    // left: -310px;
     top: -195px;
+    left: 0;
     width: 570px;
     height: 1065px;
-    background-image: -webkit-image-set(url(../images/facts/fact-bg1@1x.png) type("image/png") 1x,
-        url(../images/facts/fact-bg1@2x.png) type("image/png") 2x);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -195px;
+      left: 0;
+      width: 570px;
+      height: 1065px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      // Fallback для старых браузеров
+      background-image: url("../images/facts/fact-bg1@1x.png");
+
+      // Поддержка современных браузеров
+      @supports (background-image: image-set(url("../images/facts/fact-bg1@1x.avif") 1x)) {
+        background-image: image-set(url("../images/facts/fact-bg1@1x.avif") 1x,
+            url("../images/facts/fact-bg1@2x.avif") 2x,
+            url("../images/facts/fact-bg1@1x.png") type("image/png") 1x,
+            url("../images/facts/fact-bg1@2x.png") type("image/png") 2x);
+      }
+
+      // Safari (WebKit) поддержка
+      @supports (-webkit-image-set: url("../images/facts/fact-bg1@1x.avif") 1x) {
+        background-image: -webkit-image-set(url("../images/facts/fact-bg1@1x.avif") 1x,
+            url("../images/facts/fact-bg1@2x.avif") 2x,
+            url("../images/facts/fact-bg1@1x.png") type("image/png") 1x,
+            url("../images/facts/fact-bg1@2x.png") type("image/png") 2x);
+      }
+    }
   }
+
 
   &__subtitle {
     margin-bottom: 60px;
@@ -47,7 +77,7 @@
     grid-column: 3 span;
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     &__list {
       justify-items: center;
     }
@@ -56,10 +86,8 @@
       grid-column: 6 span;
     }
   }
-
-
-
 }
+
 
 .facts-element {
   &__circle {

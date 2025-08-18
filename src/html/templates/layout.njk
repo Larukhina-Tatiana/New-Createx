@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "head.njk" %}
+  {% block head %}{% endblock %}
+</head>
+
+<body class="{{ bodyClass }}" id="page">
+  {% include "header.njk" %}
+  {% block content %}{% endblock %}
+  {% include "footer.njk" %}
+
+  {# Общие скрипты — подключаются один раз #}
+  {% include "includes/scripts.njk" %}
+
+  {# Специфичные скрипты — по pageName #}
+  {% block scripts %}{% endblock %}
+</body>
+
+</html>

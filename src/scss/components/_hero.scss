@@ -1,3 +1,12 @@
+@mixin responsive-bg($name) {
+  background-image: image-set(url('../images/#{$name}@1x.avif') type('image/avif') 1x,
+    url('../images/#{$name}@2x.avif') type('image/avif') 2x,
+    url('../images/#{$name}@1x.webp') type('image/webp') 1x,
+    url('../images/#{$name}@2x.webp') type('image/webp') 2x,
+    url('../images/#{$name}@1x.jpg') 1x,
+    url('../images/#{$name}@2x.jpg') 2x);
+}
+
 .hero {
   // min-height: 100vh;
 
@@ -29,6 +38,22 @@
     /* Fallback для браузеров без поддержки dvh */
     @supports not (height: 100dvh) {
       min-height: calc(100vh - var(--header-height));
+    }
+
+    &--bg1 {
+      @include responsive-bg('hero/hero-bg1');
+    }
+
+    &--news {
+      @include responsive-bg('news1/image1');
+    }
+
+    &--history {
+      @include responsive-bg('history/image1');
+    }
+
+    &--services {
+      @include responsive-bg('services/image4');
     }
   }
 
@@ -150,7 +175,7 @@
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
 
-  @media screen and (width < 1024px) {
+  @media screen and (max-width:1024px) {
     &__content {
       padding-left: 0;
     }

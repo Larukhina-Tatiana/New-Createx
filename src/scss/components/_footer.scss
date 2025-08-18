@@ -120,8 +120,7 @@
   &__copyright {
     grid-column: 12 span;
     margin-top: 9px;
-    // font-size: 12px;
-    font-size: clamp(0.625rem, 0.581rem + 0.22vw, 0.75rem);
+    font-size: 12px;
     line-height: 1.5;
     color: var(--white);
 
@@ -134,7 +133,7 @@
     }
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     &__container {
       display: block;
     }

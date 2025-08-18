@@ -91,7 +91,7 @@
     margin: 0 auto;
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     width: 850px;
 
     &__wrapper {

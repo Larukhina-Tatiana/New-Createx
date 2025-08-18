@@ -1,0 +1,32 @@
+{% set bodyClass = "page-positions" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+{% set id = "hero-title-positions" %}
+{% set breadcrumbs = [
+{ text: "Homepage", href: "index.html" },
+{ text: "About Us", href: "about.html" },
+{ text: "Available Positions", current: true }
+] %}
+{% set title = "Available Positions" %}
+{% set descr = "Build your career with Createx Construction Bureau." %}
+
+{% include "page-hero.njk" %}
+
+
+{% include "vacancies.njk" %}
+{% include "values-positions.njk" %}
+{% include "application-form.njk" %}
+{% include "modals.njk" %}
+{% set pageName = "page-positions" %}
+{% include "includes/scripts.njk" %}
+{% endblock %}
+
+<!-- @include('hero-positions.html') -->
+
+
+<!-- <script src="js/main.min.js"></script> -->
+<!-- <script src="./src/js/graph-modal.min.js"></script> -->
+<!-- <script src="./src/js/modals.js"></script> -->
+
+<!-- <script src="./src/js/form-sendCv.js"></script> -->

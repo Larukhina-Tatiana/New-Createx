@@ -34,7 +34,7 @@
         }
     }
 
-    @media screen and (width < 576.01px) {
+    @media screen and (max-width:576.01px) {
         // &::before {
         //     display: none;
         // }

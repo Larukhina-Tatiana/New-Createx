@@ -14,7 +14,7 @@
   }
 
   &__nav {
-    @media screen and (width < 578.01px) {
+    @media screen and (max-width:578.01px) {
       position: fixed;
       padding: 30px;
       left: 0;
@@ -98,7 +98,7 @@
   }
 
 
-  @media screen and (width < 1025.01px) {
+  @media screen and (max-width:1025.01px) {
     &__inner {
       flex-wrap: wrap;
       gap: 20px;
@@ -107,7 +107,7 @@
 
   }
 
-  @media screen and (width < 578.01px) {
+  @media screen and (max-width:578.01px) {
     &__logo {
       z-index: 13;
     }

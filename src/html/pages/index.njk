@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+
+{% set title = "Createx Construction" %}
+{% set description = "Createx Construction Bureau — the leading construction company in the USA. We deliver high-quality
+projects with excellence and integrity." %}
+{% set bodyClass = "page-home" %}
+{% set pageName = "page-home" %}
+
+{% block content %}
+{% include "hero.njk" %}
+{% include "video.njk" %}
+{% include "values.njk" %}
+{% include "request-form.njk" %}
+{% include "our-services.njk" %}
+{% include "portfolio-section.njk" %}
+{% include "clients.njk" %}
+{% include "testimonials.njk" %}
+{% include "facts.njk" %}
+{% include "news-section.njk" %}
+{% include "application-form.njk" %}
+{% endblock %}

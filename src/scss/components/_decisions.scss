@@ -22,7 +22,7 @@
     margin-bottom: 61px;
   }
 
-  @media screen and (width < 1025px) {
+  @media screen and (max-width:1025px) {
     &__container {
       display: block;
     }

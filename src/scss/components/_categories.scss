@@ -21,7 +21,7 @@
     margin-top: 60px;
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     &__item {
       grid-column: 12 span;
     }

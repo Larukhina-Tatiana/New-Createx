@@ -86,7 +86,7 @@
     text-align: center;
   }
 
-  @media screen and (width < 768px) {
+  @media screen and (max-width:768px) {
     &__list {
       flex-wrap: wrap;
     }

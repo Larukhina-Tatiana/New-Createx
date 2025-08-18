@@ -38,12 +38,12 @@
     }
   }
 
-  @media screen and (width < 1025.01px) {
+  @media screen and (max-width:1025.01px) {
     margin-left: auto;
     margin-right: 0;
   }
 
-  @media screen and (width < 578.01px) {
+  @media screen and (max-width:578.01px) {
 
     &__list {
       // flex-direction: column;

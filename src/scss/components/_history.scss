@@ -80,7 +80,7 @@
     margin-left: 9px;
   }
 
-  @media screen and (width < 560.01px) {
+  @media screen and (max-width: 560px) {
     &__content {
       display: block;
     }

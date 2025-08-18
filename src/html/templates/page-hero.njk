@@ -1,0 +1,23 @@
+<section class="page-hero in-view" aria-labelledby="{{ id }}">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list mobile-overflow">
+        {% for crumb in breadcrumbs %}
+        <li class="breadcrumbs__item">
+          {% if crumb.current %}
+          <span class="breadcrumbs__nolink" aria-current="page">{{ crumb.text }}</span>
+          {% else %}
+          <a class="breadcrumbs__link" href="{{ crumb.href }}">{{ crumb.text }}</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </nav>
+    <div class="page-hero__content">
+      <h1 class="page-hero__title section__title" id="{{ id }}">{{ title }}</h1>
+      {% if descr %}
+      <p class="page-hero__descr">{{ descr }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

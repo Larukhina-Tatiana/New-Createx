@@ -120,7 +120,7 @@
     text-overflow: ellipsis;
   }
 
-  @media screen and (width < 1024.01px) {
+  @media screen and (max-width:1024.01px) {
     &--small {
       .news-box__descr {
         display: block;

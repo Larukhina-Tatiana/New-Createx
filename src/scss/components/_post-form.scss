@@ -40,7 +40,7 @@
     height: 100px;
   }
 
-  @media screen and (width < 485.01px) {
+  @media screen and (max-width:485.01px) {
     &__inner {
       flex-direction: column;
     }

@@ -1,5 +1,5 @@
 .burger {
-  @media screen and (width > 578.01px) {
+  @media screen and (min-width: 578.01px) {
     display: none;
   }
 

@@ -72,13 +72,13 @@
     margin-top: 8px;
   }
 
-  @media screen and (width < 1025px) {
+  @media screen and (max-width:1025px) {
     &__article {
       flex-direction: column;
     }
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
     &__inner {
       grid-template-columns: repeat(12, 1fr);
     }

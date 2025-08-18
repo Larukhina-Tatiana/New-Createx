@@ -17,7 +17,20 @@
     //   background-repeat: no-repeat;
   }
 
-  @media screen and (width < 1025.99px) {
+  @media screen and (max-width:1025.99px) {
     display: none;
+  }
+}
+
+
+.map-animate {
+
+  opacity: 0;
+  transform: scale3d(0, 0, 0);
+  transition: none;
+
+
+  &.animate-on-scroll.in-view {
+    @include appear-scale3d(0.8s, ease-out, center center);
   }
 }

@@ -23,6 +23,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
+  <link rel="preload" as="image" href="images/hero/hero-bg1@1x.avif" type="image/avif">
+  <link rel="preload" as="image" href="images/hero/hero-bg1@2x.avif" type="image/avif">
+
+
 
   <!-- Manifest -->
   <link rel="manifest" href="favicons/site.webmanifest">
@@ -85,26 +89,7 @@
   </div>
 </header>
   <main class="main">
-    <section class="page-hero in-view" style="background-image:
-    -webkit-image-set(
-    url(./images/hero/work-hero-bg@1x.png) 1x, url(./images/hero/work-hero-bg@2x.png) 2x)">
-  <div class="container">
-    <nav class="work__breadcrumbs breadcrumbs">
-      <ol class="breadcrumbs__list mobile-overflow">
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Homepage</a></li>
-        <li class="breadcrumbs__item"><span class="breadcrumbs__nolink">Work</span></li>
-      </ol>
-    </nav>
-    <div class="page-hero__content">
-      <h1 class="page-hero__title section__title">OUR WORK</h1>
-      <p class="page-hero__descr">
-        Our portfolio represents 20&nbsp;years of&nbsp;construction experience backed by&nbsp;a&nbsp;passion for
-        perfect client
-        service, quality and innovations in&nbsp;consctuction industry.
-      </p>
-    </div>
-  </div>
-</section>
+    
     <section class="portfolio container">
   <h2 class="section-subtitle visually-hidden">Portfolio</h2>
   <ul class="portfolio-tabs-nav tabs reveal-top">
@@ -1171,13 +1156,7 @@
 </div>
 </section>
     <section class="application-form section animate-on-scroll" id="discuss" itemscope
-  itemtype="https://schema.org/ContactPage" style="background-image:
-    -webkit-image-set(url(./images/application/application-bg1@1x.avif) type('image/avif') 1x,
-      url(./images/application/application-bg1@2x.avif) type('image/avif') 2x,
-      url(./images/application/application-bg1@1x.webp) type('image/webp') 1x,
-      url(./images/application/application-bg1@2x.webp) type('image/webp') 2x,
-      url(./images/application/application-bg1@1x.jpg) 1x,
-      url(./images/application/application-bg1@2x.jpg) 2x)">
+  itemtype="https://schema.org/ContactPage">
   <h2 class="visually-hidden" itemprop="name">Discuss a project</h2>
 
   <div class="container application-form__container">
@@ -1311,13 +1290,13 @@
       <div class="footer__form-inner">
         <label class="footer__form-label form__label" for="user-email">
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="Your email address" required autocomplete="on" pattern="^\S+@\S+\.\S+$"
-            title="Please specify in the format: user@example.com"
+            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+            title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
-            onchange="this.setCustomValidity('') " autocomplete="email" itemprop="email">
-          <span class="form-errors form-errors--position" data-js-form-field-errors></span>
+            onchange="this.setCustomValidity('')">
+          <span class="form-errors form-errors--position" data-js-form-field-errors aria-live="polite"></span>
         </label>
-        <button class="button button--regular footer__form-btn" type="submit">subscribe</button>
+        <button class="button button--regular footer__form-btn" type="submit">Subscribe</button>
       </div>
       <p class="footer__form-text">
         *Subscribe to&nbsp;our newsletter to&nbsp;receive communications and early updates from Createx Construction

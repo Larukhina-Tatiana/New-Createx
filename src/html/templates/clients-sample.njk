@@ -1,0 +1,11 @@
+<section class="{{ sectionClass }}">
+  <div class="container">
+    {% if subtitle %}
+    <h2 class="{{ subtitleClass }}">{{ subtitle }}</h2>
+    {% endif %}
+    {% if description %}
+    <p class="{{ descriptionClass }}">{{ description | safe }}</p>
+    {% endif %}
+  </div>
+  {% include "clients-triker.njk" %}
+</section>

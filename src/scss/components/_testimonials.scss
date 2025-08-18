@@ -61,7 +61,7 @@
     }
   }
 
-  @media screen and (width < 768.01px) {
+  @media screen and (max-width:768.01px) {
 
     &__content {
       max-width: 100%;
