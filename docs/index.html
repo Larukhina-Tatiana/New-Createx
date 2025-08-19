@@ -52,7 +52,10 @@ projects with excellence and integrity.">
 <link rel="manifest" href="favicons/site.webmanifest">
 
 <!-- Styles -->
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="preload" href="/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="/css/style.min.css">
+</noscript>
   
 </head>
 
@@ -1272,7 +1275,7 @@ projects with excellence and integrity.">
   </div>
 </section>
 
-  <footer class="footer" role="contentinfo" aria-label="Company contact and navigation">
+  <footer class="footer" aria-label="Company contact and navigation">
   <a href="#page" data-scroll class="to-top">
     <span class="to-top__text">Go to top</span>
     <span class="to-top__icon">

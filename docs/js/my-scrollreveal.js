@@ -12,32 +12,27 @@ document
 
 function ScrollRevealFunc() {
   ScrollReveal().reveal(
-    ".news-section, .page-hero, .page-hero__descr, .clients__descr,  .projects, .categories__box, .reveal-bottom",
+    ".news-section, .page-hero, .page-hero__descr, .projects, .categories__box, .reveal-bottom",
     {
       origin: "bottom",
       // delay: 0,
       // viewOffset: { top: -100 },
     }
   );
-  ScrollReveal().reveal(".quotation, .reveal-top", {
+  ScrollReveal().reveal(".reveal-top", {
+    origin: "top",
+    // viewOffset: { top: -100 },
+  });
+  ScrollReveal().reveal(".quotation, .section__title", {
     origin: "top",
     delay: 200,
     // viewOffset: { top: -100 },
   });
 
-  ScrollReveal().reveal(".reveal-bottom", {
-    origin: "bottom",
-    // duration: 2000,
-  });
   ScrollReveal().reveal(".offices__nav-coll", {
     origin: "bottom",
     duration: 2000,
   });
-
-  // ScrollReveal().reveal(".hero__btn, .gift__btn", {
-  //   origin: "top",
-  //   duration: 6800,
-  // });
 
   ScrollReveal().reveal(".reveal-left", {
     origin: "left",
@@ -61,10 +56,6 @@ function ScrollRevealFunc() {
     },
     scale: 0.5,
   });
-
-  // ScrollReveal().reveal(".satisfied, .hero__product", {
-  //   origin: "left",
-  // });
 
   const cards = document.querySelectorAll(".our-services__item");
 
