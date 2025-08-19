@@ -12,7 +12,7 @@ document
 
 function ScrollRevealFunc() {
   ScrollReveal().reveal(
-    ".news-section, .page-hero, .page-hero__descr, .team__descr, .clients__descr,  .projects, .categories__box, .reveal-bottom",
+    ".news-section, .page-hero, .page-hero__descr, .clients__descr,  .projects, .categories__box, .reveal-bottom",
     {
       origin: "bottom",
       // delay: 0,
@@ -38,10 +38,6 @@ function ScrollRevealFunc() {
   //   origin: "top",
   //   duration: 6800,
   // });
-
-  ScrollReveal().reveal(".rooms, .contacts__info", {
-    origin: "top",
-  });
 
   ScrollReveal().reveal(".reveal-left", {
     origin: "left",

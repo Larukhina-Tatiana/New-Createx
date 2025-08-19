@@ -51,6 +51,12 @@
   // }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .heartbeat {
+    animation: none !important;
+  }
+}
+
 .running-line-right {
   animation: running-line-right 30s linear 1s infinite;
 

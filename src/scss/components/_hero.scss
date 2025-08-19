@@ -1,11 +1,13 @@
 @mixin responsive-bg($name) {
-  background-image: image-set(url('../images/#{$name}@1x.avif') type('image/avif') 1x,
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  image-set(url('../images/#{$name}@1x.avif') type('image/avif') 1x,
     url('../images/#{$name}@2x.avif') type('image/avif') 2x,
     url('../images/#{$name}@1x.webp') type('image/webp') 1x,
     url('../images/#{$name}@2x.webp') type('image/webp') 2x,
     url('../images/#{$name}@1x.jpg') 1x,
     url('../images/#{$name}@2x.jpg') 2x);
 }
+
 
 .hero {
   // min-height: 100vh;
@@ -44,16 +46,32 @@
       @include responsive-bg('hero/hero-bg1');
     }
 
-    &--news {
-      @include responsive-bg('news1/image1');
+    &--bg2 {
+      @include responsive-bg('hero/hero-bg2');
     }
 
-    &--history {
-      @include responsive-bg('history/image1');
+    &--bg3 {
+      @include responsive-bg('hero/hero-bg3');
     }
 
-    &--services {
-      @include responsive-bg('services/image4');
+    &--bg4 {
+      @include responsive-bg('hero/hero-bg4');
+    }
+
+    &--bg5 {
+      @include responsive-bg('hero/hero-bg5');
+    }
+
+    &--bg6 {
+      @include responsive-bg('hero/hero-bg6');
+    }
+
+    &--bg7 {
+      @include responsive-bg('hero/hero-bg7');
+    }
+
+    &--bg8 {
+      @include responsive-bg('hero/hero-bg8');
     }
   }
 
@@ -101,7 +119,8 @@
       display: flex;
       flex-direction: column;
 
-      width: 178px;
+      // width: 178px;
+      width: 80px;
       height: auto;
       background-color: transparent;
       border-radius: 0;

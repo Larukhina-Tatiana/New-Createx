@@ -1,14 +1,15 @@
 {# hero-preload.njk #}
 {% macro preloadHero(pageKey) %}
 {% set heroMap = {
-'about': 'about-hero-bg',
-'positions': 'positions-hero-bg',
-'news': 'news-hero-bg',
-'services': 'services-hero-bg',
-'services-inside': 'services-inside-hero-bg',
-'work': 'work-hero-bg',
-'work-inside': 'work-inside-hero-bg',
-'contacts': 'contacts-hero-bg'
+'page-home': 'hero-bg1',
+'page-about': 'about-hero-bg',
+'page-positions': 'positions-hero-bg',
+'page-news': 'news-hero-bg',
+'page-services': 'services-hero-bg',
+'page-services-inside': 'services-inside-hero-bg',
+'page-work': 'work-hero-bg',
+'page-work-inside': 'work-inside-hero-bg',
+'page-contacts': 'contacts-hero-bg'
 } %}
 
 {% set bgName = heroMap[pageKey] %}

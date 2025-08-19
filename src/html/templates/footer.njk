@@ -13,8 +13,8 @@
     <div class="footer__left">
       <div class="footer__inner">
         <a class="footer__logo logo" href="./index.html">
-          <img src="./images/icons/logo-footer.svg" alt="Createx Logo" width="142" height="24" loading="lazy"
-            decoding="async">
+          <img src="./images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
+            loading="lazy" decoding="async">
         </a>
         <address class="social-media">
           <ol class="social social--footer">
@@ -65,17 +65,18 @@
       </p>
     </div>
     <form class="footer__form form" name="footer-form" action="#" method="post" data-js-form novalidate>
-      <h4 class="footer__form-title section__titleh4">
+      <h2 class="footer__form-title section__titleh4">
         Let’s stay in touch
-      </h4>
+      </h2>
       <div class="footer__form-inner">
-        <label class="footer__form-label form__label" for="user-email">
+        <label class="footer__form-label form__label visually-hidden" for="user-email">
+          Email address
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
             placeholder="e.g. user@example.com" required autocomplete="email" pattern="^\S+@\S+\.\S+$"
             title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
             onchange="this.setCustomValidity('')">
-          <span class="form-errors form-errors--position" data-js-form-field-errors aria-live="polite"></span>
+          <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
         </label>
         <button class="button button--regular footer__form-btn" type="submit">Subscribe</button>
       </div>
