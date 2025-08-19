@@ -1,5 +1,15 @@
-{% set bodyClass = "page-positions" %}
 {% extends "layout.njk" %}
+{% set title = "Available Positions — Createx Construction" %}
+{% set description = "Learn more about Createx Construction Bureau, our values, mission, and experience in the US market
+since 2000." %}
+{% set ogDescription = "Discover Createx's story, team, and commitment to quality construction." %}
+<!-- {% set ogImage = "https://larukhina-tatiana.github.io/Createx/images/og-about.jpg" %} -->
+{% set ogUrl = "https://larukhina-tatiana.github.io/Createx/positions.html" %}
+{% set pageName = "page-positions" %}
+{% set bodyClass = "page-positions" %}
+
+
+
 
 {% block content %}
 {% set id = "hero-title-positions" %}
@@ -10,7 +20,7 @@
 ] %}
 {% set title = "Available Positions" %}
 {% set descr = "Build your career with Createx Construction Bureau." %}
-
+{% set bodyClass = "page-positions" %}
 {% include "page-hero.njk" %}
 
 
@@ -19,14 +29,4 @@
 {% include "application-form.njk" %}
 {% include "modals.njk" %}
 {% set pageName = "page-positions" %}
-{% include "includes/scripts.njk" %}
 {% endblock %}
-
-<!-- @include('hero-positions.html') -->
-
-
-<!-- <script src="js/main.min.js"></script> -->
-<!-- <script src="./src/js/graph-modal.min.js"></script> -->
-<!-- <script src="./src/js/modals.js"></script> -->
-
-<!-- <script src="./src/js/form-sendCv.js"></script> -->
