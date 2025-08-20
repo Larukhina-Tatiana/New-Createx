@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+{% set title = "Services — Createx Construction" %}
+{% set description = "Learn more about Createx Construction Bureau, our values, mission, and experience in the US market
+since 2000." %}
+{% set ogDescription = "Discover Createx's story, team, and commitment to quality construction." %}
+{% set ogImage = "https://larukhina-tatiana.github.io/Createx/images/og-about.jpg" %}
+{% set ogUrl = "https://larukhina-tatiana.github.io/Createx/services.html" %}
+{% set pageName = "page-services" %}
+{% set bodyClass = "page-services" %}
+
+
+{% block content %}
+{% set id = "hero-title-services" %}
+{% set breadcrumbs = [
+{ text: "Homepage", href: "index.html" },
+{ text: "Services", current: true }
+] %}
+{% set title = "Services" %}
+{% set descr = "If you are looking for a full-service construction company, look to Createx Construction
+Bureau.
+We are doing our best to be a partner for all of your construction needs." %}
+
+{% include "page-hero.njk" %}
+
+
+{% include "section-services.njk" %}
+{% include "application-form.njk" %}
+{% endblock %}
