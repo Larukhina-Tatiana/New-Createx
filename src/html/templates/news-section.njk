@@ -1,4 +1,4 @@
-<section class="news-section container section">
+<section class="news-section container section reveal-bottom">
   <h2 class="news-section-subtitle  section-subtitle section-subtitle--center reveal-top">
     Recent
     news</h2>
@@ -7,14 +7,11 @@
       <article class="news-box">
         <div class="images__thumb images__thumb--news-box-705">
           <picture>
-            <source type="image/avif" srcset="
-                              ./images/news-section/image1@1x.avif 1x,
-                              ./images/news-section/image1@2x.avif 2x">
-            <source type="image/webp" srcset="
-                              ./images/news-section/image1@1x.webp 1x,
-                              ./images/news-section/image1@2x.webp 2x">
-            <img class="images__img" src="
-                              ./images/news-section/image1@1x.jpg" loading="lazy" decoding="async"
+            <source type="image/avif"
+              srcset="./images/news-section/image1@1x.avif 1x,./images/news-section/image1@2x.avif 2x">
+            <source type="image/webp"
+              srcset="./images/news-section/image1@1x.webp 1x,./images/news-section/image1@2x.webp 2x">
+            <img class="images__img" src=" ./images/news-section/image1@1x.jpg" loading="lazy" decoding="async"
               alt="Cover image for article: How to Build Climate Change-Resilient Infrastructure">
           </picture>
         </div>
@@ -115,8 +112,6 @@
     </li>
   </ul>
 
-  <div class="view">
-    <h4 class="view__titleh4">Explore all our news posts</h4>
-    <a class="view__link button button--large animate-on-scroll pulse" href="./news.html">View all news</a>
-  </div>
+  {% include "view.njk" %}
+
 </section>

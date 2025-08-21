@@ -39,6 +39,7 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    overflow: visible;
   }
 
   &__thumbs {
@@ -92,7 +93,7 @@
 .signature-path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: drawSignature 5s ease-in-out forwards;
+  animation: drawSignature 6s ease-in-out forwards;
 }
 
 @keyframes drawSignature {

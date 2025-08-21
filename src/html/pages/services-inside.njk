@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+{% set title = "Createx Construction Services Interior Design" %}
+{% set description = "Learn more about Createx Construction Bureau, our values, mission, and experience in the US market
+since 2000." %}
+{% set ogDescription = "Discover Createx's story, team, and commitment to quality construction." %}
+{% set ogImage = "https://larukhina-tatiana.github.io/Createx/images/og-about.jpg" %}
+{% set ogUrl = "https://larukhina-tatiana.github.io/Createx/services-inside.html" %}
+{% set pageName = "page-services-inside" %}
+{% set bodyClass = "page-services-inside" %}
+
+
+{% block content %}
+{% set id = "hero-title-services-inside" %}
+{% set breadcrumbs = [
+{ text: "Homepage", href: "index.html" },
+{ text: "Homepage", href: "services.htmll" },
+{ text: "Interior Design", current: true }
+] %}
+{% set title = "Interior Design" %}
+{% set descr = "Dui augue nec mi mi. Ut ac lectus donec fames pellentesque. Laoreet aenean vulputate elementum blandit
+amet." %}
+
+{% include "page-hero.njk" %}
+
+
+{% include "weoffer.njk" %}
+{% include "steps.njk" %}
+{% include "benefits.njk" %}
+{% include "projects.njk" %}
+{% include "pricing.njk" %}
+{% include "clients.njk" %}
+{% include "application-form.njk" %}
+{% endblock %}

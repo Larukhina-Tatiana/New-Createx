@@ -9,6 +9,7 @@
     position: relative;
     // padding-bottom: 126px;
     padding-bottom: clamp(2.5rem, 0.61rem + 9.45vw, 7.875rem);
+    overflow: visible;
   }
 
   &__title {

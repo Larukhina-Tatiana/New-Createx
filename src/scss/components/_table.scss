@@ -13,6 +13,10 @@
 
   &__wrapper {
     border-collapse: collapse;
+
+    view-timeline-name: --fadeScale-block;
+    view-timeline-axis: block;
+
   }
 
   &__th {

@@ -1,24 +1,19 @@
 ScrollReveal({
   distance: "60px",
-  duration: 1000,
+  duration: 800,
   reset: true, // повторение анимации
 });
 
-document
-  .querySelectorAll(".our-services__item, .offices__nav-coll")
-  .forEach((card, index) => {
-    card.style.setProperty("--order", index);
-  });
-
 function ScrollRevealFunc() {
-  ScrollReveal().reveal(
-    ".news-section, .page-hero, .page-hero__descr, .projects, .categories__box, .reveal-bottom",
-    {
-      origin: "bottom",
-      // delay: 0,
-      // viewOffset: { top: -100 },
-    }
-  );
+  ScrollReveal().reveal(".page-hero,  .reveal-bottom", {
+    origin: "bottom",
+    duration: 200,
+  });
+  ScrollReveal().reveal(".categories__box, .page-hero__descr, .reveal-bottom", {
+    origin: "bottom",
+    delay: 200,
+    // viewOffset: { top: -100 },
+  });
   ScrollReveal().reveal(".reveal-top", {
     origin: "top",
     // viewOffset: { top: -100 },
@@ -56,6 +51,11 @@ function ScrollRevealFunc() {
     },
     scale: 0.5,
   });
+  document
+    .querySelectorAll(".our-services__item, .offices__nav-coll")
+    .forEach((card, index) => {
+      card.style.setProperty("--order", index);
+    });
 
   const cards = document.querySelectorAll(".our-services__item");
 

@@ -158,7 +158,6 @@ function scripts() {
     src([
       // "https://unpkg.com/aos@2.3.1/dist/aos.js",
       "node_modules/jquery/dist/jquery.js",
-      "node_modules/scrollreveal/dist/scrollreveal.js",
       // "node_modules/swiper/swiper-bundle.js",
       "node_modules/swiper/swiper-bundle.js",
 
@@ -183,7 +182,6 @@ function scripts() {
       // "js/jquery.rateyo.js",
       "./src/js/burger.js",
       "./src/js/sliders.js",
-      "./src/js/video.js",
       "./src/js/progress.js",
       "./src/js/to-top.js",
       "./src/js/video.js",
