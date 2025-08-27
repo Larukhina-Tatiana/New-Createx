@@ -3,9 +3,9 @@
   // padding-bottom: 40px;
   margin-bottom: 40px;
 
-  @media screen and (min-width: 578.01px) and (max-width: 967px) {
-    padding-top: 55px;
-  }
+  // @media screen and (min-width: 578.01px) and (max-width: 967px) {
+  //   padding-top: 55px;
+  // }
 
   &__list {
     @include flex-aic;

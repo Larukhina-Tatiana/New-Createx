@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ tabs.js загружен");
+  // console.log("✅ tabs.js загружен");
 
   const portfolioTabsNav = document.querySelector(".portfolio-tabs-nav");
   const portfolioTabsBtns = document.querySelectorAll(
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   }
   // };
   const activateTab = (path) => {
-    console.log(`▶️ Активируем вкладку: ${path}`);
+    // console.log(`▶️ Активируем вкладку: ${path}`);
     const targetBtn = document.querySelector(
       `.portfolio-tabs-nav__btn[data-path="${path}"]`
     );
@@ -97,6 +97,31 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loadMore) {
       loadMore.style.display =
         itemsToShow.length > maxItems ? "inline-flex" : "none";
+    }
+
+    // / 🔽 Прокрутка к карточкам с учётом шапки и табов
+    const cardsWrapper = document.querySelector(".tabs-content");
+    const tabsWrapper = document.querySelector(".portfolio-tabs-nav");
+
+    if (cardsWrapper) {
+      const headerHeight =
+        parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            "--header-height"
+          )
+        ) || 0;
+
+      const tabsHeight = tabsWrapper?.offsetHeight || 0;
+
+      const totalOffset = headerHeight + tabsHeight;
+
+      const top =
+        cardsWrapper.getBoundingClientRect().top + window.scrollY - totalOffset;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -153,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sessionStorage.removeItem("tab");
     }
 
-    console.log("🔍 Инициализация вкладки из URL:", hash || "all");
+    // console.log("🔍 Инициализация вкладки из URL:", hash || "all");
 
     if (!hash) {
       activateTab("all");

@@ -64,8 +64,9 @@
   &__slider-img {
     max-height: 345px;
     height: 345px;
-    aspect-ratio: 16 / 4;
-    @include transition ($transition-property: (max-height));
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
+    @include transition ($transition-property: (height, object-fit));
   }
 
   &__slider-slide {
@@ -74,7 +75,7 @@
     overflow: hidden;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    background-color: var(--white);
+    // background-color: var(--white);
     -webkit-transition: max-height .5s;
 
 
@@ -87,9 +88,8 @@
     @media (any-hover: hover) {
       &:hover {
         .section__slider-img {
-          @include transition ($transition-property: (max-height, object-fit));
-          max-height: 277px;
-          object-fit: none;
+          height: 277px;
+          object-fit: contain;
         }
       }
     }
