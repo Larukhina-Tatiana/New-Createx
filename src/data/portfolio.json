@@ -1,0 +1,281 @@
+[
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-1",
+    "src": "./images/portfolio-section/slide-image-1@1x.jpg",
+    "alt": "A tall red skyscraper with a stepped facade and many small square windows, set against a clear blue sky.",
+    "title": "Red Finger Building",
+    "category": "Business Centers"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "repair",
+    "image": "./images/portfolio-section/slide-image-2",
+    "src": "./images/portfolio-section/slide-image-2@1x.jpg",
+    "alt": "Modern lounge and office area with circular orange armchairs, low tables, warm lighting, large windows, and a reception desk in a clean, collaborative setting.",
+    "title": "Collaborative Flow",
+    "category": "Interior Design"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-3",
+    "src": "./images/portfolio-section/slide-image-3@1x.jpg",
+    "alt": "A tall, modern apartment building with a pointed roof and many rounded windows.",
+    "title": "The Pencil Building",
+    "category": "Stores & Malls"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-4",
+    "src": "./images/portfolio-section/slide-image-4@1x.jpg",
+    "alt": "A child's or student's bedroom with a yellow desk, a matching chair, and a bed with integrated storage and a black and white striped pillow.",
+    "title": "Kids Bedroom With Decorations",
+    "category": "Apartments & flats"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-5",
+    "src": "./images/portfolio-section/slide-image-5@1x.jpg",
+    "alt": "A cozy and modern bedroom with a large bed, a golden chandelier, and white curtains, featuring a minimalist and clean aesthetic.",
+    "title": "Modern Double Bedroom",
+    "category": "Apartments & flats"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-6",
+    "src": "./images/portfolio-section/slide-image-6@1x.jpg",
+    "alt": "A stylish and modern living room with a focus on a beige armchair, a white marble coffee table with a vase of flowers, and a bookshelf in the background.",
+    "title": "Scandinavian Style Interior",
+    "category": "Apartments & flats"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "project",
+    "ariaLabel": "Modern Cottage - Private Houses",
+    "image": "./images/portfolio-section/slide-image-7",
+    "src": "./images/portfolio-section/slide-image-7@1x.jpg",
+    "alt": "A modern house with a cubic design, large glass windows, and an external staircase, surrounded by a lawn and trees.",
+    "title": "Modern Cottage",
+    "category": "Private houses"
+  },
+  {
+    "target": "project",
+    "href": "./work-inside.html",
+    "image": "./images/portfolio-section/slide-image-8",
+    "alt": "Modern white house with flat roof, swimming pool and traditional glass windows",
+    "src": "./images/portfolio-section/slide-image-8@1x.jpg",
+    "title": "Luxury Beach House",
+    "category": "Private houses"
+  },
+  {
+    "target": "design",
+    "href": "./work-inside.html",
+    "image": "./images/portfolio-section/slide-image-9",
+    "src": "./images/portfolio-section/slide-image-9@1x.jpg",
+    "alt": "Empty modern corridor with polished reflective floor, large windows, recessed lighting, and minimalist design, offering a view of greenery outside.",
+    "title": "Axis of Light",
+    "category": "Stores & Malls"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "project",
+    "image": "./images/portfolio-section/slide-image-10",
+    "src": "./images/portfolio-section/slide-image-10@1x.jpg",
+    "alt": "Architectural scale models of modern buildings with minimalist design, placed on a windowsill in a studio setting, featuring miniature trees and pathways.",
+    "title": "Scaled Vision",
+    "category": "Stores & Malls"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "repair",
+    "image": "./images/portfolio-section/slide-image-11",
+    "src": "./images/portfolio-section/slide-image-11@1x.jpg",
+    "alt": "Modern living room with white sofa, colorful cushions, wall of empty picture frames, potted tree, and wooden flooring in a cozy, artistic setting.",
+    "title": "Framed Comfort",
+    "category": "Private houses"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "project",
+    "image": "./images/portfolio-section/slide-image-12",
+    "src": "./images/portfolio-section/slide-image-12@1x.jpg",
+    "alt": "A modern house with a flat roof, a wooden and concrete facade, and large green lawn with an ocean view in the distance.",
+    "title": "Brown and Gray Painted House",
+    "category": "Private houses"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-13",
+    "src": "./images/portfolio-section/slide-image-13@1x.jpg",
+    "alt": "A tall, modern apartment building with a pointed roof and many rounded windows.",
+    "title": "Cubes Building",
+    "category": "Business Centers"
+  },
+  {
+    "target": "project",
+    "href": "./work-inside.html",
+    "image": "./images/portfolio-section/slide-image-14",
+    "src": "./images/portfolio-section/slide-image-14@1x.jpg",
+    "alt": "Modern multi-story house with large glass windows and warm interior lighting, situated by a lake with a dock and reflected in the water under an evening sky.",
+    "title": "Lakeside Modern",
+    "category": "Private houses"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "project",
+    "image": "./images/portfolio-section/slide-image-15",
+    "src": "./images/portfolio-section/slide-image-15@1x.jpg",
+    "alt": "Modern two-story house with white and wooden paneling, black trim accents, large windows, landscaped front yard, and illuminated walkway in a suburban setting.",
+    "title": "Linear Nest",
+    "category": "Private houses"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "project",
+    "image": "./images/portfolio-section/slide-image-16",
+    "src": "./images/portfolio-section/slide-image-16@1x.jpg",
+    "alt": "Modern two-story house with large glass windows, sloped roof, and balcony, nestled in a wooded area by a small lake, featuring a stone path and outdoor seating.",
+    "title": "Forest Edge Residence",
+    "category": "Private houses"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-17",
+    "src": "./images/portfolio-section/slide-image-17@1x.jpg",
+    "alt": "Modern open-concept living space featuring a beige sectional sofa, round metallic coffee table, dining area with chandelier, and sleek kitchen with island and glass staircase.",
+    "title": "Elevated Living",
+    "category": "Apartments & flats"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-18",
+    "src": "./images/portfolio-section/slide-image-18@1x.jpg",
+    "alt": "Modern living room with dark blue sectional sofa and ocean view through large windows, featuring a white coffee table, tripod lamp, and mountain coastline in the background.",
+    "title": "Coastal Calm House",
+    "category": "Interior Design"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-19",
+    "src": "./images/portfolio-section/slide-image-19@1x.jpg",
+    "alt": "Spacious modern bedroom with turquoise bedspread, flat-screen TV, desk area, and partition wall, featuring minimalist decor and natural lighting.",
+    "title": "Suite Serenity",
+    "category": "Interior Design"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-20",
+    "src": "./images/portfolio-section/slide-image-20@1x.jpg",
+    "alt": "Modern kitchen interior with central island, wooden cabinetry, stainless steel appliances, pendant lights, and sliding glass doors opening to a green outdoor deck.",
+    "title": "Heart of the Home",
+    "category": "Interior Design"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-21",
+    "src": "./images/portfolio-section/slide-image-21@1x.jpg",
+    "alt": "Modern glass office building with mirrored facade and surrounding greenery",
+    "title": "Business Center Panorama",
+    "category": "Commercial Architecture"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-22",
+    "src": "./images/portfolio-section/slide-image-22@1x.jpg",
+    "alt": "Partial view of an office building with a modern glass facade and trees in the foreground.",
+    "title": "A Modern Skyscraper",
+    "category": "Offices and business centers"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-23",
+    "alt": "A modern multi-story residential building with a blue facade, a mix of solid walls and large glass windows, and a segmented, contemporary design.",
+    "title": "The Blue Spire",
+    "category": "Residential Complex"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-24",
+    "src": "./images/portfolio-section/slide-image-24@1x.jpg",
+    "alt": "View from below of two modern glass skyscrapers against a cloudy sky",
+    "title": "Twin Towers Perspective",
+    "category": "Apartments & flats"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "project",
+    "image": "./images/portfolio-section/slide-image-25",
+    "src": "./images/portfolio-section/slide-image-25@1x.jpg",
+    "alt": "Modern commercial building with large glass windows, beige walls, black awnings, and clean architectural lines, set against a clear blue sky.",
+    "title": "Retail Grid",
+    "category": "Architecture"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-26",
+    "src": "./images/portfolio-section/slide-image-26@1x.jpg",
+    "alt": "Upward view of illuminated skyscrapers converging toward the center against a deep blue sky, showcasing dramatic geometry and urban scale.",
+    "title": "Converging Heights",
+    "category": "Residential complex"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "construction",
+    "image": "./images/portfolio-section/slide-image-27",
+    "src": "./images/portfolio-section/slide-image-27@1x.jpg",
+    "alt": "Upward view of modern skyscrapers with contrasting architectural styles, including curved glass and exposed metallic structures, set against a partly cloudy sky.",
+    "title": "Vertical Pulse",
+    "category": "Residential complex"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "design",
+    "image": "./images/portfolio-section/slide-image-28",
+    "src": "./images/portfolio-section/slide-image-28@1x.jpg",
+    "alt": "Elegant living room with light gray armchairs, white coffee table, glossy tiled floor, large windows with beige curtains, and a staircase with glass railing.",
+    "title": "Refined Light",
+    "category": "Interior Design"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "repair",
+    "image": "./images/portfolio-section/slide-image-29",
+    "src": "./images/portfolio-section/slide-image-29@1x.jpg",
+    "alt": "Stylish living room with light gray sofa, curved armchair, black coffee table, abstract artwork, and geometric tiled floor in a modern, minimalist setting.",
+    "title": "Curated Comfort",
+    "category": "Interior Design"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "repair",
+    "image": "./images/portfolio-section/slide-image-30",
+    "src": "./images/portfolio-section/slide-image-30@1x.jpg",
+    "alt": "Cozy living room with beige sectional sofa, wooden coffee table, built-in bookshelf, and large windows overlooking a wooded outdoor area.",
+    "title": "Woodland Retreat",
+    "category": "Interior Design"
+  },
+  {
+    "href": "./work-inside.html",
+    "target": "repair",
+    "image": "./images/portfolio-section/slide-image-31",
+    "src": "./images/portfolio-section/slide-image-31@1x.jpg",
+    "alt": "Modern apartment kitchen and dining area with light wood cabinetry, black countertop, cozy seating with red accents, and natural light from a window.",
+    "title": "Compact Harmony",
+    "category": "Interior Design"
+  }
+]
