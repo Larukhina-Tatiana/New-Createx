@@ -42,7 +42,7 @@ async function loadPortfolioData() {
     }
     const data = await response.json();
     portfolioData = data;
-    console.log(data); // Уберите в продакшене
+    // console.log(data); // Уберите в продакшене
     renderPortfolioItems();
   } catch (error) {
     console.error("Ошибка загрузки данных:", error);
@@ -53,7 +53,7 @@ async function loadPortfolioData() {
 }
 
 function renderPortfolioItems() {
-  console.log("работаем");
+  // console.log("работаем");
 
   const list = document.querySelector(".portfolio-tabs-content");
   const fragment = document.createDocumentFragment();
@@ -91,8 +91,12 @@ function renderPortfolioItems() {
     fragment.appendChild(li);
   });
   list.appendChild(fragment);
+
   if (typeof window.initTabs === "function") {
-    window.initTabs(); // 👈 запускаем вкладки после рендера
+    window.initTabs();
+  }
+  if (typeof window.initTabFromURL === "function") {
+    window.initTabFromURL();
   }
 }
 loadPortfolioData();

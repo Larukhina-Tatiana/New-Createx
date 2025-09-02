@@ -127,11 +127,15 @@
 
     .clients {
       padding-top: 172px;
-      padding-bottom: 110px;
 
-      .partners__title {
-        display: none;
+      .clients__ticker {
+        padding-bottom: 0;
       }
+
+    }
+
+    .clients__ticker {
+      padding-bottom: 100px;
     }
 
     blockquote::before {

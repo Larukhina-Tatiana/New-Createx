@@ -67,8 +67,8 @@
   },
   {
     "id": 7,
-    "available": false,
-    "href": "/projects/modern-cottage.html",
+    "available": true,
+    "href": "work-inside.html",
     "target": "project",
     "ariaLabel": "Modern Cottage - Private Houses",
     "image": "./images/portfolio-section/slide-image-7",

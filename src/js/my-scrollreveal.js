@@ -7,18 +7,22 @@ ScrollReveal({
 function ScrollRevealFunc() {
   ScrollReveal().reveal(".page-hero,  .reveal-bottom", {
     origin: "bottom",
-    duration: 200,
+    duration: 100,
   });
   ScrollReveal().reveal(".categories__box, .page-hero__descr, .reveal-bottom", {
     origin: "bottom",
     delay: 200,
     // viewOffset: { top: -100 },
   });
+
+  // ScrollReveal().reveal(".hero__title ", {
+  //   origin: "top",
+  //   duration: 100,
+  // });
   ScrollReveal().reveal(".reveal-top", {
     origin: "top",
     // viewOffset: { top: -100 },
   });
-
   ScrollReveal().reveal(".quotation, .section__title", {
     origin: "top",
     delay: 200,

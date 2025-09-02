@@ -192,7 +192,7 @@
     opacity: 1 !important;
     /* Додано !important, щоб перекрити вбудовані стилі */
     transform: translateY(0) !important;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.4s ease-out, transform 0.6s ease-out;
   }
 
   @media screen and (max-width:1024px) {
