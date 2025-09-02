@@ -18,6 +18,7 @@ function ScrollRevealFunc() {
     origin: "top",
     // viewOffset: { top: -100 },
   });
+
   ScrollReveal().reveal(".quotation, .section__title", {
     origin: "top",
     delay: 200,

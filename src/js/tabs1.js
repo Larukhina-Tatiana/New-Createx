@@ -1,3 +1,5 @@
+// document.addEventListener("DOMContentLoaded", () => {
+
 (function () {
   function initTabs() {
     console.log("✅ tabs.js загружен");
@@ -21,34 +23,49 @@
       }
     };
 
+    // Активация вкладки по path
+    // const activateTab = (path) => {
+    //   console.log(`▶️ Активируем вкладку: ${path}`);
+    //   const targetBtn = document.querySelector(
+    //     `.portfolio-tabs-nav__btn[data-path="${path}"]`
+    //   );
+    //   if (!targetBtn) return;
+
+    //   // Обновляем активную кнопку
+    //   portfolioTabsBtns.forEach((btn) =>
+    //     btn.classList.remove("portfolio-tabs-nav__btn--active")
+    //   );
+    //   targetBtn.classList.add("portfolio-tabs-nav__btn--active");
+
+    //   // Получаем нужные элементы
+    //   const itemsToShow =
+    //     path === "all"
+    //       ? Array.from(portfolioTabsItems)
+    //       : Array.from(document.querySelectorAll(`[data-target="${path}"]`))
+    //           .map((el) => el.closest(".tabs-content__item"))
+    //           .filter(Boolean);
+
+    //   // Скрываем все элементы
+    //   portfolioTabsItems.forEach((item) => {
+    //     item.classList.remove("item--visible");
+    //     item.classList.add("item--hidden");
+    //     item.style.display = "none"; // Скрываем из потока
+    //   });
+
+    //   // Показываем первые maxItems
+    //   itemsToShow.slice(0, maxItems).forEach((item) => {
+    //     item.style.display = "block"; // Показываем в потоке
+    //     setItemVisibility(item, true);
+    //   });
+
+    //   // Показываем кнопку "Показать больше", если нужно
+    //   if (loadMore) {
+    //     loadMore.style.display =
+    //       itemsToShow.length > maxItems ? "inline-flex" : "none";
+    //   }
+    // };
     const activateTab = (path) => {
       console.log(`▶️ Активируем вкладку: ${path}`);
-      currentStep = 1; // 👈 сбрасываем шаг при переключении вкладки
-      const cardsWrapper = document.querySelector(".tabs-content");
-      const tabsWrapper = document.querySelector(".portfolio-tabs-nav");
-
-      if (cardsWrapper) {
-        const headerHeight =
-          parseInt(
-            getComputedStyle(document.documentElement).getPropertyValue(
-              "--header-height"
-            )
-          ) || 0;
-
-        const tabsHeight = tabsWrapper?.offsetHeight || 0;
-        const totalOffset = headerHeight + tabsHeight;
-
-        const top =
-          cardsWrapper.getBoundingClientRect().top +
-          window.scrollY -
-          totalOffset;
-
-        window.scrollTo({
-          top,
-          behavior: "smooth",
-        });
-      }
-
       const targetBtn = document.querySelector(
         `.portfolio-tabs-nav__btn[data-path="${path}"]`
       );
@@ -87,6 +104,48 @@
       loadMore.style.display =
         itemsToShow.length > maxItems ? "inline-flex" : "none";
     };
+
+    // активация карточек по очереди
+    // const activateTab = (path) => {
+    //   console.log(`▶️ Активируем вкладку: ${path}`);
+    //   const targetBtn = document.querySelector(
+    //     `.portfolio-tabs-nav__btn[data-path="${path}"]`
+    //   );
+    //   if (!targetBtn) return;
+
+    //   portfolioTabsBtns.forEach((btn) =>
+    //     btn.classList.remove("portfolio-tabs-nav__btn--active")
+    //   );
+    //   targetBtn.classList.add("portfolio-tabs-nav__btn--active");
+
+    //   const itemsToShow =
+    //     path === "all"
+    //       ? Array.from(portfolioTabsItems)
+    //       : Array.from(document.querySelectorAll(`[data-target="${path}"]`))
+    //           .map((el) => el.closest(".tabs-content__item"))
+    //           .filter(Boolean);
+
+    //   // Скрываем все элементы
+    //   portfolioTabsItems.forEach((item) => {
+    //     item.classList.remove("item--visible");
+    //     item.classList.add("item--hidden");
+    //     item.style.display = "none";
+    //   });
+
+    //   // Каскадное появление
+    //   itemsToShow.slice(0, maxItems).forEach((item, index) => {
+    //     item.style.display = "block";
+    //     setTimeout(() => {
+    //       item.classList.remove("item--hidden");
+    //       item.classList.add("item--visible");
+    //     }, index * 100); // задержка между карточками
+    //   });
+
+    //   if (loadMore) {
+    //     loadMore.style.display =
+    //       itemsToShow.length > maxItems ? "inline-flex" : "none";
+    //   }
+    // };
 
     // Инициализация при загрузке — из хеша, query или sessionStorage
     const initTabFromURL = () => {
