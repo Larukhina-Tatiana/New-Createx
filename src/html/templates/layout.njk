@@ -2,14 +2,27 @@
 <html lang="en">
 
 <head>
+  {% if bodyClass == "page-positions" %}
+  <link rel="preload" href="/css/graph-modal.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/css/graph-modal.min.css">
+  </noscript>
+  {% endif %}
+
   {% include "head.njk" %}
   {% block head %}{% endblock %}
 </head>
 
 <body class="{{ bodyClass }}" id="page">
   {% include "header.njk" %}
-  {% block content %}{% endblock %}
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
   {% include "footer.njk" %}
+  {% if bodyClass == "page-positions" %}
+  <div class="overlay"></div>
+  {% include "modals.njk" %}
+  {% endif %}
 
   {# Общие скрипты — подключаются один раз #}
   {% include "includes/scripts.njk" %}

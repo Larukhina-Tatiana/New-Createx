@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+  
+  <link rel="preload" href="/css/graph-modal.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/css/graph-modal.min.css">
+  </noscript>
+  
+
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,10 +48,6 @@ since 2000.">
 <link rel="preload" as="image" href="images/hero/positions-hero-bg@2x.avif" type="image/avif">
 <link rel="preload" as="image" href="images/hero/positions-hero-bg@1x.webp" type="image/webp">
 <link rel="preload" as="image" href="images/hero/positions-hero-bg@2x.webp" type="image/webp">
-
-
-
-
 
 
 
@@ -111,7 +114,8 @@ since 2000.">
     </div>
   </div>
 </header>
-  
+  <main class="main">
+    
 
 
 
@@ -318,78 +322,9 @@ since 2000.">
     </form>
   </div>
 </section>
-<div class="modal">
-  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first">
-    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
-      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-        <path fill="currentColor" fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
-          clip-rule="evenodd" />
-      </svg>
-    </button>
-    <div class="modal-content">
-      <h5 class="form__title section__titleh5">Subscribe to our newsletter</h5>
-      <form class="form" action="#" id="form-newsletter">
-        <label class="form__label" for="newsletter-first-name">
-          <span class="form__label-legend">Name</span>
-          <input class="form__input" type="text" name="newsletter-first-name" id="newsletter-first-name"
-            placeholder="Your name" autocomplete="on"
-            title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
-            required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
-        </label>
-        <label class="form__label" for="newsletter-email"><span class="form__label-legend">Email</span>
-          <input class="form__input " type="email" name="newsletter-email" id="newsletter-email"
-            placeholder="Your working email" required autocomplete="on">
-          <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
-        </label>
-        <button class="button button--regular button--vacansies" type="submit">send</button>
-      </form>
-    </div>
-  </div>
-  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second">
-    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
-      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-        <path fill="currentColor" fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
-          clip-rule="evenodd" />
-      </svg>
-    </button>
-    <div class="modal-content">
-      <h5 class="form__title section__titleh5">Send your CV</h5>
-      <form action="#" class="form" id="formSendCv">
-        <label class="form__label" for="formSendCv-first-name">Name*
-          <input class="form__input" type="text" name="formSendCv-first-name" id="formSendCv-first-name"
-            placeholder="Your name" required autocomplete="on">
-        </label>
-        <label class="form__label" for="location">Location*
-          <select class="form__select form__input" name="location" id="location">
-            <option value="">Choose location</option>
-            <option value="New_York">New York</option>
-          </select>
-        </label>
-        <label class="form__label" for="formSendCv-phone">Phone*
-          <input class="form__input" type="tel" name="formSendCv-phone" id="formSendCv-phone"
-            placeholder="Your phone number" required>
-        </label>
-        <label class="form__label" for="e-mail">Email
-          <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
-        </label>
-        <label class="form__label" for="formSendCv-comment">Сovering letter
-          <textarea class="form__input" id="formSendCv-comment" placeholder="Your covering letter"></textarea>
-        </label>
 
 
-        <label class="checkbox__label" for="file">
-          <input class="checkbox checkbox__file-imput form__input" type="file" name="file" id="file">
-          <span class="checkbox__text checkbox__file-text">Attach your CV*</span>
-        </label>
-        <button class="button button--regular button--vacansies" type="submit">send</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-
+  </main>
   <footer class="footer" aria-label="Company contact and navigation">
   <a href="#page" data-scroll class="to-top">
     <span class="to-top__text">Go to top</span>
@@ -530,8 +465,79 @@ since 2000.">
     </p>
   </div>
 </footer>
+  
+  <div class="overlay"></div>
+  <div class="modal">
+  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first">
+    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
+      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+    <div class="modal-content">
+      <h2 class="form__title section__titleh5">Subscribe to our newsletter</h2>
+      <form class="form" action="#" id="form-newsletter">
+        <label class="form__label" for="newsletter-first-name">
+          <span class="form__label-legend">Name</span>
+          <input class="form__input" type="text" name="newsletter-first-name" id="newsletter-first-name"
+            placeholder="Your name" autocomplete="on"
+            title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
+            required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
+        </label>
+        <label class="form__label" for="newsletter-email"><span class="form__label-legend">Email</span>
+          <input class="form__input " type="email" name="newsletter-email" id="newsletter-email"
+            placeholder="Your working email" required autocomplete="on">
+          <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
+        </label>
+        <button class="button button--regular button--vacansies" type="submit">send</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second">
+    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
+      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+    <div class="modal-content">
+      <h2 class="form__title section__titleh5">Send your CV</h2>
+      <form action="#" class="form" id="formSendCv">
+        <label class="form__label" for="formSendCv-first-name">Name*
+          <input class="form__input" type="text" name="formSendCv-first-name" id="formSendCv-first-name"
+            placeholder="Your name" required autocomplete="on">
+        </label>
+        <label class="form__label" for="location">Location*
+          <select class="form__select form__input" name="location" id="location">
+            <option value="">Choose location</option>
+            <option value="New_York">New York</option>
+          </select>
+        </label>
+        <label class="form__label" for="formSendCv-phone">Phone*
+          <input class="form__input" type="tel" name="formSendCv-phone" id="formSendCv-phone"
+            placeholder="Your phone number" required>
+        </label>
+        <label class="form__label" for="e-mail">Email
+          <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
+        </label>
+        <label class="form__label" for="formSendCv-comment">Сovering letter
+          <textarea class="form__input" id="formSendCv-comment" placeholder="Your covering letter"></textarea>
+        </label>
 
-<div class="overlay"></div>
+
+        <label class="checkbox__label" for="file">
+          <input class="checkbox checkbox__file-imput form__input" type="file" name="file" id="file">
+          <span class="checkbox__text checkbox__file-text">Attach your CV*</span>
+        </label>
+        <button class="button button--regular button--vacansies" type="submit">send</button>
+      </form>
+    </div>
+  </div>
+</div>
+  
 
   
   

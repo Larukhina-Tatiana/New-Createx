@@ -81,7 +81,8 @@ function scripts() {
     "libs/mixitup-v3/mixitup.js",
 
     // твои скрипты
-    "src/js/**/*.js",
+    // "src/js/**/*.js",
+    "src/js/modals.js",
   ])
     .pipe(dest("docs/js"))
     .pipe(browserSync.stream());
