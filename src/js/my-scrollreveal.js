@@ -1,7 +1,8 @@
 ScrollReveal({
-  distance: "60px",
+  distance: "20px",
   duration: 800,
-  reset: true, // повторение анимации
+  reset: false, // повторение анимации
+  viewOffset: { top: 100, bottom: 50 },
 });
 
 function ScrollRevealFunc() {
@@ -56,6 +57,7 @@ function ScrollRevealFunc() {
     },
     scale: 0.5,
   });
+
   document
     .querySelectorAll(".our-services__item, .offices__nav-coll")
     .forEach((card, index) => {

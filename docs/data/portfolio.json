@@ -1,8 +1,30 @@
 [
   {
+    "id": 33,
+    "available": true,
+    "href": "/projects/project.html?id=north-shore",
+    "target": "project",
+    "image": "./images/portfolio-section/slide-image-33",
+    "src": "./images/portfolio-section/slide-image-33@1x.jpg",
+    "alt": "A modern house with a large gable roof, a wood and stone facade and large glass windows.",
+    "title": "North Shore",
+    "category": "Private houses"
+  },
+  {
+    "id": 32,
+    "available": true,
+    "href": "/projects/project.html?id=horizon-house",
+    "target": "project",
+    "image": "./images/portfolio-section/slide-image-32",
+    "src": "./images/portfolio-section/slide-image-32@1x.jpg",
+    "alt": "Modern two-story house with glass facade, wood accents, and outdoor patio in green landscape",
+    "title": "Horizon House",
+    "category": "Private houses"
+  },
+  {
     "id": 1,
     "available": false,
-    "href": "/projects/red-finger-building.html",
+    "href": "/projects/project.html?id=red-finger-building",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-1",
     "src": "./images/portfolio-section/slide-image-1@1x.jpg",
@@ -13,7 +35,7 @@
   {
     "id": 2,
     "available": false,
-    "href": "/projects/collaborative-flow.html",
+    "href": "/projects/project.html?id=collaborative-flow",
     "target": "repairs",
     "image": "./images/portfolio-section/slide-image-2",
     "src": "./images/portfolio-section/slide-image-2@1x.jpg",
@@ -24,7 +46,7 @@
   {
     "id": 3,
     "available": false,
-    "href": "/projects/the-pencil-building.html",
+    "href": "/projects/project.html?id=the-pencil-building",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-3",
     "src": "./images/portfolio-section/slide-image-3@1x.jpg",
@@ -35,7 +57,7 @@
   {
     "id": 4,
     "available": false,
-    "href": "/projects/kids-bedroom-with-decorations.html",
+    "href": "/projects/project.html?id=kids-bedroom-with-decorations",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-4",
     "src": "./images/portfolio-section/slide-image-4@1x.jpg",
@@ -46,7 +68,7 @@
   {
     "id": 5,
     "available": false,
-    "href": "/projects/modern-double-bedroom.html",
+    "href": "/projects/project.html?id=modern-double-bedroom",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-5",
     "src": "./images/portfolio-section/slide-image-5@1x.jpg",
@@ -57,7 +79,7 @@
   {
     "id": 6,
     "available": false,
-    "href": "/projects/scandinavian-style-interior.html",
+    "href": "/projects/project.html?id=scandinavian-style-interior",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-6",
     "src": "./images/portfolio-section/slide-image-6@1x.jpg",
@@ -68,7 +90,7 @@
   {
     "id": 7,
     "available": true,
-    "href": "./modern-cottage.html",
+    "href": "/projects/project.html?id=modern-cottage",
     "target": "project",
     "ariaLabel": "Modern Cottage - Private Houses",
     "image": "./images/portfolio-section/slide-image-7",
@@ -81,7 +103,7 @@
     "id": 8,
     "available": false,
     "target": "project",
-    "href": "/projects/luxury-beach-house.html",
+    "href": "/projects/project.html?id=luxury-beach-house",
     "image": "./images/portfolio-section/slide-image-8",
     "alt": "Luxury Beach House exterior",
     "src": "./images/portfolio-section/slide-image-8@1x.jpg",
@@ -92,7 +114,7 @@
     "id": 9,
     "available": false,
     "target": "design",
-    "href": "/projects/axis-of-light.html",
+    "href": "/projects/project.html?id=axis-of-light",
     "image": "./images/portfolio-section/slide-image-9",
     "src": "./images/portfolio-section/slide-image-9@1x.jpg",
     "alt": "Axis of Light exterior",
@@ -102,7 +124,7 @@
   {
     "id": 10,
     "available": false,
-    "href": "/projects/scaled-vision.html",
+    "href": "/projects/project.html?id=scaled-vision",
     "target": "project",
     "image": "./images/portfolio-section/slide-image-10",
     "src": "./images/portfolio-section/slide-image-10@1x.jpg",
@@ -113,7 +135,7 @@
   {
     "id": 11,
     "available": false,
-    "href": "/projects/framed-comfort.html",
+    "href": "/projects/project.html?id=framed-comfort",
     "target": "repairs",
     "image": "./images/portfolio-section/slide-image-11",
     "src": "./images/portfolio-section/slide-image-11@1x.jpg",
@@ -124,7 +146,7 @@
   {
     "id": 12,
     "available": false,
-    "href": "/projects/brown-and-gray-painted-house.html",
+    "href": "/projects/project.html?id=brown-and-gray-painted-house",
     "target": "project",
     "image": "./images/portfolio-section/slide-image-12",
     "src": "./images/portfolio-section/slide-image-12@1x.jpg",
@@ -135,7 +157,7 @@
   {
     "id": 13,
     "available": false,
-    "href": "/projects/cubes-building.html",
+    "href": "/projects/project.html?id=cubes-building",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-13",
     "src": "./images/portfolio-section/slide-image-13@1x.jpg",
@@ -147,7 +169,7 @@
     "id": 14,
     "available": false,
     "target": "project",
-    "href": "/projects/lakeside-modern.html",
+    "href": "/projects/project.html?id=lakeside-modern",
     "image": "./images/portfolio-section/slide-image-14",
     "src": "./images/portfolio-section/slide-image-14@1x.jpg",
     "alt": "Lakeside Modern exterior",
@@ -157,7 +179,7 @@
   {
     "id": 15,
     "available": false,
-    "href": "/projects/linear-nest.html",
+    "href": "/projects/project.html?id=linear-nest",
     "target": "project",
     "image": "./images/portfolio-section/slide-image-15",
     "src": "./images/portfolio-section/slide-image-15@1x.jpg",
@@ -168,7 +190,7 @@
   {
     "id": 16,
     "available": false,
-    "href": "/projects/forest-edge-residence.html",
+    "href": "/projects/project.html?id=forest-edge-residence",
     "target": "project",
     "image": "./images/portfolio-section/slide-image-16",
     "src": "./images/portfolio-section/slide-image-16@1x.jpg",
@@ -179,7 +201,7 @@
   {
     "id": 17,
     "available": false,
-    "href": "/projects/elevated-living.html",
+    "href": "/projects/project.html?id=elevated-living",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-17",
     "src": "./images/portfolio-section/slide-image-17@1x.jpg",
@@ -190,7 +212,7 @@
   {
     "id": 18,
     "available": false,
-    "href": "/projects/coastal-calm-house.html",
+    "href": "/projects/project.html?id=coastal-calm-house",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-18",
     "src": "./images/portfolio-section/slide-image-18@1x.jpg",
@@ -201,7 +223,7 @@
   {
     "id": 19,
     "available": false,
-    "href": "/projects/suite-serenity.html",
+    "href": "/projects/project.html?id=suite-serenity",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-19",
     "src": "./images/portfolio-section/slide-image-19@1x.jpg",
@@ -212,7 +234,7 @@
   {
     "id": 20,
     "available": false,
-    "href": "/projects/heart-of-the-home.html",
+    "href": "/projects/project.html?id=heart-of-the-home",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-20",
     "src": "./images/portfolio-section/slide-image-20@1x.jpg",
@@ -223,7 +245,7 @@
   {
     "id": 21,
     "available": false,
-    "href": "/projects/business-center-panorama.html",
+    "href": "/projects/project.html?id=business-center-panorama",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-21",
     "src": "./images/portfolio-section/slide-image-21@1x.jpg",
@@ -234,7 +256,7 @@
   {
     "id": 22,
     "available": false,
-    "href": "/projects/a-modern-skyscraper.html",
+    "href": "/projects/project.html?id=a-modern-skyscraper",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-22",
     "src": "./images/portfolio-section/slide-image-22@1x.jpg",
@@ -245,7 +267,7 @@
   {
     "id": 23,
     "available": false,
-    "href": "/projects/the-blue-spire.html",
+    "href": "/projects/project.html?id=the-blue-spire",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-23",
     "alt": "The Blue Spire exterior",
@@ -255,7 +277,7 @@
   {
     "id": 24,
     "available": false,
-    "href": "/projects/twin-towers-perspective.html",
+    "href": "/projects/project.html?id=twin-towers-perspective",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-24",
     "src": "./images/portfolio-section/slide-image-24@1x.jpg",
@@ -266,7 +288,7 @@
   {
     "id": 25,
     "available": false,
-    "href": "/projects/retail-grid.html",
+    "href": "/projects/project.html?id=retail-grid",
     "target": "project",
     "image": "./images/portfolio-section/slide-image-25",
     "src": "./images/portfolio-section/slide-image-25@1x.jpg",
@@ -277,7 +299,7 @@
   {
     "id": 26,
     "available": false,
-    "href": "/projects/converging-heights.html",
+    "href": "/projects/project.html?id=converging-heights",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-26",
     "src": "./images/portfolio-section/slide-image-26@1x.jpg",
@@ -288,7 +310,7 @@
   {
     "id": 27,
     "available": false,
-    "href": "/projects/vertical-pulse.html",
+    "href": "/projects/project.html?id=vertical-pulse",
     "target": "construction",
     "image": "./images/portfolio-section/slide-image-27",
     "src": "./images/portfolio-section/slide-image-27@1x.jpg",
@@ -299,7 +321,7 @@
   {
     "id": 28,
     "available": false,
-    "href": "/projects/refined-light.html",
+    "href": "/projects/project.html?id=refined-light",
     "target": "design",
     "image": "./images/portfolio-section/slide-image-28",
     "src": "./images/portfolio-section/slide-image-28@1x.jpg",
@@ -310,7 +332,7 @@
   {
     "id": 29,
     "available": false,
-    "href": "/projects/curated-comfort.html",
+    "href": "/projects/project.html?id=curated-comfort",
     "target": "repairs",
     "image": "./images/portfolio-section/slide-image-29",
     "src": "./images/portfolio-section/slide-image-29@1x.jpg",
@@ -321,7 +343,7 @@
   {
     "id": 30,
     "available": false,
-    "href": "/projects/woodland-retreat.html",
+    "href": "/projects/project.html?id=woodland-retreat",
     "target": "repairs",
     "image": "./images/portfolio-section/slide-image-30",
     "src": "./images/portfolio-section/slide-image-30@1x.jpg",
@@ -332,7 +354,7 @@
   {
     "id": 31,
     "available": false,
-    "href": "/projects/compact-harmony.html",
+    "href": "/projects/project.html?id=compact-harmony",
     "target": "repairs",
     "image": "./images/portfolio-section/slide-image-31",
     "src": "./images/portfolio-section/slide-image-31@1x.jpg",

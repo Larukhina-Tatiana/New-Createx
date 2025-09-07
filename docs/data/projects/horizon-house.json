@@ -1,0 +1,68 @@
+{
+  "id": "horizon-house",
+  "title": "Horizon House",
+  "description": [
+    "Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms, a terrace, a pool and a garage for two cars.",
+    "Modern design and care for each family member to feel as comfortable as possible in the new home."
+  ],
+  "gallery": [
+    {
+      "src": "horizon-house1",
+      "alt": "Modern two-story house with dark brick facade, large windows, and outdoor seating area."
+    },
+    {
+      "src": "horizon-house2",
+      "alt": "Contemporary home with black-framed windows, stone accents, and outdoor seating."
+    },
+    {
+      "src": "horizon-house3",
+      "alt": "The project is a two-storey brick house with a gable roof, chimneys and symmetrical window arrangement."
+    },
+    {
+      "src": "horizon-house4",
+      "alt": "Angled view of Horizon House showing flat roof, vertical windows, and surrounding pine trees"
+    },
+    {
+      "src": "horizon-house5",
+      "alt": "Oblique view of Horizon House with layered rooflines, wood soffits, and landscaped entrance"
+    },
+    {
+      "src": "horizon-house6",
+      "alt": "Symmetrical front view of Horizon House with hipped roof, columns, and large vertical windows"
+    }
+  ],
+  "thumbnails": [
+    {
+      "src": "s-horizon-house1",
+      "alt": "Thumbnail of Horizon House front view with cantilevered upper floor and pool"
+    },
+    {
+      "src": "s-horizon-house2",
+      "alt": "Thumbnail of side elevation with brick facade and recessed lighting"
+    },
+    {
+      "src": "s-horizon-house3",
+      "alt": "Thumbnail of patio with white furniture and landscaped garden"
+    },
+    {
+      "src": "s-horizon-house4",
+      "alt": "Thumbnail of angled view with flat roof and surrounding pine trees"
+    },
+    {
+      "src": "s-horizon-house5",
+      "alt": "Thumbnail of layered rooflines and landscaped entrance"
+    },
+    {
+      "src": "s-horizon-house6",
+      "alt": "Thumbnail of symmetrical facade with hipped roof and vertical windows"
+    }
+  ],
+  "details": {
+    "location": "2464 Royal Ln. Mesa, New Jersey",
+    "client": "Darlene Robertson",
+    "architect": "HIK Architecture",
+    "size": "840 sq. ft.",
+    "value": "$2 million",
+    "completed": "May 2024"
+  }
+}

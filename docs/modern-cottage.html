@@ -38,6 +38,11 @@
 
 
 
+<link rel="preload" as="image" href="images/hero/work-inside-hero-bg@1x.avif" type="image/avif">
+<link rel="preload" as="image" href="images/hero/work-inside-hero-bg@2x.avif" type="image/avif">
+<link rel="preload" as="image" href="images/hero/work-inside-hero-bg@1x.webp" type="image/webp">
+<link rel="preload" as="image" href="images/hero/work-inside-hero-bg@2x.webp" type="image/webp">
+
 
 
 <!-- Manifest -->
@@ -51,7 +56,7 @@
   
 </head>
 
-<body class="work-inside" id="page">
+<body class="page-work-inside" id="page">
   <header class="header">
   <div class="container">
     <div class="header__inner">
@@ -109,19 +114,41 @@
 
 
 
-
-
-<section class="work-inside page-hero" style="background-image:
-    -webkit-image-set(
-      url(./images/hero/work-inside-hero-bg@1x.png) 1x, url(./images/hero/work-inside-hero-bg@2x.png) 2x)">
+<section class="page-hero in-view" aria-labelledby="hero-work-inside">
   <div class="container">
-    <nav class="breadcrumbs">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
       <ol class="breadcrumbs__list mobile-overflow">
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="./index.html">Homepage</a></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="./work.html">Work</a></li>
-        <li class="breadcrumbs__item"><span class="breadcrumbs__nolink">Modern Cottage</span></li>
+        
+        <li class="breadcrumbs__item">
+          
+          <a class="breadcrumbs__link" href="index.html">Homepage</a>
+          
+        </li>
+        
+        <li class="breadcrumbs__item">
+          
+          <a class="breadcrumbs__link" href="work.html">Work</a>
+          
+        </li>
+        
+        <li class="breadcrumbs__item">
+          
+          <span class="breadcrumbs__nolink" aria-current="page">Modern Cottage</span>
+          
+        </li>
+        
       </ol>
     </nav>
+    <div class="page-hero__content">
+      <h1 class="page-hero__title section__title" id="hero-work-inside">Modern Cottage</h1>
+      
+    </div>
+  </div>
+</section>
+
+<!-- <section class="work-inside page-hero">
+  <div class="container">
+
 
     <h1 class="work-inside__title section__inside-title">Modern Cottage</h1>
 
@@ -342,7 +369,7 @@
       </table>
     </div>
   </div>
-</section>
+</section> -->
 <section class="decisions">
   <div class="container decisions__container grid">
     <div class="images__thumb images__thumb--decisions">
@@ -791,6 +818,10 @@
 
 
 
+
+
+<script src="/js/swiper-bundle.min.js" defer></script>
+<script src="/js/sliders.js" defer></script>
 
 
   

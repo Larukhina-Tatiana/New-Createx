@@ -1,0 +1,68 @@
+{
+  "id": "north-shore",
+  "title": "North Shore",
+  "description": [
+    "The brutal geometry and natural textures of the facade materials emphasize the modern northern character. Wide wooden roof overhangs protect the terrace and balconies from precipitation. Panoramic glazing across the entire wall maximally unites the site and the interior space, filling it with light.",
+    "The terrace with lighting and an outdoor barbecue becomes an extension of the living room, where you can spend a pleasant summer evening with family and friends."
+  ],
+  "gallery": [
+    {
+      "src": "north-shore1",
+      "alt": "A modern A-frame house with a large gabled roof, a wood and stone facade, and expansive glass windows that reveal a cozy, well-lit interior. The home is nestled in a lush green forest."
+    },
+    {
+      "src": "north-shore2",
+      "alt": "A modern A-frame house with a gabled roof, a wood and stone facade, and large glass windows. The home is nestled in a forest with green lawn."
+    },
+    {
+      "src": "north-shore3",
+      "alt": "Modern two-story house with glass balcony, wood and stone facade, surrounded by pine trees — North Shore project by Createx Construction."
+    },
+    {
+      "src": "north-shore4",
+      "alt": "North Shore — modern two-story house with floor-to-ceiling windows, wood and stone facade, outdoor fireplace and deck surrounded by forest"
+    },
+    {
+      "src": "north-shore5",
+      "alt": "orth Shore — sleek two-story house with glass balcony, wood accents, and landscaped entrance partially obscured by a tall tree"
+    },
+    {
+      "src": "north-shore6",
+      "alt": "North Shore interior — modern living room with dark wood entertainment wall, fireplace, sectional sofa, and built-in shelving"
+    }
+  ],
+  "thumbnails": [
+    {
+      "src": "s-north-shore1",
+      "alt": "A thumbnail image showing the 'North Shore' house, highlighting its a-frame design and glass facade."
+    },
+    {
+      "src": "s-north-shore2",
+      "alt": "Thumbnail of side a modern A-frame house with a gabled roof, a wood and stone facade, and large glass windows. The home is nestled in a forest with green lawn."
+    },
+    {
+      "src": "s-north-shore3",
+      "alt": "Thumbnail of North Shore project — modern house with glass balcony and wood-panel facade"
+    },
+    {
+      "src": "s-north-shore4",
+      "alt": "Thumbnail of North Shore — forest house with glass facade and outdoor fireplace"
+    },
+    {
+      "src": "s-north-shore5",
+      "alt": "Thumbnail of North Shore — modern house with glass balcony and tree-lined entrance"
+    },
+    {
+      "src": "s-north-shore6",
+      "alt": "Thumbnail of North Shore interior — cozy living room with fireplace and dark wood accents"
+    }
+  ],
+  "details": {
+    "location": "2464 Royal Ln. Mesa, New Jersey",
+    "client": "Darlene Robertson",
+    "architect": "CCB Architecture",
+    "size": "840 sq. ft.",
+    "value": "$1,8 million",
+    "completed": "May 2025"
+  }
+}

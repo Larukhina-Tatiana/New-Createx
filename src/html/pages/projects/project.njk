@@ -1,0 +1,64 @@
+{% extends "layout.njk" %}
+
+{# ——— Мета-теги и head ——— #}
+{% set title = "Project — Createx Construction" %}
+{% set description = "Project details and gallery" %}
+{% set ogDescription = "Quality construction and exemplary service" %}
+{% set ogUrl = "https://larukhina-tatiana.github.io/Createx/projects/project.html" %}
+{% set bodyClass = "page-work-inside" %}
+{% set pageName = "page-work-inside" %}
+
+{% block head %}
+{% include "includes/head.njk" %}
+{% endblock %}
+
+{% block content %}
+{% set breadcrumbs = [
+{ text: "Homepage", href: "/index.html" },
+{ text: "Work", href: "/work.html" },
+{ text: "Project", current: true }
+] %}
+{% set title = "Createx Project -" %}
+{% include "includes/page-hero.njk" %}
+
+<section class="work-inside">
+  <div class="container">
+    <h1 class="work-inside__title section__inside-title">Loading...</h1>
+
+    <div class="work-inside__galery project-galery">
+      <div class="work-inside__slider-big project-slider-big">
+        <button class="slider-nav__btn portfolio-section__prev work-inside__btn work-inside__btn--prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M9.207 17.207a1 1 0 0 1-1.414 0l-4.5-4.5a1 1 0 0 1 0-1.414l4.5-4.5a1 1 0 0 1 1.414 1.414L6.414 11H20a1 1 0 1 1 0 2H6.414l2.793 2.793a1 1 0 0 1 0 1.414Z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button class="slider-nav__btn portfolio-section__next work-inside__btn work-inside__btn--next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M14.793 6.793a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-2.793-2.793a1 1 0 0 1 0-1.414Z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="swiper-wrapper"></div>
+      </div>
+
+      <div class="work-inside__slider-small" data-thumbs-slider>
+        <div class="swiper-wrapper"></div>
+      </div>
+    </div>
+
+    <div class="project-goal">
+      <div class="project-goal__content">
+        <h2 class="project-goal__subtitle section-subtitle reveal-top">Project goal</h2>
+      </div>
+      <table class="project-goal__table"></table>
+    </div>
+  </div>
+</section>
+
+{% include "decisions.njk" %}
+{% include "projects.njk" %}
+{% include "includes/application-form.njk" %}
+{% endblock %}

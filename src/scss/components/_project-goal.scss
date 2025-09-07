@@ -4,6 +4,7 @@
   align-items: center;
   gap: 30px;
 
+
   &__content {
     max-width: 600px;
     padding-top: 43px;
@@ -23,27 +24,22 @@
   }
 
   &__table {
-    padding: 37px 10px 37px 60px;
+    // padding: 37px 10px 37px 60px;
+    padding: 40px 60px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-
+    background: var(--white);
     background-color: var(--white);
     flex-shrink: 0;
-    @include transition ($transition-property: (scale, box-shadow));
 
-    @media (any-hover: hover) {
-      &:hover {
-        scale: 1.1;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      }
-    }
 
 
     &-name {
       font-weight: 700;
       color: var(--gray-900);
       width: 98px;
-      padding-right: 32px;
+      // padding-right: 32px;
+      padding-right: clamp(1rem, 0.648rem + 1.76vw, 2rem);
     }
 
     &-value {

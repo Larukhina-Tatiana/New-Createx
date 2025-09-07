@@ -9,16 +9,18 @@
   </noscript>
   {% endif %}
 
-  {% include "head.njk" %}
-  {% block head %}{% endblock %}
+  {% block head %}
+  {% include "includes/head.njk" %}
+  {% endblock %}
+
 </head>
 
 <body class="{{ bodyClass }}" id="page">
-  {% include "header.njk" %}
+  {% include "includes/header.njk" %}
   <main class="main">
     {% block content %}{% endblock %}
   </main>
-  {% include "footer.njk" %}
+  {% include "includes/footer.njk" %}
   {% if bodyClass == "page-positions" %}
   <div class="overlay"></div>
   {% include "modals.njk" %}

@@ -47,7 +47,7 @@ function nunjucks() {
   return src("src/html/pages/**/*.njk")
     .pipe(
       nunjucksRender({
-        path: ["src/html/templates"],
+        path: ["src/html/templates", "src/html/templates/includes"],
       })
     )
     .pipe(dest("docs"))
@@ -81,8 +81,8 @@ function scripts() {
     "libs/mixitup-v3/mixitup.js",
 
     // твои скрипты
-    // "src/js/**/*.js",
-    "src/js/modals.js",
+    "src/js/**/*.js",
+    // "src/js/modals.js",
   ])
     .pipe(dest("docs/js"))
     .pipe(browserSync.stream());

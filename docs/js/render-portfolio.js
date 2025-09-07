@@ -67,7 +67,7 @@ function renderPortfolioItems() {
       item.available ? item.href : "#"
     }" data-target="${item.target}" aria-label="${item.title}" ${
       !item.available
-        ? "onclick=\"event.preventDefault(); alert('Страница проекта ещё в разработке.')\""
+        ? 'style="pointer-events: none; cursor: not-allowed; opacity: .5" onclick="event.preventDefault(); alert(\'Страница проекта ещё в разработке.\')"'
         : ""
     }>
         <picture>
