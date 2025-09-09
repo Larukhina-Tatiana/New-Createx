@@ -1,18 +1,10 @@
 .application-form {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 69px;
   background-repeat: no-repeat;
   background-position: center;
   // background-size: cover;
   background-size: 0% 100%;
-
-  /* 1. Фолбек для старых браузеров */
-
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
   /* 1. Фолбек для старых браузеров */
   background-image: url("../images/application/application-bg1@1x.jpg");
@@ -41,12 +33,10 @@
       $anim-name: my-revealBg-100-100);
   }
 
-
   &__container {
     display: flex;
     justify-content: flex-end;
   }
-
 
   &__form {
     // padding: 48px 40px;
@@ -64,14 +54,8 @@
     text-align: center;
   }
 
-  .form__label {
-    // width: 100%;
-    margin-bottom: 17px;
-
-  }
-
   .checkbox__label {
-    margin-bottom: 18px;
+    margin-bottom: 21px;
     font-size: 14px;
     line-height: 1.5;
   }

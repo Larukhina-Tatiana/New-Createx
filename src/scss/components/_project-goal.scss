@@ -22,28 +22,41 @@
     }
   }
 
+
   &__table {
-    padding: 37px 10px 37px 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    // padding: 37px 10px 37px 60px;
+    padding: 40px 60px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    background: var(--white);
     background-color: var(--white);
     flex-shrink: 0;
-    @include transition ($transition-property: (scale, box-shadow));
 
-    @media (any-hover: hover) {
-      &:hover {
-        scale: 1.1;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      }
+
+
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+
+
+
+
+    &-wrapper {
+      perspective: 25px;
     }
+
 
 
     &-name {
       font-weight: 700;
       color: var(--gray-900);
       width: 98px;
-      padding-right: 32px;
+      // padding-right: 32px;
+      padding-right: clamp(1rem, 0.648rem + 1.76vw, 2rem);
     }
 
     &-value {

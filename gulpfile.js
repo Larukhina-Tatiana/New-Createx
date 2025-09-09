@@ -47,7 +47,7 @@ function nunjucks() {
   return src("src/html/pages/**/*.njk")
     .pipe(
       nunjucksRender({
-        path: ["src/html/templates"],
+        path: ["src/html/templates", "src/html/templates/includes"],
       })
     )
     .pipe(dest("docs"))
@@ -75,6 +75,7 @@ function scripts() {
     "node_modules/imask/dist/imask.min.js",
     "node_modules/scrollreveal/dist/scrollreveal.min.js",
     "node_modules/swiper/swiper-bundle.min.js",
+    "node_modules/aos/dist/aos.js",
     "libs/smoothscroll/smooth-scroll.min.js",
     "libs/TransferElements.js",
     "libs/slick/slick.min.js",
@@ -82,6 +83,7 @@ function scripts() {
 
     // твои скрипты
     "src/js/**/*.js",
+    // "src/js/modals.js",
   ])
     .pipe(dest("docs/js"))
     .pipe(browserSync.stream());

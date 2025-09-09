@@ -1,13 +1,19 @@
 {% extends "layout.njk" %}
+
+{# ——— Мета-теги и head ——— #}
 {% set title = "OUR WORK — Createx Construction" %}
 {% set description = "Learn more about Createx Construction Bureau, our values, mission, and experience in the US market
 since 2000." %}
 {% set ogDescription = "Discover Createx's story, team, and commitment to quality construction." %}
-<!-- {% set ogImage = "https://larukhina-tatiana.github.io/Createx/images/og-about.jpg" %} -->
 {% set ogUrl = "https://larukhina-tatiana.github.io/Createx/work.html" %}
-{% set pageName = "page-work" %}
 {% set bodyClass = "page-work" %}
+{% set pageName = "page-work" %}
 
+{% block head %}
+{% include "includes/head.njk" %}
+{% endblock %}
+
+{# ——— Контент страницы ——— #}
 
 {% block content %}
 {% set id = "hero-title-work" %}
@@ -16,15 +22,15 @@ since 2000." %}
 { text: "Work", current: true }
 ] %}
 {% set title = "OUR WORK" %}
-{% set descr = "Our portfolio represents 20 years of construction experience backed by a passion for
-perfect client
-service, quality and innovations in consctuction industry." %}
+{% set descr = "Our portfolio represents 20 years of construction experience backed by a passion for perfect client
+service,
+quality and innovations in construction industry." %}
 
-{% include "page-hero.njk" %}
+{% include "includes/page-hero.njk" %}
 
 
 {% include "portfolio.njk" %}
 {% include "testimonials.njk" %}
 {% include "clients-work.njk" %}
-{% include "application-form.njk" %}
+{% include "includes/application-form.njk" %}
 {% endblock %}

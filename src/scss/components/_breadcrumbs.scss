@@ -1,7 +1,7 @@
 .breadcrumbs {
   // padding-top: 152px;
   // padding-bottom: 40px;
-  margin-bottom: 40px;
+  margin-bottom: clamp(1.25rem, 0.547rem + 3.52vw, 3.25rem);
 
   // @media screen and (min-width: 578.01px) and (max-width: 967px) {
   //   padding-top: 55px;

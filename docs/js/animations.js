@@ -1,280 +1,206 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const shakeDuration = 1200;
-  const shakeInterval = 3000;
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
+// 🎬 Главный объект, управляющий всеми анимациями на странице
+const Animations = {
+  // Проверка на предпочтение пользователя: отключить анимации, если включён режим "reduce motion"
+  prefersReducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)")
+    .matches,
 
-  const elements = document.querySelectorAll(".animate-on-scroll");
+  // 🚀 Инициализация всех анимаций после полной загрузки DOM
+  init() {
+    document.addEventListener("DOMContentLoaded", () => {
+      this.initShakeLoop(); // Анимация тряски
+      this.initAppearance(); // Анимация появления
+      this.init3DTilt(); // 3D наклон при движении мыши
+    });
+  },
 
-  function setupShakeLoop(el) {
-    if (prefersReducedMotion || el.dataset.shaking === "true") return;
+  // 🔁 Анимация тряски элементов с классом .shake
+  initShakeLoop() {
+    const elements = document.querySelectorAll(".animate-on-scroll");
 
-    el.dataset.shaking = "true";
+    // Запускаем бесконечную тряску для элемента
+    const setupShakeLoop = (el) => {
+      if (this.prefersReducedMotion || el.dataset.shaking === "true") return;
 
-    const intervalId = setInterval(() => {
-      el.classList.add("shake-loop");
-      setTimeout(() => el.classList.remove("shake-loop"), shakeDuration);
-    }, shakeInterval);
+      el.dataset.shaking = "true";
 
-    el.dataset.shakeInterval = intervalId;
-  }
+      // Устанавливаем интервал тряски
+      const intervalId = setInterval(() => {
+        el.classList.add("shake-loop");
+        setTimeout(() => el.classList.remove("shake-loop"), 1200); // длительность тряски
+      }, 3000); // интервал между трясками
 
-  function clearShakeLoop(el) {
-    const id = el.dataset.shakeInterval;
-    if (id) clearInterval(id);
-    delete el.dataset.shakeInterval;
-    delete el.dataset.shaking;
-    el.classList.remove("shake-loop");
-  }
+      el.dataset.shakeInterval = intervalId;
+    };
 
-  function handleVisibilityChange(el, isVisible) {
-    const isShake = el.classList.contains("shake");
+    // Останавливаем тряску и очищаем данные
+    const clearShakeLoop = (el) => {
+      const id = el.dataset.shakeInterval;
+      if (id) clearInterval(id);
+      delete el.dataset.shakeInterval;
+      delete el.dataset.shaking;
+      el.classList.remove("shake-loop");
+    };
 
-    if (isVisible) {
-      el.classList.add("in-view");
-      if (isShake) setupShakeLoop(el);
+    // Обработка появления/исчезновения элемента в зоне видимости
+    const handleVisibilityChange = (el, isVisible) => {
+      const isShake = el.classList.contains("shake");
+
+      if (isVisible) {
+        el.classList.add("in-view");
+        if (isShake) setupShakeLoop(el);
+      } else {
+        el.classList.remove("in-view");
+        if (isShake) clearShakeLoop(el);
+      }
+    };
+
+    // Используем IntersectionObserver, если доступен
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            handleVisibilityChange(entry.target, entry.isIntersecting);
+          });
+        },
+        { threshold: 0.2 } // элемент считается видимым, если 20% его площади в viewport
+      );
+
+      elements.forEach((el) => observer.observe(el));
     } else {
-      el.classList.remove("in-view");
-      if (isShake) clearShakeLoop(el);
-    }
-  }
+      // 🔙 Фолбэк для старых браузеров
+      const fallbackCheckVisibility = () => {
+        elements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          const visible = rect.top <= window.innerHeight && rect.bottom >= 0;
+          handleVisibilityChange(el, visible);
+        });
+      };
 
-  if ("IntersectionObserver" in window) {
+      window.addEventListener("scroll", fallbackCheckVisibility);
+      window.addEventListener("resize", fallbackCheckVisibility);
+      fallbackCheckVisibility(); // первичная проверка
+    }
+  },
+
+  // ✨ Анимация появления элементов с классами типа appearance-*
+  initAppearance() {
+    let appearanceEls = [
+      ...document.querySelectorAll("[class*='appearance-']"),
+    ];
+
+    // Наблюдатель за появлением элементов в зоне видимости
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          handleVisibilityChange(entry.target, entry.isIntersecting);
+          const el = entry.target;
+          const animateType = el.dataset.animate;
+          const delayAttr = el.dataset.delay;
+          const index = appearanceEls.indexOf(el);
+
+          if (entry.isIntersecting) {
+            // Вычисляем задержку анимации
+            let delay = 0;
+            if (animateType === "sync") delay = 0;
+            else if (animateType === "chain") delay = 0.2 + index * 0.3;
+            else if (animateType === "delay" && delayAttr)
+              delay = parseFloat(delayAttr);
+
+            // Устанавливаем задержку и запускаем анимацию
+            el.style.animationDelay = `${delay}s`;
+            el.classList.add("visible");
+
+            // Если цепная анимация — запускаем следующий элемент после завершения текущего
+            if (animateType === "chain") {
+              el.addEventListener(
+                "animationend",
+                () => {
+                  const nextEl = appearanceEls[index + 1];
+                  if (nextEl && !nextEl.classList.contains("visible")) {
+                    nextEl.classList.add("visible");
+                  }
+                },
+                { once: true }
+              );
+            }
+          } else {
+            // Сброс анимации при выходе из зоны видимости
+            el.classList.remove("visible");
+          }
         });
       },
       {
-        root: null,
         threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px", // смещение нижней границы viewport
       }
     );
 
-    elements.forEach((el) => observer.observe(el));
-  } else {
-    // Fallback для старых браузеров
-    function fallbackCheckVisibility() {
-      elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        const visible = rect.top <= window.innerHeight && rect.bottom >= 0;
-        handleVisibilityChange(el, visible);
-      });
-    }
+    // Запускаем наблюдение за всеми элементами
+    const observeAll = () => {
+      appearanceEls.forEach((el) => observer.observe(el));
+    };
 
-    window.addEventListener("scroll", fallbackCheckVisibility);
-    window.addEventListener("resize", fallbackCheckVisibility);
-    fallbackCheckVisibility(); // первичная проверка
-  }
-});
-
-// Анимация появления вакансий position.html -> vacancies
-
-// Не повторяющаяся при скролле
-// document.addEventListener("DOMContentLoaded", () => {
-//   const appearanceEls = document.querySelectorAll("[class*='appearance-']");
-
-//   const observer = new IntersectionObserver(
-//     (entries, obs) => {
-//       entries.forEach((entry, i) => {
-//         if (entry.isIntersecting) {
-//           const el = entry.target;
-//           el.classList.add("visible");
-//           el.style.animationDelay = `${i * 0.4}s`;
-//           obs.unobserve(el);
-//         }
-//       });
-//     },
-//     { threshold: 0.2 }
-//   );
-
-//   appearanceEls.forEach((el) => observer.observe(el));
-// });
-
-//  Повторяющаяся при скроле
-// document.addEventListener("DOMContentLoaded", () => {
-//   const appearanceEls = document.querySelectorAll("[class*='appearance-']");
-
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry, i) => {
-//         const el = entry.target;
-
-//         if (entry.isIntersecting) {
-//           el.classList.add("visible");
-//           el.style.animationDelay = `${0.2 + i * 0.6}s`;
-//         } else {
-//           el.classList.remove("visible"); // повторная активация при скролле
-//           // el.style.animationDelay = "0s"; // сброс задержки, если нужно
-//         }
-//       });
-//     },
-//     { threshold: 0.2 }
-//   );
-
-//   appearanceEls.forEach((el) => observer.observe(el));
-// });
-// следующая анимация  по окончанию предыдущей
-document.addEventListener("DOMContentLoaded", () => {
-  let appearanceEls = [...document.querySelectorAll("[class*='appearance-']")];
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const el = entry.target;
-
-        if (entry.isIntersecting) {
-          observer.unobserve(el); // чтобы не запускать повторно
-
-          const animateType = el.dataset.animate;
-          const delayAttr = el.dataset.delay;
-
-          const index = appearanceEls.indexOf(el);
-
-          let delay = 0;
-
-          if (animateType === "sync") {
-            delay = 0;
-          } else if (animateType === "chain") {
-            delay = 0.2 + index * 0.3;
-          } else if (animateType === "delay" && delayAttr) {
-            delay = parseFloat(delayAttr);
-          }
-
-          el.style.animationDelay = `${delay}s`;
-          el.classList.add("visible");
-
-          // для последовательной активации (если sequential)
-          if (animateType === "chain") {
-            el.addEventListener(
-              "animationend",
-              () => {
-                const nextEl = appearanceEls[index + 1];
-                if (nextEl && !nextEl.classList.contains("visible")) {
-                  nextEl.classList.add("visible");
-                }
-              },
-              { once: true }
-            );
-          }
-        } else {
-          el.classList.remove("visible");
-        }
-      });
-    },
-    {
-      threshold: 0.2,
-      rootMargin: "0px 0px -50px 0px",
-    }
-  );
-
-  const observeAll = () => {
-    appearanceEls.forEach((el) => observer.observe(el));
-  };
-
-  observeAll();
-
-  window.addEventListener("resize", () => {
-    appearanceEls = [...document.querySelectorAll("[class*='appearance-']")];
     observeAll();
-  });
-});
 
-// const factElements = document.querySelectorAll(".facts-element__value");
+    // При изменении размеров окна — пересобираем список и запускаем наблюдение заново
+    window.addEventListener("resize", () => {
+      appearanceEls = [...document.querySelectorAll("[class*='appearance-']")];
+      observeAll();
+    });
+  },
 
-// const factObserver = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       const el = entry.target;
-//       if (entry.isIntersecting) {
-//         el.classList.add("visible");
-//         factObserver.unobserve(el); // чтобы не повторялась
-//       }
-//     });
-//   },
-//   {
-//     threshold: 0.3,
-//     rootMargin: "0px 0px -50px 0px",
-//   }
-// );
+  // 🌀 3D наклон блока при движении мыши
+  init3DTilt() {
+    const container = document.getElementById("js-container");
+    const inner = document.getElementById("js-inner");
 
-// factElements.forEach((el) => factObserver.observe(el));
+    // Если нужные элементы отсутствуют — выходим
+    if (!container || !inner) return;
 
-// const progressCircles = document.querySelectorAll(".progress");
+    // Объект для отслеживания положения мыши
+    const mouse = {
+      _x: 0,
+      _y: 0,
+      x: 0,
+      y: 0,
 
-// const circleObserver = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       const el = entry.target;
-//       if (entry.isIntersecting) {
-//         el.classList.add("animate"); // запускаем анимацию
-//         // circleObserver.unobserve(el); // чтобы не повторялась
-//       }
-//     });
-//   },
-//   {
-//     threshold: 0.5,
-//     rootMargin: "0px 0px -50px 0px",
-//   }
-// );
+      // Обновляем координаты мыши относительно центра контейнера
+      updatePosition(event) {
+        this.x = event.clientX - this._x;
+        this.y = (event.clientY - this._y) * -1;
+      },
 
-// progressCircles.forEach((el) => circleObserver.observe(el));
+      // Устанавливаем точку отсчёта — центр контейнера
+      setOrigin(el) {
+        const rect = el.getBoundingClientRect();
+        this._x = rect.left + rect.width / 2;
+        this._y = rect.top + rect.height / 2;
+      },
+    };
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const circles = document.querySelectorAll(".facts-element__circle");
+    mouse.setOrigin(container);
 
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           const circleElement = entry.target;
-//           const progress = circleElement.querySelector(".progress");
-//           const valueBlock = circleElement.querySelector(
-//             ".facts-element__value"
-//           );
-//           const radius = progress.getAttribute("r");
-//           const circleLength = 2 * Math.PI * radius;
+    let counter = 0;
+    const updateRate = 10;
 
-//           if (circleElement.dataset.percentage === "true") {
-//             const full = parseFloat(circleElement.dataset.full);
-//             const value = parseFloat(circleElement.dataset.value);
-//             const percentageProgress = Math.floor((value / full) * 100);
+    // Проверка, пора ли обновлять анимацию (для оптимизации)
+    const isTimeToUpdate = () => counter++ % updateRate === 0;
 
-//             valueBlock.textContent = value;
-//             progress.setAttribute("stroke-dasharray", circleLength);
+    // Обновляем стиль трансформации
+    const update = (event) => {
+      mouse.updatePosition(event);
+      const x = (mouse.y / inner.offsetHeight / 2).toFixed(2);
+      const y = (mouse.x / inner.offsetWidth / 2).toFixed(2);
+      inner.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+    };
 
-//             setTimeout(() => {
-//               progress.style.strokeDashoffset =
-//                 circleLength - (circleLength * percentageProgress) / 100;
-//             }, 10);
-//           } else {
-//             const percent = parseFloat(circleElement.dataset.percent);
-//             const percentageProgress = Math.floor(percent);
+    // Навешиваем обработчики событий мыши
+    container.addEventListener("mouseenter", update);
+    container.addEventListener("mouseleave", () => (inner.style = ""));
+    container.addEventListener("mousemove", (event) => {
+      if (isTimeToUpdate()) update(event);
+    });
+  },
+};
 
-//             valueBlock.textContent = percent + "%";
-//             progress.setAttribute("stroke-dasharray", circleLength);
-
-//             setTimeout(() => {
-//               progress.style.strokeDashoffset =
-//                 circleLength - (circleLength * percentageProgress) / 100;
-//             }, 10);
-//           }
-
-//           // Добавляем класс для запуска анимации значения
-//           setTimeout(() => {
-//             valueBlock.classList.add("show");
-//           }, 1000);
-
-//           observer.unobserve(entry.target);
-//         }
-//       });
-//     },
-//     { threshold: 0.5 }
-//   );
-
-//   circles.forEach((circle) => {
-//     observer.observe(circle);
-//   });
-// });
+// 🔧 Запускаем модуль анимаций
+Animations.init();

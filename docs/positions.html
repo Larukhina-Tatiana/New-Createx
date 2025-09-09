@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  
+  <link rel="preload" href="/css/graph-modal.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/css/graph-modal.min.css">
+  </noscript>
+  
+
+  
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +28,15 @@ since 2000.">
 <title>Available Positions — Createx Construction</title>
 
 <!-- Icons -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="shortcut icon" href="favicons/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="f/avicons/android-chrome-512x512.png">
 
 <!-- Preload -->
-<link rel="preload" href="fonts/Ubuntu-R.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Ubuntu-R.woff2" as="font" type="font/woff2" crossorigin>
 
 
 
@@ -37,51 +45,50 @@ since 2000.">
 
 
 
-<link rel="preload" as="image" href="images/hero/positions-hero-bg@1x.avif" type="image/avif">
-<link rel="preload" as="image" href="images/hero/positions-hero-bg@2x.avif" type="image/avif">
-<link rel="preload" as="image" href="images/hero/positions-hero-bg@1x.webp" type="image/webp">
-<link rel="preload" as="image" href="images/hero/positions-hero-bg@2x.webp" type="image/webp">
-
-
-
-
+<link rel="preload" as="image" href="/images/hero/positions-hero-bg@1x.avif" type="image/avif">
+<link rel="preload" as="image" href="/images/hero/positions-hero-bg@2x.avif" type="image/avif">
+<link rel="preload" as="image" href="/images/hero/positions-hero-bg@1x.webp" type="image/webp">
+<link rel="preload" as="image" href="/images/hero/positions-hero-bg@2x.webp" type="image/webp">
 
 
 
 <!-- Manifest -->
-<link rel="manifest" href="favicons/site.webmanifest">
+<link rel="manifest" href="/favicons/site.webmanifest">
 
 <!-- Styles -->
 <link rel="preload" href="/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
   <link rel="stylesheet" href="/css/style.min.css">
 </noscript>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   
+
 </head>
 
 <body class="page-positions" id="page">
   <header class="header">
   <div class="container">
     <div class="header__inner">
-      <a class="header__logo logo" href="./index.html">
+      <a class="header__logo logo" href="/index.html">
         <img src="/images/icons/logo.svg" alt="Createx Construction logo" width="130" height="22">
       </a>
       <nav class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="./about.html">About Us</a>
+            <a class="nav__link" href="/about.html">About Us</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./services.html">Services</a>
+            <a class="nav__link" href="/services.html">Services</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./work.html">Work</a>
+            <a class="nav__link" href="/work.html">Work</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./news.html">News</a>
+            <a class="nav__link" href="/news.html">News</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./contacts.html">Contacts</a>
+            <a class="nav__link" href="/contacts.html">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -111,7 +118,8 @@ since 2000.">
     </div>
   </div>
 </header>
-  
+  <main class="main">
+    
 
 
 
@@ -318,79 +326,10 @@ since 2000.">
     </form>
   </div>
 </section>
-<div class="modal">
-  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first">
-    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
-      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-        <path fill="currentColor" fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
-          clip-rule="evenodd" />
-      </svg>
-    </button>
-    <div class="modal-content">
-      <h5 class="form__title section__titleh5">Subscribe to our newsletter</h5>
-      <form class="form" action="#" id="form-newsletter">
-        <label class="form__label" for="newsletter-first-name">
-          <span class="form__label-legend">Name</span>
-          <input class="form__input" type="text" name="newsletter-first-name" id="newsletter-first-name"
-            placeholder="Your name" autocomplete="on"
-            title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
-            required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
-        </label>
-        <label class="form__label" for="newsletter-email"><span class="form__label-legend">Email</span>
-          <input class="form__input " type="email" name="newsletter-email" id="newsletter-email"
-            placeholder="Your working email" required autocomplete="on">
-          <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
-        </label>
-        <button class="button button--regular button--vacansies" type="submit">send</button>
-      </form>
-    </div>
-  </div>
-  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second">
-    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
-      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-        <path fill="currentColor" fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
-          clip-rule="evenodd" />
-      </svg>
-    </button>
-    <div class="modal-content">
-      <h5 class="form__title section__titleh5">Send your CV</h5>
-      <form action="#" class="form" id="formSendCv">
-        <label class="form__label" for="formSendCv-first-name">Name*
-          <input class="form__input" type="text" name="formSendCv-first-name" id="formSendCv-first-name"
-            placeholder="Your name" required autocomplete="on">
-        </label>
-        <label class="form__label" for="location">Location*
-          <select class="form__select form__input" name="location" id="location">
-            <option value="">Choose location</option>
-            <option value="New_York">New York</option>
-          </select>
-        </label>
-        <label class="form__label" for="formSendCv-phone">Phone*
-          <input class="form__input" type="tel" name="formSendCv-phone" id="formSendCv-phone"
-            placeholder="Your phone number" required>
-        </label>
-        <label class="form__label" for="e-mail">Email
-          <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
-        </label>
-        <label class="form__label" for="formSendCv-comment">Сovering letter
-          <textarea class="form__input" id="formSendCv-comment" placeholder="Your covering letter"></textarea>
-        </label>
 
 
-        <label class="checkbox__label" for="file">
-          <input class="checkbox checkbox__file-imput form__input" type="file" name="file" id="file">
-          <span class="checkbox__text checkbox__file-text">Attach your CV*</span>
-        </label>
-        <button class="button button--regular button--vacansies" type="submit">send</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-  <footer class="footer" aria-label="Company contact and navigation">
+  </main>
+  <footer class="footer animate-on-scroll" aria-label="Company contact and navigation">
   <a href="#page" data-scroll class="to-top">
     <span class="to-top__text">Go to top</span>
     <span class="to-top__icon">
@@ -404,8 +343,8 @@ since 2000.">
   <div class="container footer__container grid">
     <div class="footer__left">
       <div class="footer__inner">
-        <a class="footer__logo logo" href="./index.html">
-          <img src="./images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
+        <a class="footer__logo logo" href="/index.html">
+          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
             loading="lazy" decoding="async">
         </a>
         <address class="social-media">
@@ -413,35 +352,35 @@ since 2000.">
             <li class="social__item social__item--footer">
               <a href="" class="social__link" target="_blank">
                 <svg aria-label="icon whatsapp">
-                  <use href="./images/icons/sprite.svg#whatsapp"></use>
+                  <use href="/images/icons/sprite.svg#whatsapp"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item social__item--footer">
               <a href="" class="social__link" target="_blank">
                 <svg aria-label="icon Messanger">
-                  <use href="./images/icons/sprite.svg#messanger"></use>
+                  <use href="/images/icons/sprite.svg#messanger"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item social__item--footer">
               <a href="" class="social__link" target="_blank">
                 <svg aria-label="icon facebook">
-                  <use href="./images/icons/sprite.svg#facebook"></use>
+                  <use href="/images/icons/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item social__item--footer">
               <a href="" class="social__link" target="_blank">
                 <svg aria-label="icon Twitter">
-                  <use href="./images/icons/sprite.svg#twitter"></use>
+                  <use href="/images/icons/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item social__item--footer">
               <a href="" class="social__link" target="_blank">
                 <svg aria-label="icon Youtube">
-                  <use href="./images/icons/sprite.svg#youtube"></use>
+                  <use href="/images/icons/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -500,13 +439,13 @@ since 2000.">
         <p class="footer__title">WHO WE ARE</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="./about.html">About Us</a>
+            <a class="footer__link" href="/about.html">About Us</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="./positions.html">Available Positions</a>
+            <a class="footer__link" href="/positions.html">Available Positions</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="./contacts.html">Contacts</a>
+            <a class="footer__link" href="/contacts.html">Contacts</a>
           </li>
         </ul>
       </div>
@@ -514,13 +453,13 @@ since 2000.">
         <p class="footer__title">OUR EXPERIENCE</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="./services.html">Services</a>
+            <a class="footer__link" href="/services.html">Services</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="./work.html">Work</a>
+            <a class="footer__link" href="/work.html">Work</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="./news.html">News</a>
+            <a class="footer__link" href="/news.html">News</a>
           </li>
         </ul>
       </div>
@@ -530,8 +469,79 @@ since 2000.">
     </p>
   </div>
 </footer>
+  
+  <div class="overlay"></div>
+  <div class="modal">
+  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first">
+    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
+      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+    <div class="modal-content">
+      <h2 class="form__title section__titleh5">Subscribe to our newsletter</h2>
+      <form class="form" action="#" id="form-newsletter">
+        <label class="form__label" for="newsletter-first-name">
+          <span class="form__label-legend">Name</span>
+          <input class="form__input" type="text" name="newsletter-first-name" id="newsletter-first-name"
+            placeholder="Your name" autocomplete="on"
+            title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
+            required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
+        </label>
+        <label class="form__label" for="newsletter-email"><span class="form__label-legend">Email</span>
+          <input class="form__input " type="email" name="newsletter-email" id="newsletter-email"
+            placeholder="Your working email" required autocomplete="on">
+          <span class="form-errors" id="first-name-errors" data-js-form-field-errors></span>
+        </label>
+        <button class="button button--regular button--vacansies" type="submit">send</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second">
+    <button class="modal__close" type="button" data-modal-close aria-label="Clouse modal">
+      <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414Z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+    <div class="modal-content">
+      <h2 class="form__title section__titleh5">Send your CV</h2>
+      <form action="#" class="form" id="formSendCv">
+        <label class="form__label" for="formSendCv-first-name">Name*
+          <input class="form__input" type="text" name="formSendCv-first-name" id="formSendCv-first-name"
+            placeholder="Your name" required autocomplete="on">
+        </label>
+        <label class="form__label" for="location">Location*
+          <select class="form__select form__input" name="location" id="location">
+            <option value="">Choose location</option>
+            <option value="New_York">New York</option>
+          </select>
+        </label>
+        <label class="form__label" for="formSendCv-phone">Phone*
+          <input class="form__input" type="tel" name="formSendCv-phone" id="formSendCv-phone"
+            placeholder="Your phone number" required>
+        </label>
+        <label class="form__label" for="e-mail">Email
+          <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email" required>
+        </label>
+        <label class="form__label" for="formSendCv-comment">Сovering letter
+          <textarea class="form__input" id="formSendCv-comment" placeholder="Your covering letter"></textarea>
+        </label>
 
-<div class="overlay"></div>
+
+        <label class="checkbox__label" for="file">
+          <input class="checkbox checkbox__file-imput form__input" type="file" name="file" id="file">
+          <span class="checkbox__text checkbox__file-text">Attach your CV*</span>
+        </label>
+        <button class="button button--regular button--vacansies" type="submit">send</button>
+      </form>
+    </div>
+  </div>
+</div>
+  
 
   
   
@@ -545,7 +555,8 @@ since 2000.">
 <script src="/js/initScrollReset.js" defer></script>
 
 <script src="/js/scrollreveal.min.js" defer></script>
-<script src="/js/my-scrollreveal.js" defer></script>
+<!-- <script src="/js/my-scrollreveal.js" defer></script> -->
+<script src="/js/modules/scrollReveal.js" defer></script>
 
 <script src="/js/to-top.js" defer></script>
 
@@ -569,6 +580,7 @@ since 2000.">
 <script src="/js/graph-modal.min.js" defer></script>
 <script src="/js/modals.js" defer></script>
 <script src="/js/form-sendCv.js" defer></script>
+
 
 
 

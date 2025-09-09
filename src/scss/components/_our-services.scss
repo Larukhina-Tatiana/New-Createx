@@ -12,6 +12,9 @@
     -webkit-image-set(url(../images/our-services/our-services-bg1@1x.png) type('image/png') 1x,
       url(../images/our-services/our-services-bg1@2x.png) type('image/png') 2x);
 
+  .container {
+    overflow: visible;
+  }
 
   &__titleh3 {
     @include transition ($transition-property: color);

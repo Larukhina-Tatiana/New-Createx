@@ -9,7 +9,8 @@
 <script src="/js/initScrollReset.js" defer></script>
 
 <script src="/js/scrollreveal.min.js" defer></script>
-<script src="/js/my-scrollreveal.js" defer></script>
+<!-- <script src="/js/my-scrollreveal.js" defer></script> -->
+<script src="/js/modules/scrollReveal.js" defer></script>
 
 <script src="/js/to-top.js" defer></script>
 
@@ -60,4 +61,16 @@
 <script src="/js/tab-link-handler.js" defer></script>
 <script src="/js/tabs.js" defer></script>
 <script src="/js/render-portfolio.js" defer></script>
+{% endif %}
+{% if pageName == "page-project" %}
+<script src="/js/swiper-bundle.min.js" defer></script>
+<script src="/js/sliders.js" defer></script>
+<script src="/js/render-project.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,
+    once: false
+  })
+</script>
 {% endif %}

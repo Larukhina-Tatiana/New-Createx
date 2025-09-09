@@ -8,15 +8,15 @@
 'page-services': 'services-hero-bg',
 'page-services-inside': 'services-inside-hero-bg',
 'page-work': 'work-hero-bg',
-'page-work-inside': 'work-inside-hero-bg',
+'page-project': 'work-inside-hero-bg',
 'page-contacts': 'contacts-hero-bg'
 } %}
 
 {% set bgName = heroMap[pageKey] %}
 {% if bgName %}
-<link rel="preload" as="image" href="images/hero/{{ bgName }}@1x.avif" type="image/avif">
-<link rel="preload" as="image" href="images/hero/{{ bgName }}@2x.avif" type="image/avif">
-<link rel="preload" as="image" href="images/hero/{{ bgName }}@1x.webp" type="image/webp">
-<link rel="preload" as="image" href="images/hero/{{ bgName }}@2x.webp" type="image/webp">
+<link rel="preload" as="image" href="/images/hero/{{ bgName }}@1x.avif" type="image/avif">
+<link rel="preload" as="image" href="/images/hero/{{ bgName }}@2x.avif" type="image/avif">
+<link rel="preload" as="image" href="/images/hero/{{ bgName }}@1x.webp" type="image/webp">
+<link rel="preload" as="image" href="/images/hero/{{ bgName }}@2x.webp" type="image/webp">
 {% endif %}
 {% endmacro %}

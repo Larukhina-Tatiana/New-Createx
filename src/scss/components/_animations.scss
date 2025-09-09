@@ -1,12 +1,14 @@
 .animate-on-scroll {
   opacity: 0;
-  transform: translateX(-50px);
-  animation: none;
+  // transform: translateX(-50px);
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
+
 
   &.in-view {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 
   &.spin.in-view {

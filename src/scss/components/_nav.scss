@@ -11,6 +11,10 @@
     color: var(--gray-800);
   }
 
+  &__item {
+    padding: 5px 0;
+  }
+
   &__link {
     padding: 13px 0;
     font-weight: 700;
