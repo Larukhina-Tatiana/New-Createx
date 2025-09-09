@@ -5,11 +5,18 @@
 
   &__btn {
     @include flex-all-center;
-    width: 48px;
-    height: 48px;
+    // width: 48px;
+    width: clamp(1.5rem, 0.973rem + 2.64vw, 3rem);
+    // height: 48px;
+    height: clamp(1.5rem, 0.973rem + 2.64vw, 3rem);
     border-radius: 100%;
     transform: translateX(12px);
     z-index: 6;
+
+    & svg {
+      width: clamp(0.75rem, 0.486rem + 1.32vw, 1.5rem);
+      height: clamp(0.75rem, 0.486rem + 1.32vw, 1.5rem);
+    }
 
     @include transition ($transition-property: (background-color, color));
 

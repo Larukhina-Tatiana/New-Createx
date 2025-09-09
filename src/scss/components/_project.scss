@@ -1,4 +1,4 @@
-.work-inside {
+.project {
   // padding-bottom: 120px;
 
   padding-bottom: clamp(2.5rem, 0.742rem + 8.79vw, 7.5rem);
@@ -48,11 +48,13 @@
     background-color: rgba(255, 255, 255, .5);
 
     &--prev {
-      left: 31px;
+      // left: 31px;
+      left: clamp(0.25rem, -0.343rem + 2.97vw, 1.938rem);
     }
 
     &--next {
-      right: 38px;
+      // right: 38px;
+      right: clamp(0.25rem, -0.497rem + 3.74vw, 2.375rem);
     }
   }
 

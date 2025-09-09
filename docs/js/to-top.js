@@ -1,51 +1,88 @@
-const toTop = document.querySelector(".to-top");
+/**
+ * Инициализирует кнопку "Наверх" (to-top).
+ *
+ * - Определяет высоту hero-блока для расчета точки появления кнопки.
+ * - Показывает/скрывает кнопку в зависимости от положения скролла.
+ * - Обеспечивает плавную прокрутку наверх при клике.
+ * - Адаптируется к изменению размера окна.
+ */
+const initToTopButton = () => {
+  const toTop = document.querySelector(".to-top");
 
-// Перевіряємо, чи існує елемент
-if (!toTop) {
-  console.warn('Елемент з класом "to-top" не знайдено.');
-} else {
-  // Змінна для зберігання висоти 'hero' блоку
+  // Если кнопка не найдена, выходим из функции
+  if (!toTop) {
+    console.warn('Элемент с классом "to-top" не найден.');
+    return;
+  }
+
+  // Переменная для высоты hero-блока
   let heroHeight = 0;
 
-  // Знаходимо елементи, що визначають висоту прокручування
+  // Находим hero-блоки
   const heroElement = document.querySelector(".hero");
   const pageHeroElement = document.querySelector(".page-hero");
 
-  // Встановлюємо висоту 'heroHeight'
-  if (heroElement) {
-    heroHeight = heroElement.offsetHeight;
-  } else if (pageHeroElement) {
-    heroHeight = pageHeroElement.offsetHeight;
-  }
+  /**
+   * Рассчитывает и устанавливает высоту hero-блока.
+   * Это нужно, чтобы кнопка "Наверх" появлялась после прокрутки этого блока.
+   */
+  const setHeroHeight = () => {
+    if (heroElement) {
+      heroHeight = heroElement.offsetHeight;
+    } else if (pageHeroElement) {
+      heroHeight = pageHeroElement.offsetHeight;
+    }
+  };
 
-  // Функція для перевірки видимості кнопки
-  const isVisibleToTop = (y = 0) => {
-    if (y >= heroHeight) {
+  /**
+   * Управляет видимостью кнопки "Наверх".
+   * @param {number} scrollY - Текущая позиция скролла по вертикали.
+   */
+  const handleScroll = (scrollY = 0) => {
+    if (scrollY >= heroHeight && heroHeight > 0) {
       toTop.classList.add("to-top--active");
     } else {
       toTop.classList.remove("to-top--active");
     }
   };
 
-  // Початкова перевірка при завантаженні сторінки
-  isVisibleToTop(window.scrollY);
-
-  // Обробник події скролу для оновлення видимості кнопки
-  window.addEventListener("scroll", () => {
-    let y = window.scrollY;
-    isVisibleToTop(y);
-  });
-
-  // --- Нова логіка для обробки кліка ---
-  // Додаємо обробник події click на кнопку
-  toTop.addEventListener("click", (event) => {
-    // Зупиняємо стандартну поведінку посилання, щоб не було переходу
+  /**
+   * Обработчик клика по кнопке "Наверх".
+   * @param {Event} event - Событие клика.
+   */
+  const handleTopClick = (event) => {
     event.preventDefault();
-
-    // Виконуємо плавне прокручування до верху сторінки
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  });
-}
+  };
+
+  /**
+   * Обработчик изменения размера окна.
+   * Пересчитывает высоту hero-блока и обновляет видимость кнопки.
+   */
+  const handleResize = () => {
+    setHeroHeight();
+    handleScroll(window.scrollY);
+  };
+
+  // --- Инициализация ---
+
+  // Устанавливаем начальную высоту hero-блока
+  setHeroHeight();
+  // Проверяем видимость кнопки при начальной загрузке
+  handleScroll(window.scrollY);
+
+  // --- Добавление обработчиков событий ---
+
+  // Скролл страницы
+  window.addEventListener("scroll", () => handleScroll(window.scrollY));
+  // Изменение размера окна
+  window.addEventListener("resize", handleResize);
+  // Клик по кнопке
+  toTop.addEventListener("click", handleTopClick);
+};
+
+// Запускаем всю логику только после полной загрузки DOM
+document.addEventListener("DOMContentLoaded", initToTopButton);

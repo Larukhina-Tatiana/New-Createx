@@ -20,12 +20,6 @@
       rotate: { x: 500, y: 500 },
       scale: 0.5,
     });
-    sr.reveal(".footer", {
-      origin: "bottom",
-      distance: "20px",
-      duration: 500,
-      delay: 100,
-    });
   }
 
   function revealHomePage() {
@@ -61,14 +55,12 @@
   }
 
   function revealWorkPage() {
-    sr.reveal(".projects__title", { origin: "top", delay: 100 });
-    sr.reveal(".project-card", {
-      origin: "bottom",
-      interval: 100,
-      scale: 0.95,
+    sr.reveal(".projects__title", {
+      origin: "top",
+      delay: 100,
     });
+
     sr.reveal(".testimonial", { origin: "bottom", delay: 200 });
-    sr.reveal(".subscribe-form, .footer", { origin: "bottom", delay: 150 });
   }
 
   function initScrollReveal() {

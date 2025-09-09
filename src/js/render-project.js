@@ -48,13 +48,13 @@ function updateHead(project) {
 }
 
 function showError(message) {
-  const container = document.querySelector(".work-inside");
+  const container = document.querySelector(".project");
   container.innerHTML = `<p class="error-message">${message}</p>`;
 }
 
 function renderProject(project) {
   updateHead(project);
-  document.querySelector(".work-inside__title").textContent = project.title;
+  document.querySelector(".project__title").textContent = project.title;
 
   renderGallery(project.gallery);
   renderThumbnails(project.thumbnails);
@@ -73,7 +73,7 @@ function renderGallery(images) {
   images.forEach((image) => {
     galleryWrapper.innerHTML += `
       <div class="swiper-slide">
-        <div class="work-inside__cover-big">
+        <div class="project__cover-big">
           <picture>
             <source type="image/avif" srcset="
               /images/projects/${projectId}/${image.src}@1x.avif 1x,
@@ -81,7 +81,7 @@ function renderGallery(images) {
             <source type="image/webp" srcset="
               /images/projects/${projectId}/${image.src}@1x.webp 1x,
               /images/projects/${projectId}/${image.src}@2x.webp 2x">
-            <img class="work-inside__img"
+            <img class="project__img"
               src="/images/projects/${projectId}/${image.src}@1x.jpg"
               loading="lazy" decoding="async" alt="${image.alt}">
           </picture>
@@ -101,7 +101,7 @@ function renderThumbnails(thumbnails) {
   thumbnails.forEach((image) => {
     thumbWrapper.innerHTML += `
       <div class="swiper-slide">
-        <div class="work-inside__cover-small">
+        <div class="project__cover-small">
           <picture>
             <source type="image/avif" srcset="
               /images/projects/${projectId}/${image.src}@1x.avif 1x,
@@ -109,7 +109,7 @@ function renderThumbnails(thumbnails) {
             <source type="image/webp" srcset="
               /images/projects/${projectId}/${image.src}@1x.webp 1x,
               /images/projects/${projectId}/${image.src}@2x.webp 2x">
-            <img class="work-inside__img work-inside__img--small"
+            <img class="project__img project__img--small"
               src="/images/projects/${projectId}/${image.src}@1x.jpg"
               loading="lazy" decoding="async" alt="${image.alt}">
           </picture>

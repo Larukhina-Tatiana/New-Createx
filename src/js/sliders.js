@@ -131,11 +131,11 @@ const testimonialsSlider = new Swiper(".testimonials__swiper", {
   },
 });
 
-const workInsideGalery = document.querySelector(".work-inside__slider-big");
+const workInsideGalery = document.querySelector(".project__slider-big");
 // console.log("✅ workInsideGalery найден:", workInsideGalery);
 
 if (workInsideGalery) {
-  const workSlider = new Swiper(".work-inside__slider-small", {
+  const workSlider = new Swiper(".project__slider-small", {
     spaceBetween: 5,
     slidesPerView: 6,
     freeMode: true,
@@ -156,8 +156,8 @@ if (workInsideGalery) {
     spaceBetween: 20,
     slidesPerView: 1,
     navigation: {
-      nextEl: ".work-inside__btn--next",
-      prevEl: ".work-inside__btn--prev",
+      nextEl: ".project__btn--next",
+      prevEl: ".project__btn--prev",
     },
     thumbs: {
       swiper: workSlider,
@@ -165,7 +165,7 @@ if (workInsideGalery) {
     on: {
       slideChange: function () {
         const activeSlide = this.slides[this.activeIndex];
-        const img = activeSlide.querySelector(".work-inside__img");
+        const img = activeSlide.querySelector(".project__img");
 
         if (!img) return;
 
@@ -201,7 +201,7 @@ if (workInsideGalery) {
 
   // Начальная анимация для первого слайда
   const activeSlide = workInsideGalery.querySelector(".swiper-slide-active");
-  const img = activeSlide?.querySelector(".work-inside__img");
+  const img = activeSlide?.querySelector(".project__img");
   if (img) img.classList.add("img-expand-left");
 }
 

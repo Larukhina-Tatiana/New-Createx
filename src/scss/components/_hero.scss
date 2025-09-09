@@ -43,7 +43,7 @@
     }
 
     &--bg1 {
-      @include responsive-bg('hero/hero-bg1');
+      @include responsive-bg('hero/hero-bg10');
     }
 
     &--bg2 {
@@ -63,7 +63,7 @@
     }
 
     &--bg6 {
-      @include responsive-bg('hero/hero-bg6');
+      @include responsive-bg('hero/hero-bg11');
     }
 
     &--bg7 {

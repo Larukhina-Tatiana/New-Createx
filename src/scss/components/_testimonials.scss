@@ -2,6 +2,7 @@
   // padding-top: 185px;
   padding-top: clamp(4.375rem, 3.276rem + 5.49vw, 7.5rem);
   background-color: var(--gray-200);
+  outline: 1px solid red;
 
   &__container {
     display: flex;
@@ -13,11 +14,7 @@
 
   &__content {
     max-width: 600px;
-  }
-
-  &__swiper {
-    position: relative;
-    overflow: hidden;
+    flex: 1 1 600px;
   }
 
   &__subtitle {
@@ -25,8 +22,16 @@
     margin-bottom: clamp(1.875rem, 1.216rem + 3.3vw, 3.75rem);
   }
 
+  &__swiper {
+    padding: 0 0 50px;
+  }
+
+  blockquote {
+    padding-left: 0;
+  }
+
   &__blockquote-text {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 
   &__blockquote-name {
@@ -37,6 +42,7 @@
 
     & span {
       display: block;
+      margin-top: 3px;
       font-weight: 400;
       font-size: 14px;
       line-height: 1.5;
@@ -46,14 +52,26 @@
 
   &__slider-nav {
     justify-content: flex-end;
-    margin-top: -114px;
+    margin-top: -82px;
+    transform: translateX(12px);
+    margin-right: 0;
+    position: relative;
+    z-index: 5;
   }
 
-  &__img {
+  .slider-nav__btn {
+    display: inline-flex;
+  }
+
+  &__pic {
     border-radius: var(--border-radius);
     position: relative;
     z-index: 5;
     margin-bottom: -60px;
+  }
+
+  &__img {
+    height: auto;
   }
 
   @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -63,16 +81,28 @@
   }
 
   @media screen and (max-width:768.01px) {
+    padding-bottom: 100px;
 
     &__content {
       max-width: 100%;
+      width: 100%;
+    }
+
+    &__swiper {
+      padding: 0;
     }
 
     &__blockquote {
       padding-left: 32px;
     }
 
-    &__img {
+    &__slider-nav {
+      margin-top: -62px;
+      transform: none;
+      width: 90%;
+    }
+
+    &__pic {
       display: none;
     }
   }

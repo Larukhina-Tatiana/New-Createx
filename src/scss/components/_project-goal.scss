@@ -4,7 +4,6 @@
   align-items: center;
   gap: 30px;
 
-
   &__content {
     max-width: 600px;
     padding-top: 43px;
@@ -23,14 +22,32 @@
     }
   }
 
+
   &__table {
+    margin-right: 20px;
+    margin-bottom: 20px;
     // padding: 37px 10px 37px 60px;
     padding: 40px 60px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
     background: var(--white);
     background-color: var(--white);
     flex-shrink: 0;
+
+
+
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+
+
+
+
+    &-wrapper {
+      perspective: 25px;
+    }
 
 
 

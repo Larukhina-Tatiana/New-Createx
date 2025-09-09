@@ -5,8 +5,8 @@
 {% set description = "Project details and gallery" %}
 {% set ogDescription = "Quality construction and exemplary service" %}
 {% set ogUrl = "https://larukhina-tatiana.github.io/Createx/projects/project.html" %}
-{% set bodyClass = "page-work-inside" %}
-{% set pageName = "page-work-inside" %}
+{% set bodyClass = "page-project" %}
+{% set pageName = "page-project" %}
 
 {% block head %}
 {% include "includes/head.njk" %}
@@ -21,21 +21,21 @@
 {% set title = "Createx Project -" %}
 {% include "includes/page-hero.njk" %}
 
-<section class="work-inside">
+<section class="project">
   <div class="container">
-    <h1 class="work-inside__title section__inside-title">Loading...</h1>
+    <h1 class="project__title section__inside-title reveal-top">Loading...</h1>
 
-    <div class="work-inside__galery project-galery">
-      <div class="work-inside__slider-big project-slider-big">
-        <button class="slider-nav__btn portfolio-section__prev work-inside__btn work-inside__btn--prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+    <div class="project__galery">
+      <div class="project__slider-big project-slider-big" data-aos="flip-right">
+        <button class="slider-nav__btn portfolio-section__prev project__btn project__btn--prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
             <path fill="currentColor" fill-rule="evenodd"
               d="M9.207 17.207a1 1 0 0 1-1.414 0l-4.5-4.5a1 1 0 0 1 0-1.414l4.5-4.5a1 1 0 0 1 1.414 1.414L6.414 11H20a1 1 0 1 1 0 2H6.414l2.793 2.793a1 1 0 0 1 0 1.414Z"
               clip-rule="evenodd" />
           </svg>
         </button>
-        <button class="slider-nav__btn portfolio-section__next work-inside__btn work-inside__btn--next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+        <button class="slider-nav__btn portfolio-section__next project__btn project__btn--next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
             <path fill="currentColor" fill-rule="evenodd"
               d="M14.793 6.793a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-2.793-2.793a1 1 0 0 1 0-1.414Z"
               clip-rule="evenodd" />
@@ -44,16 +44,19 @@
         <div class="swiper-wrapper"></div>
       </div>
 
-      <div class="work-inside__slider-small" data-thumbs-slider>
+      <div class="project__slider-small" data-thumbs-slider>
         <div class="swiper-wrapper"></div>
       </div>
     </div>
 
     <div class="project-goal">
-      <div class="project-goal__content">
-        <h2 class="project-goal__subtitle section-subtitle reveal-top">Project goal</h2>
+      <div class="project-goal__content animate-on-scroll">
+        <h2 class="project-goal__subtitle section-subtitle">Project goal</h2>
       </div>
-      <table class="project-goal__table"></table>
+      <div class="project-goal__table-wrapper" id="js-container">
+
+        <table class="project-goal__table" id="js-inner"></table>
+      </div>
     </div>
   </div>
 </section>
