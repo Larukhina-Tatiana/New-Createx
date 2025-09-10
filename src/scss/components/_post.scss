@@ -3,6 +3,10 @@
   // padding-bottom: 180px;
   padding-bottom: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
 
+  .container {
+    overflow: visible;
+  }
+
   &__thumb {
     position: relative;
     z-index: 1;
@@ -66,18 +70,20 @@
       }
     }
 
-    &__share {
-      @include flex-aic;
-      gap: 12px;
 
-      span {
-        font-weight: 700;
-        color: var(--gray-900);
-      }
-    }
 
     &__form-comment {
       padding-top: 40px;
+    }
+  }
+
+  &__share {
+    @include flex-aic;
+    gap: 12px;
+
+    span {
+      font-weight: 700;
+      color: var(--gray-900);
     }
   }
 }

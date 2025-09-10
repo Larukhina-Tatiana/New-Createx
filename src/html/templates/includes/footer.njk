@@ -16,45 +16,17 @@
           <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
             loading="lazy" decoding="async">
         </a>
-        <address class="social-media">
-          <ol class="social social--footer">
-            <li class="social__item social__item--footer">
-              <a href="" class="social__link" target="_blank">
-                <svg aria-label="icon whatsapp">
-                  <use href="/images/icons/sprite.svg#whatsapp"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item social__item--footer">
-              <a href="" class="social__link" target="_blank">
-                <svg aria-label="icon Messanger">
-                  <use href="/images/icons/sprite.svg#messanger"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item social__item--footer">
-              <a href="" class="social__link" target="_blank">
-                <svg aria-label="icon facebook">
-                  <use href="/images/icons/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item social__item--footer">
-              <a href="" class="social__link" target="_blank">
-                <svg aria-label="icon Twitter">
-                  <use href="/images/icons/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item social__item--footer">
-              <a href="" class="social__link" target="_blank">
-                <svg aria-label="icon Youtube">
-                  <use href="/images/icons/sprite.svg#youtube"></use>
-                </svg>
-              </a>
-            </li>
-          </ol>
-        </address>
+        {% set contextClass = 'footer' %}
+        {% set icons = [
+        { name: 'whatsapp', label: 'Whatsapp', url: 'https://whatsapp.com/createx' },
+        { name: 'messanger', label: 'Messanger', url: 'https://messanger.com/createx' },
+        { name: 'facebook', label: 'Facebook', url: 'https://facebook.com/createx' },
+        { name: 'twitter', label: 'Twitter', url: 'https://twitter.com/createx' },
+        { name: 'youtube', label: 'YouTube', url: 'https://youtube.com/createx' }
+        ] %}
+
+        {% include "social-media.njk" %}
+
       </div>
       <p class="footer__left-text">
         Createx Construction Bureau has been successfully operating in&nbsp;the USA construction market since 2000.

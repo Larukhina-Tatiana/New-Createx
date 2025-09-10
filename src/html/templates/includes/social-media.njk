@@ -1,0 +1,16 @@
+<address class="social-media">
+  {% set modifier = contextClass or 'footer' %}
+  {% set icons = icons or [] %}
+
+  <ul class="social social--{{ modifier }}">
+    {% for icon in icons %}
+    <li class="social__item social__item--{{ modifier }}">
+      <a href="{{ icon.url }}" class="social__link" target="_blank" rel="noopener noreferrer">
+        <svg aria-label="{{ icon.label }}">
+          <use href="/images/icons/sprite.svg#{{ icon.name }}"></use>
+        </svg>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</address>

@@ -1,0 +1,26 @@
+{% extends "layout.njk" %}
+{% set title = "How to Build Climate Change-Resilient Infrastructure" %}
+{% set description = "Explore how Createx is building infrastructure that withstands climate challenges." %}
+{% set ogTitle = "Resilient Infrastructure by Createx" %}
+{% set ogDescription = "Discover how Createx integrates sustainability and innovation in modern construction." %}
+{% set ogImage = "https://larukhina-tatiana.github.io/Createx/images/og-about.jpg" %}
+{% set ogUrl = "https://larukhina-tatiana.github.io/Createx/news1.html" %}
+{% set pageName = "page-post" %}
+{% set bodyClass = "page-post" %}
+
+
+{% block content %}
+{% set id = "hero-title-news1" %}
+{% set breadcrumbs = [
+{ text: "Homepage", href: "index.html" },
+{ text: "News", href: "/news.html" },
+{ text: "How to Build Climate Change-Resilient Infrastructure", current: true }
+] %}
+{% set title = "How to Build Climate Change-Resilient Infrastructure" %}
+{% set descr = "" %}
+
+{% include "page-hero.njk" %}
+
+{% include "post.njk" %}
+{% include "application-form.njk" %}
+{% endblock %}

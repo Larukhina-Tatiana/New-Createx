@@ -25,6 +25,7 @@
 
 
 
+
 {# Специфичные скрипты по pageName #}
 
 {% if pageName == "page-home" %}
@@ -73,4 +74,15 @@
     once: false
   })
 </script>
+{% endif %}
+
+{% if pageName == "page-news" %}
+<script src="/js/mixitup.min.js" defer></script>
+<script src="/js/mainmixitup.js" defer></script>
+<script src="/js/tab-link-handler.js" defer></script>
+<script src="/js/tabs.js" defer></script>
+{% endif %}
+
+{% if pageName == "page-post" %}
+<script src="/js/forms-handle.js" defer></script>
 {% endif %}

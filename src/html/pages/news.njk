@@ -1,0 +1,26 @@
+{% extends "layout.njk" %}
+{% set title = "Createx Construction News" %}
+{% set description = "Learn more about Createx Construction Bureau, our values, mission, and experience in the US market
+since 2000." %}
+{% set ogDescription = "Discover Createx's story, team, and commitment to quality construction." %}
+{% set ogImage = "https://larukhina-tatiana.github.io/Createx/images/og-about.jpg" %}
+{% set ogUrl = "https://larukhina-tatiana.github.io/Createx/news.html" %}
+{% set pageName = "page-news" %}
+{% set bodyClass = "page-news" %}
+
+
+{% block content %}
+{% set id = "hero-title-news" %}
+{% set breadcrumbs = [
+{ text: "Homepage", href: "index.html" },
+{ text: "News", current: true }
+] %}
+{% set title = "News" %}
+{% set descr = "Stay tuned with our news, expert tips and articles." %}
+
+{% include "page-hero.njk" %}
+
+
+{% include "categories.njk" %}
+{% include "application-form.njk" %}
+{% endblock %}
