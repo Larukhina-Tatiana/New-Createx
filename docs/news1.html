@@ -62,7 +62,7 @@
       <a class="header__logo logo" href="/index.html">
         <img src="/images/icons/logo.svg" alt="Createx Construction logo" width="130" height="22">
       </a>
-      <nav class="header__nav nav">
+      <nav class="header__nav nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="/about.html">About Us</a>
@@ -327,7 +327,9 @@
 
     </div>
     <section class="post-comments" id="post-comments">
-      <h2 class="post-comments__title section-subtitle reveal-top section-subtitle section-subtitle--center">4
+      <h2
+        class="post-comments__title section-subtitle  section-subtitle section-subtitle--center animate-on-scroll fadeInDown">
+        4
         comments</h2>
       <ul class="post-comments__list">
         <li class="post-comments__item">
@@ -431,7 +433,8 @@
     </section>
     <section class="post__form-comment">
       <form class="post-form form" action="#">
-        <h2 class="section-subtitle reveal-top section-subtitle section-subtitle--center post-form__title">
+        <h2
+          class="section-subtitle section-subtitle section-subtitle--center post-form__title animate-on-scroll fadeInDown">
           Leave your comment
         </h2>
         <div class="post-form__inner">
@@ -441,20 +444,23 @@
               placeholder="Your name"
               title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
               required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
-            <span id="error-message" style="color: red;"></span>
+            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+            <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
           <label class="post-form__label post-form__label--width form__label" for="post-email">
             <span class="form__label-legend">Email</span>
             <input class="post-form__input form__input" type="email" name="e-mail" id="post-email"
               placeholder="Your working email" required>
-            <span id="error-message" style="color: red;"></span>
+            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+            <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
 
           <label class="post-form__label form__label form__label--width100" for="post-comment">
             <span class="form__label-legend">Your comment</span>
             <textarea class="post-form__input form__input" id="post-comment" name="comment"
               placeholder="Type comment here" minlength="10" maxlength="200" required></textarea>
-            <span id="error-message" style="color: red;"></span>
+            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+            <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
         </div>
         <button class="post-form__btn button button--large" type="submit">Post comment</button>
@@ -545,7 +551,7 @@
     <div class="footer__left">
       <div class="footer__inner">
         <a class="footer__logo logo" href="/index.html">
-          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
+          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo in footer" width="142" height="24"
             loading="lazy" decoding="async">
         </a>
         
@@ -617,7 +623,7 @@
         <label class="footer__form-label form__label" for="user-email">
           <span class="visually-hidden">Email address</span>
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^\S+@\S+\.\S+$"
+            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
             title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
             onchange="this.setCustomValidity('')">

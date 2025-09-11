@@ -17,6 +17,14 @@
               alt="Photo by Courtney Alexander, CEO">
           </picture>
           <div class="team__hover">
+
+            {% set contextClass = 'team' %}
+            {% set icons = [
+            { name: 'linked-in', label: 'LinkedIn', url: 'https://linkedin.com/company/createx' },
+            { name: 'twitter', label: 'Share on Twitter', url: 'https://twitter.com/share?url=news-url' },
+            { name: 'facebook', label: 'Facebook', url: 'https://facebook.com/createx' }
+            ] %}
+            {% include "social-media.njk" %}
             <address class="social-media">
               <ol class="social social--team">
                 <li class="social__item social__item--team">

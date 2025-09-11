@@ -68,7 +68,7 @@ since 2000.">
       <a class="header__logo logo" href="/index.html">
         <img src="/images/icons/logo.svg" alt="Createx Construction logo" width="130" height="22">
       </a>
-      <nav class="header__nav nav">
+      <nav class="header__nav nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="/about.html">About Us</a>
@@ -1111,6 +1111,41 @@ offer you quality construction and exemplary service.</p>
               alt="Photo by Courtney Alexander, CEO">
           </picture>
           <div class="team__hover">
+
+            
+            
+            <address class="social-media">
+  
+  
+
+  <ul class="social social--team">
+    
+    <li class="social__item social__item--team">
+      <a href="https://linkedin.com/company/createx" class="social__link" target="_blank" rel="noopener noreferrer">
+        <svg aria-label="LinkedIn">
+          <use href="/images/icons/sprite.svg#linked-in"></use>
+        </svg>
+      </a>
+    </li>
+    
+    <li class="social__item social__item--team">
+      <a href="https://twitter.com/share?url=news-url" class="social__link" target="_blank" rel="noopener noreferrer">
+        <svg aria-label="Share on Twitter">
+          <use href="/images/icons/sprite.svg#twitter"></use>
+        </svg>
+      </a>
+    </li>
+    
+    <li class="social__item social__item--team">
+      <a href="https://facebook.com/createx" class="social__link" target="_blank" rel="noopener noreferrer">
+        <svg aria-label="Facebook">
+          <use href="/images/icons/sprite.svg#facebook"></use>
+        </svg>
+      </a>
+    </li>
+    
+  </ul>
+</address>
             <address class="social-media">
               <ol class="social social--team">
                 <li class="social__item social__item--team">
@@ -1820,7 +1855,7 @@ offer you quality construction and exemplary service.</p>
     <div class="footer__left">
       <div class="footer__inner">
         <a class="footer__logo logo" href="/index.html">
-          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
+          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo in footer" width="142" height="24"
             loading="lazy" decoding="async">
         </a>
         
@@ -1892,7 +1927,7 @@ offer you quality construction and exemplary service.</p>
         <label class="footer__form-label form__label" for="user-email">
           <span class="visually-hidden">Email address</span>
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^\S+@\S+\.\S+$"
+            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
             title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
             onchange="this.setCustomValidity('')">

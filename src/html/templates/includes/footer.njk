@@ -13,7 +13,7 @@
     <div class="footer__left">
       <div class="footer__inner">
         <a class="footer__logo logo" href="/index.html">
-          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
+          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo in footer" width="142" height="24"
             loading="lazy" decoding="async">
         </a>
         {% set contextClass = 'footer' %}
@@ -44,7 +44,7 @@
         <label class="footer__form-label form__label" for="user-email">
           <span class="visually-hidden">Email address</span>
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^\S+@\S+\.\S+$"
+            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
             title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
             onchange="this.setCustomValidity('')">

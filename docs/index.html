@@ -68,7 +68,7 @@ projects with excellence and integrity.">
       <a class="header__logo logo" href="/index.html">
         <img src="/images/icons/logo.svg" alt="Createx Construction logo" width="130" height="22">
       </a>
-      <nav class="header__nav nav">
+      <nav class="header__nav nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="/about.html">About Us</a>
@@ -1308,7 +1308,7 @@ projects with excellence and integrity.">
     <div class="footer__left">
       <div class="footer__inner">
         <a class="footer__logo logo" href="/index.html">
-          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo" width="142" height="24"
+          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo in footer" width="142" height="24"
             loading="lazy" decoding="async">
         </a>
         
@@ -1380,7 +1380,7 @@ projects with excellence and integrity.">
         <label class="footer__form-label form__label" for="user-email">
           <span class="visually-hidden">Email address</span>
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^\S+@\S+\.\S+$"
+            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
             title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
             onchange="this.setCustomValidity('')">
