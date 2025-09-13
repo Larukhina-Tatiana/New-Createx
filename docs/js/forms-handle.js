@@ -1,6 +1,7 @@
 // import { createAlertBox } from "./create-alertbox.js";
 document.addEventListener("DOMContentLoaded", () => {
   const forms = document.querySelectorAll("form");
+  // console.log("forms", forms);
 
   forms.forEach((form) => {
     console.table("form", form);
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.querySelectorAll("input, textarea, select").forEach((field) => {
       // const errorSpan = form.querySelector(`#${field.id}-errors`);
-      const errorSpan = form.querySelector("#error-message");
+      const errorSpan = form.querySelector(".error-message");
       if (errorSpan) errorSpan.textContent = "";
 
       // Проверяем input/textarea

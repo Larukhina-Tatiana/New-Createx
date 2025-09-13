@@ -5,8 +5,9 @@
   <ul class="social social--{{ modifier }}">
     {% for icon in icons %}
     <li class="social__item social__item--{{ modifier }}">
-      <a href="{{ icon.url }}" class="social__link" target="_blank" rel="noopener noreferrer">
-        <svg aria-label="{{ icon.label }}">
+      <a class="social__link" href="{{ icon.url }}" aria-label="{{ icon.label }}" target="_blank"
+        rel="noopener noreferrer">
+        <svg focusable="false" aria-hidden="true">
           <use href="/images/icons/sprite.svg#{{ icon.name }}"></use>
         </svg>
       </a>

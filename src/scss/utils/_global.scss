@@ -235,3 +235,9 @@ button[disabled] {
     top: 0;
     width: 100%;
 }
+
+input:-webkit-autofill {
+    box-shadow: inset 0 0 0 1000px var(--gray-200);
+    -webkit-text-fill-color: inherit;
+    transition: background-color 0s ease-in-out 0s;
+}

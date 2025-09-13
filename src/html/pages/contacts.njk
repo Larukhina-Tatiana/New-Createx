@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{# ——— Мета-теги и head ——— #}
+{% set title = "Contacts — Createx Construction" %}
+{% set description = "Reach out to Createx Construction for expert advice, project inquiries, or partnership
+opportunities." %}
+{% set ogDescription = "Get in touch with Createx Construction — your trusted partner in building excellence. Whether
+you have questions, ideas,
+or project inquiries, our team is ready to connect and collaborate." %}
+{% set ogUrl = "https://larukhina-tatiana.github.io/Createx/contacts.html" %}
+{% set bodyClass = "page-contacts" %}
+{% set pageName = "page-contacts" %}
+
+{% block head %}
+{% include "includes/head.njk" %}
+{% endblock %}
+
+{# ——— Контент страницы ——— #}
+
+{% block content %}
+{% set id = "hero-title-contacts" %}
+{% set breadcrumbs = [
+{ text: "Homepage", href: "index.html" },
+{ text: "Contacts", current: true }
+] %}
+{% set title = "Contacts" %}
+{% set descr = "Contact us for all your construction needs. We always welcome any questions and comments." %}
+
+{% include "includes/page-hero.njk" %}
+
+
+{% include "section-contacts.njk" %}
+{% include "offices.njk" %}
+{% endblock %}

@@ -15,6 +15,10 @@
     color: var(--gray-600);
     background-color: var(--gray-200);
     width: 100%;
+
+    &.is-invalid {
+      border-color: red;
+    }
   }
 
   &__list--single {

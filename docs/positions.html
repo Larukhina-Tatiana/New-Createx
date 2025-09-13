@@ -365,40 +365,45 @@ since 2000.">
   <ul class="social social--footer">
     
     <li class="social__item social__item--footer">
-      <a href="https://whatsapp.com/createx" class="social__link" target="_blank" rel="noopener noreferrer">
-        <svg aria-label="Whatsapp">
+      <a class="social__link" href="https://whatsapp.com/createx" aria-label="Whatsapp" target="_blank"
+        rel="noopener noreferrer">
+        <svg focusable="false" aria-hidden="true">
           <use href="/images/icons/sprite.svg#whatsapp"></use>
         </svg>
       </a>
     </li>
     
     <li class="social__item social__item--footer">
-      <a href="https://messanger.com/createx" class="social__link" target="_blank" rel="noopener noreferrer">
-        <svg aria-label="Messanger">
-          <use href="/images/icons/sprite.svg#messanger"></use>
+      <a class="social__link" href="https://messanger.com/createx" aria-label="Messanger" target="_blank"
+        rel="noopener noreferrer">
+        <svg focusable="false" aria-hidden="true">
+          <use href="/images/icons/sprite.svg#messenger"></use>
         </svg>
       </a>
     </li>
     
     <li class="social__item social__item--footer">
-      <a href="https://facebook.com/createx" class="social__link" target="_blank" rel="noopener noreferrer">
-        <svg aria-label="Facebook">
+      <a class="social__link" href="https://facebook.com/createx" aria-label="Facebook" target="_blank"
+        rel="noopener noreferrer">
+        <svg focusable="false" aria-hidden="true">
           <use href="/images/icons/sprite.svg#facebook"></use>
         </svg>
       </a>
     </li>
     
     <li class="social__item social__item--footer">
-      <a href="https://twitter.com/createx" class="social__link" target="_blank" rel="noopener noreferrer">
-        <svg aria-label="Twitter">
+      <a class="social__link" href="https://twitter.com/createx" aria-label="Twitter" target="_blank"
+        rel="noopener noreferrer">
+        <svg focusable="false" aria-hidden="true">
           <use href="/images/icons/sprite.svg#twitter"></use>
         </svg>
       </a>
     </li>
     
     <li class="social__item social__item--footer">
-      <a href="https://youtube.com/createx" class="social__link" target="_blank" rel="noopener noreferrer">
-        <svg aria-label="YouTube">
+      <a class="social__link" href="https://youtube.com/createx" aria-label="YouTube" target="_blank"
+        rel="noopener noreferrer">
+        <svg focusable="false" aria-hidden="true">
           <use href="/images/icons/sprite.svg#youtube"></use>
         </svg>
       </a>
@@ -424,7 +429,7 @@ since 2000.">
         <label class="footer__form-label form__label" for="user-email">
           <span class="visually-hidden">Email address</span>
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+"
             title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
             onchange="this.setCustomValidity('')">
@@ -588,7 +593,11 @@ since 2000.">
 
 <script src="/js/animations.js" defer></script>
 <script src="/js/create-alertbox.js" defer></script>
+<script src="/js/create-alertbox.js" defer></script>
 <script src="/js/scrollManager.js" defer></script>
+<script src="/js/validation-form.js" defer></script>
+<script src="/js/imask.min.js" defer></script>
+<script src="/js/progress.js" defer></script>
 
 
 
@@ -602,6 +611,8 @@ since 2000.">
 <script src="/js/graph-modal.min.js" defer></script>
 <script src="/js/modals.js" defer></script>
 <script src="/js/form-sendCv.js" defer></script>
+
+
 
 
 

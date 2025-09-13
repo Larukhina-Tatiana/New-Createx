@@ -19,7 +19,7 @@
         {% set contextClass = 'footer' %}
         {% set icons = [
         { name: 'whatsapp', label: 'Whatsapp', url: 'https://whatsapp.com/createx' },
-        { name: 'messanger', label: 'Messanger', url: 'https://messanger.com/createx' },
+        { name: 'messenger', label: 'Messanger', url: 'https://messanger.com/createx' },
         { name: 'facebook', label: 'Facebook', url: 'https://facebook.com/createx' },
         { name: 'twitter', label: 'Twitter', url: 'https://twitter.com/createx' },
         { name: 'youtube', label: 'YouTube', url: 'https://youtube.com/createx' }
@@ -44,7 +44,7 @@
         <label class="footer__form-label form__label" for="user-email">
           <span class="visually-hidden">Email address</span>
           <input class="footer__form-input form__input" type="email" name="email" id="user-email"
-            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+            placeholder="e.g. user@example.com" required autocomplete="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+"
             title="Please enter a valid email address in the format: user@example.com"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
             onchange="this.setCustomValidity('')">

@@ -5,14 +5,14 @@
       Give us a call, send us a note or visit our office. We can’t wait to hear from you!
     </p>
 
-    <nav class="offices__nav" title="secondary navigation">
+    <nav class="offices__nav" aria-label="Office locations">
       <div class="offices__nav-coll">
         <p class="offices__nav-title">New York, USA</p>
         <ul class="offices__list">
           <li class="offices__item offices__item--address">
             <span class="offices__address">8502&nbsp;Preston Rd. Inglewood, New York 98380</span>
             <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-              rel="noopener noreferrer nofollow">See on the map</a>
+              rel="noopener noreferrer nofollow" aria-label="See New York office on the map">See on the map</a>
           </li>
           <li class="offices__item">
             <a class="offices__link" href="tel:4055550128"><span class="offices__link--name">Call:&nbsp;</span>(405)
@@ -23,7 +23,8 @@
                 class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
           </li>
           <li class="offices__item">
-            <span>Schedule:&nbsp;</span>Mon&nbsp;&mdash; Fri&nbsp;9:00&nbsp;&mdash;18:00
+            <span aria-label="Working hours">Schedule:&nbsp;</span>
+            Mon - Fri <time datetime="09:00">9:00</time> - <time datetime="18:00">18:00</time>
           </li>
         </ul>
       </div>
@@ -32,8 +33,8 @@
         <ul class="offices__list">
           <li class="offices__item offices__item--address">
             <span class="offices__address">2464&nbsp;Royal Ln. Mesa, New Jersey 45463</span>
-            <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-              rel="noopener noreferrer nofollow">See on the map</a>
+            <a class="offices__link offices__link--map" href="https://maps.app.goo.gl/2cgs8CQZgvUkzcMw7" target="_blank"
+              rel="noopener noreferrer nofollow" aria-label="See New Jersey office on the map">See on the map</a>
           </li>
           <li class="offices__item">
             <a class="offices__link" href="tel:8085550111"><span class="offices__link--name">Call:&nbsp;</span>(808)
@@ -44,7 +45,8 @@
                 class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
           </li>
           <li class="offices__item">
-            <span>Schedule:&nbsp;</span>Mon&nbsp;&mdash; Fri&nbsp;9:00&nbsp;&mdash;18:00
+            <span aria-label="Working hours">Schedule:&nbsp;</span>
+            Mon - Fri <time datetime="09:00">9:00</time> - <time datetime="18:00">18:00</time>
           </li>
         </ul>
       </div>
@@ -53,8 +55,8 @@
         <ul class="offices__list">
           <li class="offices__item offices__item--address">
             <span class="offices__address">8502 Preston Rd. Inglewood, San Francisco 98380</span>
-            <a class="offices__link offices__link--map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-              rel="noopener noreferrer nofollow">See on the map</a>
+            <a class="offices__link offices__link--map" href="https://maps.app.goo.gl/KciBVzwhJwheR41LA" target="_blank"
+              rel="noopener noreferrer nofollow" aria-label="See San Francisco office on the map">See on the map</a>
           </li>
           <li class="offices__item">
             <a class="offices__link" href="tel:5055550125"><span class="offices__link--name">Call:&nbsp;</span>(505)
@@ -65,54 +67,25 @@
                 class="offices__link--name">Email:&nbsp;</span>hello@createx.com</a>
           </li>
           <li class="offices__item">
-            <span>Schedule:&nbsp;</span>Mon&nbsp;&mdash; Fri&nbsp;10:00&nbsp;&mdash;19:00
+            <span aria-label="Working hours">Schedule:&nbsp;</span>
+            Mon - Fri <time datetime="09:00">10:00</time> - <time datetime="18:00">19:00</time>
           </li>
         </ul>
       </div>
     </nav>
-    <section class="offices__social">
+    <section class="offices__social" role="navigation" aria-label="Social media links">
       <h2 class="offices__social-title section-subtitle reveal-top section-subtitle section-subtitle--center">Find us
         at
       </h2>
-      <address class="social-media">
-        <ol class="social">
-          <li class="social__item social__item--contact">
-            <a href="" class="social__link social__link--contact" target="_blank">
-              <svg aria-label="icon whatsapp">
-                <use href="./images/icons/sprite.svg#whatsapp"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item social__item--contact">
-            <a href="" class="social__link  social__link--contact" target="_blank">
-              <svg aria-label="icon Messanger">
-                <use href="./images/icons/sprite.svg#messanger"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item social__item--contact">
-            <a href="" class="social__link  social__link--contact" target="_blank">
-              <svg aria-label="icon facebook">
-                <use href="./images/icons/sprite.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item social__item--contact">
-            <a href="" class="social__link  social__link--contact" target="_blank">
-              <svg aria-label="icon Twitter">
-                <use href="./images/icons/sprite.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item social__item--contact">
-            <a href="" class="social__link  social__link--contact" target="_blank">
-              <svg aria-label="icon Youtube">
-                <use href="./images/icons/sprite.svg#youtube"></use>
-              </svg>
-            </a>
-          </li>
-        </ol>
-      </address>
+      {% set contextClass = 'contact' %}
+      {% set icons = [
+      { name: 'whatsapp', label: 'WhatsApp', url: 'https://wa.me/4055550128' },
+      { name: 'messenger', label: 'Messenger', url: 'https://m.me/createx' },
+      { name: 'facebook', label: 'Facebook', url: 'https://facebook.com/createx' },
+      { name: 'twitter', label: 'Twitter', url: 'https://twitter.com/createx' },
+      { name: 'youtube', label: 'YouTube', url: 'https://www.youtube.com/watch?v=createx' }
+      ] %}
+      {% include "social-media.njk" %}
     </section>
   </div>
 </section>

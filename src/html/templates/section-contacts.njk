@@ -18,22 +18,31 @@
         </picture>
       </div>
 
-      <form class="contact-form reveal-right" action="#">
+      <form class="contact-form reveal-right" action="#" id="contact-form" name="contactForm" data-js-form novalidate>
         <div class="contact-form__grup" role="group" aria-labelledby="contact-details-head">
           <div class="contact-form__data">
-            <label class="form__label" for="first-name">Name*
+            <label class="form__label" for="first-name">
+              <span class="form__label-legend">Name</span>
               <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Your name"
-                data-required data-reg="^[A-Za-zА-Яа-я]{1}[A-Za-zА-Яа-я-\'\s]*[A-Za-zА-Яа-я]{1}$"
-                title="Your name without spaces">
+                title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
+                required minlength="2" maxlength="15" placeholder="Your name" pattern="^[a-zA-ZА-Яа-яёЁЇїІіЄєҐґ]{2,15}$"
+                autocomplete="on" itemprop="name">
+              <span class="form-errors" data-js-form-field-errors role="alert"></span>
             </label>
-
-            <label class="form__label" for="phone">Phone*
-              <input class="form__input" type="tel" name="phone" id="phone" placeholder="Your phone number"
-                inputmode="tel" data-required data-reg="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$">
+            <label class="form__label" id="phone">
+              <span class="form__label-legend">Phone</span>
+              <input class="form__input" id="phone" type="tel" name="tel" data-js-phone placeholder="Your phone number"
+                required pattern="^.{19}$" autocomplete="on" itemprop="telephone">
+              <span class="progress-line"></span>
+              <span class="form-errors" data-js-form-field-errors role="alert"></span>
             </label>
-            <label class="form__label" for="e-mail">Email
-              <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Your working email"
-                inputmode="email" data-required data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+            <label class="form__label" for="email">
+              <span class="form__label-legend">Email</span>
+              <input class="form__input" type="email" name="email" id="email" placeholder="Your working email" required
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+" title=" Please specify in the format: user@example.com"
+                oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+                onchange="this.setCustomValidity('') " autocomplete="email" itemprop="email">
+              <span class="form-errors" data-js-form-field-errors role="alert"></span>
             </label>
           </div>
 
@@ -45,39 +54,46 @@
                 <option value="Graphic_designer">Graphic designer</option>
               </select>
             </label>
-            <label class="form__label" for="location">Location*
-              <select class="form__select form__input" name="location" id="location">
-                <option value="">Choose location</option>
+            <label class="form__label" for="location">
+              <span class="form__label-legend">Location</span>
+              <span class="form-errors" id="location-error" data-js-form-field-errors role="alert"></span>
+              <select class="form__select form__input" name="location" id="location" required>
+                <option value="" disabled selected>Choose location</option>
                 <option value="New_York">New York</option>
+                <option value="New_Jersey">New Jersey</option>
+                <option value="San_Francisco">San Francisco</option>
               </select>
             </label>
             <fieldset class="form__fields">
               <legend>Preferred contact method</legend>
               <div class="form__fields-inner" tabindex="-1">
                 <label class="custom-radio form-radio">
-                  <input class="custom-radio__input" type="radio" value="Phone" name="contactMetod">
+                  <input class="custom-radio__input" type="radio" value="Phone" name="contactMetod" required>
                   <span class="custom-radio__text">Phone</span>
                 </label>
                 <label class="custom-radio form-radio">
-                  <input class="custom-radio__input" type="radio" value="Email" name="contactMetod">
+                  <input class="custom-radio__input" type="radio" value="Email" name="contactMetod" required>
                   <span class="custom-radio__text">Email</span>
                 </label>
                 <label class="custom-radio form-radio">
-                  <input class="custom-radio__input" type="radio" value="Viber" name="contactMetod">
+                  <input class="custom-radio__input" type="radio" value="Viber" name="contactMetod" required>
                   <span class="custom-radio__text">Viber</span>
                 </label>
               </div>
+              <span class="form-errors" id="contactMetod-error" data-js-form-field-errors role="alert"></span>
             </fieldset>
           </div>
         </div>
 
-        <label class="form__label form__label--big" for="comment">Message*
+        <label class="form__label form__label--big" for="comment">
+          <span class="form__label-legend">Message</span>
           <textarea class="form__textarea form__input" name="comment" id="comment" placeholder="Your message"
-            data-reg="\S" data-required></textarea>
+            title="The field must be filled" maxlength="1000" required></textarea>
+          <span class="form-errors" data-js-form-field-errors role="alert"></span>
         </label>
 
         <div class="contact-form__policy-box">
-          <input class="checkbox" type="checkbox" name="policy" id="policy" checked>
+          <input class="checkbox" type="checkbox" name="policy" id="policy" class="js-policy-checkbox" checked>
           <label class="checkbox__label" for="policy">
             <span class="checkbox__castom-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" fill="none">
