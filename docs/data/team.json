@@ -1,0 +1,204 @@
+{
+  "team": [
+    {
+      "name": "Courtney Alexander",
+      "post": "CEO, Co-Founder",
+      "image": {
+        "base": "./images/team/image1",
+        "alt": "Photo by Courtney Alexander, CEO"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/courtney-alexander"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/courtneyalex"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/courtney.alexander"
+        }
+      ]
+    },
+    {
+      "name": "Calvin Fox",
+      "post": "CTO, Co-Founder",
+      "image": {
+        "base": "./images/team/image2",
+        "alt": "Photo by Calvin Fox, Co-Founder"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/calvin-fox"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/calvinfox"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/calvin.fox"
+        }
+      ]
+    },
+    {
+      "name": "Johnny Lane",
+      "post": "Commercial Manager",
+      "image": {
+        "base": "./images/team/image3",
+        "alt": "Photo by Johnny Lane, Co-Founder"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/johnny-lane"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/johnnylane"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/johnny.lane"
+        }
+      ]
+    },
+    {
+      "name": "Diane Mccoy",
+      "post": "Director of Human Resources",
+      "image": {
+        "base": "./images/team/image4",
+        "alt": "Photo by Diane McCoy, Director of Human Resources"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/diane-mccoy"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/dianemccoy"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/diane.mccoy"
+        }
+      ]
+    },
+    {
+      "name": "Judith Warren",
+      "post": "Lead Accountant",
+      "image": {
+        "base": "./images/team/image5",
+        "alt": "Photo by Judith Warren, Lead Accountant"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/judith-warren"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/judithwarren"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/judith.warren"
+        }
+      ]
+    },
+    {
+      "name": "Floyd Simmmons",
+      "post": "Finacial Director",
+      "image": {
+        "base": "./images/team/image6",
+        "alt": "Photo by Floyd Simmons, Finacial Director"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/floyd-simmmons"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/floydsimmmons"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/floyd.simmmons"
+        }
+      ]
+    },
+    {
+      "name": "Serenity Edwards",
+      "post": "Director of Marketing",
+      "image": {
+        "base": "./images/team/image7",
+        "alt": "Photo by Serenity Edwards, Director of Marketing"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/serenity-edwards"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/serenityedwards"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/serenity.edwards"
+        }
+      ]
+    },
+    {
+      "name": "Shawn Edwards",
+      "post": "Tech Lead",
+      "image": {
+        "base": "./images/team/image8",
+        "alt": "Photo by Shawn Edwards, Tech Lead"
+      },
+      "socials": [
+        {
+          "name": "linked-in",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/shawn-edwards"
+        },
+        {
+          "name": "twitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/shawnedwards"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "url": "https://facebook.com/shawn.edwards"
+        }
+      ]
+    }
+  ]
+}
