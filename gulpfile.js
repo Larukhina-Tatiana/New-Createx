@@ -149,20 +149,25 @@ function watchFiles() {
   watch("src/js/**/*.js").on("change", browserSync.reload);
 
   watch("src/js/**/*.js", scripts);
-  watch("images/src/**/*.*", images);
-  watch("fonts/src/**/*.*", fonts);
-  watch("src/img/**/*.*", copyAssets);
+  watch("src/images/**/*.*", images);
+  // watch("fonts/src/**/*.*", fonts);
+  // watch("src/img/**/*.*", copyAssets);
 }
 
 // 🏗 Финальная сборка
 exports.build = series(
   cleanDocs,
-  parallel(nunjucks, styles, scripts, images, fonts, sprite, copyAssets),
+  // parallel(nunjucks, styles, scripts, images, fonts, sprite, copyAssets),
+  parallel(nunjucks, styles, scripts, images, sprite),
   html
 );
 
 // 🚀 По умолчанию
 exports.default = series(
-  parallel(nunjucks, styles, scripts, images, fonts, sprite, copyAssets),
+  parallel(nunjucks, styles, scripts, images, sprite),
   watchFiles
 );
+// exports.default = series(
+//   parallel(nunjucks, styles, scripts, images, fonts, sprite, copyAssets),
+//   watchFiles
+// );
