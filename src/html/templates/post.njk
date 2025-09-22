@@ -205,7 +205,7 @@
       </ul>
     </section>
     <section class="post__form-comment">
-      <form class="post-form form" action="#">
+      <form class="post-form form" action="#" id="post-form-comment" name="post-form-comment" data-js-form novalidate>
         <h2
           class="section-subtitle section-subtitle section-subtitle--center post-form__title animate-on-scroll fadeInDown">
           Leave your comment
@@ -217,14 +217,15 @@
               placeholder="Your name"
               title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
               required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
-            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+            <span class="form-errors" data-js-form-field-errors role="alert"></span>
             <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
           <label class="post-form__label post-form__label--width form__label" for="post-email">
             <span class="form__label-legend">Email</span>
             <input class="post-form__input form__input" type="email" name="e-mail" id="post-email"
-              placeholder="Your working email" required>
-            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+              placeholder="Your working email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+"
+              title=" Please specify in the format: user@example.com" autocomplete="email">
+            <span class="form-errors" data-js-form-field-errors role="alert"></span>
             <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
 
@@ -232,7 +233,7 @@
             <span class="form__label-legend">Your comment</span>
             <textarea class="post-form__input form__input" id="post-comment" name="comment"
               placeholder="Type comment here" minlength="10" maxlength="200" required></textarea>
-            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+            <span class="form-errors" data-js-form-field-errors role="alert"></span>
             <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
         </div>

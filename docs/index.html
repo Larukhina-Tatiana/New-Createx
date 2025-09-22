@@ -71,19 +71,22 @@ projects with excellence and integrity.">
       <nav class="header__nav nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="/about.html">About Us</a>
+            <a class="nav__link "" href=" /about.html">About
+              Us</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/services.html">Services</a>
+            <a class="nav__link "
+              href="/services.html">Services</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/work.html">Work</a>
+            <a class="nav__link " href="/work.html">Work</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/news.html">News</a>
+            <a class="nav__link " href="/news.html">News</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/contacts.html">Contacts</a>
+            <a class="nav__link "
+              href="/contacts.html">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -352,9 +355,10 @@ projects with excellence and integrity.">
     <label class="form__label">
       <span class="form__label-legend">Phone</span>
       <input class="form__input" type="tel" name="phone" data-js-phone placeholder="Enter your phone number" required
-        autocomplete="on" title="Введите номер телефона без пробелов и других символов" itemprop="telephone">
+        pattern="^.{19}$" autocomplete="on" title="Введите номер телефона без пробелов и других символов"
+        itemprop="telephone">
       <span class="progress-line"></span>
-      <span class="form-errors" data-js-form-field-errors></span>
+      <span class="form-errors" data-js-form-field-errors role="alert"></span>
     </label>
 
     <label class="form__label form__label--big" for="message">
@@ -1123,8 +1127,7 @@ projects with excellence and integrity.">
           </h3>
 
           <div class="news-box__meta">
-            <a class="news-box__meta-item news-box__author" href="" aria-label="View all Industry News">Industry
-              News</a>
+            <a class="news-box__meta-item news-box__author" href="" aria-label="View all Industry News">Marketing</a>
             <time class="news-box__meta-item news-box__date" datetime="2024-08-15">August 15, 2024</time>
             <a class="news-box__meta-item news-box__comments" href="" aria-label="Read 4 comments">4 comments</a>
           </div>
@@ -1249,7 +1252,7 @@ projects with excellence and integrity.">
       <label class="form__label">
         <span class="form__label-legend">Phone</span>
         <input class="form__input" type="tel" name="tel" data-js-phone placeholder="Your phone number" required
-          autocomplete="on" itemprop="telephone">
+          pattern="^.{19}$" autocomplete="on" itemprop="telephone">
         <span class="progress-line"></span>
         <span class="form-errors" data-js-form-field-errors role="alert"></span>
 

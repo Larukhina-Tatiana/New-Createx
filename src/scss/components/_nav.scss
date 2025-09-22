@@ -16,24 +16,44 @@
   }
 
   &__link {
+    position: relative;
+    display: inline-flex;
     padding: 13px 0;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.6;
-    @include transition ($transition-property: color);
+    // @include transition ($transition-property: color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 13px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: background-color .3s, width .3s, left .3s;
+    }
 
     &:focus {
       outline: 2px solid var(--primary);
       outline-offset: 2px;
     }
 
+    // @media (any-hover: hover) {
+    //   &:hover {
+    //     color: var(--primary);
+    //   }
+    // }
     @media (any-hover: hover) {
       &:hover {
-        color: var(--primary);
+        &::before {
+          width: 100%;
+        }
       }
     }
 
-    &:active {
+    &.is-active {
       color: var(--primary);
     }
 

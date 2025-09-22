@@ -65,19 +65,22 @@
       <nav class="header__nav nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="/about.html">About Us</a>
+            <a class="nav__link "" href=" /about.html">About
+              Us</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/services.html">Services</a>
+            <a class="nav__link "
+              href="/services.html">Services</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/work.html">Work</a>
+            <a class="nav__link " href="/work.html">Work</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/news.html">News</a>
+            <a class="nav__link " href="/news.html">News</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/contacts.html">Contacts</a>
+            <a class="nav__link "
+              href="/contacts.html">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -152,7 +155,8 @@
         
         <div class="singlepost__bottom">
   <div class="singlepost__meta">
-    <a class="singlepost__item singlepost__item--author singlepost__item--active" href="">Industry News</a>
+    <a class="singlepost__item singlepost__item--author singlepost__item--active"
+      href="/news.html?filter=marketing">Marketing</a>
     <time class="singlepost__item singlepost__item--date" datetime="2024-08-15">June 15, 2024</time>
     <a class="singlepost__item singlepost__item--comments" href="#post-comments">4 comments</a>
   </div>
@@ -438,7 +442,7 @@
       </ul>
     </section>
     <section class="post__form-comment">
-      <form class="post-form form" action="#">
+      <form class="post-form form" action="#" id="post-form-comment" name="post-form-comment" data-js-form novalidate>
         <h2
           class="section-subtitle section-subtitle section-subtitle--center post-form__title animate-on-scroll fadeInDown">
           Leave your comment
@@ -450,14 +454,15 @@
               placeholder="Your name"
               title="The name must be between 2 and 15 characters long, be one word, and contain no characters other than letters."
               required minlength="2" maxlength="15" pattern="^[a-zA-Z]+$">
-            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+            <span class="form-errors" data-js-form-field-errors role="alert"></span>
             <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
           <label class="post-form__label post-form__label--width form__label" for="post-email">
             <span class="form__label-legend">Email</span>
             <input class="post-form__input form__input" type="email" name="e-mail" id="post-email"
-              placeholder="Your working email" required>
-            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+              placeholder="Your working email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+"
+              title=" Please specify in the format: user@example.com" autocomplete="email">
+            <span class="form-errors" data-js-form-field-errors role="alert"></span>
             <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
 
@@ -465,7 +470,7 @@
             <span class="form__label-legend">Your comment</span>
             <textarea class="post-form__input form__input" id="post-comment" name="comment"
               placeholder="Type comment here" minlength="10" maxlength="200" required></textarea>
-            <span class="form-errors form-errors--position" data-js-form-field-errors role="alert"></span>
+            <span class="form-errors" data-js-form-field-errors role="alert"></span>
             <!-- <span id="error-message" style="color: red;"></span> -->
           </label>
         </div>
@@ -498,7 +503,7 @@
       <label class="form__label">
         <span class="form__label-legend">Phone</span>
         <input class="form__input" type="tel" name="tel" data-js-phone placeholder="Your phone number" required
-          autocomplete="on" itemprop="telephone">
+          pattern="^.{19}$" autocomplete="on" itemprop="telephone">
         <span class="progress-line"></span>
         <span class="form-errors" data-js-form-field-errors role="alert"></span>
 
@@ -748,7 +753,7 @@
 
 
 
-<script src="/js/forms-handle.js" defer></script>
+
 
 
 
