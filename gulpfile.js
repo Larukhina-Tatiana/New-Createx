@@ -91,7 +91,7 @@ function scripts() {
 
 // 🖼 Картинки
 function images() {
-  return src(["images/src/*.*", "!images/src/*.svg"])
+  return src(["src/images/*.*", "!src/images/*.svg"])
     .pipe(newer("docs/images"))
     .pipe(avif({ quality: 50 }))
     .pipe(src("images/src/*.*"))
@@ -105,7 +105,7 @@ function images() {
 
 // 🧬 SVG-спрайт
 function sprite() {
-  return src("images/src/icons/*.svg")
+  return src("src/images/icons/*.svg")
     .pipe(
       svgSprite({
         mode: {
@@ -120,13 +120,13 @@ function sprite() {
 }
 
 // 🔤 Шрифты
-function fonts() {
-  return src("fonts/src/*.*")
-    .pipe(fonter({ formats: ["woff", "ttf"] }))
-    .pipe(src("fonts/*.ttf"))
-    .pipe(ttf2woff2())
-    .pipe(dest("docs/fonts"));
-}
+// function fonts() {
+//   return src("src/fonts/*.*")
+//     .pipe(fonter({ formats: ["woff", "ttf"] }))
+//     .pipe(src("fonts/*.ttf"))
+//     .pipe(ttf2woff2())
+//     .pipe(dest("docs/fonts"));
+// }
 
 // 📦 Копирование ассетов
 function copyAssets() {

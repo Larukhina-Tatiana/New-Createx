@@ -1,0 +1,68 @@
+{
+  "id": "modern-cottage",
+  "title": "Modern Cottage",
+  "description": [
+    "Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms, a terrace, a pool and a garage for two cars.",
+    "Modern design and care for each family member to feel as comfortable as possible in the new home."
+  ],
+  "gallery": [
+    {
+      "src": "modern-cottage1",
+      "alt": "A modern A-frame house with a large gabled roof, a wood and stone facade, and expansive glass windows that reveal a cozy, well-lit interior. The home is nestled in a lush green forest."
+    },
+    {
+      "src": "modern-cottage2",
+      "alt": "A modern A-frame house with a gabled roof, a wood and stone facade, and large glass windows. The home is nestled in a forest with green lawn."
+    },
+    {
+      "src": "modern-cottage3",
+      "alt": "Modern two-story house with glass balcony, wood and stone facade, surrounded by pine trees — North Shore project by Createx Construction."
+    },
+    {
+      "src": "modern-cottage4",
+      "alt": "North Shore — modern two-story house with floor-to-ceiling windows, wood and stone facade, outdoor fireplace and deck surrounded by forest"
+    },
+    {
+      "src": "modern-cottage5",
+      "alt": "orth Shore — sleek two-story house with glass balcony, wood accents, and landscaped entrance partially obscured by a tall tree"
+    },
+    {
+      "src": "modern-cottage6",
+      "alt": "North Shore interior — modern living room with dark wood entertainment wall, fireplace, sectional sofa, and built-in shelving"
+    }
+  ],
+  "thumbnails": [
+    {
+      "src": "s-modern-cottage1",
+      "alt": "A thumbnail image showing the 'North Shore' house, highlighting its a-frame design and glass facade."
+    },
+    {
+      "src": "s-modern-cottage2",
+      "alt": "Thumbnail of side a modern A-frame house with a gabled roof, a wood and stone facade, and large glass windows. The home is nestled in a forest with green lawn."
+    },
+    {
+      "src": "s-modern-cottage3",
+      "alt": "Thumbnail of North Shore project — modern house with glass balcony and wood-panel facade"
+    },
+    {
+      "src": "s-modern-cottage4",
+      "alt": "Thumbnail of North Shore — forest house with glass facade and outdoor fireplace"
+    },
+    {
+      "src": "s-modern-cottage5",
+      "alt": "Thumbnail of North Shore — modern house with glass balcony and tree-lined entrance"
+    },
+    {
+      "src": "s-modern-cottage6",
+      "alt": "Thumbnail of North Shore interior — cozy living room with fireplace and dark wood accents"
+    }
+  ],
+  "details": {
+    "location": "2464 Royal Ln. Mesa, New Jersey",
+    "client": "Darlene Robertson",
+    "architect": "CCB Architecture",
+    "size": "840 sq. ft.",
+    "value": "$1,5 million",
+    "completed": "June 2024"
+  }
+}
