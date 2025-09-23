@@ -48,6 +48,7 @@ function nunjucks() {
     .pipe(
       nunjucksRender({
         path: ["src/html/templates", "src/html/templates/includes"],
+        data: { isProd }, // 👈 передаём флаг
       })
     )
     .pipe(dest("docs"))
@@ -69,35 +70,40 @@ function styles() {
 
 // 🧩 Скрипты
 function scripts() {
-  return src([
-    // сторонние библиотеки
-    "node_modules/jquery/dist/jquery.js",
-    "node_modules/imask/dist/imask.min.js",
-    "node_modules/scrollreveal/dist/scrollreveal.min.js",
-    "node_modules/swiper/swiper-bundle.min.js",
-    "node_modules/aos/dist/aos.js",
-    "libs/smoothscroll/smooth-scroll.min.js",
-    "libs/TransferElements.js",
-    "libs/slick/slick.min.js",
-    "libs/mixitup-v3/mixitup.js",
+  return src(
+    [
+      // сторонние библиотеки
+      // "node_modules/jquery/dist/jquery.js",
+      // "node_modules/imask/dist/imask.min.js",
+      // "node_modules/scrollreveal/dist/scrollreveal.min.js",
+      // "node_modules/swiper/swiper-bundle.min.js",
+      // "node_modules/aos/dist/aos.js",
+      // "libs/smoothscroll/smooth-scroll.min.js",
+      // "libs/TransferElements.js",
+      // "libs/slick/slick.min.js",
+      // "libs/mixitup-v3/mixitup.js",
 
-    // твои скрипты
-    "src/js/**/*.js",
-    // "src/js/modals.js",
-  ])
+      // твои скрипты
+      "src/js/**/*.js",
+      // "src/js/modals.js",
+    ],
+    { base: "src/js" }
+  )
+    .pipe(isProd ? concat("main.min.js") : noop())
+    .pipe(isProd ? uglify() : noop())
     .pipe(dest("docs/js"))
     .pipe(browserSync.stream());
 }
 
-// 🖼 Картинки
+// 🖼 Картинки копирование со сжатием
 function images() {
-  return src(["src/images/*.*", "!src/images/*.svg"])
+  return src(["src/images/**/*.{png,jpg,jpeg,gif}", "!src/images/icons/**"])
     .pipe(newer("docs/images"))
     .pipe(avif({ quality: 50 }))
-    .pipe(src("images/src/*.*"))
+    .pipe(src(["src/images/**/*.{png,jpg,jpeg,gif}", "!src/images/icons/**"]))
     .pipe(newer("docs/images"))
     .pipe(webp())
-    .pipe(src("images/src/*.*"))
+    .pipe(src(["src/images/**/*.{png,jpg,jpeg,gif}", "!src/images/icons/**"]))
     .pipe(newer("docs/images"))
     .pipe(imagemin())
     .pipe(dest("docs/images"));
@@ -120,20 +126,30 @@ function sprite() {
 }
 
 // 🔤 Шрифты
-// function fonts() {
-//   return src("src/fonts/*.*")
-//     .pipe(fonter({ formats: ["woff", "ttf"] }))
-//     .pipe(src("fonts/*.ttf"))
-//     .pipe(ttf2woff2())
-//     .pipe(dest("docs/fonts"));
-// }
+function fonts() {
+  return src("src/fonts/*.*")
+    .pipe(fonter({ formats: ["woff", "ttf"] }))
+    .pipe(src("fonts/*.ttf"))
+    .pipe(ttf2woff2())
+    .pipe(dest("docs/fonts"));
+}
 
+// Просто копирование изображений
 // 📦 Копирование ассетов
 function copyAssets() {
   return src([
     "src/images/**/*.{svg,png,jpg,jpeg,gif,avif,webp}",
-    "!src/images/icons/**",
+    // "!src/images/icons/**",
   ]).pipe(dest("docs/images"));
+}
+function copyData() {
+  return src(["src/data/**/*"]).pipe(dest("docs/data"));
+}
+function copyJs() {
+  return src(["src/js/**/*"]).pipe(dest("docs/js"));
+}
+function copyFav() {
+  return src(["src/favicons/**/*"]).pipe(dest("docs/favicons"));
 }
 
 // 👀 Вотчер
@@ -151,20 +167,38 @@ function watchFiles() {
   watch("src/js/**/*.js", scripts);
   watch("src/images/**/*.*", images);
   // watch("fonts/src/**/*.*", fonts);
-  // watch("src/img/**/*.*", copyAssets);
+  watch("src/img/**/*.*", copyData);
 }
 
 // 🏗 Финальная сборка
 exports.build = series(
   cleanDocs,
   // parallel(nunjucks, styles, scripts, images, fonts, sprite, copyAssets),
-  parallel(nunjucks, styles, scripts, images, sprite),
+  parallel(
+    nunjucks,
+    styles,
+    scripts,
+    fonts,
+    sprite,
+    copyData,
+    copyAssets,
+    copyFav
+  ),
   html
 );
 
 // 🚀 По умолчанию
 exports.default = series(
-  parallel(nunjucks, styles, scripts, images, sprite),
+  parallel(
+    nunjucks,
+    styles,
+    scripts,
+    images,
+    sprite,
+    copyData,
+    copyAssets,
+    copyFav
+  ),
   watchFiles
 );
 // exports.default = series(
