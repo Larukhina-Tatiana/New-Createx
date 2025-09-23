@@ -126,13 +126,13 @@ function sprite() {
 }
 
 // 🔤 Шрифты
-function fonts() {
-  return src("src/fonts/*.*")
-    .pipe(fonter({ formats: ["woff", "ttf"] }))
-    .pipe(src("fonts/*.ttf"))
-    .pipe(ttf2woff2())
-    .pipe(dest("docs/fonts"));
-}
+// function fonts() {
+//   return src("src/fonts/*.*")
+//     .pipe(fonter({ formats: ["woff", "ttf"] }))
+//     .pipe(src("fonts/*.ttf"))
+//     .pipe(ttf2woff2())
+//     .pipe(dest("docs/fonts"));
+// }
 
 // Просто копирование изображений
 // 📦 Копирование ассетов
@@ -148,8 +148,14 @@ function copyData() {
 function copyJs() {
   return src(["src/js/**/*"]).pipe(dest("docs/js"));
 }
+function copyResources() {
+  return src(["src/resources/**/*"]).pipe(dest("docs/resources"));
+}
 function copyFav() {
   return src(["src/favicons/**/*"]).pipe(dest("docs/favicons"));
+}
+function copyFonts() {
+  return src(["src/fonts/**/*"]).pipe(dest("docs/fonts"));
 }
 
 // 👀 Вотчер
@@ -178,11 +184,13 @@ exports.build = series(
     nunjucks,
     styles,
     scripts,
-    fonts,
+    // fonts,
     sprite,
     copyData,
     copyAssets,
-    copyFav
+    copyFav,
+    copyResources,
+    copyFonts
   ),
   html
 );
