@@ -70,20 +70,18 @@ function styles() {
 
 // 🧩 Скрипты
 function scripts() {
-  return (
-    src(
-      [
-        // твои скрипты
-        "src/js/**/*.js",
-        "!src/js/main.min.js", // исключаем main.min.js
-      ],
-      { base: "src/js" }
-    )
-      .pipe(isProd ? concat("main.min.js") : noop())
-      // .pipe(isProd ? uglify() : noop())
-      .pipe(dest("docs/js"))
-      .pipe(browserSync.stream())
-  );
+  return src(
+    [
+      // твои скрипты
+      "src/js/**/*.js",
+      "!src/js/main.min.js", // исключаем main.min.js
+    ],
+    { base: "src/js" }
+  )
+    .pipe(isProd ? concat("main.min.js") : noop())
+    .pipe(isProd ? uglify() : noop())
+    .pipe(dest("docs/js"))
+    .pipe(browserSync.stream());
 }
 
 // 🖼 Картинки копирование со сжатием
