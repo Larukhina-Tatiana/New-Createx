@@ -43,7 +43,7 @@
   }
 
   &__item {
-    grid-column: 3 span;
+    grid-column: span 3;
 
 
     opacity: 0;
@@ -141,13 +141,13 @@
     }
 
     &__item {
-      grid-column: 4 span;
+      grid-column: span 4;
     }
   }
 
   @media screen and (max-width:980.99px) {
     &__item {
-      grid-column: 6 span;
+      grid-column: span 6;
     }
   }
 
@@ -157,7 +157,7 @@
     }
 
     &__item {
-      grid-column: 12 span;
+      grid-column: span 12;
     }
   }
 }

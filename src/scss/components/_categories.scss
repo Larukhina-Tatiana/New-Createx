@@ -14,7 +14,7 @@
   }
 
   &__item {
-    grid-column: 6 span;
+    grid-column: span 6;
   }
 
   &__pag {
@@ -23,7 +23,7 @@
 
   @media screen and (max-width:768.01px) {
     &__item {
-      grid-column: 12 span;
+      grid-column: span 12;
     }
   }
 }

@@ -54,13 +54,13 @@
 
   @media screen and (max-width:1025px) {
     &__item {
-      grid-column: 6 span;
+      grid-column: span 6;
     }
   }
 
   @media screen and (max-width:485px) {
     &__item {
-      grid-column: 12 span;
+      grid-column: span 12;
     }
   }
 }

@@ -120,7 +120,7 @@
 
   @media screen and (max-width:768.01px) {
     &__nav-coll {
-      grid-column: 12 span;
+      grid-column: span 12;
       width: 100%;
       text-align: center;
 

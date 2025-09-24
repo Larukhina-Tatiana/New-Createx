@@ -84,7 +84,7 @@
     }
 
     &__list {
-      grid-column: 12 span;
+      grid-column: span 12;
 
       &:not(:last-child) {
         margin-bottom: 50px;

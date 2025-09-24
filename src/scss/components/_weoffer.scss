@@ -9,7 +9,7 @@
   }
 
   &__content {
-    grid-column: 5 span;
+    grid-column: span 5;
     @include appearance(right, 50px, 0.6s, 0.4s);
   }
 

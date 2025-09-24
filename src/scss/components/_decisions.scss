@@ -12,7 +12,7 @@
   }
 
   &__content {
-    grid-column: 6 span;
+    grid-column: span 6;
     grid-column-start: 6;
     grid-column-end: -1;
     // margin-bottom: 114px;
