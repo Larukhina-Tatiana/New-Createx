@@ -76,13 +76,13 @@ function renderGallery(images) {
         <div class="project__cover-big">
           <picture>
             <source type="image/avif" srcset="
-              ../images/projects/${projectId}/${image.src}@1x.avif 1x,
-              ../images/projects/${projectId}/${image.src}@2x.avif 2x">
+              images/projects/${projectId}/${image.src}@1x.avif 1x,
+             images/projects/${projectId}/${image.src}@2x.avif 2x">
             <source type="image/webp" srcset="
-              ../images/projects/${projectId}/${image.src}@1x.webp 1x,
-              ../images/projects/${projectId}/${image.src}@2x.webp 2x">
+              images/projects/${projectId}/${image.src}@1x.webp 1x,
+              images/projects/${projectId}/${image.src}@2x.webp 2x">
             <img class="project__img"
-              src="../images/projects/${projectId}/${image.src}@1x.jpg"
+              src="images/projects/${projectId}/${image.src}@1x.jpg"
               loading="lazy" decoding="async" alt="${image.alt}">
           </picture>
         </div>
@@ -104,13 +104,13 @@ function renderThumbnails(thumbnails) {
         <div class="project__cover-small">
           <picture>
             <source type="image/avif" srcset="
-              ../images/projects/${projectId}/${image.src}@1x.avif 1x,
-              ../images/projects/${projectId}/${image.src}@2x.avif 2x">
+              images/projects/${projectId}/${image.src}@1x.avif 1x,
+              images/projects/${projectId}/${image.src}@2x.avif 2x">
             <source type="image/webp" srcset="
-              ../images/projects/${projectId}/${image.src}@1x.webp 1x,
-              ../images/projects/${projectId}/${image.src}@2x.webp 2x">
+              images/projects/${projectId}/${image.src}@1x.webp 1x,
+              images/projects/${projectId}/${image.src}@2x.webp 2x">
             <img class="project__img project__img--small"
-              src="../images/projects/${projectId}/${image.src}@1x.jpg"
+              src="images/projects/${projectId}/${image.src}@1x.jpg"
               loading="lazy" decoding="async" alt="${image.alt}">
           </picture>
         </div>
