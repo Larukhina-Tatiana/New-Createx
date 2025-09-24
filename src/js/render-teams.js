@@ -104,7 +104,7 @@ function renderTeamMembers() {
         <a class="social__link" href="${social.url}" aria-label="${social.label}" target="_blank"
           rel="noopener noreferrer">
           <svg focusable="false" aria-hidden="true">
-            <use href="/images/icons/sprite.svg#${social.name}"></use>
+            <use href="images/icons/sprite.svg#${social.name}"></use>
           </svg>
         </a>
       </li>

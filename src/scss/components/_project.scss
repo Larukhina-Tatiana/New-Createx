@@ -6,20 +6,20 @@
   background-repeat: no-repeat;
   background-position: top right;
 
-  background-image: image-set(url(/images/hero/work-inside-hero-bg@1x.avif) 1x,
-      url(/images/hero/work-inside-hero-bg@2x.avif) 2x,
-      url(/images/hero/work-inside-hero-bg@1x.webp) 1x,
-      url(/images/hero/work-inside-hero-bg@2x.webp) 2x,
-      url(/images/hero/work-inside-hero-bg@1x.png) 1x,
-      url(/images/hero/work-inside-hero-bg@2x.png) 2x);
+  background-image: image-set(url(images/hero/work-inside-hero-bg@1x.avif) 1x,
+      url(images/hero/work-inside-hero-bg@2x.avif) 2x,
+      url(images/hero/work-inside-hero-bg@1x.webp) 1x,
+      url(images/hero/work-inside-hero-bg@2x.webp) 2x,
+      url(images/hero/work-inside-hero-bg@1x.png) 1x,
+      url(images/hero/work-inside-hero-bg@2x.png) 2x);
 
-  @supports (background-image: image-set(url("/images/hero/work-inside-hero-bg@1x.avif") 1x)) {
+  @supports (background-image: image-set(url("images/hero/work-inside-hero-bg@1x.avif") 1x)) {
     background-image: image-set(url("../images/hero/work-inside-hero-bg@1x.avif") 1x,
-        url("/images/hero/work-inside-hero-bg@2x.avif") 2x,
-        url("/images/hero/work-inside-hero-bg@1x.webp") 1x,
-        url("/images/hero/work-inside-hero-bg@2x.webp") 2x,
-        url("/images/hero/work-inside-hero-bg@1x.png") 1x,
-        url("/images/hero/work-inside-hero-bg@2x.png") 2x);
+        url("images/hero/work-inside-hero-bg@2x.avif") 2x,
+        url("images/hero/work-inside-hero-bg@1x.webp") 1x,
+        url("images/hero/work-inside-hero-bg@2x.webp") 2x,
+        url("images/hero/work-inside-hero-bg@1x.png") 1x,
+        url("images/hero/work-inside-hero-bg@2x.png") 2x);
   }
 
 
