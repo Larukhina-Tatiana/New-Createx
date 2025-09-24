@@ -101,7 +101,7 @@ const Animations = {
             // Вычисляем задержку анимации
             let delay = 0;
             if (animateType === "sync") delay = 0;
-            else if (animateType === "chain") delay = 0.2 + index * 0.3;
+            else if (animateType === "chain") delay = 0.2 + index * 0.1;
             else if (animateType === "delay" && delayAttr)
               delay = parseFloat(delayAttr);
 
