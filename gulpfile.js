@@ -69,12 +69,25 @@ function styles() {
 }
 
 // 🧩 Скрипты
+
+const path = require("path");
+
 const gulpIf = require("gulp-if");
 
 function scripts() {
   return src("src/js/**/*.js", { base: "src/js" })
     .pipe(gulpIf(isProd, uglify()))
-    .pipe(gulpIf(isProd, rename({ suffix: ".min" })))
+    .pipe(
+      gulpIf(
+        isProd,
+        rename(function (filePath) {
+          const isAlreadyMin = filePath.basename.endsWith(".min");
+          if (!isAlreadyMin) {
+            filePath.basename += ".min";
+          }
+        })
+      )
+    )
     .pipe(dest("docs/js"))
     .pipe(browserSync.stream());
 }
