@@ -70,29 +70,20 @@ function styles() {
 
 // 🧩 Скрипты
 function scripts() {
-  return src(
-    [
-      // сторонние библиотеки
-      // "node_modules/jquery/dist/jquery.js",
-      // "node_modules/imask/dist/imask.min.js",
-      // "node_modules/scrollreveal/dist/scrollreveal.min.js",
-      // "node_modules/swiper/swiper-bundle.min.js",
-      // "node_modules/aos/dist/aos.js",
-      // "libs/smoothscroll/smooth-scroll.min.js",
-      // "libs/TransferElements.js",
-      // "libs/slick/slick.min.js",
-      // "libs/mixitup-v3/mixitup.js",
-
-      // твои скрипты
-      "src/js/**/*.js",
-      // "src/js/modals.js",
-    ],
-    { base: "src/js" }
-  )
-    .pipe(isProd ? concat("main.min.js") : noop())
-    .pipe(isProd ? uglify() : noop())
-    .pipe(dest("docs/js"))
-    .pipe(browserSync.stream());
+  return (
+    src(
+      [
+        // твои скрипты
+        "src/js/**/*.js",
+        "!src/js/main.min.js", // исключаем main.min.js
+      ],
+      { base: "src/js" }
+    )
+      .pipe(isProd ? concat("main.min.js") : noop())
+      // .pipe(isProd ? uglify() : noop())
+      .pipe(dest("docs/js"))
+      .pipe(browserSync.stream())
+  );
 }
 
 // 🖼 Картинки копирование со сжатием
