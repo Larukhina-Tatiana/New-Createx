@@ -3,16 +3,16 @@
 
 <head>
   {% if bodyClass == "page-positions" %}
-  <link rel="preload" href="css/graph-modal.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="{{ basePath }}css/graph-modal.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="css/graph-modal.min.css">
+    <link rel="stylesheet" href="{{ basePath }}css/graph-modal.min.css">
   </noscript>
   {% endif %}
 
   {% block head %}
   {% include "includes/head.njk" %}
   {% endblock %}
-
 </head>
 
 <body class="{{ bodyClass }}" id="page">
@@ -21,15 +21,15 @@
     {% block content %}{% endblock %}
   </main>
   {% include "includes/footer.njk" %}
+
   {% if bodyClass == "page-positions" %}
   <div class="overlay"></div>
   {% include "modals.njk" %}
   {% endif %}
 
-  {# Общие скрипты — подключаются один раз #}
+  {# Скрипты #}
   {% include "includes/scripts.njk" %}
 
-  {# Специфичные скрипты — по pageName #}
   {% block scripts %}{% endblock %}
 </body>
 

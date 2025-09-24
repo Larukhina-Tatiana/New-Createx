@@ -22,18 +22,20 @@
 <title>How to Build Climate Change-Resilient Infrastructure</title>
 
 <!-- Icons -->
+
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
 <link rel="shortcut icon" href="favicons/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
-
 <!-- Preload -->
+
 <link rel="preload" href="fonts/Ubuntu-R.woff2" as="font" type="font/woff2" crossorigin>
-
-
-
+<link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="css/style.min.css">
+</noscript>
 
 
 
@@ -42,45 +44,38 @@
 
 
 <!-- Manifest -->
-<link rel="manifest" href="/favicons/site.webmanifest">
+<link rel="manifest" href="favicons/site.webmanifest">
 
-<!-- Styles -->
-<link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="css/style.min.css">
-</noscript>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"> -->
   
-
 </head>
 
 <body class="page-post" id="page">
   <header class="header">
   <div class="container">
     <div class="header__inner">
-      <a class="header__logo logo" href="/index.html">
-        <img src="/images/icons/logo.svg" alt="Createx Construction logo" width="130" height="22">
+      <a class="header__logo logo" href="index.html">
+        <img src="images/icons/logo.svg" alt="Createx Construction logo" width="130" height="22">
       </a>
       <nav class="header__nav nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link "" href=" /about.html">About
+            <a class="nav__link "" href=" about.html">About
               Us</a>
           </li>
           <li class="nav__item">
             <a class="nav__link "
-              href="/services.html">Services</a>
+              href="services.html">Services</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link " href="/work.html">Work</a>
+            <a class="nav__link " href="work.html">Work</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link " href="/news.html">News</a>
+            <a class="nav__link " href="news.html">News</a>
           </li>
           <li class="nav__item">
             <a class="nav__link "
-              href="/contacts.html">Contacts</a>
+              href="contacts.html">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -130,7 +125,7 @@
         
         <li class="breadcrumbs__item">
           
-          <a class="breadcrumbs__link" href="/news.html">News</a>
+          <a class="breadcrumbs__link" href="news.html">News</a>
           
         </li>
         
@@ -156,7 +151,7 @@
         <div class="singlepost__bottom">
   <div class="singlepost__meta">
     <a class="singlepost__item singlepost__item--author singlepost__item--active"
-      href="/news.html?filter=marketing">Marketing</a>
+      href="news.html?filter=marketing">Marketing</a>
     <time class="singlepost__item singlepost__item--date" datetime="2024-08-15">June 15, 2024</time>
     <a class="singlepost__item singlepost__item--comments" href="#post-comments">4 comments</a>
   </div>
@@ -174,7 +169,7 @@
       <a class="social__link" href="https://facebook.com/createx" aria-label="Facebook" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#facebook"></use>
+          <use href="images/icons/sprite.svg#facebook"></use>
         </svg>
       </a>
     </li>
@@ -183,7 +178,7 @@
       <a class="social__link" href="https://linkedin.com/company/createx" aria-label="LinkedIn" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#linked-in"></use>
+          <use href="images/icons/sprite.svg#linked-in"></use>
         </svg>
       </a>
     </li>
@@ -192,7 +187,7 @@
       <a class="social__link" href="https://twitter.com/share?url=news-url" aria-label="Share on Twitter" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#twitter"></use>
+          <use href="images/icons/sprite.svg#twitter"></use>
         </svg>
       </a>
     </li>
@@ -210,14 +205,13 @@
     <h2 class="section-subtitle reveal-top visually-hidden">Single Post</h2>
     <div class="post__thumb images__thumb images__thumb--post reveal-bottom">
       <picture>
-        <source type="image/avif" srcset="
-              ./images/news1/image1@1x.avif 1x,
-              ./images/news1/image1@2x.avif 2x">
+        <source type="image/avif" srcset="images/news1/image1@1x.avif 1x,
+              images/news1/image1@2x.avif 2x">
         <source type="image/webp" srcset="
-              ./images/news1/image1@1x.webp 1x,
-              ./images/news1/image1@2x.webp 2x">
+              images/news1/image1@1x.webp 1x,
+              images/news1/image1@2x.webp 2x">
         <img class="images__img" src="
-              ./images/news1/image1@1x.jpg" loading="lazy" decoding="async" alt="Post cover">
+              images/news1/image1@1x.jpg" loading="lazy" decoding="async" alt="Post cover">
       </picture>
     </div>
   </div>
@@ -309,7 +303,7 @@
       <a class="social__link" href="https://facebook.com/createx" aria-label="Facebook" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#facebook"></use>
+          <use href="images/icons/sprite.svg#facebook"></use>
         </svg>
       </a>
     </li>
@@ -318,7 +312,7 @@
       <a class="social__link" href="https://linkedin.com/company/createx" aria-label="LinkedIn" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#linked-in"></use>
+          <use href="images/icons/sprite.svg#linked-in"></use>
         </svg>
       </a>
     </li>
@@ -327,7 +321,7 @@
       <a class="social__link" href="https://twitter.com/share?url=news-url" aria-label="Share on Twitter" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#twitter"></use>
+          <use href="images/icons/sprite.svg#twitter"></use>
         </svg>
       </a>
     </li>
@@ -360,7 +354,7 @@
               </div>
               <button class="comment__reply">
                 <svg class="comment__reply-svg" width="16" height="16" aria-label="images">
-                  <use href="./images/icons/sprite.svg#reply"></use>
+                  <use href="images/icons/sprite.svg#reply"></use>
                 </svg>
                 Reply
               </button>
@@ -385,7 +379,7 @@
               </div>
               <button class="comment__reply">
                 <svg class="comment__reply-svg" width="16" height="16" aria-label="images">
-                  <use href="./images/icons/sprite.svg#reply"></use>
+                  <use href="images/icons/sprite.svg#reply"></use>
                 </svg>
                 Reply
               </button>
@@ -408,7 +402,7 @@
               </div>
               <button class="comment__reply">
                 <svg class="comment__reply-svg" width="16" height="16" aria-label="images">
-                  <use href="./images/icons/sprite.svg#reply"></use>
+                  <use href="images/icons/sprite.svg#reply"></use>
                 </svg>
                 Reply
               </button>
@@ -432,7 +426,7 @@
               </div>
               <button class="comment__reply">
                 <svg class="comment__reply-svg" width="16" height="16" aria-label="images">
-                  <use href="./images/icons/sprite.svg#reply"></use>
+                  <use href="images/icons/sprite.svg#reply"></use>
                 </svg>
                 Reply
               </button>
@@ -561,8 +555,8 @@
   <div class="container footer__container grid">
     <div class="footer__left">
       <div class="footer__inner">
-        <a class="footer__logo logo" href="/index.html">
-          <img src="/images/icons/logo-footer.svg" alt="Createx Construction logo in footer" width="142" height="24"
+        <a class="footer__logo logo" href="index.html">
+          <img src="images/icons/logo-footer.svg" alt="Createx Construction logo in footer" width="142" height="24"
             loading="lazy" decoding="async">
         </a>
         
@@ -578,7 +572,7 @@
       <a class="social__link" href="https://whatsapp.com/createx" aria-label="Whatsapp" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#whatsapp"></use>
+          <use href="images/icons/sprite.svg#whatsapp"></use>
         </svg>
       </a>
     </li>
@@ -587,7 +581,7 @@
       <a class="social__link" href="https://messanger.com/createx" aria-label="Messanger" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#messenger"></use>
+          <use href="images/icons/sprite.svg#messenger"></use>
         </svg>
       </a>
     </li>
@@ -596,7 +590,7 @@
       <a class="social__link" href="https://facebook.com/createx" aria-label="Facebook" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#facebook"></use>
+          <use href="images/icons/sprite.svg#facebook"></use>
         </svg>
       </a>
     </li>
@@ -605,7 +599,7 @@
       <a class="social__link" href="https://twitter.com/createx" aria-label="Twitter" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#twitter"></use>
+          <use href="images/icons/sprite.svg#twitter"></use>
         </svg>
       </a>
     </li>
@@ -614,7 +608,7 @@
       <a class="social__link" href="https://youtube.com/createx" aria-label="YouTube" target="_blank"
         rel="noopener noreferrer">
         <svg focusable="false" aria-hidden="true">
-          <use href="/images/icons/sprite.svg#youtube"></use>
+          <use href="images/icons/sprite.svg#youtube"></use>
         </svg>
       </a>
     </li>
@@ -675,13 +669,13 @@
         <p class="footer__title">WHO WE ARE</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="/about.html">About Us</a>
+            <a class="footer__link" href="about.html">About Us</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="/positions.html">Available Positions</a>
+            <a class="footer__link" href="positions.html">Available Positions</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="/contacts.html">Contacts</a>
+            <a class="footer__link" href="contacts.html">Contacts</a>
           </li>
         </ul>
       </div>
@@ -689,13 +683,13 @@
         <p class="footer__title">OUR EXPERIENCE</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="/services.html">Services</a>
+            <a class="footer__link" href="services.html">Services</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="/work.html">Work</a>
+            <a class="footer__link" href="work.html">Work</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="/news.html">News</a>
+            <a class="footer__link" href="news.html">News</a>
           </li>
         </ul>
       </div>
@@ -705,6 +699,7 @@
     </p>
   </div>
 </footer>
+
   
 
   
@@ -760,7 +755,6 @@
 
 
 
-  
   
 </body>
 
