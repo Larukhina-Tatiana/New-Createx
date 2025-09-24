@@ -69,17 +69,12 @@ function styles() {
 }
 
 // 🧩 Скрипты
+const gulpIf = require("gulp-if");
+
 function scripts() {
-  return src(
-    [
-      // твои скрипты
-      "src/js/**/*.js",
-      "!src/js/main.min.js", // исключаем main.min.js
-    ],
-    { base: "src/js" }
-  )
-    .pipe(isProd ? concat("main.min.js") : noop())
-    .pipe(isProd ? uglify() : noop())
+  return src("src/js/**/*.js", { base: "src/js" })
+    .pipe(gulpIf(isProd, uglify()))
+    .pipe(gulpIf(isProd, rename({ suffix: ".min" })))
     .pipe(dest("docs/js"))
     .pipe(browserSync.stream());
 }
