@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const response = await fetch(`../data/projects/${projectId}.json`);
+    const response = await fetch(`data/projects/${projectId}.json`);
     if (!response.ok) throw new Error("Project data not found.");
     const project = await response.json();
     renderProject(project);
