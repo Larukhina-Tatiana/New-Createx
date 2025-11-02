@@ -23,6 +23,12 @@
       .form__input {
         margin-top: 3px;
       }
+
+      @media screen and (width <=665px) {
+        .form__label {
+          width: 100%;
+        }
+      }
     }
 
     .clients {

@@ -4,12 +4,14 @@
   overflow: hidden;
 
 
+
   &__subtitle {
     // margin-bottom: 59px;
     margin-bottom: clamp(1.875rem, 1.238rem + 3.19vw, 3.688rem);
   }
 
   &__list {
+    margin-top: 60px;
     grid-template-rows: repeat(2, 255px);
     gap: 30px;
     padding-bottom: 80px;

@@ -213,6 +213,23 @@
       }
     }
   }
+
+  @media screen and (width <=426px) {
+    &__form-inner {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__form-btn {
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+    }
+
+    &__form-input {
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
+  }
 }
 
 @keyframes pulse-hard {
