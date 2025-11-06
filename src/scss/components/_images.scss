@@ -5,6 +5,10 @@
   &--news-box-705 {
     width: 705px;
     height: 360px;
+
+    @media screen and (max-width:1024.01px) {
+      width: 100%;
+    }
   }
 
   &--news-box {
@@ -15,6 +19,10 @@
   &--news-box-small {
     width: 495px;
     height: 156px;
+
+    @media screen and (max-width:1024.01px) {
+      width: 100%;
+    }
   }
 
   &--slider {
