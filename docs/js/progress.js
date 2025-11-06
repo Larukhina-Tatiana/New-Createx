@@ -112,8 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
               2600
             );
             // isFactsAnimatorFinished = true;
-          } else if (!isFactsAnimatorFinished) {
+          } else {
+            // Выход из зоны видимости
             factsSection.classList.remove("svg-animation");
+
+            // Сброс значений
+            document.querySelectorAll(".facts-element__value").forEach((el) => {
+              el.textContent = "0%";
+            });
           }
         });
       },

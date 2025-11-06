@@ -84,6 +84,11 @@
     .page-hero.in-view {
       @include my-reveal-bg($anim-name: my-revealBg-50-100);
     }
+
+    .images-thumb {
+      overflow: visible;
+      border-radius: var(--br-10);
+    }
   }
 
   &-services-inside {

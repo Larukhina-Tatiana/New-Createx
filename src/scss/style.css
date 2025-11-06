@@ -243,26 +243,26 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.images__thumb {
+.images-thumb {
   overflow: hidden;
   border-radius: var(--border-radius);
 }
-.images__thumb--services {
+.images-thumb--services {
   width: 575px;
   height: 420px;
 }
-.images__thumb--weoffer {
+.images-thumb--weoffer {
   grid-column: 7 span;
   width: 705px;
   height: 440px;
 }
-.images__thumb--avatar {
+.images-thumb--avatar {
   border-radius: 100%;
   width: 72px;
   height: 72px;
   margin-bottom: 25px;
 }
-.images__thumb--decisions {
+.images-thumb--decisions {
   grid-column: 5 span;
   width: 495px;
   height: 553px;
@@ -270,27 +270,27 @@ button {
   left: 14px;
   top: 0;
 }
-.images__thumb--history {
+.images-thumb--history {
   width: 810px;
   height: 450px;
   margin-bottom: 36px;
 }
-.images__thumb--team {
+.images-thumb--team {
   width: 285px;
   height: 340px;
 }
-.images__thumb--news {
+.images-thumb--news {
   width: 600px;
   height: 306px;
 }
-.images__thumb--post {
+.images-thumb--post {
   min-width: 1230px;
 }
-.images__thumb--contact {
+.images-thumb--contact {
   width: 495px;
   height: 586px;
 }
-.images__img {
+.images-thumb__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

@@ -1,100 +1,89 @@
+// Миксин для генерации background-image с поддержкой image-set (AVIF, WebP, Fallback)
+// Принимает базовое имя файла (без расширения и @1x/@2x) и расширение fallback-изображения.
+@mixin image-set-background($base-name, $fallback-ext: 'png') {
+  // Fallback для старых браузеров
+  background-image: url("#{$base-name}@1x.#{$fallback-ext}");
+
+  // Определяем список изображений для image-set в переменной для избежания дублирования
+  $image-set-list: image-set(url("#{$base-name}@1x.avif") type("image/avif") 1x,
+      url("#{$base-name}@2x.avif") type("image/avif") 2x,
+      url("#{$base-name}@1x.webp") type("image/webp") 1x,
+      url("#{$base-name}@2x.webp") type("image/webp") 2x,
+      url("#{$base-name}@1x.#{$fallback-ext}") type("image/#{$fallback-ext}") 1x,
+      url("#{$base-name}@2x.#{$fallback-ext}") type("image/#{$fallback-ext}") 2x);
+
+  // Поддержка современных браузеров (стандартный синтаксис)
+  @supports (background-image: $image-set-list) {
+    background-image: $image-set-list;
+  }
+
+  // Safari (WebKit) поддержка (префиксный синтаксис)
+  // Обратите внимание, что для -webkit-image-set также нужно использовать префикс
+  // и в значении, и в проверке @supports, если это необходимо для очень старых версий Safari.
+  // Для большинства современных браузеров достаточно стандартного image-set.
+  @supports (-webkit-background-image: -webkit-image-set(url("") 1x)) {
+    background-image: -webkit-image-set(url("#{$base-name}@1x.avif") type("image/avif") 1x,
+      url("#{$base-name}@2x.avif") type("image/avif") 2x,
+      url("#{$base-name}@1x.webp") type("image/webp") 1x,
+      url("#{$base-name}@2x.webp") type("image/webp") 2x,
+      url("#{$base-name}@1x.#{$fallback-ext}") type("image/#{$fallback-ext}") 1x,
+      url("#{$base-name}@2x.#{$fallback-ext}") type("image/#{$fallback-ext}") 2x);
+  }
+}
+
+
+$hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+$returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$categories: construction, project, design, repairs;
+
 .services {
   position: relative;
   // padding-bottom: 180px;
   padding-bottom: clamp(2.5rem, -0.577rem + 15.38vw, 11.25rem);
 
-  &::before {
-    content: "";
-    position: absolute;
-    // left: -310px;
-    bottom: -235px;
-    left: 0;
-    width: 791px;
-    height: 937px;
-    // background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    mix-blend-mode: multiply;
-    // Fallback для старых браузеров
-    background-image: url("../images/services/bg-image1@1x.png");
-
-    // Определяем список изображений для image-set в переменной для избежания дублирования
-    $bg-image-set: image-set(url("../images/services/bg-image1@1x.avif") type("image/avif") 1x,
-        url("../images/services/bg-image1@2x.avif") type("image/avif") 2x,
-        url("../images/services/bg-image1@1x.webp") type("image/webp") 1x, // Добавлен WebP
-        url("../images/services/bg-image1@2x.webp") type("image/webp") 2x, // Добавлен WebP
-        url("../images/services/bg-image1@1x.png") type("image/png") 1x,
-        url("../images/services/bg-image1@2x.png") type("image/png") 2x);
-
-    // Поддержка современных браузеров (стандартный синтаксис)
-    @supports (background-image: $bg-image-set) {
-      background-image: $bg-image-set;
-    }
-
-    // Safari (WebKit) поддержка (префиксный синтаксис)
-    // Обратите внимание, что для -webkit-image-set также нужно использовать префикс
-    // и в значении, и в проверке @supports, если это необходимо для очень старых версий Safari.
-    // Для большинства современных браузеров достаточно стандартного image-set.
-    @supports (-webkit-background-image: -webkit-image-set(url("../images/services/bg-image1@1x.avif") 1x)) {
-      background-image: -webkit-image-set((url("../images/services/bg-image1@1x.avif") type("image/avif") 1x,
-            url("../images/services/bg-image1@2x.avif") type("image/avif") 2x,
-            url("../images/services/bg-image1@1x.webp") type("image/webp") 1x, // Добавлен WebP
-            url("../images/services/bg-image1@2x.webp") type("image/webp") 2x, // Добавлен WebP
-            url("../images/services/bg-image1@1x.png") type("image/png") 1x,
-            url("../images/services/bg-image1@2x.png") type("image/png") 2x));
-    }
-  }
-
+  &::before,
   &::after {
     content: "";
     position: absolute;
     // left: -310px;
-    bottom: 26%;
-    right: -214px;
+    bottom: -235px;
     width: 791px;
     height: 937px;
-    // background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     mix-blend-mode: multiply;
-    // Fallback для старых браузеров
-    background-image: url("../images/services/bg-image2@1x.png");
-
-    // Определяем список изображений для image-set в переменной для избежания дублирования
-    $bg-image-set: image-set(url("../images/services/bg-image2@1x.avif") type("image/avif") 1x,
-        url("../images/services/bg-image2@2x.avif") type("image/avif") 2x,
-        url("../images/services/bg-image2@1x.webp") type("image/webp") 1x, // Добавлен WebP
-        url("../images/services/bg-image2@2x.webp") type("image/webp") 2x, // Добавлен WebP
-        url("../images/services/bg-image2@1x.png") type("image/png") 1x,
-        url("../images/services/bg-image2@2x.png") type("image/png") 2x);
-
-    // Поддержка современных браузеров (стандартный синтаксис)
-    @supports (background-image: $bg-image-set) {
-      background-image: $bg-image-set;
-    }
-
-    // Safari (WebKit) поддержка (префиксный синтаксис)
-    // Обратите внимание, что для -webkit-image-set также нужно использовать префикс
-    // и в значении, и в проверке @supports, если это необходимо для очень старых версий Safari.
-    // Для большинства современных браузеров достаточно стандартного image-set.
-    @supports (-webkit-background-image: -webkit-image-set(url("../images/services/bg-image2@1x.avif") 1x)) {
-      background-image: -webkit-image-set((url("../images/services/bg-image2@1x.avif") type("image/avif") 1x,
-            url("../images/services/bg-image2@2x.avif") type("image/avif") 2x,
-            url("../images/services/bg-image2@1x.webp") type("image/webp") 1x, // Добавлен WebP
-            url("../images/services/bg-image2@2x.webp") type("image/webp") 2x, // Добавлен WebP
-            url("../images/services/bg-image2@1x.png") type("image/png") 1x,
-            url("../images/services/bg-image2@2x.png") type("image/png") 2x));
-    }
+    z-index: -1;
   }
 
-  // &_list {
-  //   gap: 80px;
-  // }
+  &::before {
+    left: 0;
+    @include image-set-background("../images/services/bg-image1", "png");
+  }
+
+
+  &::after {
+    // left: -310px;
+    bottom: 26%;
+    right: -214px;
+    @include image-set-background("../images/services/bg-image2", "png");
+  }
+
+  .container {
+    overflow: visible;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
 
   &__item {
     // gap: 80px;
     gap: 80px clamp(1.5rem, -1.583rem + 8.56vw, 5rem);
     align-items: center;
+
+    // overflow: visible;
 
     @media screen and (min-width: 567.99px) {
       &:nth-child(even) {
@@ -103,16 +92,32 @@
         }
       }
     }
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 120px;
+  &__wrap {
+    grid-column: span 6;
+    // box-sizing: content-box;
+  }
+
+  &__bg {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @each $item in $categories {
+    &__bg--#{$item} {
+      @include image-set-background("../images/services/#{$item}", "jpg");
     }
   }
 
 
-  &__picture-cover {
-    grid-column: span 6;
-  }
+
 
   &__content {
     grid-column: span 6;
@@ -138,9 +143,65 @@
 
   @media screen and (max-width:568px) {
 
-    &__picture-cover,
+    &__wrap,
     &__content {
       grid-column: span 12;
     }
   }
+}
+
+.animate-wrap {
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 50px; // ✅ создаёт пространство для тени
+
+  @include transition ($transition-property: color);
+
+  @media (any-hover: hover) {
+    &:hover {
+      .animate-bg {
+        transition:
+          0.6s $hoverEasing,
+          opacity 5s $hoverEasing;
+        opacity: 0.8;
+      }
+
+      .animate-card {
+        transition:
+          0.6s $hoverEasing,
+          box-shadow 2s $hoverEasing;
+        box-shadow:
+          rgba(white, 0.2) 0 0 40px 5px,
+          rgba(white, 1) 0 0 0 1px,
+          rgba(black, 0.66) 0 30px 60px 0,
+          inset #333 0 0 0 5px,
+          inset white 0 0 0 6px;
+      }
+    }
+  }
+}
+
+.animate-card {
+  position: relative;
+  width: 100%;
+  // overflow: visible;
+  background-color: #333;
+  transition: transform 1s $returnEasing,
+    box-shadow 2s $hoverEasing;
+  box-shadow:
+    rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+}
+
+
+.animate-bg {
+  opacity: 0.5;
+  transition: transform 1s $returnEasing,
+    opacity 5s 1s $returnEasing;
+  pointer-events: none;
+  border-radius: var(--br-10);
 }

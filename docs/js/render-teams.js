@@ -114,11 +114,11 @@ function renderTeamMembers() {
 
     // Формируем полную HTML-структуру карточки.
     li.innerHTML = `
-      <div class="team__thumb images__thumb images__thumb--team">
+      <div class="team__thumb images-thumb images-thumb--team">
         <picture>
           <source type="image/avif" srcset="${member.image.base}@1x.avif 1x, ${member.image.base}@2x.avif 2x">
           <source type="image/webp" srcset="${member.image.base}@1x.webp 1x, ${member.image.base}@2x.webp 2x">
-          <img class="images__img" src="${member.image.base}@1x.jpg" loading="lazy" decoding="async" alt="${member.image.alt}">
+          <img class="images-thumb__img" src="${member.image.base}@1x.jpg" loading="lazy" decoding="async" alt="${member.image.alt}">
         </picture>
         <div class="team__hover">
           <address class="social-media">
